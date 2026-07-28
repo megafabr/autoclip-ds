@@ -73,9 +73,9 @@ const DebugPage: React.FC = () => {
         ...prev,
         desktopMode: info
       }))
-      message.success('桌面模式检测完成')
+      message.success('桌面模式检测Completed')
     } catch (error: any) {
-      const errorMsg = `桌面模式检测失败: ${error.message}`
+      const errorMsg = `桌面模式检测Failed: ${error.message}`
       setDebugInfo(prev => ({
         ...prev,
         errors: [...prev.errors, errorMsg]
@@ -94,7 +94,7 @@ const DebugPage: React.FC = () => {
     try {
       setLoading(true)
       
-      // 测试设置API
+      // 测试SettingsAPI
       try {
         const settings = await settingsApi.getSettings()
         apiStatus.settings = true
@@ -103,7 +103,7 @@ const DebugPage: React.FC = () => {
           currentSettings: settings
         }))
       } catch (error: any) {
-        errors.push(`设置API失败: ${error.message}`)
+        errors.push(`SettingsAPIFailed: ${error.message}`)
       }
 
       // 测试桌面模式API
@@ -112,7 +112,7 @@ const DebugPage: React.FC = () => {
         apiStatus.desktopMode = true
         console.log('桌面模式API响应:', desktopMode)
       } catch (error: any) {
-        errors.push(`桌面模式API失败: ${error.message}`)
+        errors.push(`桌面模式APIFailed: ${error.message}`)
       }
 
       // 测试API Key测试接口
@@ -121,7 +121,7 @@ const DebugPage: React.FC = () => {
         apiStatus.testApi = true
         console.log('API测试响应:', testResult)
       } catch (error: any) {
-        errors.push(`API测试接口失败: ${error.message}`)
+        errors.push(`API测试接口Failed: ${error.message}`)
       }
 
       setDebugInfo(prev => ({
@@ -133,10 +133,10 @@ const DebugPage: React.FC = () => {
       if (errors.length === 0) {
         message.success('所有API连接测试通过')
       } else {
-        message.warning(`部分API测试失败: ${errors.length}个错误`)
+        message.warning(`部分API测试Failed: ${errors.length}个错误`)
       }
     } catch (error: any) {
-      const errorMsg = `API连接测试失败: ${error.message}`
+      const errorMsg = `API连接测试Failed: ${error.message}`
       setDebugInfo(prev => ({
         ...prev,
         errors: [...prev.errors, errorMsg]
@@ -147,7 +147,7 @@ const DebugPage: React.FC = () => {
     }
   }
 
-  // 测试API Key保存
+  // 测试API KeySave
   const testApiKeySave = async () => {
     try {
       setLoading(true)
@@ -198,9 +198,9 @@ const DebugPage: React.FC = () => {
       }
 
       await settingsApi.updateSettings(testSettings)
-      message.success('API Key保存测试成功！')
+      message.success('API KeySave测试Success！')
     } catch (error: any) {
-      const errorMsg = `API Key保存失败: ${error.message}`
+      const errorMsg = `API KeySaveFailed: ${error.message}`
       setDebugInfo(prev => ({
         ...prev,
         errors: [...prev.errors, errorMsg]
@@ -232,7 +232,7 @@ const DebugPage: React.FC = () => {
           </Title>
           
           <Paragraph>
-            这个页面用于调试桌面模式检测和API Key保存功能。请按顺序测试各个功能。
+            这个页面用于调试桌面模式检测和API KeySave功能。请按顺序测试各个功能。
           </Paragraph>
 
           <Row gutter={[16, 16]}>
@@ -252,12 +252,12 @@ const DebugPage: React.FC = () => {
                     onClick={refreshAll}
                     loading={loading}
                   >
-                    刷新全部
+                    Refresh全部
                   </Button>
                 </Space>
               }>
                 <Descriptions bordered column={2}>
-                  <Descriptions.Item label="桌面模式状态">
+                  <Descriptions.Item label="桌面模式Status">
                     <Tag color={debugInfo.desktopMode.isDesktop ? 'green' : 'red'}>
                       {debugInfo.desktopMode.isDesktop ? '是' : '否'}
                     </Tag>
@@ -293,7 +293,7 @@ const DebugPage: React.FC = () => {
                           <CheckCircleOutlined style={{ color: 'green' }} /> : 
                           <CloseCircleOutlined style={{ color: 'red' }} />
                         }
-                        <Text>设置API</Text>
+                        <Text>SettingsAPI</Text>
                       </Space>
                     </Card>
                   </Col>
@@ -323,16 +323,16 @@ const DebugPage: React.FC = () => {
               </Card>
             </Col>
 
-            {/* API Key保存测试 */}
+            {/* API KeySave测试 */}
             <Col span={24}>
-              <Card title="API Key保存测试" extra={
+              <Card title="API KeySave测试" extra={
                 <Button 
                   type="primary"
                   icon={<SettingOutlined />} 
                   onClick={testApiKeySave}
                   loading={loading}
                 >
-                  测试保存
+                  测试Save
                 </Button>
               }>
                 <Form form={form} layout="vertical">
@@ -360,12 +360,12 @@ const DebugPage: React.FC = () => {
               </Card>
             </Col>
 
-            {/* 当前设置信息 */}
+            {/* 当前Settings信息 */}
             {debugInfo.currentSettings && (
               <Col span={24}>
-                <Card title="当前设置信息">
+                <Card title="当前Settings信息">
                   <Collapse>
-                    <Panel header="查看完整设置" key="1">
+                    <Panel header="查看完整Settings" key="1">
                       <pre style={{ 
                         background: '#f5f5f5', 
                         padding: '16px', 
@@ -408,7 +408,7 @@ const DebugPage: React.FC = () => {
                     <div>
                       <p>1. 首先检查"桌面模式检测"是否显示为"是"</p>
                       <p>2. 然后测试"API连接测试"，确保所有连接都显示绿色</p>
-                      <p>3. 最后在"API Key保存测试"中输入真实的API Key进行测试</p>
+                      <p>3. 最后在"API KeySave测试"中输入真实的API Key进行测试</p>
                       <p>4. 如果出现错误，请查看"错误信息"部分</p>
                     </div>
                   }

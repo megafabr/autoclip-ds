@@ -1,0 +1,71 @@
+﻿[src\pages\HomePage.tsx]
+--------------------------------------------------------------------------------
+27:59 [mojibake] ('all') const [activeTab, setActiveTab] = useState
+    const [statusFilter, setStatusFilter] = useState<string>('all')
+47:22 [chinese] ж— иїђиЎЊйЎ№з›®пјЊе·Іе…Ёе±ЂеЃњж­ўиї›еє¦иЅ®иЇўе№¶жё…з©єиї›еє¦зј“е­
+    console.log('ж— иїђиЎЊйЎ№з›®пјЊе·Іе…Ёе±ЂеЃњж­ўиї›еє¦иЅ®иЇўе№¶жё…з©єиї›еє¦зј“е­')
+49:23 [chinese] еЃњж­ўе…Ёе±Ђиї›еє¦иЅ®иЇўж—¶е‡єзЋ°й—®йў:
+    console.warn('еЃњж­ўе…Ёе±Ђиї›еє¦иЅ®иЇўж—¶е‡єзЋ°й—®йў:', e)
+72:22 [chinese] еЉ иЅЅйЎ№з›®е¤±иґҐ
+    message.error('еЉ иЅЅйЎ№з›®е¤±иґҐ')
+73:22 [mojibake] Load projects error:
+    console.error('Load projects error:', error)
+85:24 [chinese] йЎ№з›®е€ й™¤ж€ђеЉџ
+    message.success('йЎ№з›®е€ й™¤ж€ђеЉџ')
+87:22 [chinese] е€ й™¤йЎ№з›®е¤±иґҐ
+    message.error('е€ й™¤йЎ№з›®е¤±иґҐ')
+88:22 [mojibake] Delete project error:
+    console.error('Delete project error:', error)
+97:22 [chinese] е·ІејЂе§‹й‡ЌиЇ•е¤„зђ†йЎ№з›®
+    message.success('е·ІејЂе§‹й‡ЌиЇ•е¤„зђ†йЎ№з›®')
+101:22 [mojibake] Refresh after retry error:
+    console.error('Refresh after retry error:', error)
+108:24 [chinese] йЎ№з›®ж­ЈењЁеЇје…Ґдё­пјЊиЇ·зЁЌеђЋе†ЌжџҐзњ‹иЇ¦жѓ…
+    message.warning('йЎ№з›®ж­ЈењЁеЇје…Ґдё­пјЊиЇ·зЁЌеђЋе†ЌжџҐзњ‹иЇ¦жѓ…')
+131:35 [mojibake] 40px 56px 56px
+    <Content style={{ padding: '40px 56px 56px', position: 'relative' }}>
+132:52 [mojibake] 0 auto
+    <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+141:82 [mojibake] 0 4px 14px
+    <div style={{ fontSize: '13px', color: 'var(--ac-muted)', margin: '0 4px 14px', letterSpacing: '0.2px' }}>
+147:26 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+162:32 [mojibake] 8px 18px
+    padding: '8px 18px',
+169:35 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+171:61 [mojibake] 0 1px 2px rgba(0,0,0,.08)
+    boxShadow: activeTab === 'bilibili' ? '0 1px 2px rgba(0,0,0,.08)' : 'none'
+179:32 [mojibake] 8px 18px
+    padding: '8px 18px',
+186:35 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+188:59 [mojibake] 0 1px 2px rgba(0,0,0,.08)
+    boxShadow: activeTab === 'upload' ? '0 1px 2px rgba(0,0,0,.08)' : 'none'
+209:38 [chinese] йЎ№з›®е€›е»єж€ђеЉџпјЊж­ЈењЁе¤„зђ†дё­...
+    message.success('йЎ№з›®е€›е»єж€ђеЉџпјЊж­ЈењЁе¤„зђ†дё­...')
+249:32 [chinese] е…ЁйѓЁзЉ¶жЂЃ
+    placeholder="е…ЁйѓЁзЉ¶жЂЃ"
+257:39 [chinese] е…ЁйѓЁзЉ¶жЂЃ
+    <Option value="all">е…ЁйѓЁзЉ¶жЂЃ</Option>
+258:45 [chinese] е·Іе®Њж€ђ
+    <Option value="completed">е·Іе®Њж€ђ</Option>
+259:46 [chinese] е¤„зђ†дё­
+    <Option value="processing">е¤„зђ†дё­</Option>
+260:41 [chinese] е¤„зђ†е¤±иґҐ
+    <Option value="error">е¤„зђ†е¤±иґҐ</Option>
+270:30 [mojibake] 72px 0
+    padding: '72px 0',
+273:29 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)'
+283:30 [mojibake] 72px 0
+    padding: '72px 0',
+286:29 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)'
+293:54 [chinese] иїжІЎжњ‰йЎ№з›®пјЊиЇ·дЅїз”ЁдёЉж–№зљ„еЇје…ҐеЊєеџџе€›е»єз¬¬дёЂдёЄйЎ№з›®
+    {projects.length === 0 ? 'иїжІЎжњ‰йЎ№з›®пјЊиЇ·дЅїз”ЁдёЉж–№зљ„еЇје…ҐеЊєеџџе€›е»єз¬¬дёЂдёЄйЎ№з›®' : 'жІЎжњ‰ж‰ѕе€°еЊ№й…Ќзљ„йЎ№з›®'}
+293:82 [chinese] жІЎжњ‰ж‰ѕе€°еЊ№й…Ќзљ„йЎ№з›®
+    {projects.length === 0 ? 'иїжІЎжњ‰йЎ№з›®пјЊиЇ·дЅїз”ЁдёЉж–№зљ„еЇје…ҐеЊєеџџе€›е»єз¬¬дёЂдёЄйЎ№з›®' : 'жІЎжњ‰ж‰ѕе€°еЊ№й…Ќзљ„йЎ№з›®'}
+302:42 [mojibake] repeat(auto-fill, minmax(300px, 1fr))
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+

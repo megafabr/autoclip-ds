@@ -1,0 +1,5287 @@
+DS OS вЂ” РѕС‚С‡С‘С‚ Р»РѕРєР°Р»РёР·Р°С†РёРё V4
+==========================================================================================
+РџСЂРѕСЃРєР°РЅРёСЂРѕРІР°РЅРѕ С„Р°Р№Р»РѕРІ: 87
+РќР°Р№РґРµРЅРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃС‚СЂРѕРє: 1014
+
+РџРѕ РєР»Р°СЃСЃРёС„РёРєР°С†РёРё:
+  chinese: 1008
+  russian: 6
+
+РџРѕ С‚РёРїСѓ РёСЃС‚РѕС‡РЅРёРєР°:
+  attribute-expression:description: 3
+  attribute-expression:message: 1
+  attribute-expression:placeholder: 1
+  attribute-expression:title: 7
+  attribute:addonAfter: 2
+  attribute:alt: 1
+  attribute:aria-label: 1
+  attribute:cancelText: 19
+  attribute:description: 27
+  attribute:extra: 3
+  attribute:label: 93
+  attribute:message: 33
+  attribute:okText: 19
+  attribute:placeholder: 52
+  attribute:tab: 5
+  attribute:title: 113
+  function:message.error: 102
+  function:message.info: 24
+  function:message.loading: 6
+  function:message.success: 71
+  function:message.warning: 8
+  jsx-text: 226
+  object-field:description: 43
+  object-field:text: 69
+  object-field:title: 85
+
+Р¤Р°Р№Р»С‹ СЃ РЅР°РёР±РѕР»СЊС€РёРј РєРѕР»РёС‡РµСЃС‚РІРѕРј СЃС‚СЂРѕРє:
+   106  src\components\BilibiliManager.tsx
+    70  src\pages\SettingsPage.tsx
+    64  src\components\BilibiliAccountManager.tsx
+    62  src\components\UploadQueueManager.tsx
+    61  src\pages\UploadStatusPage.tsx
+    60  src\components\FirstRunWizard.tsx
+    46  src\components\UploadTaskManager.tsx
+    41  src\components\DesktopSettings.tsx
+    39  src\components\CookieHelper.tsx
+    36  src\components\AccountHealthMonitor.tsx
+    33  src\pages\SimpleProgressDemo.tsx
+    28  src\components\CollectionPreviewModal_fixed.tsx
+    28  src\pages\ProcessingPage.tsx
+    25  src\components\SpeechRecognitionConfig.tsx
+    25  src\pages\DebugPage.tsx
+    22  src\components\CollectionPreviewModal.tsx
+    21  src\components\PipelineControl.tsx
+    21  src\components\UploadModal.tsx
+    20  src\components\ProjectTaskManager.tsx
+    20  src\pages\ProjectDetailPage.tsx
+    18  src\components\TaskProgressModal.tsx
+    16  src\utils\statusUtils.tsx
+    15  src\components\ProjectCard.tsx
+    13  src\components\BilibiliDownload.tsx
+    11  src\components\SimpleProjectCard.tsx
+    11  src\pages\HomePage.tsx
+    10  src\components\TaskProgressDisplay.tsx
+     9  src\components\EditableTitle.tsx
+     8  src\components\EditableCollectionTitle.tsx
+     8  src\components\ErrorBoundary.tsx
+
+==========================================================================================
+РќРђР™Р”Р•РќРќР«Р• РЎРўР РћРљР
+==========================================================================================
+
+[src\components\AccountHealthMonitor.tsx]
+------------------------------------------------------------------------------------------
+127:26 [chinese] [function:message.success]
+  key:  accounthealthmonitor.text
+  text: 健康检查完成
+  code: message.success('健康检查完成');
+
+131:22 [chinese] [function:message.error]
+  key:  accounthealthmonitor.text_2
+  text: 获取健康状态失败
+  code: message.error('获取健康状态失败');
+
+183:24 [chinese] [function:message.success]
+  key:  accounthealthmonitor.updatedaccount_username
+  text: 账号 ${updatedAccount.username} 检查完成
+  code: message.success(`账号 ${updatedAccount.username} 检查完成`);
+
+186:22 [chinese] [function:message.error]
+  key:  accounthealthmonitor.text_3
+  text: 检查账号失败
+  code: message.error('检查账号失败');
+
+219:22 [chinese] [function:message.error]
+  key:  accounthealthmonitor.cookie
+  text: 刷新Cookie失败
+  code: message.error('刷新Cookie失败');
+
+226:74 [chinese] [object-field:text]
+  key:  accounthealthmonitor.text_4
+  text: 健康
+  code: healthy: { color: 'success', icon: <CheckCircleOutlined />, text: '健康' },
+
+227:80 [chinese] [object-field:text]
+  key:  accounthealthmonitor.text_5
+  text: 警告
+  code: warning: { color: 'warning', icon: <ExclamationCircleOutlined />, text: '警告' },
+
+228:73 [chinese] [object-field:text]
+  key:  accounthealthmonitor.text_6
+  text: 严重
+  code: critical: { color: 'error', icon: <CloseCircleOutlined />, text: '严重' },
+
+229:77 [chinese] [object-field:text]
+  key:  accounthealthmonitor.text_7
+  text: 未知
+  code: unknown: { color: 'default', icon: <QuestionCircleOutlined />, text: '未知' }
+
+258:24 [chinese] [attribute-expression:title]
+  key:  accounthealthmonitor.expiresin
+  text: 还有 ${expiresIn} 天过期
+  code: <Tooltip title={`还有 ${expiresIn} 天过期`}>
+
+273:15 [chinese] [object-field:title]
+  key:  accounthealthmonitor.text_8
+  text: 账号
+  code: title: '账号',
+
+280:30 [chinese] [attribute-expression:title]
+  key:  accounthealthmonitor.record_details_login_user_info_level
+  text: 等级: ${record.details.login.user_info.level}
+  code: <Tooltip title={`等级: ${record.details.login.user_info.level}`}>
+
+288:15 [chinese] [object-field:title]
+  key:  accounthealthmonitor.text_9
+  text: 健康状态
+  code: title: '健康状态',
+
+294:15 [chinese] [object-field:title]
+  key:  accounthealthmonitor.cookie_2
+  text: Cookie状态
+  code: title: 'Cookie状态',
+
+304:15 [chinese] [object-field:title]
+  key:  accounthealthmonitor.text_10
+  text: 最后检查
+  code: title: '最后检查',
+
+317:15 [chinese] [object-field:title]
+  key:  accounthealthmonitor.text_11
+  text: 操作
+  code: title: '操作',
+
+386:22 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_12
+  text: 总账号数
+  code: title="总账号数"
+
+395:22 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_13
+  text: 健康账号
+  code: title="健康账号"
+
+405:22 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_14
+  text: 警告账号
+  code: title="警告账号"
+
+415:22 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_15
+  text: 严重问题
+  code: title="严重问题"
+
+460:20 [chinese] [attribute:message]
+  key:  accounthealthmonitor.text_16
+  text: 账号健康警告
+  code: message="账号健康警告"
+
+461:25 [chinese] [attribute-expression:description]
+  key:  accounthealthmonitor.healthdata_critical_count_healthdata_warning_count
+  text: 发现 ${healthData.critical_count} 个严重问题和 ${healthData.warning_count} 个警告，请及时处理
+  code: description={`发现 ${healthData.critical_count} 个严重问题和 ${healthData.warning_count} 个警告，请及时处理`}
+
+469:20 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_17
+  text: 账号健康状态
+  code: <Card title="账号健康状态">
+
+487:17 [chinese] [attribute-expression:title]
+  key:  accounthealthmonitor.selectedaccount_username
+  text: 账号详情 - ${selectedAccount?.username}
+  code: title={`账号详情 - ${selectedAccount?.username}`}
+
+513:30 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_18
+  text: 基本信息
+  code: <Card title="基本信息" size="small">
+
+514:30 [chinese] [jsx-text]
+  key:  accounthealthmonitor.id
+  text: 账号ID:
+  code: <p><strong>账号ID:</strong> {selectedAccount.account_id}</p>
+
+515:30 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_19
+  text: 用户名:
+  code: <p><strong>用户名:</strong> {selectedAccount.username}</p>
+
+516:30 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_20
+  text: 整体状态:
+  code: <p><strong>整体状态:</strong> {getStatusTag(selectedAccount.status)}</p>
+
+517:30 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_21
+  text: 状态消息:
+  code: <p><strong>状态消息:</strong> {selectedAccount.message}</p>
+
+521:30 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_22
+  text: 检查时间
+  code: <Card title="检查时间" size="small">
+
+522:30 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_23
+  text: 最后检查:
+  code: <p><strong>最后检查:</strong> {new Date(selectedAccount.last_check).toLocaleString()}</p>
+
+524:32 [chinese] [jsx-text]
+  key:  accounthealthmonitor.cookie_3
+  text: Cookie过期:
+  code: <p><strong>Cookie过期:</strong> {selectedAccount.expires_in} 天后</p>
+
+530:26 [chinese] [attribute:title]
+  key:  accounthealthmonitor.text_24
+  text: 详细状态
+  code: <Card title="详细状态" size="small" style={{ marginTop: 16 }}>
+
+533:27 [chinese] [jsx-text]
+  key:  accounthealthmonitor.cookie_4
+  text: Cookie状态:
+  code: <strong>Cookie状态:</strong> {getStatusTag(selectedAccount.details.cookie.status)}
+
+540:27 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_25
+  text: 登录状态:
+  code: <strong>登录状态:</strong> {getStatusTag(selectedAccount.details.login.status)}
+
+550:27 [chinese] [jsx-text]
+  key:  accounthealthmonitor.text_26
+  text: 上传权限:
+  code: <strong>上传权限:</strong> {getStatusTag(selectedAccount.details.upload.status)}
+
+
+[src\components\AddClipToCollectionModal.tsx]
+------------------------------------------------------------------------------------------
+96:14 [chinese] [attribute:title]
+  key:  addcliptocollectionmodal.text
+  text: 添加切片到合集
+  code: title="添加切片到合集"
+
+119:26 [chinese] [attribute:placeholder]
+  key:  addcliptocollectionmodal.text_2
+  text: 搜索切片标题、内容或推荐理由...
+  code: placeholder="搜索切片标题、内容或推荐理由..."
+
+
+[src\components\BilibiliAccountManager.tsx]
+------------------------------------------------------------------------------------------
+46:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text
+  text: 获取账号列表失败:
+  code: message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+
+90:24 [chinese] [function:message.success]
+  key:  bilibiliaccountmanager.text_2
+  text: 健康状态已刷新
+  code: message.success('健康状态已刷新')
+
+92:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_3
+  text: 刷新失败:
+  code: message.error('刷新失败: ' + (error.message || '未知错误'))
+
+114:24 [chinese] [function:message.success]
+  key:  bilibiliaccountmanager.text_4
+  text: 账号密码登录成功！
+  code: message.success('账号密码登录成功！')
+
+119:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_5
+  text: 账号密码登录失败:
+  code: message.error('账号密码登录失败: ' + (error.message || '未知错误'))
+
+142:24 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.cookie
+  text: Cookie格式不正确，请检查输入
+  code: message.error('Cookie格式不正确，请检查输入')
+
+147:24 [chinese] [function:message.success]
+  key:  bilibiliaccountmanager.cookie_2
+  text: Cookie导入成功！
+  code: message.success('Cookie导入成功！')
+
+152:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.cookie_3
+  text: Cookie导入失败:
+  code: message.error('Cookie导入失败: ' + (error.message || '未知错误'))
+
+181:28 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_6
+  text: 二维码登录超时，请重试
+  code: message.error('二维码登录超时，请重试')
+
+197:30 [chinese] [function:message.success]
+  key:  bilibiliaccountmanager.text_7
+  text: 二维码登录成功！
+  code: message.success('二维码登录成功！')
+
+202:28 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_8
+  text: 二维码登录失败，请重试
+  code: message.error('二维码登录失败，请重试')
+
+213:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_9
+  text: 启动二维码登录失败:
+  code: message.error('启动二维码登录失败: ' + (error.message || '未知错误'))
+
+223:24 [chinese] [function:message.success]
+  key:  bilibiliaccountmanager.text_10
+  text: 账号删除成功
+  code: message.success('账号删除成功')
+
+226:22 [chinese] [function:message.error]
+  key:  bilibiliaccountmanager.text_11
+  text: 删除账号失败:
+  code: message.error('删除账号失败: ' + (error.message || '未知错误'))
+
+232:30 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.text_12
+  text: 未知
+  code: if (!health) return <Tag>未知</Tag>
+
+235:43 [chinese] [object-field:text]
+  key:  bilibiliaccountmanager.text_13
+  text: 优秀
+  code: excellent: { color: 'green', text: '优秀', icon: <TrophyOutlined /> },
+
+236:37 [chinese] [object-field:text]
+  key:  bilibiliaccountmanager.text_14
+  text: 良好
+  code: good: { color: 'blue', text: '良好', icon: <CheckCircleOutlined /> },
+
+237:42 [chinese] [object-field:text]
+  key:  bilibiliaccountmanager.text_15
+  text: 警告
+  code: warning: { color: 'orange', text: '警告', icon: <ExclamationCircleOutlined /> },
+
+238:36 [chinese] [object-field:text]
+  key:  bilibiliaccountmanager.text_16
+  text: 较差
+  code: poor: { color: 'red', text: '较差', icon: <CloseCircleOutlined /> }
+
+243:24 [chinese] [attribute-expression:title]
+  key:  bilibiliaccountmanager.health_score_100
+  text: 健康分数: ${health.score}/100
+  code: <Tooltip title={`健康分数: ${health.score}/100`}>
+
+266:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_17
+  text: 用户名
+  code: title: '用户名',
+
+277:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_18
+  text: 昵称
+  code: title: '昵称',
+
+282:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_19
+  text: 账号状态
+  code: title: '账号状态',
+
+292:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_20
+  text: 健康状态
+  code: title: '健康状态',
+
+297:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_21
+  text: 活跃度
+  code: title: '活跃度',
+
+321:15 [chinese] [object-field:title]
+  key:  bilibiliaccountmanager.text_22
+  text: 操作
+  code: title: '操作',
+
+325:27 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_23
+  text: 查看详情
+  code: <Tooltip title="查看详情">
+
+331:20 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_24
+  text: 确定要删除这个账号吗？
+  code: title="确定要删除这个账号吗？"
+
+332:26 [chinese] [attribute:description]
+  key:  bilibiliaccountmanager.text_25
+  text: 删除后将无法恢复，请谨慎操作。
+  code: description="删除后将无法恢复，请谨慎操作。"
+
+334:21 [chinese] [attribute:okText]
+  key:  bilibiliaccountmanager.text_26
+  text: 确定
+  code: okText="确定"
+
+335:25 [chinese] [attribute:cancelText]
+  key:  bilibiliaccountmanager.text_27
+  text: 取消
+  code: cancelText="取消"
+
+379:30 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_28
+  text: 总账号数
+  code: title="总账号数"
+
+387:30 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_29
+  text: 活跃账号
+  code: title="活跃账号"
+
+396:30 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_30
+  text: 平均健康分
+  code: title="平均健康分"
+
+405:30 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_31
+  text: 优秀账号
+  code: title="优秀账号"
+
+414:26 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.b
+  text: B站账号管理
+  code: title="B站账号管理"
+
+417:39 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.text_32
+  text: 刷新健康状态
+  code: <Tooltip title="刷新健康状态">
+
+464:16 [chinese] [attribute:title]
+  key:  bilibiliaccountmanager.b_2
+  text: 添加B站账号
+  code: title="添加B站账号"
+
+480:20 [chinese] [attribute:message]
+  key:  bilibiliaccountmanager.text_33
+  text: 登录方式说明
+  code: message="登录方式说明"
+
+481:24 [chinese] [attribute:description]
+  key:  bilibiliaccountmanager.b_cookie
+  text: 为了避免B站风控，建议使用Cookie导入方式。扫码登录可能触发风控机制。
+  code: description="为了避免B站风控，建议使用Cookie导入方式。扫码登录可能触发风控机制。"
+
+488:25 [chinese] [attribute:tab]
+  key:  bilibiliaccountmanager.cookie_4
+  text: Cookie导入
+  code: <TabPane tab="Cookie导入" key="cookie">
+
+492:24 [chinese] [attribute:label]
+  key:  bilibiliaccountmanager.text_34
+  text: 昵称
+  code: label="昵称"
+
+495:37 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.text_35
+  text: 请输入账号昵称
+  code: <Input placeholder="请输入账号昵称" />
+
+517:33 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.cookie_sessdata_xxx_bili_jct_xxx_dedeuserid_xxx
+  text: 请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx
+  code: placeholder="请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx"
+
+530:29 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.cookie_5
+  text: 快速获取Cookie：
+  code: <Text strong>快速获取Cookie：</Text>
+
+536:25 [chinese] [attribute:tab]
+  key:  bilibiliaccountmanager.text_36
+  text: 账号密码
+  code: <TabPane tab="账号密码" key="password">
+
+540:24 [chinese] [attribute:label]
+  key:  bilibiliaccountmanager.text_37
+  text: 用户名
+  code: label="用户名"
+
+543:37 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.b_3
+  text: 请输入B站用户名或手机号
+  code: <Input placeholder="请输入B站用户名或手机号" />
+
+548:24 [chinese] [attribute:label]
+  key:  bilibiliaccountmanager.text_38
+  text: 密码
+  code: label="密码"
+
+551:46 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.text_39
+  text: 请输入密码
+  code: <Input.Password placeholder="请输入密码" />
+
+556:24 [chinese] [attribute:label]
+  key:  bilibiliaccountmanager.text_40
+  text: 昵称
+  code: label="昵称"
+
+559:37 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.text_41
+  text: 请输入账号昵称
+  code: <Input placeholder="请输入账号昵称" />
+
+570:24 [chinese] [attribute:message]
+  key:  bilibiliaccountmanager.text_42
+  text: 注意
+  code: message="注意"
+
+571:28 [chinese] [attribute:description]
+  key:  bilibiliaccountmanager.cookie_6
+  text: 账号密码登录可能需要处理验证码，如果遇到问题建议使用Cookie导入方式。
+  code: description="账号密码登录可能需要处理验证码，如果遇到问题建议使用Cookie导入方式。"
+
+577:25 [chinese] [attribute:tab]
+  key:  bilibiliaccountmanager.text_43
+  text: 扫码登录
+  code: <TabPane tab="扫码登录" key="qr">
+
+581:37 [chinese] [attribute:label]
+  key:  bilibiliaccountmanager.text_44
+  text: 昵称
+  code: <Form.Item label="昵称">
+
+582:41 [chinese] [attribute:placeholder]
+  key:  bilibiliaccountmanager.text_45
+  text: 请输入账号昵称（可选）
+  code: <Input placeholder="请输入账号昵称（可选）" />
+
+598:49 [chinese] [attribute:alt]
+  key:  bilibiliaccountmanager.text_46
+  text: 二维码
+  code: <img src={qrCodeUrl} alt="二维码" style={{ maxWidth: '200px' }} />
+
+603:24 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.text_47
+  text: 正在生成二维码...
+  code: <p>正在生成二维码...</p>
+
+607:24 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.b_app
+  text: 请使用B站APP扫描二维码
+  code: <p>请使用B站APP扫描二维码</p>
+
+611:53 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.text_48
+  text: ✅ 登录成功！
+  code: <p style={{ color: '#52c41a' }}>✅ 登录成功！</p>
+
+615:53 [chinese] [jsx-text]
+  key:  bilibiliaccountmanager.text_49
+  text: ❌ 登录失败，请重试
+  code: <p style={{ color: '#ff4d4f' }}>❌ 登录失败，请重试</p>
+
+622:24 [chinese] [attribute:message]
+  key:  bilibiliaccountmanager.text_50
+  text: 风险提示
+  code: message="风险提示"
+
+623:28 [chinese] [attribute:description]
+  key:  bilibiliaccountmanager.b_cookie_2
+  text: 扫码登录可能触发B站风控机制，建议优先使用Cookie导入方式。
+  code: description="扫码登录可能触发B站风控机制，建议优先使用Cookie导入方式。"
+
+
+[src\components\BilibiliDownload.tsx]
+------------------------------------------------------------------------------------------
+46:24 [chinese] [function:message.error]
+  key:  bilibilidownload.text
+  text: 加载视频分类失败
+  code: message.error('加载视频分类失败')
+
+165:28 [chinese] [function:message.success]
+  key:  bilibilidownload.text_2
+  text: 视频下载完成！
+  code: message.success('视频下载完成！')
+
+177:26 [chinese] [function:message.error]
+  key:  bilibilidownload.task_error_message
+  text: 下载失败: ${task.error_message || '未知错误'}
+  code: message.error(`下载失败: ${task.error_message || '未知错误'}`)
+
+190:22 [chinese] [function:message.error]
+  key:  bilibilidownload.text_3
+  text: 请输入视频链接
+  code: message.error('请输入视频链接')
+
+196:22 [chinese] [function:message.error]
+  key:  bilibilidownload.b_youtube
+  text: 请输入有效的B站或YouTube视频链接
+  code: message.error('请输入有效的B站或YouTube视频链接')
+
+245:26 [chinese] [function:message.success]
+  key:  bilibilidownload.platformname
+  text: ${platformName}项目创建成功，正在后台下载中，您可以继续添加其他项目
+  code: message.success(`${platformName}项目创建成功，正在后台下载中，您可以继续添加其他项目`)
+
+281:19 [chinese] [function:message.info]
+  key:  bilibilidownload.text_4
+  text: 已停止监控下载任务
+  code: message.info('已停止监控下载任务')
+
+334:24 [chinese] [jsx-text]
+  key:  bilibilidownload.text_5
+  text: 正在解析视频信息...
+  code: <span>正在解析视频信息...</span>
+
+376:127 [chinese] [jsx-text]
+  key:  bilibilidownload.text_6
+  text: 项目名称（可选）
+  code: <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>项目名称（可选）</Text>
+
+394:127 [chinese] [jsx-text]
+  key:  bilibilidownload.ai
+  text: 浏览器选择（获取AI字幕需要）
+  code: <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>浏览器选择（获取AI字幕需要）</Text>
+
+396:32 [chinese] [attribute:placeholder]
+  key:  bilibilidownload.cookie
+  text: 选择浏览器以获取cookie（可选）
+  code: placeholder="选择浏览器以获取cookie（可选）"
+
+422:127 [chinese] [jsx-text]
+  key:  bilibilidownload.text_7
+  text: 视频分类
+  code: <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>视频分类</Text>
+
+545:83 [chinese] [jsx-text]
+  key:  bilibilidownload.text_8
+  text: 导入进度
+  code: <Text style={{ color: '#ffffff', fontWeight: 600, fontSize: '18px' }}>导入进度</Text>
+
+
+[src\components\BilibiliManager.tsx]
+------------------------------------------------------------------------------------------
+49:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text
+  text: 获取账号列表失败:
+  code: message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+
+62:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_2
+  text: 获取投稿记录失败:
+  code: message.error('获取投稿记录失败: ' + (error.message || '未知错误'))
+
+72:24 [chinese] [function:message.success]
+  key:  bilibilimanager.text_3
+  text: 重试任务已提交
+  code: message.success('重试任务已提交')
+
+75:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_4
+  text: 重试失败:
+  code: message.error('重试失败: ' + (error.message || '未知错误'))
+
+83:24 [chinese] [function:message.success]
+  key:  bilibilimanager.text_5
+  text: 任务已取消
+  code: message.success('任务已取消')
+
+86:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_6
+  text: 取消失败:
+  code: message.error('取消失败: ' + (error.message || '未知错误'))
+
+94:24 [chinese] [function:message.success]
+  key:  bilibilimanager.text_7
+  text: 任务已删除
+  code: message.success('任务已删除')
+
+97:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_8
+  text: 删除失败:
+  code: message.error('删除失败: ' + (error.message || '未知错误'))
+
+142:24 [chinese] [function:message.error]
+  key:  bilibilimanager.cookie
+  text: Cookie格式不正确，请检查输入
+  code: message.error('Cookie格式不正确，请检查输入')
+
+147:24 [chinese] [function:message.success]
+  key:  bilibilimanager.text_9
+  text: 账号添加成功！
+  code: message.success('账号添加成功！')
+
+152:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_10
+  text: 添加账号失败:
+  code: message.error('添加账号失败: ' + (error.message || '未知错误'))
+
+162:24 [chinese] [function:message.success]
+  key:  bilibilimanager.text_11
+  text: 账号删除成功
+  code: message.success('账号删除成功')
+
+165:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_12
+  text: 删除账号失败:
+  code: message.error('删除账号失败: ' + (error.message || '未知错误'))
+
+172:19 [chinese] [function:message.info]
+  key:  bilibilimanager.b
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3)
+
+177:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_13
+  text: 没有选择要上传的切片
+  code: message.error('没有选择要上传的切片')
+
+203:26 [chinese] [function:message.success]
+  key:  bilibilimanager.text_14
+  text: 投稿任务已创建，正在后台处理中...
+  code: message.success('投稿任务已创建，正在后台处理中...')
+
+208:24 [chinese] [function:message.error]
+  key:  bilibilimanager.text_15
+  text: 投稿失败:
+  code: message.error('投稿失败: ' + (error.detail || '未知错误'))
+
+211:22 [chinese] [function:message.error]
+  key:  bilibilimanager.text_16
+  text: 投稿失败:
+  code: message.error('投稿失败: ' + (error.message || '未知错误'))
+
+220:74 [chinese] [object-field:text]
+  key:  bilibilimanager.text_17
+  text: 等待中
+  code: pending: { color: 'default', icon: <ClockCircleOutlined />, text: '等待中' },
+
+221:79 [chinese] [object-field:text]
+  key:  bilibilimanager.text_18
+  text: 处理中
+  code: processing: { color: 'processing', icon: <PlayCircleOutlined />, text: '处理中' },
+
+222:74 [chinese] [object-field:text]
+  key:  bilibilimanager.text_19
+  text: 成功
+  code: success: { color: 'success', icon: <CheckCircleOutlined />, text: '成功' },
+
+223:76 [chinese] [object-field:text]
+  key:  bilibilimanager.text_20
+  text: 完成
+  code: completed: { color: 'success', icon: <CheckCircleOutlined />, text: '完成' },
+
+224:77 [chinese] [object-field:text]
+  key:  bilibilimanager.text_21
+  text: 失败
+  code: failed: { color: 'error', icon: <ExclamationCircleOutlined />, text: '失败' },
+
+225:69 [chinese] [object-field:text]
+  key:  bilibilimanager.text_22
+  text: 已取消
+  code: cancelled: { color: 'default', icon: <StopOutlined />, text: '已取消' }
+
+281:60 [chinese] [jsx-text]
+  key:  bilibilimanager.cookie_2
+  text: Cookie获取步骤：
+  code: <div style={{ marginBottom: 8, fontWeight: 'bold' }}>Cookie获取步骤：</div>
+
+283:13 [chinese] [jsx-text]
+  key:  bilibilimanager.b_2
+  text: 打开B站网站并登录
+  code: <li>打开B站网站并登录</li>
+
+284:13 [chinese] [jsx-text]
+  key:  bilibilimanager.f12
+  text: 按F12打开开发者工具
+  code: <li>按F12打开开发者工具</li>
+
+285:13 [chinese] [jsx-text]
+  key:  bilibilimanager.network
+  text: 点击Network标签页
+  code: <li>点击Network标签页</li>
+
+286:13 [chinese] [jsx-text]
+  key:  bilibilimanager.text_23
+  text: 刷新页面
+  code: <li>刷新页面</li>
+
+287:13 [chinese] [jsx-text]
+  key:  bilibilimanager.text_24
+  text: 找到任意请求，点击查看
+  code: <li>找到任意请求，点击查看</li>
+
+288:13 [chinese] [jsx-text]
+  key:  bilibilimanager.request_headers_cookie
+  text: 在Request Headers中找到Cookie字段
+  code: <li>在Request Headers中找到Cookie字段</li>
+
+289:13 [chinese] [jsx-text]
+  key:  bilibilimanager.cookie_cookie
+  text: 复制Cookie的值（不包含"Cookie: "前缀）
+  code: <li>复制Cookie的值（不包含"Cookie: "前缀）</li>
+
+297:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_25
+  text: 昵称
+  code: title: '昵称',
+
+308:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_26
+  text: 用户名
+  code: title: '用户名',
+
+313:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_27
+  text: 状态
+  code: title: '状态',
+
+323:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_28
+  text: 操作
+  code: title: '操作',
+
+327:18 [chinese] [attribute:title]
+  key:  bilibilimanager.text_29
+  text: 确定要删除这个账号吗？
+  code: title="确定要删除这个账号吗？"
+
+328:24 [chinese] [attribute:description]
+  key:  bilibilimanager.text_30
+  text: 删除后将无法恢复，请谨慎操作。
+  code: description="删除后将无法恢复，请谨慎操作。"
+
+330:19 [chinese] [attribute:okText]
+  key:  bilibilimanager.text_31
+  text: 确定
+  code: okText="确定"
+
+331:23 [chinese] [attribute:cancelText]
+  key:  bilibilimanager.text_32
+  text: 取消
+  code: cancelText="取消"
+
+344:15 [chinese] [object-field:title]
+  key:  bilibilimanager.id
+  text: 任务ID
+  code: title: '任务ID',
+
+351:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_33
+  text: 标题
+  code: title: '标题',
+
+362:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_34
+  text: 投稿账号
+  code: title: '投稿账号',
+
+376:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_35
+  text: 分区
+  code: title: '分区',
+
+385:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_36
+  text: 状态
+  code: title: '状态',
+
+392:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_37
+  text: 进度
+  code: title: '进度',
+
+409:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_38
+  text: 文件大小
+  code: title: '文件大小',
+
+416:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_39
+  text: 创建时间
+  code: title: '创建时间',
+
+423:15 [chinese] [object-field:title]
+  key:  bilibilimanager.text_40
+  text: 操作
+  code: title: '操作',
+
+438:22 [chinese] [attribute:title]
+  key:  bilibilimanager.text_41
+  text: 确定要重试这个投稿任务吗？
+  code: title="确定要重试这个投稿任务吗？"
+
+440:23 [chinese] [attribute:okText]
+  key:  bilibilimanager.text_42
+  text: 确定
+  code: okText="确定"
+
+441:27 [chinese] [attribute:cancelText]
+  key:  bilibilimanager.text_43
+  text: 取消
+  code: cancelText="取消"
+
+454:22 [chinese] [attribute:title]
+  key:  bilibilimanager.text_44
+  text: 确定要取消这个投稿任务吗？
+  code: title="确定要取消这个投稿任务吗？"
+
+456:23 [chinese] [attribute:okText]
+  key:  bilibilimanager.text_45
+  text: 确定
+  code: okText="确定"
+
+457:27 [chinese] [attribute:cancelText]
+  key:  bilibilimanager.text_46
+  text: 取消
+  code: cancelText="取消"
+
+471:22 [chinese] [attribute:title]
+  key:  bilibilimanager.text_47
+  text: 确定要删除这个投稿任务吗？删除后无法恢复。
+  code: title="确定要删除这个投稿任务吗？删除后无法恢复。"
+
+473:23 [chinese] [attribute:okText]
+  key:  bilibilimanager.text_48
+  text: 确定
+  code: okText="确定"
+
+474:27 [chinese] [attribute:cancelText]
+  key:  bilibilimanager.text_49
+  text: 取消
+  code: cancelText="取消"
+
+506:57 [chinese] [jsx-text]
+  key:  bilibilimanager.b_3
+  text: B站管理
+  code: <h2 className="bilibili-manager-header-title">B站管理</h2>
+
+531:26 [chinese] [attribute:message]
+  key:  bilibilimanager.text_50
+  text: 投稿信息
+  code: message="投稿信息"
+
+532:31 [chinese] [attribute-expression:description]
+  key:  bilibilimanager.clipids_length_b
+  text: 准备上传 ${clipIds.length} 个切片到B站
+  code: description={`准备上传 ${clipIds.length} 个切片到B站`}
+
+550:28 [chinese] [attribute:label]
+  key:  bilibilimanager.text_51
+  text: 选择账号
+  code: label="选择账号"
+
+555:36 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.b_4
+  text: 选择要使用的B站账号
+  code: placeholder="选择要使用的B站账号"
+
+558:30 [chinese] [jsx-text]
+  key:  bilibilimanager.text_52
+  text: 暂无可用账号
+  code: <p>暂无可用账号</p>
+
+579:28 [chinese] [attribute:label]
+  key:  bilibilimanager.text_53
+  text: 视频分区
+  code: label="视频分区"
+
+583:42 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.text_54
+  text: 选择视频分区
+  code: <Select placeholder="选择视频分区" showSearch>
+
+595:24 [chinese] [attribute:label]
+  key:  bilibilimanager.text_55
+  text: 标题
+  code: label="标题"
+
+599:37 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.text_56
+  text: 输入视频标题
+  code: <Input placeholder="输入视频标题" maxLength={80} showCount />
+
+603:24 [chinese] [attribute:label]
+  key:  bilibilimanager.text_57
+  text: 描述
+  code: label="描述"
+
+607:32 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.text_58
+  text: 输入视频描述（可选）
+  code: placeholder="输入视频描述（可选）"
+
+615:24 [chinese] [attribute:label]
+  key:  bilibilimanager.text_59
+  text: 标签
+  code: label="标签"
+
+618:37 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.text_60
+  text: 输入标签，用逗号分隔（可选）
+  code: <Input placeholder="输入标签，用逗号分隔（可选）" />
+
+625:50 [chinese] [function:message.info]
+  key:  bilibilimanager.text_61
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+684:59 [chinese] [jsx-text]
+  key:  bilibilimanager.text_62
+  text: 投稿任务状态
+  code: <h3 style={{ margin: 0, color: '#ffffff' }}>投稿任务状态</h3>
+
+703:67 [chinese] [jsx-text]
+  key:  bilibilimanager.text_63
+  text: 总任务数
+  code: title={<span style={{ color: '#ffffff' }}>总任务数</span>}
+
+712:67 [chinese] [jsx-text]
+  key:  bilibilimanager.text_64
+  text: 成功
+  code: title={<span style={{ color: '#ffffff' }}>成功</span>}
+
+722:67 [chinese] [jsx-text]
+  key:  bilibilimanager.text_65
+  text: 失败
+  code: title={<span style={{ color: '#ffffff' }}>失败</span>}
+
+732:67 [chinese] [jsx-text]
+  key:  bilibilimanager.text_66
+  text: 进行中
+  code: title={<span style={{ color: '#ffffff' }}>进行中</span>}
+
+765:16 [chinese] [attribute:title]
+  key:  bilibilimanager.b_5
+  text: 添加B站账号
+  code: title="添加B站账号"
+
+775:20 [chinese] [attribute:message]
+  key:  bilibilimanager.cookie_3
+  text: 推荐使用Cookie导入
+  code: message="推荐使用Cookie导入"
+
+776:24 [chinese] [attribute:description]
+  key:  bilibilimanager.cookie_b
+  text: Cookie导入是最安全、最稳定的登录方式，不会触发B站风控。
+  code: description="Cookie导入是最安全、最稳定的登录方式，不会触发B站风控。"
+
+785:20 [chinese] [attribute:label]
+  key:  bilibilimanager.text_67
+  text: 账号昵称
+  code: label="账号昵称"
+
+788:33 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.text_68
+  text: 请输入账号昵称，用于识别
+  code: <Input placeholder="请输入账号昵称，用于识别" />
+
+814:28 [chinese] [attribute:placeholder]
+  key:  bilibilimanager.cookie_sessdata_xxx_bili_jct_xxx_dedeuserid_xxx
+  text: 请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx
+  code: placeholder="请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx"
+
+833:16 [chinese] [attribute:title]
+  key:  bilibilimanager.text_69
+  text: 投稿任务详情
+  code: title="投稿任务详情"
+
+861:41 [chinese] [attribute:label]
+  key:  bilibilimanager.id_2
+  text: 任务ID
+  code: <Descriptions.Item label="任务ID" span={1}>
+
+864:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_70
+  text: 状态
+  code: <Descriptions.Item label="状态" span={1}>
+
+867:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_71
+  text: 标题
+  code: <Descriptions.Item label="标题" span={2}>
+
+870:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_72
+  text: 投稿账号
+  code: <Descriptions.Item label="投稿账号" span={1}>
+
+873:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_73
+  text: 分区
+  code: <Descriptions.Item label="分区" span={1}>
+
+876:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_74
+  text: 项目名称
+  code: <Descriptions.Item label="项目名称" span={1}>
+
+879:41 [chinese] [attribute:label]
+  key:  bilibilimanager.id_3
+  text: 切片ID
+  code: <Descriptions.Item label="切片ID" span={1}>
+
+882:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_75
+  text: 进度
+  code: <Descriptions.Item label="进度" span={2}>
+
+892:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_76
+  text: 文件大小
+  code: <Descriptions.Item label="文件大小" span={1}>
+
+895:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_77
+  text: 上传时长
+  code: <Descriptions.Item label="上传时长" span={1}>
+
+898:41 [chinese] [attribute:label]
+  key:  bilibilimanager.bv
+  text: BV号
+  code: <Descriptions.Item label="BV号" span={1}>
+
+901:41 [chinese] [attribute:label]
+  key:  bilibilimanager.av
+  text: AV号
+  code: <Descriptions.Item label="AV号" span={1}>
+
+904:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_78
+  text: 创建时间
+  code: <Descriptions.Item label="创建时间" span={1}>
+
+907:41 [chinese] [attribute:label]
+  key:  bilibilimanager.text_79
+  text: 更新时间
+  code: <Descriptions.Item label="更新时间" span={1}>
+
+914:50 [chinese] [jsx-text]
+  key:  bilibilimanager.text_80
+  text: 描述
+  code: <h4 style={{ color: '#ffffff' }}>描述</h4>
+
+921:50 [chinese] [jsx-text]
+  key:  bilibilimanager.text_81
+  text: 标签
+  code: <h4 style={{ color: '#ffffff' }}>标签</h4>
+
+928:50 [chinese] [jsx-text]
+  key:  bilibilimanager.text_82
+  text: 错误信息
+  code: <h4 style={{ color: '#ffffff' }}>错误信息</h4>
+
+930:28 [chinese] [attribute:message]
+  key:  bilibilimanager.text_83
+  text: 投稿失败
+  code: message="投稿失败"
+
+942:28 [chinese] [attribute:title]
+  key:  bilibilimanager.text_84
+  text: 确定要重试这个投稿任务吗？
+  code: title="确定要重试这个投稿任务吗？"
+
+947:29 [chinese] [attribute:okText]
+  key:  bilibilimanager.text_85
+  text: 确定
+  code: okText="确定"
+
+948:33 [chinese] [attribute:cancelText]
+  key:  bilibilimanager.text_86
+  text: 取消
+  code: cancelText="取消"
+
+
+[src\components\ClipCard.tsx]
+------------------------------------------------------------------------------------------
+66:22 [chinese] [function:message.error]
+  key:  clipcard.text
+  text: 下载失败
+  code: message.error('下载失败')
+
+388:46 [chinese] [function:message.info]
+  key:  clipcard.text_2
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+417:42 [chinese] [function:message.info]
+  key:  clipcard.text_3
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+
+[src\components\CollectionCard.tsx]
+------------------------------------------------------------------------------------------
+303:42 [chinese] [function:message.info]
+  key:  collectioncard.text
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+
+[src\components\CollectionPreviewModal.tsx]
+------------------------------------------------------------------------------------------
+135:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal.text
+  text: 正在更新切片顺序...
+  code: const hideLoading = message.loading('正在更新切片顺序...', 0)
+
+152:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal.text_2
+  text: 切片顺序修改失败
+  code: message.error('切片顺序修改失败')
+
+161:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal.text_3
+  text: 正在移除切片...
+  code: const hideLoading = message.loading('正在移除切片...', 0)
+
+179:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal.text_4
+  text: 移除切片失败
+  code: message.error('移除切片失败')
+
+198:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal.text_5
+  text: 正在添加切片...
+  code: const hideLoading = message.loading('正在添加切片...', 0)
+
+208:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal.text_6
+  text: 添加切片失败
+  code: message.error('添加切片失败')
+
+265:46 [chinese] [function:message.info]
+  key:  collectionpreviewmodal.text_7
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+271:26 [chinese] [attribute:title]
+  key:  collectionpreviewmodal.text_8
+  text: 删除合集
+  code: title="删除合集"
+
+272:32 [chinese] [attribute:description]
+  key:  collectionpreviewmodal.text_9
+  text: 确定要删除这个合集吗？此操作不可撤销。
+  code: description="确定要删除这个合集吗？此操作不可撤销。"
+
+274:27 [chinese] [attribute:okText]
+  key:  collectionpreviewmodal.text_10
+  text: 确定
+  code: okText="确定"
+
+275:31 [chinese] [attribute:cancelText]
+  key:  collectionpreviewmodal.text_11
+  text: 取消
+  code: cancelText="取消"
+
+290:29 [chinese] [attribute:aria-label]
+  key:  collectionpreviewmodal.text_12
+  text: 关闭合集预览
+  code: aria-label="关闭合集预览"
+
+291:24 [chinese] [attribute:title]
+  key:  collectionpreviewmodal.text_13
+  text: 关闭
+  code: title="关闭"
+
+324:70 [chinese] [jsx-text]
+  key:  collectionpreviewmodal.text_14
+  text: 暂无视频内容
+  code: <Text style={{ color: '#999', marginTop: 16 }}>暂无视频内容</Text>
+
+357:106 [chinese] [jsx-text]
+  key:  collectionpreviewmodal.text_15
+  text: 分
+  code: <span className="ac-mono">{(currentClip.final_score * 100).toFixed(0)}</span> 分
+
+371:34 [chinese] [attribute:title]
+  key:  collectionpreviewmodal.text_16
+  text: 上一个切片
+  code: title="上一个切片"
+
+379:34 [chinese] [attribute:title]
+  key:  collectionpreviewmodal.text_17
+  text: 下一个切片
+  code: title="下一个切片"
+
+394:60 [chinese] [jsx-text]
+  key:  collectionpreviewmodal.text_18
+  text: 播放列表
+  code: <Title level={5} style={{ margin: 0 }}>播放列表</Title>
+
+395:44 [chinese] [jsx-text]
+  key:  collectionpreviewmodal.text_19
+  text: 拖拽调整顺序
+  code: <Text type="secondary">拖拽调整顺序</Text>
+
+479:44 [chinese] [attribute:title]
+  key:  collectionpreviewmodal.text_20
+  text: 确定要从合集中移除这个切片吗？
+  code: title="确定要从合集中移除这个切片吗？"
+
+484:45 [chinese] [attribute:okText]
+  key:  collectionpreviewmodal.text_21
+  text: 确定
+  code: okText="确定"
+
+485:49 [chinese] [attribute:cancelText]
+  key:  collectionpreviewmodal.text_22
+  text: 取消
+  code: cancelText="取消"
+
+
+[src\components\CollectionPreviewModal_fixed.tsx]
+------------------------------------------------------------------------------------------
+127:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal_fixed.text
+  text: 正在更新切片顺序...
+  code: const hideLoading = message.loading('正在更新切片顺序...', 0)
+
+141:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.text_2
+  text: 切片顺序更新成功
+  code: message.success('切片顺序更新成功')
+
+145:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_3
+  text: 切片顺序修改失败
+  code: message.error('切片顺序修改失败')
+
+154:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal_fixed.text_4
+  text: 正在移除切片...
+  code: const hideLoading = message.loading('正在移除切片...', 0)
+
+169:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.text_5
+  text: 切片移除成功
+  code: message.success('切片移除成功')
+
+173:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_6
+  text: 移除切片失败
+  code: message.error('移除切片失败')
+
+183:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.text_7
+  text: 切片下载成功
+  code: message.success('切片下载成功')
+
+186:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_8
+  text: 切片下载失败
+  code: message.error('切片下载失败')
+
+198:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.text_9
+  text: 合集下载成功
+  code: message.success('合集下载成功')
+
+201:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_10
+  text: 合集下载失败
+  code: message.error('合集下载失败')
+
+213:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.text_11
+  text: 开始生成合集视频，请稍后查看下载
+  code: message.success('开始生成合集视频，请稍后查看下载')
+
+215:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_12
+  text: 生成合集视频失败
+  code: message.error('生成合集视频失败')
+
+224:42 [chinese] [function:message.loading]
+  key:  collectionpreviewmodal_fixed.text_13
+  text: 正在添加切片...
+  code: const hideLoading = message.loading('正在添加切片...', 0)
+
+231:24 [chinese] [function:message.success]
+  key:  collectionpreviewmodal_fixed.selectedclipids_length
+  text: 成功添加 ${selectedClipIds.length} 个切片到合集
+  code: message.success(`成功添加 ${selectedClipIds.length} 个切片到合集`)
+
+235:22 [chinese] [function:message.error]
+  key:  collectionpreviewmodal_fixed.text_14
+  text: 添加切片失败
+  code: message.error('添加切片失败')
+
+299:26 [chinese] [attribute:title]
+  key:  collectionpreviewmodal_fixed.text_15
+  text: 删除合集
+  code: title="删除合集"
+
+300:32 [chinese] [attribute:description]
+  key:  collectionpreviewmodal_fixed.text_16
+  text: 确定要删除这个合集吗？此操作不可撤销。
+  code: description="确定要删除这个合集吗？此操作不可撤销。"
+
+302:27 [chinese] [attribute:okText]
+  key:  collectionpreviewmodal_fixed.text_17
+  text: 确定
+  code: okText="确定"
+
+303:31 [chinese] [attribute:cancelText]
+  key:  collectionpreviewmodal_fixed.text_18
+  text: 取消
+  code: cancelText="取消"
+
+346:70 [chinese] [jsx-text]
+  key:  collectionpreviewmodal_fixed.text_19
+  text: 暂无视频内容
+  code: <Text style={{ color: '#999', marginTop: 16 }}>暂无视频内容</Text>
+
+374:34 [chinese] [attribute:title]
+  key:  collectionpreviewmodal_fixed.text_20
+  text: 上一个切片
+  code: title="上一个切片"
+
+382:34 [chinese] [attribute:title]
+  key:  collectionpreviewmodal_fixed.text_21
+  text: 下一个切片
+  code: title="下一个切片"
+
+397:60 [chinese] [jsx-text]
+  key:  collectionpreviewmodal_fixed.text_22
+  text: 播放列表
+  code: <Title level={5} style={{ margin: 0 }}>播放列表</Title>
+
+398:44 [chinese] [jsx-text]
+  key:  collectionpreviewmodal_fixed.text_23
+  text: 拖拽调整顺序
+  code: <Text type="secondary">拖拽调整顺序</Text>
+
+466:51 [chinese] [attribute:title]
+  key:  collectionpreviewmodal_fixed.text_24
+  text: 下载切片
+  code: <Tooltip title="下载切片">
+
+480:44 [chinese] [attribute:title]
+  key:  collectionpreviewmodal_fixed.text_25
+  text: 确定要从合集中移除这个切片吗？
+  code: title="确定要从合集中移除这个切片吗？"
+
+485:45 [chinese] [attribute:okText]
+  key:  collectionpreviewmodal_fixed.text_26
+  text: 确定
+  code: okText="确定"
+
+486:49 [chinese] [attribute:cancelText]
+  key:  collectionpreviewmodal_fixed.text_27
+  text: 取消
+  code: cancelText="取消"
+
+
+[src\components\CookieHelper.tsx]
+------------------------------------------------------------------------------------------
+19:15 [chinese] [object-field:title]
+  key:  cookiehelper.b
+  text: 登录B站
+  code: title: '登录B站',
+
+20:21 [chinese] [object-field:description]
+  key:  cookiehelper.b_2
+  text: 在浏览器中登录B站账号
+  code: description: '在浏览器中登录B站账号',
+
+24:22 [chinese] [attribute:message]
+  key:  cookiehelper.b_3
+  text: 第一步：登录B站
+  code: message="第一步：登录B站"
+
+25:26 [chinese] [attribute:description]
+  key:  cookiehelper.b_4
+  text: 请确保您已经在浏览器中成功登录了B站账号
+  code: description="请确保您已经在浏览器中成功登录了B站账号"
+
+48:15 [chinese] [object-field:title]
+  key:  cookiehelper.text
+  text: 打开开发者工具
+  code: title: '打开开发者工具',
+
+49:21 [chinese] [object-field:description]
+  key:  cookiehelper.f12
+  text: 按F12打开浏览器开发者工具
+  code: description: '按F12打开浏览器开发者工具',
+
+53:22 [chinese] [attribute:message]
+  key:  cookiehelper.text_2
+  text: 第二步：打开开发者工具
+  code: message="第二步：打开开发者工具"
+
+54:26 [chinese] [attribute:description]
+  key:  cookiehelper.text_3
+  text: 使用快捷键打开浏览器的开发者工具
+  code: description="使用快捷键打开浏览器的开发者工具"
+
+61:49 [chinese] [jsx-text]
+  key:  cookiehelper.text_4
+  text: 按
+  code: <Text strong>Windows/Linux:</Text> 按 <Text code>F12</Text> 键
+
+61:73 [chinese] [jsx-text]
+  key:  cookiehelper.text_5
+  text: 键
+  code: <Text strong>Windows/Linux:</Text> 按 <Text code>F12</Text> 键
+
+64:39 [chinese] [jsx-text]
+  key:  cookiehelper.text_6
+  text: 按
+  code: <Text strong>Mac:</Text> 按 <Text code>Command + Option + I</Text>
+
+78:15 [chinese] [object-field:title]
+  key:  cookiehelper.network
+  text: 切换到Network标签
+  code: title: '切换到Network标签',
+
+79:21 [chinese] [object-field:description]
+  key:  cookiehelper.network_2
+  text: 找到Network（网络）标签页
+  code: description: '找到Network（网络）标签页',
+
+83:22 [chinese] [attribute:message]
+  key:  cookiehelper.network_3
+  text: 第三步：切换到Network标签
+  code: message="第三步：切换到Network标签"
+
+84:26 [chinese] [attribute:description]
+  key:  cookiehelper.network_4
+  text: 在开发者工具中找到Network标签页
+  code: description="在开发者工具中找到Network标签页"
+
+94:46 [chinese] [jsx-text]
+  key:  cookiehelper.text_7
+  text: 标签
+  code: 2. 点击 <Text code>Network</Text> 标签
+
+108:15 [chinese] [object-field:title]
+  key:  cookiehelper.text_8
+  text: 刷新页面
+  code: title: '刷新页面',
+
+109:21 [chinese] [object-field:description]
+  key:  cookiehelper.b_5
+  text: 刷新B站页面以捕获请求
+  code: description: '刷新B站页面以捕获请求',
+
+113:22 [chinese] [attribute:message]
+  key:  cookiehelper.text_9
+  text: 第四步：刷新页面
+  code: message="第四步：刷新页面"
+
+114:26 [chinese] [attribute:description]
+  key:  cookiehelper.b_6
+  text: 刷新B站页面以捕获网络请求
+  code: description="刷新B站页面以捕获网络请求"
+
+124:40 [chinese] [jsx-text]
+  key:  cookiehelper.text_10
+  text: 或点击浏览器的刷新按钮
+  code: 2. 按 <Text code>F5</Text> 或点击浏览器的刷新按钮
+
+138:15 [chinese] [object-field:title]
+  key:  cookiehelper.cookie
+  text: 找到Cookie
+  code: title: '找到Cookie',
+
+139:21 [chinese] [object-field:description]
+  key:  cookiehelper.cookie_2
+  text: 在请求头中找到Cookie信息
+  code: description: '在请求头中找到Cookie信息',
+
+143:22 [chinese] [attribute:message]
+  key:  cookiehelper.cookie_3
+  text: 第五步：找到Cookie信息
+  code: message="第五步：找到Cookie信息"
+
+144:26 [chinese] [attribute:description]
+  key:  cookiehelper.cookie_4
+  text: 在任意请求中找到Cookie字段
+  code: description="在任意请求中找到Cookie字段"
+
+154:58 [chinese] [jsx-text]
+  key:  cookiehelper.text_11
+  text: 标签
+  code: 2. 点击该请求，在右侧面板中找到 <Text code>Headers</Text> 标签
+
+157:53 [chinese] [jsx-text]
+  key:  cookiehelper.text_12
+  text: 部分找到
+  code: 3. 在 <Text code>Request Headers</Text> 部分找到 <Text code>Cookie</Text> 字段
+
+157:83 [chinese] [jsx-text]
+  key:  cookiehelper.text_13
+  text: 字段
+  code: 3. 在 <Text code>Request Headers</Text> 部分找到 <Text code>Cookie</Text> 字段
+
+171:15 [chinese] [object-field:title]
+  key:  cookiehelper.cookie_5
+  text: 复制Cookie
+  code: title: '复制Cookie',
+
+172:21 [chinese] [object-field:description]
+  key:  cookiehelper.cookie_6
+  text: 复制完整的Cookie字符串
+  code: description: '复制完整的Cookie字符串',
+
+176:22 [chinese] [attribute:message]
+  key:  cookiehelper.cookie_7
+  text: 第六步：复制Cookie
+  code: message="第六步：复制Cookie"
+
+177:26 [chinese] [attribute:description]
+  key:  cookiehelper.cookie_8
+  text: 复制完整的Cookie字符串到剪贴板
+  code: description="复制完整的Cookie字符串到剪贴板"
+
+190:62 [chinese] [jsx-text]
+  key:  cookiehelper.text_14
+  text: 复制
+  code: 3. 或者双击选中整个Cookie值，然后按 <Text code>Ctrl+C</Text> 复制
+
+197:24 [chinese] [attribute:message]
+  key:  cookiehelper.text_15
+  text: 重要提示
+  code: message="重要提示"
+
+198:28 [chinese] [attribute:description]
+  key:  cookiehelper.cookie_9
+  text: Cookie包含您的登录信息，请妥善保管，不要分享给他人
+  code: description="Cookie包含您的登录信息，请妥善保管，不要分享给他人"
+
+221:17 [chinese] [jsx-text]
+  key:  cookiehelper.cookie_10
+  text: Cookie获取指南
+  code: <span>Cookie获取指南</span>
+
+242:20 [chinese] [attribute:message]
+  key:  cookiehelper.cookie_11
+  text: Cookie导入是最安全的登录方式
+  code: message="Cookie导入是最安全的登录方式"
+
+243:24 [chinese] [attribute:description]
+  key:  cookiehelper.cookie_b
+  text: 相比扫码登录，Cookie导入不会触发B站的风控机制，是最推荐的登录方式。
+  code: description="相比扫码登录，Cookie导入不会触发B站的风控机制，是最推荐的登录方式。"
+
+261:33 [chinese] [attribute:title]
+  key:  cookiehelper.cookie_12
+  text: Cookie格式示例
+  code: <Card size="small" title="Cookie格式示例">
+
+
+[src\components\CreateCollectionModal.tsx]
+------------------------------------------------------------------------------------------
+84:54 [chinese] [jsx-text]
+  key:  createcollectionmodal.text
+  text: 创建新合集
+  code: <Title level={3} className="modal-title">创建新合集</Title>
+
+85:46 [chinese] [jsx-text]
+  key:  createcollectionmodal.text_2
+  text: 将精选片段组合成一个主题合集
+  code: <Text className="modal-subtitle">将精选片段组合成一个主题合集</Text>
+
+97:28 [chinese] [jsx-text]
+  key:  createcollectionmodal.text_3
+  text: 合集标题
+  code: <Text strong>合集标题</Text>
+
+101:28 [chinese] [attribute:placeholder]
+  key:  createcollectionmodal.text_4
+  text: 请输入合集标题
+  code: placeholder="请输入合集标题"
+
+114:28 [chinese] [jsx-text]
+  key:  createcollectionmodal.text_5
+  text: 合集描述
+  code: <Text strong>合集描述</Text>
+
+117:28 [chinese] [attribute:placeholder]
+  key:  createcollectionmodal.text_6
+  text: 请输入合集描述（可选）
+  code: placeholder="请输入合集描述（可选）"
+
+131:28 [chinese] [jsx-text]
+  key:  createcollectionmodal.text_7
+  text: 选择片段
+  code: <Text strong>选择片段</Text>
+
+
+[src\components\DesktopSettings.tsx]
+------------------------------------------------------------------------------------------
+94:24 [chinese] [function:message.error]
+  key:  desktopsettings.text
+  text: 加载配置失败
+  code: message.error('加载配置失败');
+
+98:22 [chinese] [function:message.error]
+  key:  desktopsettings.text_2
+  text: 加载配置失败
+  code: message.error('加载配置失败');
+
+168:26 [chinese] [function:message.success]
+  key:  desktopsettings.text_3
+  text: 配置保存成功
+  code: message.success('配置保存成功');
+
+172:24 [chinese] [function:message.error]
+  key:  desktopsettings.errordata_detail
+  text: 配置保存失败: ${errorData.detail || '未知错误'}
+  code: message.error(`配置保存失败: ${errorData.detail || '未知错误'}`);
+
+176:22 [chinese] [function:message.error]
+  key:  desktopsettings.text_4
+  text: 配置保存失败
+  code: message.error('配置保存失败');
+
+199:28 [chinese] [jsx-text]
+  key:  desktopsettings.text_5
+  text: 桌面设置
+  code: <SettingOutlined /> 桌面设置
+
+204:48 [chinese] [jsx-text]
+  key:  desktopsettings.text_6
+  text: 基础设置
+  code: <TabPane tab={<span><SettingOutlined />基础设置</span>} key="basic">
+
+216:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_7
+  text: 应用名称
+  code: label="应用名称"
+
+225:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_8
+  text: 应用版本
+  code: label="应用版本"
+
+235:24 [chinese] [attribute:label]
+  key:  desktopsettings.text_9
+  text: 调试模式
+  code: label="调试模式"
+
+243:32 [chinese] [jsx-text]
+  key:  desktopsettings.text_10
+  text: 服务配置
+  code: <Title level={4}>服务配置</Title>
+
+248:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_11
+  text: 主机地址
+  code: label="主机地址"
+
+257:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_12
+  text: 端口
+  code: label="端口"
+
+267:24 [chinese] [attribute:label]
+  key:  desktopsettings.mb
+  text: 最大内存使用 (MB)
+  code: label="最大内存使用 (MB)"
+
+296:44 [chinese] [jsx-text]
+  key:  desktopsettings.api
+  text: API设置
+  code: <TabPane tab={<span><ApiOutlined />API设置</span>} key="api">
+
+304:32 [chinese] [jsx-text]
+  key:  desktopsettings.api_2
+  text: API密钥
+  code: <Title level={4}>API密钥</Title>
+
+309:46 [chinese] [attribute:placeholder]
+  key:  desktopsettings.dashscope_api_key
+  text: 请输入DashScope API Key
+  code: <Input.Password placeholder="请输入DashScope API Key" />
+
+316:46 [chinese] [attribute:placeholder]
+  key:  desktopsettings.openai_api_key
+  text: 请输入OpenAI API Key
+  code: <Input.Password placeholder="请输入OpenAI API Key" />
+
+323:46 [chinese] [attribute:placeholder]
+  key:  desktopsettings.gemini_api_key
+  text: 请输入Gemini API Key
+  code: <Input.Password placeholder="请输入Gemini API Key" />
+
+330:46 [chinese] [attribute:placeholder]
+  key:  desktopsettings.siliconflow_api_key
+  text: 请输入SiliconFlow API Key
+  code: <Input.Password placeholder="请输入SiliconFlow API Key" />
+
+335:32 [chinese] [jsx-text]
+  key:  desktopsettings.text_13
+  text: 模型配置
+  code: <Title level={4}>模型配置</Title>
+
+340:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_14
+  text: 默认模型
+  code: label="默认模型"
+
+349:28 [chinese] [attribute:label]
+  key:  desktopsettings.token
+  text: 最大Token数
+  code: label="最大Token数"
+
+359:24 [chinese] [attribute:label]
+  key:  desktopsettings.text_15
+  text: 超时时间 (秒)
+  code: label="超时时间 (秒)"
+
+380:45 [chinese] [jsx-text]
+  key:  desktopsettings.text_16
+  text: 处理设置
+  code: <TabPane tab={<span><ToolOutlined />处理设置</span>} key="processing">
+
+392:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_17
+  text: 块大小
+  code: label="块大小"
+
+401:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_18
+  text: 最小评分阈值
+  code: label="最小评分阈值"
+
+413:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_19
+  text: 每个合集最大片段数
+  code: label="每个合集最大片段数"
+
+422:28 [chinese] [attribute:label]
+  key:  desktopsettings.text_20
+  text: 最大重试次数
+  code: label="最大重试次数"
+
+445:49 [chinese] [jsx-text]
+  key:  desktopsettings.text_21
+  text: 系统信息
+  code: <TabPane tab={<span><DatabaseOutlined />系统信息</span>} key="system">
+
+451:28 [chinese] [attribute:title]
+  key:  desktopsettings.text_22
+  text: 操作系统
+  code: title="操作系统"
+
+458:28 [chinese] [attribute:title]
+  key:  desktopsettings.text_23
+  text: 架构
+  code: title="架构"
+
+464:28 [chinese] [attribute:title]
+  key:  desktopsettings.python
+  text: Python版本
+  code: title="Python版本"
+
+477:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_24
+  text: 总内存
+  code: title="总内存"
+
+483:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_25
+  text: 可用内存
+  code: title="可用内存"
+
+491:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_26
+  text: 内存使用率
+  code: title="内存使用率"
+
+498:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_27
+  text: 磁盘使用率
+  code: title="磁盘使用率"
+
+510:34 [chinese] [jsx-text]
+  key:  desktopsettings.text_28
+  text: 服务状态
+  code: <Title level={4}>服务状态</Title>
+
+514:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_29
+  text: 服务状态
+  code: title="服务状态"
+
+521:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_30
+  text: 端口
+  code: title="端口"
+
+527:30 [chinese] [attribute:title]
+  key:  desktopsettings.text_31
+  text: 运行时间
+  code: title="运行时间"
+
+
+[src\components\EditableCollectionTitle.tsx]
+------------------------------------------------------------------------------------------
+64:22 [chinese] [function:message.error]
+  key:  editablecollectiontitle.text
+  text: 标题不能为空
+  code: message.error('标题不能为空')
+
+69:22 [chinese] [function:message.error]
+  key:  editablecollectiontitle.maxlength
+  text: 标题长度不能超过${maxLength}个字符
+  code: message.error(`标题长度不能超过${maxLength}个字符`)
+
+81:24 [chinese] [function:message.success]
+  key:  editablecollectiontitle.text_2
+  text: 标题更新成功
+  code: message.success('标题更新成功')
+
+100:26 [chinese] [function:message.success]
+  key:  editablecollectiontitle.text_3
+  text: 标题生成成功，您可以继续编辑或点击保存
+  code: message.success('标题生成成功，您可以继续编辑或点击保存')
+
+102:24 [chinese] [function:message.error]
+  key:  editablecollectiontitle.text_4
+  text: 标题生成失败
+  code: message.error('标题生成失败')
+
+123:16 [chinese] [attribute:title]
+  key:  editablecollectiontitle.text_5
+  text: 编辑合集标题
+  code: title="编辑合集标题"
+
+138:26 [chinese] [attribute:placeholder]
+  key:  editablecollectiontitle.text_6
+  text: 请输入合集标题
+  code: placeholder="请输入合集标题"
+
+201:14 [chinese] [attribute:title]
+  key:  editablecollectiontitle.text_7
+  text: 点击编辑合集标题
+  code: title="点击编辑合集标题"
+
+
+[src\components\EditableTitle.tsx]
+------------------------------------------------------------------------------------------
+67:22 [chinese] [function:message.error]
+  key:  editabletitle.text
+  text: 标题不能为空
+  code: message.error('标题不能为空')
+
+72:22 [chinese] [function:message.error]
+  key:  editabletitle.maxlength
+  text: 标题长度不能超过${maxLength}个字符
+  code: message.error(`标题长度不能超过${maxLength}个字符`)
+
+84:24 [chinese] [function:message.success]
+  key:  editabletitle.text_2
+  text: 标题更新成功
+  code: message.success('标题更新成功')
+
+104:26 [chinese] [function:message.success]
+  key:  editabletitle.text_3
+  text: 标题生成成功，您可以继续编辑或点击保存
+  code: message.success('标题生成成功，您可以继续编辑或点击保存')
+
+106:24 [chinese] [function:message.error]
+  key:  editabletitle.text_4
+  text: 标题生成失败
+  code: message.error('标题生成失败')
+
+127:16 [chinese] [attribute:title]
+  key:  editabletitle.text_5
+  text: 编辑标题
+  code: title="编辑标题"
+
+142:26 [chinese] [attribute:placeholder]
+  key:  editabletitle.text_6
+  text: 请输入标题
+  code: placeholder="请输入标题"
+
+156:29 [chinese] [attribute:title]
+  key:  editabletitle.ai
+  text: AI生成标题
+  code: <Tooltip title="AI生成标题">
+
+196:14 [chinese] [attribute:title]
+  key:  editabletitle.text_7
+  text: 点击编辑标题
+  code: title="点击编辑标题"
+
+
+[src\components\ErrorBoundary.tsx]
+------------------------------------------------------------------------------------------
+146:22 [chinese] [attribute:title]
+  key:  errorboundary.text
+  text: 页面出现错误
+  code: title="页面出现错误"
+
+180:34 [chinese] [jsx-text]
+  key:  errorboundary.text_2
+  text: 错误详情
+  code: <Title level={5}>错误详情</Title>
+
+234:32 [chinese] [jsx-text]
+  key:  errorboundary.text_3
+  text: 常见解决方案
+  code: <Title level={5}>常见解决方案</Title>
+
+236:21 [chinese] [jsx-text]
+  key:  errorboundary.text_4
+  text: 刷新页面重试
+  code: <li>刷新页面重试</li>
+
+237:21 [chinese] [jsx-text]
+  key:  errorboundary.cookie
+  text: 清除浏览器缓存和 Cookie
+  code: <li>清除浏览器缓存和 Cookie</li>
+
+238:21 [chinese] [jsx-text]
+  key:  errorboundary.text_5
+  text: 检查网络连接
+  code: <li>检查网络连接</li>
+
+239:21 [chinese] [jsx-text]
+  key:  errorboundary.text_6
+  text: 尝试使用其他浏览器
+  code: <li>尝试使用其他浏览器</li>
+
+240:21 [chinese] [jsx-text]
+  key:  errorboundary.text_7
+  text: 如果问题持续存在，请联系技术支持
+  code: <li>如果问题持续存在，请联系技术支持</li>
+
+
+[src\components\FileUpload.tsx]
+------------------------------------------------------------------------------------------
+44:24 [chinese] [function:message.error]
+  key:  fileupload.text
+  text: 加载视频分类失败
+  code: message.error('加载视频分类失败')
+
+274:92 [chinese] [jsx-text]
+  key:  fileupload.srt_ai
+  text: 可选择导入字幕文件(.srt)或使用AI自动生成
+  code: 支持 MP4、AVI、MOV、MKV、WebM 格式，<Text style={{ color: '#52c41a', fontWeight: 600 }}>可选择导入字幕文件(.srt)或使用AI自动生成</Text>
+
+288:26 [chinese] [attribute:placeholder]
+  key:  fileupload.text_2
+  text: 请输入项目名称，用于标识您的视频项目
+  code: placeholder="请输入项目名称，用于标识您的视频项目"
+
+499:83 [chinese] [jsx-text]
+  key:  fileupload.text_3
+  text: 导入进度
+  code: <Text style={{ color: '#ffffff', fontWeight: 600, fontSize: '14px' }}>导入进度</Text>
+
+
+[src\components\FirstRunWizard.tsx]
+------------------------------------------------------------------------------------------
+67:24 [chinese] [function:message.error]
+  key:  firstrunwizard.llm_api_key
+  text: 请选择LLM提供商并输入API Key
+  code: message.error('请选择LLM提供商并输入API Key')
+
+85:24 [chinese] [function:message.error]
+  key:  firstrunwizard.text
+  text: 请选择语音识别方案
+  code: message.error('请选择语音识别方案')
+
+97:26 [chinese] [function:message.error]
+  key:  firstrunwizard.llm
+  text: LLM配置保存失败，请重试
+  code: message.error('LLM配置保存失败，请重试')
+
+117:24 [chinese] [function:message.success]
+  key:  firstrunwizard.autoclip
+  text: 配置完成!欢迎使用AutoClip
+  code: message.success('配置完成!欢迎使用AutoClip')
+
+122:22 [chinese] [function:message.error]
+  key:  firstrunwizard.errormessage
+  text: 配置保存失败: ${errorMessage}
+  code: message.error(`配置保存失败: ${errorMessage}`)
+
+133:21 [chinese] [function:message.info]
+  key:  firstrunwizard.ai
+  text: 已跳过AI模型配置,请稍后在配置页中进行设置
+  code: message.info('已跳过AI模型配置,请稍后在配置页中进行设置', 3)
+
+147:23 [chinese] [function:message.info]
+  key:  firstrunwizard.text_2
+  text: 已跳过语音识别配置,请稍后在配置页中进行设置
+  code: message.info('已跳过语音识别配置,请稍后在配置页中进行设置', 3)
+
+150:24 [chinese] [function:message.error]
+  key:  firstrunwizard.text_3
+  text: 配置保存失败,请重试
+  code: message.error('配置保存失败,请重试')
+
+334:24 [chinese] [function:message.warning]
+  key:  firstrunwizard.api_key
+  text: 请先输入API Key
+  code: message.warning('请先输入API Key')
+
+351:26 [chinese] [function:message.success]
+  key:  firstrunwizard.api
+  text: API连接测试成功!
+  code: message.success('API连接测试成功!')
+
+353:24 [chinese] [function:message.error]
+  key:  firstrunwizard.api_result_error
+  text: API连接测试失败: ${result.error || '未知错误'}
+  code: message.error(`API连接测试失败: ${result.error || '未知错误'}`)
+
+358:22 [chinese] [function:message.error]
+  key:  firstrunwizard.api_detail
+  text: API连接测试失败: ${detail}
+  code: message.error(`API连接测试失败: ${detail}`)
+
+368:23 [chinese] [object-field:description]
+  key:  firstrunwizard.dashscope_api_key
+  text: 注册阿里云账号,开通DashScope服务,创建API Key
+  code: description: '注册阿里云账号,开通DashScope服务,创建API Key'
+
+373:23 [chinese] [object-field:description]
+  key:  firstrunwizard.openai_api_keys
+  text: 注册OpenAI账号,在API Keys页面创建新的密钥
+  code: description: '注册OpenAI账号,在API Keys页面创建新的密钥'
+
+378:23 [chinese] [object-field:description]
+  key:  firstrunwizard.google_api_keys
+  text: 使用Google账号登录,在API Keys页面创建密钥
+  code: description: '使用Google账号登录,在API Keys页面创建密钥'
+
+383:23 [chinese] [object-field:description]
+  key:  firstrunwizard.siliconflow_api_key
+  text: 注册SiliconFlow账号,在控制台创建API Key
+  code: description: '注册SiliconFlow账号,在控制台创建API Key'
+
+447:24 [chinese] [attribute:label]
+  key:  firstrunwizard.ai_2
+  text: 选择AI模型提供商
+  code: label="选择AI模型提供商"
+
+451:52 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.text_4
+  text: 选择提供商
+  code: <Select size="middle" placeholder="选择提供商">
+
+454:36 [chinese] [jsx-text]
+  key:  firstrunwizard.text_5
+  text: 阿里云通义千问
+  code: <Text strong>阿里云通义千问</Text>
+
+455:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_6
+  text: (推荐国内用户)
+  code: <Text type="secondary">(推荐国内用户)</Text>
+
+461:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_7
+  text: (需要科学上网)
+  code: <Text type="secondary">(需要科学上网)</Text>
+
+467:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_8
+  text: (需要科学上网)
+  code: <Text type="secondary">(需要科学上网)</Text>
+
+473:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_9
+  text: (国内替代方案)
+  code: <Text type="secondary">(国内替代方案)</Text>
+
+489:34 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.api_key_2
+  text: 请输入您的API Key
+  code: placeholder="请输入您的API Key"
+
+546:24 [chinese] [attribute:label]
+  key:  firstrunwizard.text_10
+  text: 选择语音识别方案
+  code: label="选择语音识别方案"
+
+550:52 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.text_11
+  text: 选择方案
+  code: <Select size="middle" placeholder="选择方案">
+
+554:36 [chinese] [jsx-text]
+  key:  firstrunwizard.whisper
+  text: 本地 Whisper 模型
+  code: <Text strong>本地 Whisper 模型</Text>
+
+555:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_12
+  text: (免费离线，推荐新手)
+  code: <Text type="secondary">(免费离线，推荐新手)</Text>
+
+562:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_13
+  text: (云端处理，准确度更高)
+  code: <Text type="secondary">(云端处理，准确度更高)</Text>
+
+569:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_14
+  text: (企业级服务)
+  code: <Text type="secondary">(企业级服务)</Text>
+
+576:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_15
+  text: (多语言支持)
+  code: <Text type="secondary">(多语言支持)</Text>
+
+582:36 [chinese] [jsx-text]
+  key:  firstrunwizard.text_16
+  text: 阿里云语音识别
+  code: <Text strong>阿里云语音识别</Text>
+
+583:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_17
+  text: (中文优化)
+  code: <Text type="secondary">(中文优化)</Text>
+
+589:36 [chinese] [jsx-text]
+  key:  firstrunwizard.api_2
+  text: 自定义API
+  code: <Text strong>自定义API</Text>
+
+590:46 [chinese] [jsx-text]
+  key:  firstrunwizard.text_18
+  text: (自定义服务端点)
+  code: <Text type="secondary">(自定义服务端点)</Text>
+
+604:32 [chinese] [attribute:label]
+  key:  firstrunwizard.text_19
+  text: 选择模型大小
+  code: label="选择模型大小"
+
+607:60 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.text_20
+  text: 选择模型
+  code: <Select size="middle" placeholder="选择模型">
+
+608:48 [chinese] [jsx-text]
+  key:  firstrunwizard.tiny_39mb
+  text: Tiny (39MB) - 最快速度
+  code: <Option value="tiny">Tiny (39MB) - 最快速度</Option>
+
+609:48 [chinese] [jsx-text]
+  key:  firstrunwizard.base_74mb
+  text: Base (74MB) - 平衡选择 (推荐)
+  code: <Option value="base">Base (74MB) - 平衡选择 (推荐)</Option>
+
+610:49 [chinese] [jsx-text]
+  key:  firstrunwizard.small_244mb
+  text: Small (244MB) - 较好准确度
+  code: <Option value="small">Small (244MB) - 较好准确度</Option>
+
+611:50 [chinese] [jsx-text]
+  key:  firstrunwizard.medium_769mb
+  text: Medium (769MB) - 高准确度
+  code: <Option value="medium">Medium (769MB) - 高准确度</Option>
+
+612:49 [chinese] [jsx-text]
+  key:  firstrunwizard.large_1550mb
+  text: Large (1550MB) - 最高准确度
+  code: <Option value="large">Large (1550MB) - 最高准确度</Option>
+
+628:40 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.openai_api_key
+  text: 请输入OpenAI API Key
+  code: placeholder="请输入OpenAI API Key"
+
+645:42 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.azure_speech_api_key
+  text: 请输入Azure Speech API Key
+  code: placeholder="请输入Azure Speech API Key"
+
+650:34 [chinese] [attribute:label]
+  key:  firstrunwizard.azure
+  text: Azure 区域
+  code: label="Azure 区域"
+
+655:42 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.eastus_westus2
+  text: 例如: eastus, westus2
+  code: placeholder="例如: eastus, westus2"
+
+672:40 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.google_speech_to_text_api_key
+  text: 请输入Google Speech-to-Text API Key
+  code: placeholder="请输入Google Speech-to-Text API Key"
+
+682:32 [chinese] [attribute:label]
+  key:  firstrunwizard.api_key_3
+  text: 阿里云 API Key
+  code: label="阿里云 API Key"
+
+688:40 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.api_key_4
+  text: 请输入阿里云语音识别 API Key
+  code: placeholder="请输入阿里云语音识别 API Key"
+
+699:34 [chinese] [attribute:label]
+  key:  firstrunwizard.api_key_5
+  text: 自定义 API Key
+  code: label="自定义 API Key"
+
+705:42 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.api_key_6
+  text: 请输入自定义 API Key
+  code: placeholder="请输入自定义 API Key"
+
+710:34 [chinese] [attribute:label]
+  key:  firstrunwizard.api_3
+  text: API 端点
+  code: label="API 端点"
+
+716:42 [chinese] [attribute:placeholder]
+  key:  firstrunwizard.https_form_item_space_return_null_form_item_form_item_should
+  text: 例如: https: /> </Form.Item> </Space> ) } return null }} </Form.Item> <Form.Item shouldUpdate={(prevValues, currentValues) => prevValues.speechMethod !== currentValues.speechMethod} style={{ marginBottom: '8px' }}> {({ getFieldValue }) => { const speechMethod = getFieldValue('speechMethod') const getMethodDescription = (method: string) => { const descriptions: Record<string, { icon: string; name: string; description: string }> = { whisper_local: { icon: '🆓', name: '本地 Whisper 模型', description: '免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。' }, openai_api: { icon: '🤖', name: 'OpenAI Whisper API', description: '云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。' }, azure_speech: { icon: '☁️', name: 'Azure Speech Services', description: '企业级语音识别服务，支持多种语言和方言，适合商业使用。' }, google_speech: { icon: '🌐', name: 'Google Speech-to-Text', description: '多语言支持，识别准确度高，支持实时语音识别。' }, aliyun_speech: { icon: '☁️', name: '阿里云语音识别', description: '中文优化，国内访问速度快，支持多种中文方言识别。' }, custom_api: { icon: '⚙️', name: '自定义API', description: '支持自定义服务端点，可以接入自己的语音识别服务。' } } return descriptions[method] || descriptions.whisper_local } const methodInfo = getMethodDescription(speechMethod) return ( <Alert message={ <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}> <span>{methodInfo.icon}</span> <span>{methodInfo.name} 配置说明</span> </div> } description={ <div style={{ fontSize: '12px' }}> <p style={{ margin: '4px 0' }}>{methodInfo.description}</p> </div> } type=
+  code: placeholder="例如: https://api.example.com/speech"
+
+737:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_21
+  text: 免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。
+  code: description: '免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。'
+
+742:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_22
+  text: 云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。
+  code: description: '云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。'
+
+747:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_23
+  text: 企业级语音识别服务，支持多种语言和方言，适合商业使用。
+  code: description: '企业级语音识别服务，支持多种语言和方言，适合商业使用。'
+
+752:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_24
+  text: 多语言支持，识别准确度高，支持实时语音识别。
+  code: description: '多语言支持，识别准确度高，支持实时语音识别。'
+
+757:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_25
+  text: 中文优化，国内访问速度快，支持多种中文方言识别。
+  code: description: '中文优化，国内访问速度快，支持多种中文方言识别。'
+
+762:39 [chinese] [object-field:description]
+  key:  firstrunwizard.text_26
+  text: 支持自定义服务端点，可以接入自己的语音识别服务。
+  code: description: '支持自定义服务端点，可以接入自己的语音识别服务。'
+
+844:17 [chinese] [jsx-text]
+  key:  firstrunwizard.text_27
+  text: 正在保存配置并创建示例项目...
+  code: <Text>正在保存配置并创建示例项目...</Text>
+
+
+[src\components\InlineProgressBar.tsx]
+------------------------------------------------------------------------------------------
+22:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.text
+  text: 从视频转写文本中提取结构性大纲
+  code: { id: 1, name: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+
+23:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.srt
+  text: 基于SRT字幕定位话题时间区间
+  code: { id: 2, name: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+
+24:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.text_2
+  text: 多维度评估片段质量与传播潜力
+  code: { id: 3, name: '内容评分', description: '多维度评估片段质量与传播潜力' },
+
+25:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.text_3
+  text: 为高分片段生成吸引人的标题
+  code: { id: 4, name: '标题生成', description: '为高分片段生成吸引人的标题' },
+
+26:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.text_4
+  text: 将相关片段聚合为合集推荐
+  code: { id: 5, name: '主题聚类', description: '将相关片段聚合为合集推荐' },
+
+27:40 [chinese] [object-field:description]
+  key:  inlineprogressbar.ffmpeg
+  text: 使用FFmpeg生成切片与合集视频
+  code: { id: 6, name: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+
+
+[src\components\NotificationList.tsx]
+------------------------------------------------------------------------------------------
+153:17 [chinese] [jsx-text]
+  key:  notificationlist.text
+  text: 通知
+  code: <span>通知</span>
+
+
+[src\components\OfflineModeIndicator.tsx]
+------------------------------------------------------------------------------------------
+194:16 [chinese] [attribute:title]
+  key:  offlinemodeindicator.text
+  text: 检查网络状态
+  code: title="检查网络状态"
+
+
+[src\components\PipelineControl.tsx]
+------------------------------------------------------------------------------------------
+173:46 [chinese] [object-field:text]
+  key:  pipelinecontrol.text
+  text: 处理中
+  code: return { color: 'processing', text: '处理中', icon: <PlayCircleOutlined /> };
+
+175:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_2
+  text: 已完成
+  code: return { color: 'success', text: '已完成', icon: <CheckCircleOutlined /> };
+
+177:41 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_3
+  text: 失败
+  code: return { color: 'error', text: '失败', icon: <CloseCircleOutlined /> };
+
+179:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_4
+  text: 等待中
+  code: return { color: 'default', text: '等待中', icon: <ClockCircleOutlined /> };
+
+181:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_5
+  text: 已暂停
+  code: return { color: 'warning', text: '已暂停', icon: <PauseCircleOutlined /> };
+
+191:46 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_6
+  text: 运行中
+  code: return { color: 'processing', text: '运行中' };
+
+193:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_7
+  text: 已完成
+  code: return { color: 'success', text: '已完成' };
+
+195:41 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_8
+  text: 失败
+  code: return { color: 'error', text: '失败' };
+
+197:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_9
+  text: 等待中
+  code: return { color: 'default', text: '等待中' };
+
+199:43 [chinese] [object-field:text]
+  key:  pipelinecontrol.text_10
+  text: 已取消
+  code: return { color: 'warning', text: '已取消' };
+
+211:19 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_11
+  text: 正在获取流水线状态...
+  code: <Text>正在获取流水线状态...</Text>
+
+222:20 [chinese] [attribute:message]
+  key:  pipelinecontrol.text_12
+  text: 获取流水线状态失败
+  code: message="获取流水线状态失败"
+
+308:62 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_13
+  text: 总任务
+  code: <div style={{ fontSize: '12px', color: '#666' }}>总任务</div>
+
+315:62 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_14
+  text: 运行中
+  code: <div style={{ fontSize: '12px', color: '#666' }}>运行中</div>
+
+322:62 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_15
+  text: 已完成
+  code: <div style={{ fontSize: '12px', color: '#666' }}>已完成</div>
+
+329:62 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_16
+  text: 失败
+  code: <div style={{ fontSize: '12px', color: '#666' }}>失败</div>
+
+336:26 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_17
+  text: 当前任务:
+  code: <Text strong>当前任务:</Text>
+
+361:34 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_10
+  text: 状态每10秒自动更新
+  code: <Text type="secondary">状态每10秒自动更新</Text>
+
+367:16 [chinese] [attribute:title]
+  key:  pipelinecontrol.text_18
+  text: 流水线状态详情
+  code: title="流水线状态详情"
+
+376:28 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_19
+  text: 项目状态:
+  code: <Text strong>项目状态: </Text>
+
+381:36 [chinese] [jsx-text]
+  key:  pipelinecontrol.text_20
+  text: 任务列表
+  code: header={<Text strong>任务列表</Text>}
+
+
+[src\components\ProjectCard.tsx]
+------------------------------------------------------------------------------------------
+300:24 [chinese] [function:message.error]
+  key:  projectcard.text
+  text: 重试失败，请稍后再试
+  code: message.error('重试失败，请稍后再试')
+
+352:32 [chinese] [function:message.warning]
+  key:  projectcard.text_2
+  text: 项目正在导入中，请稍后再查看详情
+  code: message.warning('项目正在导入中，请稍后再查看详情')
+
+358:32 [chinese] [function:message.warning]
+  key:  projectcard.text_3
+  text: 项目处理中，请完成后再查看
+  code: message.warning('项目处理中，请完成后再查看')
+
+373:49 [chinese] [jsx-text]
+  key:  projectcard.text_4
+  text: 生成封面中…
+  code: <div style={{ fontSize: '12px' }}>生成封面中…</div>
+
+464:28 [chinese] [attribute:title]
+  key:  projectcard.text_5
+  text: 确定要删除这个项目吗？
+  code: title="确定要删除这个项目吗？"
+
+465:34 [chinese] [attribute:description]
+  key:  projectcard.text_6
+  text: 删除后无法恢复
+  code: description="删除后无法恢复"
+
+473:29 [chinese] [attribute:okText]
+  key:  projectcard.text_7
+  text: 确定
+  code: okText="确定"
+
+474:33 [chinese] [attribute:cancelText]
+  key:  projectcard.text_8
+  text: 取消
+  code: cancelText="取消"
+
+534:41 [chinese] [function:message.info]
+  key:  projectcard.text_9
+  text: 下载功能开发中...
+  code: message.info('下载功能开发中...')
+
+552:30 [chinese] [attribute:title]
+  key:  projectcard.text_10
+  text: 确定要删除这个项目吗？
+  code: title="确定要删除这个项目吗？"
+
+553:36 [chinese] [attribute:description]
+  key:  projectcard.text_11
+  text: 删除后无法恢复
+  code: description="删除后无法恢复"
+
+561:31 [chinese] [attribute:okText]
+  key:  projectcard.text_12
+  text: 确定
+  code: okText="确定"
+
+562:35 [chinese] [attribute:cancelText]
+  key:  projectcard.text_13
+  text: 取消
+  code: cancelText="取消"
+
+643:76 [chinese] [jsx-text]
+  key:  projectcard.text_14
+  text: 切片
+  code: <span className="ac-mono">{project.total_clips || 0}</span> 切片
+
+645:82 [chinese] [jsx-text]
+  key:  projectcard.text_15
+  text: 合集
+  code: <span className="ac-mono">{project.total_collections || 0}</span> 合集
+
+
+[src\components\ProjectStatusIndicator.tsx]
+------------------------------------------------------------------------------------------
+40:25 [chinese] [object-field:text]
+  key:  projectstatusindicator.text
+  text: 处理中
+  code: return { text: '处理中', badgeStatus: 'processing' as const, color: '#1890ff' }
+
+42:25 [chinese] [object-field:text]
+  key:  projectstatusindicator.text_2
+  text: 已完成
+  code: return { text: '已完成', badgeStatus: 'success' as const, color: '#52c41a' }
+
+44:25 [chinese] [object-field:text]
+  key:  projectstatusindicator.text_3
+  text: 失败
+  code: return { text: '失败', badgeStatus: 'error' as const, color: '#ff4d4f' }
+
+46:25 [chinese] [object-field:text]
+  key:  projectstatusindicator.text_4
+  text: 未知
+  code: return { text: '未知', badgeStatus: 'default' as const, color: '#d9d9d9' }
+
+
+[src\components\ProjectTaskManager.tsx]
+------------------------------------------------------------------------------------------
+34:22 [chinese] [function:message.success]
+  key:  projecttaskmanager.text
+  text: 任务列表已刷新
+  code: message.success('任务列表已刷新')
+
+46:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_2
+  text: 确认删除
+  code: title: '确认删除',
+
+53:26 [chinese] [function:message.success]
+  key:  projecttaskmanager.taskid
+  text: 任务已删除: ${taskId}
+  code: message.success(`任务已删除: ${taskId}`)
+
+77:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_3
+  text: 任务名称
+  code: title: '任务名称',
+
+88:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_4
+  text: 状态
+  code: title: '状态',
+
+101:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_5
+  text: 进度
+  code: title: '进度',
+
+113:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_6
+  text: 当前步骤
+  code: title: '当前步骤',
+
+119:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_7
+  text: 创建时间
+  code: title: '创建时间',
+
+129:15 [chinese] [object-field:title]
+  key:  projecttaskmanager.text_8
+  text: 操作
+  code: title: '操作',
+
+139:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_9
+  text: 查看详情
+  code: title="查看详情"
+
+146:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_10
+  text: 删除任务
+  code: title="删除任务"
+
+156:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_11
+  text: 任务管理
+  code: <Card title="任务管理" size="small">
+
+158:34 [chinese] [jsx-text]
+  key:  projecttaskmanager.text_12
+  text: 该项目暂无任务记录
+  code: <Text type="secondary">该项目暂无任务记录</Text>
+
+168:17 [chinese] [jsx-text]
+  key:  projecttaskmanager.text_13
+  text: 任务管理
+  code: <span>任务管理</span>
+
+186:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_14
+  text: 总任务数
+  code: title="总任务数"
+
+193:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_15
+  text: 活跃任务
+  code: title="活跃任务"
+
+201:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_16
+  text: 已完成
+  code: title="已完成"
+
+209:20 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_17
+  text: 失败任务
+  code: title="失败任务"
+
+222:19 [chinese] [attribute-expression:title]
+  key:  projecttaskmanager.activetasks_length
+  text: 活跃任务 (${activeTasks.length})
+  code: title={`活跃任务 (${activeTasks.length})`}
+
+252:16 [chinese] [attribute:title]
+  key:  projecttaskmanager.text_18
+  text: 任务详情
+  code: title="任务详情"
+
+
+[src\components\RealTimeStatus.tsx]
+------------------------------------------------------------------------------------------
+90:22 [chinese] [attribute:title]
+  key:  realtimestatus.text
+  text: 任务总数
+  code: title="任务总数"
+
+99:22 [chinese] [attribute:title]
+  key:  realtimestatus.text_2
+  text: 加载状态
+  code: title="加载状态"
+
+108:22 [chinese] [attribute:title]
+  key:  realtimestatus.text_3
+  text: 未读通知
+  code: title="未读通知"
+
+118:20 [chinese] [attribute:title]
+  key:  realtimestatus.text_4
+  text: 任务进度
+  code: title="任务进度"
+
+
+[src\components\SimpleProgressBar.tsx]
+------------------------------------------------------------------------------------------
+64:34 [chinese] [jsx-text]
+  key:  simpleprogressbar.text
+  text: 等待开始处理...
+  code: <Text type="secondary">等待开始处理...</Text>
+
+
+[src\components\SimpleProjectCard.tsx]
+------------------------------------------------------------------------------------------
+87:15 [chinese] [object-field:title]
+  key:  simpleprojectcard.text
+  text: 确认删除
+  code: title: '确认删除',
+
+112:16 [chinese] [object-field:text]
+  key:  simpleprojectcard.text_2
+  text: 处理失败
+  code: text: '处理失败'
+
+120:16 [chinese] [object-field:text]
+  key:  simpleprojectcard.text_3
+  text: 处理完成
+  code: text: '处理完成'
+
+128:16 [chinese] [object-field:text]
+  key:  simpleprojectcard.text_4
+  text: 处理中
+  code: text: '处理中'
+
+135:14 [chinese] [object-field:text]
+  key:  simpleprojectcard.text_5
+  text: 等待处理
+  code: text: '等待处理'
+
+149:27 [chinese] [attribute:title]
+  key:  simpleprojectcard.text_6
+  text: 开始处理
+  code: <Tooltip title="开始处理">
+
+160:27 [chinese] [attribute:title]
+  key:  simpleprojectcard.text_7
+  text: 重试
+  code: <Tooltip title="重试">
+
+169:25 [chinese] [attribute:title]
+  key:  simpleprojectcard.text_8
+  text: 查看详情
+  code: <Tooltip title="查看详情">
+
+177:25 [chinese] [attribute:title]
+  key:  simpleprojectcard.text_9
+  text: 删除项目
+  code: <Tooltip title="删除项目">
+
+227:34 [chinese] [function:message.success]
+  key:  simpleprojectcard.text_10
+  text: 项目处理完成！
+  code: message.success('项目处理完成！')
+
+229:32 [chinese] [function:message.error]
+  key:  simpleprojectcard.text_11
+  text: 项目处理失败！
+  code: message.error('项目处理失败！')
+
+
+[src\components\SpeechRecognitionConfig.tsx]
+------------------------------------------------------------------------------------------
+72:22 [chinese] [function:message.error]
+  key:  speechrecognitionconfig.text
+  text: 卸载失败
+  code: message.error('卸载失败')
+
+79:21 [chinese] [function:message.info]
+  key:  speechrecognitionconfig.model
+  text: 开始下载模型 ${model}
+  code: message.info(`开始下载模型 ${model}`)
+
+90:24 [chinese] [function:message.success]
+  key:  speechrecognitionconfig.model_2
+  text: 已删除模型 ${model}
+  code: message.success(`已删除模型 ${model}`)
+
+93:22 [chinese] [function:message.error]
+  key:  speechrecognitionconfig.text_2
+  text: 删除失败
+  code: message.error('删除失败')
+
+108:18 [chinese] [attribute:message]
+  key:  speechrecognitionconfig.whisper
+  text: 什么时候需要 Whisper？
+  code: message="什么时候需要 Whisper？"
+
+109:22 [chinese] [attribute:description]
+  key:  speechrecognitionconfig.b_ai_whisper_whisper_whisper
+  text: 当导入的视频自带字幕（例如 B站 的 AI 字幕）时，会直接使用现成字幕，无需 Whisper。只有当视频没有字幕时，才需要本地 Whisper 来自动转写生成字幕。Whisper 为按需安装，装不装、装哪个模型都由你决定。
+  code: description="当导入的视频自带字幕（例如 B站 的 AI 字幕）时，会直接使用现成字幕，无需 Whisper。只有当视频没有字幕时，才需要本地 Whisper 来自动转写生成字幕。Whisper 为按需安装，装不装、装哪个模型都由你决定。"
+
+113:49 [chinese] [attribute:message]
+  key:  speechrecognitionconfig.text_3
+  text: 当前平台不支持
+  code: <Alert type="warning" showIcon message="当前平台不支持"
+
+114:24 [chinese] [attribute:description]
+  key:  speechrecognitionconfig.mlx_whisper_apple_silicon_m_mac
+  text: mlx-whisper 仅支持 Apple Silicon (M 系列) Mac。
+  code: description="mlx-whisper 仅支持 Apple Silicon (M 系列) Mac。" />
+
+118:63 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.whisper_2
+  text: Whisper 运行时
+  code: <Card size="small" title={<Space><ThunderboltOutlined />Whisper 运行时</Space>}>
+
+123:28 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_4
+  text: 已安装
+  code: <Text strong>已安装</Text>
+
+126:32 [chinese] [attribute:title]
+  key:  speechrecognitionconfig.whisper_3
+  text: 卸载 Whisper 运行时？已下载的模型不会被删除。
+  code: <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+
+126:97 [chinese] [attribute:okText]
+  key:  speechrecognitionconfig.text_5
+  text: 卸载
+  code: <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+
+126:113 [chinese] [attribute:cancelText]
+  key:  speechrecognitionconfig.text_6
+  text: 取消
+  code: <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+
+127:69 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_7
+  text: 卸载运行时
+  code: <Button danger size="small" icon={<DeleteOutlined />}>卸载运行时</Button>
+
+157:51 [chinese] [attribute:message]
+  key:  speechrecognitionconfig.text_8
+  text: 安装出错
+  code: <Alert type="error" showIcon message="安装出错" description={runtime?.message} />
+
+158:93 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_9
+  text: 重试安装
+  code: <Button icon={<ReloadOutlined />} onClick={handleInstall} disabled={!supported}>重试安装</Button>
+
+164:33 [chinese] [attribute:title]
+  key:  speechrecognitionconfig.whisper_4
+  text: Whisper 模型
+  code: <Card size="small" title="Whisper 模型">
+
+166:34 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.whisper_5
+  text: 请先安装 Whisper 运行时，然后在这里下载模型。
+  code: <Text type="secondary">请先安装 Whisper 运行时，然后在这里下载模型。</Text>
+
+178:43 [chinese] [attribute-expression:title]
+  key:  speechrecognitionconfig.m_name
+  text: 删除模型 ${m.name}？
+  code: <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+
+178:108 [chinese] [attribute:okText]
+  key:  speechrecognitionconfig.text_10
+  text: 删除
+  code: <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+
+178:124 [chinese] [attribute:cancelText]
+  key:  speechrecognitionconfig.text_11
+  text: 取消
+  code: <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+
+179:79 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_12
+  text: 删除
+  code: <Button size="small" danger icon={<DeleteOutlined />}>删除</Button>
+
+182:61 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_13
+  text: 下载中
+  code: <Button size="small" loading disabled>下载中</Button>
+
+195:59 [chinese] [jsx-text]
+  key:  speechrecognitionconfig.text_14
+  text: 已下载
+  code: {downloaded && <Tag color="green">已下载</Tag>}
+
+197:41 [chinese] [attribute:title]
+  key:  speechrecognitionconfig.text_15
+  text: 速度
+  code: <Tooltip title="速度"><Tag>{m.speed}</Tag></Tooltip>
+
+
+[src\components\TaskProgress.tsx]
+------------------------------------------------------------------------------------------
+90:76 [chinese] [object-field:text]
+  key:  taskprogress.text
+  text: 处理中
+  code: return { icon: <PlayCircleOutlined />, color: 'processing', text: '处理中' };
+
+92:74 [chinese] [object-field:text]
+  key:  taskprogress.text_2
+  text: 已完成
+  code: return { icon: <CheckCircleOutlined />, color: 'success', text: '已完成' };
+
+94:72 [chinese] [object-field:text]
+  key:  taskprogress.text_3
+  text: 失败
+  code: return { icon: <CloseCircleOutlined />, color: 'error', text: '失败' };
+
+96:74 [chinese] [object-field:text]
+  key:  taskprogress.text_4
+  text: 等待中
+  code: return { icon: <ClockCircleOutlined />, color: 'default', text: '等待中' };
+
+122:19 [chinese] [jsx-text]
+  key:  taskprogress.text_5
+  text: 正在获取任务进度...
+  code: <Text>正在获取任务进度...</Text>
+
+177:22 [chinese] [jsx-text]
+  key:  taskprogress.text_6
+  text: 当前步骤:
+  code: <Text strong>当前步骤: </Text>
+
+183:24 [chinese] [jsx-text]
+  key:  taskprogress.text_7
+  text: 详细信息:
+  code: <Text strong>详细信息: </Text>
+
+210:34 [chinese] [jsx-text]
+  key:  taskprogress.text_5
+  text: 进度每5秒自动更新
+  code: <Text type="secondary">进度每5秒自动更新</Text>
+
+
+[src\components\TaskProgressDisplay.tsx]
+------------------------------------------------------------------------------------------
+36:24 [chinese] [function:message.success]
+  key:  taskprogressdisplay.text
+  text: 任务处理完成！
+  code: message.success('任务处理完成！');
+
+41:22 [chinese] [function:message.error]
+  key:  taskprogressdisplay.state_message
+  text: 任务处理失败: ${state.message}
+  code: message.error(`任务处理失败: ${state.message}`);
+
+110:24 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_2
+  text: 任务进度
+  code: <Text strong>任务进度</Text>
+
+125:20 [chinese] [attribute:title]
+  key:  taskprogressdisplay.text_3
+  text: 终态校准
+  code: title="终态校准"
+
+167:30 [chinese] [jsx-text]
+  key:  taskprogressdisplay.id
+  text: 任务ID:
+  code: <Text strong>任务ID:</Text> {taskState.task_id}
+
+170:30 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_4
+  text: 序列号:
+  code: <Text strong>序列号:</Text> {taskState.seq}
+
+173:30 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_5
+  text: 时间戳:
+  code: <Text strong>时间戳:</Text> {new Date(taskState.ts * 1000).toLocaleString()}
+
+176:30 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_6
+  text: 最后更新:
+  code: <Text strong>最后更新:</Text> {new Date(taskState.last_updated).toLocaleString()}
+
+180:32 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_7
+  text: 元数据:
+  code: <Text strong>元数据:</Text> {JSON.stringify(taskState.meta, null, 2)}
+
+184:30 [chinese] [jsx-text]
+  key:  taskprogressdisplay.text_8
+  text: 连接状态:
+  code: <Text strong>连接状态:</Text>
+
+
+[src\components\TaskProgressModal.tsx]
+------------------------------------------------------------------------------------------
+42:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text
+  text: 大纲提取
+  code: { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+
+42:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.text_2
+  text: 从视频转写文本中提取结构性大纲
+  code: { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+
+43:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text_3
+  text: 时间定位
+  code: { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+
+43:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.srt
+  text: 基于SRT字幕定位话题时间区间
+  code: { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+
+44:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text_4
+  text: 内容评分
+  code: { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+
+44:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.text_5
+  text: 多维度评估片段质量与传播潜力
+  code: { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+
+45:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text_6
+  text: 标题生成
+  code: { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+
+45:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.text_7
+  text: 为高分片段生成吸引人的标题
+  code: { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+
+46:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text_8
+  text: 主题聚类
+  code: { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+
+46:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.text_9
+  text: 将相关片段聚合为合集推荐
+  code: { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+
+47:15 [chinese] [object-field:title]
+  key:  taskprogressmodal.text_10
+  text: 视频切割
+  code: { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+
+47:36 [chinese] [object-field:description]
+  key:  taskprogressmodal.ffmpeg
+  text: 使用FFmpeg生成切片与合集视频
+  code: { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+
+149:17 [chinese] [jsx-text]
+  key:  taskprogressmodal.text_11
+  text: 任务处理进度
+  code: <span>任务处理进度</span>
+
+193:30 [chinese] [jsx-text]
+  key:  taskprogressmodal.text_12
+  text: 整体进度
+  code: <Text strong>整体进度</Text>
+
+229:26 [chinese] [attribute:message]
+  key:  taskprogressmodal.text_13
+  text: 处理失败
+  code: message="处理失败"
+
+238:79 [chinese] [jsx-text]
+  key:  taskprogressmodal.text_14
+  text: 处理步骤
+  code: <Text strong style={{ marginBottom: '16px', display: 'block' }}>处理步骤</Text>
+
+260:26 [chinese] [attribute:message]
+  key:  taskprogressmodal.text_15
+  text: 处理完成
+  code: message="处理完成"
+
+261:30 [chinese] [attribute:description]
+  key:  taskprogressmodal.text_16
+  text: 视频已成功处理，您可以查看生成的片段和合集。
+  code: description="视频已成功处理，您可以查看生成的片段和合集。"
+
+
+[src\components\UnifiedStatusBar.tsx]
+------------------------------------------------------------------------------------------
+142:58 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text
+  text: 导入中
+  code: if (status === 'importing') return <ProgressRow label="导入中" percent={downloadProgress} />
+
+143:60 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_2
+  text: 下载中
+  code: if (status === 'downloading') return <ProgressRow label="下载中" percent={currentDownloadProgress} />
+
+146:47 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_3
+  text: 初始化中
+  code: if (!progress) return <ProgressRow label="初始化中" percent={0} />
+
+148:53 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_4
+  text: 处理失败
+  code: if (isFailed(message)) return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+
+152:56 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_5
+  text: 已完成
+  code: if (status === 'completed') return <StatusRow label="已完成" dot="var(--ac-ok)" color="var(--ac-sub)" />
+
+153:53 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_6
+  text: 处理失败
+  code: if (status === 'failed') return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+
+156:28 [chinese] [attribute:label]
+  key:  unifiedstatusbar.text_7
+  text: 等待中
+  code: return <StatusRow label="等待中" dot="var(--ac-muted)" color="var(--ac-muted)" />
+
+
+[src\components\UploadModal.tsx]
+------------------------------------------------------------------------------------------
+99:19 [chinese] [function:message.info]
+  key:  uploadmodal.b
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3)
+
+104:22 [chinese] [function:message.error]
+  key:  uploadmodal.b_2
+  text: 请选择B站账号
+  code: message.error('请选择B站账号')
+
+136:24 [chinese] [function:message.success]
+  key:  uploadmodal.text
+  text: 投稿任务创建成功！
+  code: message.success('投稿任务创建成功！')
+
+265:24 [chinese] [function:message.success]
+  key:  uploadmodal.text_2
+  text: 投稿任务已取消
+  code: message.success('投稿任务已取消')
+
+269:22 [chinese] [function:message.error]
+  key:  uploadmodal.text_3
+  text: 取消投稿失败，请重试
+  code: message.error('取消投稿失败，请重试')
+
+301:17 [chinese] [jsx-text]
+  key:  uploadmodal.b_3
+  text: 投稿到B站
+  code: <span>投稿到B站</span>
+
+326:24 [chinese] [attribute:label]
+  key:  uploadmodal.b_4
+  text: B站账号
+  code: label="B站账号"
+
+330:38 [chinese] [attribute:placeholder]
+  key:  uploadmodal.b_5
+  text: 选择要使用的B站账号
+  code: <Select placeholder="选择要使用的B站账号">
+
+341:24 [chinese] [attribute:label]
+  key:  uploadmodal.text_4
+  text: 分区
+  code: label="分区"
+
+345:38 [chinese] [attribute:placeholder]
+  key:  uploadmodal.text_5
+  text: 选择视频分区
+  code: <Select placeholder="选择视频分区" showSearch>
+
+357:20 [chinese] [attribute:label]
+  key:  uploadmodal.text_6
+  text: 标题
+  code: label="标题"
+
+361:33 [chinese] [attribute:placeholder]
+  key:  uploadmodal.text_7
+  text: 输入视频标题
+  code: <Input placeholder="输入视频标题" maxLength={80} showCount />
+
+365:20 [chinese] [attribute:label]
+  key:  uploadmodal.text_8
+  text: 描述
+  code: label="描述"
+
+370:28 [chinese] [attribute:placeholder]
+  key:  uploadmodal.text_9
+  text: 输入视频描述
+  code: placeholder="输入视频描述"
+
+378:20 [chinese] [attribute:label]
+  key:  uploadmodal.text_10
+  text: 标签
+  code: label="标签"
+
+380:20 [chinese] [attribute:extra]
+  key:  uploadmodal.text_10
+  text: 最多添加10个标签，用逗号分隔
+  code: extra="最多添加10个标签，用逗号分隔"
+
+384:28 [chinese] [attribute:placeholder]
+  key:  uploadmodal.text_11
+  text: 输入标签，按回车确认
+  code: placeholder="输入标签，按回车确认"
+
+399:46 [chinese] [function:message.info]
+  key:  uploadmodal.text_12
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+426:24 [chinese] [attribute:message]
+  key:  uploadmodal.text_13
+  text: 投稿成功！
+  code: message="投稿成功！"
+
+427:29 [chinese] [attribute-expression:description]
+  key:  uploadmodal.bv_uploadprogress_bvid
+  text: BV号: ${uploadProgress.bvid}
+  code: description={`BV号: ${uploadProgress.bvid}`}
+
+436:24 [chinese] [attribute:message]
+  key:  uploadmodal.text_14
+  text: 投稿失败
+  code: message="投稿失败"
+
+
+[src\components\UploadQueueManager.tsx]
+------------------------------------------------------------------------------------------
+113:22 [chinese] [function:message.error]
+  key:  uploadqueuemanager.text
+  text: 获取上传历史失败
+  code: message.error('获取上传历史失败');
+
+145:26 [chinese] [function:message.success]
+  key:  uploadqueuemanager.data_task_id
+  text: 任务已添加: ${data.task_id}
+  code: message.success(`任务已添加: ${data.task_id}`);
+
+152:24 [chinese] [function:message.error]
+  key:  uploadqueuemanager.error_detail
+  text: 添加任务失败: ${error.detail}
+  code: message.error(`添加任务失败: ${error.detail}`);
+
+156:22 [chinese] [function:message.error]
+  key:  uploadqueuemanager.text_2
+  text: 添加任务失败
+  code: message.error('添加任务失败');
+
+184:26 [chinese] [function:message.success]
+  key:  uploadqueuemanager.data_count
+  text: 批量添加了 ${data.count} 个任务
+  code: message.success(`批量添加了 ${data.count} 个任务`);
+
+191:24 [chinese] [function:message.error]
+  key:  uploadqueuemanager.error_detail_2
+  text: 批量添加失败: ${error.detail}
+  code: message.error(`批量添加失败: ${error.detail}`);
+
+195:22 [chinese] [function:message.error]
+  key:  uploadqueuemanager.text_3
+  text: 批量添加失败
+  code: message.error('批量添加失败');
+
+207:26 [chinese] [function:message.success]
+  key:  uploadqueuemanager.text_4
+  text: 任务已取消
+  code: message.success('任务已取消');
+
+212:24 [chinese] [function:message.error]
+  key:  uploadqueuemanager.error_detail_3
+  text: 取消任务失败: ${error.detail}
+  code: message.error(`取消任务失败: ${error.detail}`);
+
+216:22 [chinese] [function:message.error]
+  key:  uploadqueuemanager.text_5
+  text: 取消任务失败
+  code: message.error('取消任务失败');
+
+229:26 [chinese] [function:message.success]
+  key:  uploadqueuemanager.data_new_task_id
+  text: 任务已重新添加: ${data.new_task_id}
+  code: message.success(`任务已重新添加: ${data.new_task_id}`);
+
+234:24 [chinese] [function:message.error]
+  key:  uploadqueuemanager.error_detail_4
+  text: 重试任务失败: ${error.detail}
+  code: message.error(`重试任务失败: ${error.detail}`);
+
+238:22 [chinese] [function:message.error]
+  key:  uploadqueuemanager.text_6
+  text: 重试任务失败
+  code: message.error('重试任务失败');
+
+245:43 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_7
+  text: 等待中
+  code: pending: { color: 'default', text: '等待中' },
+
+246:39 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_8
+  text: 队列中
+  code: queued: { color: 'blue', text: '队列中' },
+
+247:45 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_9
+  text: 处理中
+  code: processing: { color: 'orange', text: '处理中' },
+
+248:43 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_10
+  text: 已完成
+  code: completed: { color: 'green', text: '已完成' },
+
+249:38 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_11
+  text: 失败
+  code: failed: { color: 'red', text: '失败' },
+
+250:42 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_12
+  text: 已取消
+  code: cancelled: { color: 'gray', text: '已取消' }
+
+260:37 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_13
+  text: 低
+  code: 1: { color: 'default', text: '低' },
+
+261:34 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_14
+  text: 普通
+  code: 2: { color: 'blue', text: '普通' },
+
+262:36 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_15
+  text: 高
+  code: 3: { color: 'orange', text: '高' },
+
+263:33 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_16
+  text: 紧急
+  code: 4: { color: 'red', text: '紧急' }
+
+266:75 [chinese] [object-field:text]
+  key:  uploadqueuemanager.text_17
+  text: 普通
+  code: const config = priorityConfig[priority] || { color: 'default', text: '普通' };
+
+273:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.id
+  text: 任务ID
+  code: title: '任务ID',
+
+284:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_18
+  text: 标题
+  code: title: '标题',
+
+290:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_19
+  text: 状态
+  code: title: '状态',
+
+297:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_20
+  text: 优先级
+  code: title: '优先级',
+
+304:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_21
+  text: 进度
+  code: title: '进度',
+
+317:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.id_2
+  text: 账号ID
+  code: title: '账号ID',
+
+323:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.bv
+  text: BV号
+  code: title: 'BV号',
+
+334:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_22
+  text: 创建时间
+  code: title: '创建时间',
+
+341:15 [chinese] [object-field:title]
+  key:  uploadqueuemanager.text_23
+  text: 操作
+  code: title: '操作',
+
+401:24 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_24
+  text: 队列中任务
+  code: title="队列中任务"
+
+410:24 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_25
+  text: 处理中任务
+  code: title="处理中任务"
+
+419:24 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_26
+  text: 最大并发数
+  code: title="最大并发数"
+
+428:24 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_27
+  text: 可用账号
+  code: title="可用账号"
+
+466:20 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_28
+  text: 上传任务
+  code: <Card title="上传任务">
+
+484:16 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_29
+  text: 添加上传任务
+  code: title="添加上传任务"
+
+497:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_30
+  text: 视频文件路径
+  code: label="视频文件路径"
+
+505:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_31
+  text: 视频标题
+  code: label="视频标题"
+
+508:33 [chinese] [attribute:placeholder]
+  key:  uploadqueuemanager.text_32
+  text: 视频标题
+  code: <Input placeholder="视频标题" maxLength={80} />
+
+513:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_33
+  text: 视频描述
+  code: label="视频描述"
+
+515:45 [chinese] [attribute:placeholder]
+  key:  uploadqueuemanager.text_34
+  text: 视频描述
+  code: <TextArea rows={4} placeholder="视频描述" maxLength={2000} />
+
+520:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_35
+  text: 标签
+  code: label="标签"
+
+522:33 [chinese] [attribute:placeholder]
+  key:  uploadqueuemanager.text_1_2_3
+  text: 标签1,标签2,标签3
+  code: <Input placeholder="标签1,标签2,标签3" />
+
+527:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_36
+  text: 指定账号
+  code: label="指定账号"
+
+529:34 [chinese] [attribute:placeholder]
+  key:  uploadqueuemanager.text_37
+  text: 自动选择最佳账号
+  code: <Select placeholder="自动选择最佳账号" allowClear>
+
+542:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_38
+  text: 优先级
+  code: label="优先级"
+
+546:35 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_39
+  text: 低
+  code: <Option value="low">低</Option>
+
+547:38 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_40
+  text: 普通
+  code: <Option value="normal">普通</Option>
+
+548:36 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_41
+  text: 高
+  code: <Option value="high">高</Option>
+
+549:38 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_42
+  text: 紧急
+  code: <Option value="urgent">紧急</Option>
+
+557:16 [chinese] [attribute:title]
+  key:  uploadqueuemanager.text_43
+  text: 批量上传任务
+  code: title="批量上传任务"
+
+570:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_44
+  text: 任务列表
+  code: label="任务列表"
+
+572:20 [chinese] [attribute:extra]
+  key:  uploadqueuemanager.text_45
+  text: 每行一个任务，格式：视频路径|标题|描述|标签
+  code: extra="每行一个任务，格式：视频路径|标题|描述|标签"
+
+576:29 [chinese] [attribute-expression:placeholder]
+  key:  uploadqueuemanager.path_to_video1_mp4_1_1_1_2_path_to_video2_mp4_2_2_3_4
+  text: /path/to/video1.mp4|视频标题1|视频描述1|标签1,标签2 /path/to/video2.mp4|视频标题2|视频描述2|标签3,标签4
+  code: placeholder={`/path/to/video1.mp4|视频标题1|视频描述1|标签1,标签2
+
+583:20 [chinese] [attribute:label]
+  key:  uploadqueuemanager.text_46
+  text: 批量优先级
+  code: label="批量优先级"
+
+587:35 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_47
+  text: 低
+  code: <Option value="low">低</Option>
+
+588:38 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_48
+  text: 普通
+  code: <Option value="normal">普通</Option>
+
+589:36 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_49
+  text: 高
+  code: <Option value="high">高</Option>
+
+590:38 [chinese] [jsx-text]
+  key:  uploadqueuemanager.text_50
+  text: 紧急
+  code: <Option value="urgent">紧急</Option>
+
+
+[src\components\UploadTaskManager.tsx]
+------------------------------------------------------------------------------------------
+96:22 [chinese] [function:message.error]
+  key:  uploadtaskmanager.text
+  text: 获取投稿任务失败:
+  code: message.error('获取投稿任务失败: ' + (error.message || '未知错误'))
+
+106:19 [chinese] [function:message.info]
+  key:  uploadtaskmanager.b
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3);
+
+112:24 [chinese] [function:message.success]
+  key:  uploadtaskmanager.text_2
+  text: 任务重试已启动
+  code: message.success('任务重试已启动')
+
+115:22 [chinese] [function:message.error]
+  key:  uploadtaskmanager.text_3
+  text: 重试任务失败:
+  code: message.error('重试任务失败: ' + (error.message || '未知错误'))
+
+121:19 [chinese] [function:message.info]
+  key:  uploadtaskmanager.b_2
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3);
+
+127:24 [chinese] [function:message.success]
+  key:  uploadtaskmanager.text_4
+  text: 任务已取消
+  code: message.success('任务已取消')
+
+130:22 [chinese] [function:message.error]
+  key:  uploadtaskmanager.text_5
+  text: 取消任务失败:
+  code: message.error('取消任务失败: ' + (error.message || '未知错误'))
+
+253:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_6
+  text: 任务信息
+  code: title: '任务信息',
+
+265:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_7
+  text: 切片数量
+  code: title: '切片数量',
+
+273:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_8
+  text: 分区
+  code: title: '分区',
+
+281:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_9
+  text: 状态
+  code: title: '状态',
+
+290:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_10
+  text: 进度
+  code: title: '进度',
+
+304:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_11
+  text: 创建时间
+  code: title: '创建时间',
+
+309:15 [chinese] [object-field:title]
+  key:  uploadtaskmanager.text_12
+  text: 操作
+  code: title: '操作',
+
+335:22 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_13
+  text: 确定要取消这个任务吗？
+  code: title="确定要取消这个任务吗？"
+
+337:23 [chinese] [attribute:okText]
+  key:  uploadtaskmanager.text_14
+  text: 确定
+  code: okText="确定"
+
+338:27 [chinese] [attribute:cancelText]
+  key:  uploadtaskmanager.text_15
+  text: 取消
+  code: cancelText="取消"
+
+363:31 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_16
+  text: 总任务数
+  code: <Statistic title="总任务数" value={stats.total} />
+
+368:31 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_17
+  text: 待处理
+  code: <Statistic title="待处理" value={stats.pending} valueStyle={{ color: '#faad14' }} />
+
+373:31 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_18
+  text: 处理中
+  code: <Statistic title="处理中" value={stats.processing} valueStyle={{ color: '#1890ff' }} />
+
+378:31 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_19
+  text: 成功
+  code: <Statistic title="成功" value={stats.success} valueStyle={{ color: '#52c41a' }} />
+
+383:31 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_20
+  text: 失败
+  code: <Statistic title="失败" value={stats.failed} valueStyle={{ color: '#ff4d4f' }} />
+
+389:22 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_21
+  text: 成功率
+  code: title="成功率"
+
+402:31 [chinese] [attribute:label]
+  key:  uploadtaskmanager.text_22
+  text: 状态
+  code: <Form.Item label="状态" style={{ marginBottom: 0 }}>
+
+404:30 [chinese] [attribute:placeholder]
+  key:  uploadtaskmanager.text_23
+  text: 选择状态
+  code: placeholder="选择状态"
+
+409:41 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_24
+  text: 待处理
+  code: <Option value="pending">待处理</Option>
+
+410:44 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_25
+  text: 处理中
+  code: <Option value="processing">处理中</Option>
+
+411:41 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_26
+  text: 成功
+  code: <Option value="success">成功</Option>
+
+412:40 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_27
+  text: 失败
+  code: <Option value="failed">失败</Option>
+
+417:31 [chinese] [attribute:label]
+  key:  uploadtaskmanager.text_28
+  text: 时间范围
+  code: <Form.Item label="时间范围" style={{ marginBottom: 0 }}>
+
+426:31 [chinese] [attribute:label]
+  key:  uploadtaskmanager.text_29
+  text: 关键词
+  code: <Form.Item label="关键词" style={{ marginBottom: 0 }}>
+
+428:30 [chinese] [attribute:placeholder]
+  key:  uploadtaskmanager.text_30
+  text: 搜索标题或描述
+  code: placeholder="搜索标题或描述"
+
+451:21 [chinese] [attribute-expression:title]
+  key:  uploadtaskmanager.filteredtasks_length
+  text: 投稿任务列表 (${filteredTasks.length})
+  code: <Card title={`投稿任务列表 (${filteredTasks.length})`}>
+
+468:16 [chinese] [attribute:title]
+  key:  uploadtaskmanager.text_31
+  text: 任务详情
+  code: title="任务详情"
+
+482:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.id
+  text: 任务ID:
+  code: <div><strong>任务ID:</strong> {selectedTask.id}</div>
+
+483:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.id_2
+  text: 项目ID:
+  code: <div><strong>项目ID:</strong> {selectedTask.project_id}</div>
+
+484:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_32
+  text: 标题:
+  code: <div><strong>标题:</strong> {selectedTask.title}</div>
+
+485:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_33
+  text: 描述:
+  code: <div><strong>描述:</strong> {selectedTask.description}</div>
+
+488:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_34
+  text: 状态:
+  code: <div><strong>状态:</strong>
+
+493:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_35
+  text: 分区:
+  code: <div><strong>分区:</strong>
+
+499:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_36
+  text: 创建时间:
+  code: <div><strong>创建时间:</strong> {dayjs(selectedTask.created_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+
+500:30 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_37
+  text: 更新时间:
+  code: <div><strong>更新时间:</strong> {dayjs(selectedTask.updated_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+
+507:23 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_38
+  text: 切片信息:
+  code: <strong>切片信息:</strong>
+
+519:27 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_39
+  text: 标签:
+  code: <strong>标签:</strong>
+
+533:27 [chinese] [jsx-text]
+  key:  uploadtaskmanager.bv
+  text: BV号:
+  code: <strong>BV号:</strong> {selectedTask.bvid}
+
+542:27 [chinese] [jsx-text]
+  key:  uploadtaskmanager.text_40
+  text: 错误信息:
+  code: <strong>错误信息:</strong>
+
+
+[src\components\UploadToBilibili.tsx]
+------------------------------------------------------------------------------------------
+22:17 [chinese] [jsx-text]
+  key:  uploadtobilibili.b
+  text: B站分区信息
+  code: <span>B站分区信息</span>
+
+36:24 [chinese] [jsx-text]
+  key:  uploadtobilibili.id
+  text: 分区ID:
+  code: <Text strong>分区ID: </Text>
+
+
+[src\hooks\useCollectionVideoDownload.ts]
+------------------------------------------------------------------------------------------
+19:21 [chinese] [function:message.info]
+  key:  hooks.usecollectionvideodownload.text
+  text: 正在按您的顺序生成合集视频...
+  code: message.info('正在按您的顺序生成合集视频...')
+
+25:24 [chinese] [function:message.success]
+  key:  hooks.usecollectionvideodownload.text_2
+  text: 合集视频生成成功，正在下载...
+  code: message.success('合集视频生成成功，正在下载...')
+
+30:28 [chinese] [function:message.success]
+  key:  hooks.usecollectionvideodownload.text_3
+  text: 合集视频下载完成
+  code: message.success('合集视频下载完成')
+
+33:26 [chinese] [function:message.error]
+  key:  hooks.usecollectionvideodownload.text_4
+  text: 下载失败，请稍后重试
+  code: message.error('下载失败，请稍后重试')
+
+39:22 [chinese] [function:message.error]
+  key:  hooks.usecollectionvideodownload.text_5
+  text: 生成合集视频失败
+  code: message.error('生成合集视频失败')
+
+
+[src\hooks\useNotifications.ts]
+------------------------------------------------------------------------------------------
+95:15 [chinese] [object-field:title]
+  key:  hooks.usenotifications.message_error_type
+  text: 错误: ${message.error_type}
+  code: title: `错误: ${message.error_type}`,
+
+
+[src\pages\DebugPage.tsx]
+------------------------------------------------------------------------------------------
+76:24 [chinese] [function:message.success]
+  key:  debugpage.text
+  text: 桌面模式检测完成
+  code: message.success('桌面模式检测完成')
+
+134:26 [chinese] [function:message.success]
+  key:  debugpage.api
+  text: 所有API连接测试通过
+  code: message.success('所有API连接测试通过')
+
+136:26 [chinese] [function:message.warning]
+  key:  debugpage.api_errors_length
+  text: 部分API测试失败: ${errors.length}个错误
+  code: message.warning(`部分API测试失败: ${errors.length}个错误`)
+
+157:24 [chinese] [function:message.error]
+  key:  debugpage.api_key
+  text: 请填写API Key和提供商
+  code: message.error('请填写API Key和提供商')
+
+201:24 [chinese] [function:message.success]
+  key:  debugpage.api_key_2
+  text: API Key保存测试成功！
+  code: message.success('API Key保存测试成功！')
+
+231:28 [chinese] [jsx-text]
+  key:  debugpage.autoclip
+  text: AutoClip 调试页面
+  code: <BugOutlined /> AutoClip 调试页面
+
+241:28 [chinese] [attribute:title]
+  key:  debugpage.text_2
+  text: 桌面模式检测
+  code: <Card title="桌面模式检测" extra={
+
+260:45 [chinese] [attribute:label]
+  key:  debugpage.text_3
+  text: 桌面模式状态
+  code: <Descriptions.Item label="桌面模式状态">
+
+265:45 [chinese] [attribute:label]
+  key:  debugpage.text_4
+  text: 检测来源
+  code: <Descriptions.Item label="检测来源">
+
+268:45 [chinese] [attribute:label]
+  key:  debugpage.text_5
+  text: 环境信息
+  code: <Descriptions.Item label="环境信息" span={2}>
+
+279:28 [chinese] [attribute:title]
+  key:  debugpage.api_2
+  text: API连接测试
+  code: <Card title="API连接测试" extra={
+
+296:31 [chinese] [jsx-text]
+  key:  debugpage.api_3
+  text: 设置API
+  code: <Text>设置API</Text>
+
+307:31 [chinese] [jsx-text]
+  key:  debugpage.api_4
+  text: 桌面模式API
+  code: <Text>桌面模式API</Text>
+
+318:31 [chinese] [jsx-text]
+  key:  debugpage.api_5
+  text: API测试接口
+  code: <Text>API测试接口</Text>
+
+328:28 [chinese] [attribute:title]
+  key:  debugpage.api_key_3
+  text: API Key保存测试
+  code: <Card title="API Key保存测试" extra={
+
+343:32 [chinese] [attribute:label]
+  key:  debugpage.api_6
+  text: API提供商
+  code: label="API提供商"
+
+355:54 [chinese] [attribute:placeholder]
+  key:  debugpage.api_key_4
+  text: 请输入API Key
+  code: <Input.Password placeholder="请输入API Key" />
+
+366:30 [chinese] [attribute:title]
+  key:  debugpage.text_6
+  text: 当前设置信息
+  code: <Card title="当前设置信息">
+
+388:30 [chinese] [attribute:title]
+  key:  debugpage.text_7
+  text: 错误信息
+  code: <Card title="错误信息" style={{ borderColor: '#ff4d4f' }}>
+
+404:28 [chinese] [attribute:title]
+  key:  debugpage.text_8
+  text: 使用说明
+  code: <Card title="使用说明">
+
+406:28 [chinese] [attribute:message]
+  key:  debugpage.text_9
+  text: 调试步骤
+  code: message="调试步骤"
+
+409:26 [chinese] [jsx-text]
+  key:  debugpage.text_1
+  text: 1. 首先检查"桌面模式检测"是否显示为"是"
+  code: <p>1. 首先检查"桌面模式检测"是否显示为"是"</p>
+
+410:26 [chinese] [jsx-text]
+  key:  debugpage.text_2_api
+  text: 2. 然后测试"API连接测试"，确保所有连接都显示绿色
+  code: <p>2. 然后测试"API连接测试"，确保所有连接都显示绿色</p>
+
+411:26 [chinese] [jsx-text]
+  key:  debugpage.text_3_api_key_api_key
+  text: 3. 最后在"API Key保存测试"中输入真实的API Key进行测试
+  code: <p>3. 最后在"API Key保存测试"中输入真实的API Key进行测试</p>
+
+412:26 [chinese] [jsx-text]
+  key:  debugpage.text_4
+  text: 4. 如果出现错误，请查看"错误信息"部分
+  code: <p>4. 如果出现错误，请查看"错误信息"部分</p>
+
+
+[src\pages\HomePage.tsx]
+------------------------------------------------------------------------------------------
+72:22 [chinese] [function:message.error]
+  key:  homepage.text
+  text: 加载项目失败
+  code: message.error('加载项目失败')
+
+85:24 [chinese] [function:message.success]
+  key:  homepage.text_2
+  text: 项目删除成功
+  code: message.success('项目删除成功')
+
+87:22 [chinese] [function:message.error]
+  key:  homepage.text_3
+  text: 删除项目失败
+  code: message.error('删除项目失败')
+
+97:22 [chinese] [function:message.success]
+  key:  homepage.text_4
+  text: 已开始重试处理项目
+  code: message.success('已开始重试处理项目')
+
+108:24 [chinese] [function:message.warning]
+  key:  homepage.text_5
+  text: 项目正在导入中，请稍后再查看详情
+  code: message.warning('项目正在导入中，请稍后再查看详情')
+
+209:38 [chinese] [function:message.success]
+  key:  homepage.text_6
+  text: 项目创建成功，正在处理中...
+  code: message.success('项目创建成功，正在处理中...')
+
+249:32 [chinese] [attribute:placeholder]
+  key:  homepage.text_7
+  text: 全部状态
+  code: placeholder="全部状态"
+
+257:39 [chinese] [jsx-text]
+  key:  homepage.text_8
+  text: 全部状态
+  code: <Option value="all">全部状态</Option>
+
+258:45 [chinese] [jsx-text]
+  key:  homepage.text_9
+  text: 已完成
+  code: <Option value="completed">已完成</Option>
+
+259:46 [chinese] [jsx-text]
+  key:  homepage.text_10
+  text: 处理中
+  code: <Option value="processing">处理中</Option>
+
+260:41 [chinese] [jsx-text]
+  key:  homepage.text_11
+  text: 处理失败
+  code: <Option value="error">处理失败</Option>
+
+
+[src\pages\ProcessingPage.tsx]
+------------------------------------------------------------------------------------------
+29:15 [chinese] [object-field:title]
+  key:  processingpage.text
+  text: 大纲提取
+  code: { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+
+29:36 [chinese] [object-field:description]
+  key:  processingpage.text_2
+  text: 从视频转写文本中提取结构性大纲
+  code: { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+
+30:15 [chinese] [object-field:title]
+  key:  processingpage.text_3
+  text: 时间定位
+  code: { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+
+30:36 [chinese] [object-field:description]
+  key:  processingpage.srt
+  text: 基于SRT字幕定位话题时间区间
+  code: { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+
+31:15 [chinese] [object-field:title]
+  key:  processingpage.text_4
+  text: 内容评分
+  code: { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+
+31:36 [chinese] [object-field:description]
+  key:  processingpage.text_5
+  text: 多维度评估片段质量与传播潜力
+  code: { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+
+32:15 [chinese] [object-field:title]
+  key:  processingpage.text_6
+  text: 标题生成
+  code: { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+
+32:36 [chinese] [object-field:description]
+  key:  processingpage.text_7
+  text: 为高分片段生成吸引人的标题
+  code: { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+
+33:15 [chinese] [object-field:title]
+  key:  processingpage.text_8
+  text: 主题聚类
+  code: { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+
+33:36 [chinese] [object-field:description]
+  key:  processingpage.text_9
+  text: 将相关片段聚合为合集推荐
+  code: { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+
+34:15 [chinese] [object-field:title]
+  key:  processingpage.text_10
+  text: 视频切割
+  code: { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+
+34:36 [chinese] [object-field:description]
+  key:  processingpage.ffmpeg
+  text: 使用FFmpeg生成切片与合集视频
+  code: { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+
+64:22 [chinese] [function:message.error]
+  key:  processingpage.text_11
+  text: 加载项目失败
+  code: message.error('加载项目失败')
+
+76:24 [chinese] [function:message.success]
+  key:  processingpage.text_12
+  text: 开始处理项目
+  code: message.success('开始处理项目')
+
+78:22 [chinese] [function:message.error]
+  key:  processingpage.text_13
+  text: 启动处理失败
+  code: message.error('启动处理失败')
+
+92:26 [chinese] [function:message.success]
+  key:  processingpage.text_14
+  text: 🎉 视频处理完成！正在跳转到结果页面...
+  code: message.success('🎉 视频处理完成！正在跳转到结果页面...')
+
+101:24 [chinese] [function:message.error]
+  key:  processingpage.errormsg
+  text: 处理失败: ${errorMsg}
+  code: message.error(`处理失败: ${errorMsg}`)
+
+104:23 [chinese] [function:message.info]
+  key:  processingpage.text_15
+  text: 您可以返回首页重新上传文件或联系技术支持
+  code: message.info('您可以返回首页重新上传文件或联系技术支持', 5)
+
+112:24 [chinese] [function:message.error]
+  key:  processingpage.text_16
+  text: 项目不存在或已被删除
+  code: message.error('项目不存在或已被删除')
+
+115:26 [chinese] [function:message.warning]
+  key:  processingpage.text_17
+  text: 网络连接超时，正在重试...
+  code: message.warning('网络连接超时，正在重试...')
+
+117:24 [chinese] [function:message.error]
+  key:  processingpage.text_18
+  text: 获取处理状态失败，请刷新页面重试
+  code: message.error('获取处理状态失败，请刷新页面重试')
+
+155:28 [chinese] [jsx-text]
+  key:  processingpage.text_19
+  text: 视频处理进度
+  code: <Title level={2}>视频处理进度</Title>
+
+173:22 [chinese] [attribute:message]
+  key:  processingpage.text_20
+  text: 处理失败
+  code: message="处理失败"
+
+198:24 [chinese] [attribute:title]
+  key:  processingpage.text_21
+  text: 处理进度
+  code: <Card title="处理进度">
+
+202:32 [chinese] [jsx-text]
+  key:  processingpage.text_22
+  text: 总体进度
+  code: <Text strong>总体进度</Text>
+
+216:30 [chinese] [jsx-text]
+  key:  processingpage.text_23
+  text: 当前步骤:
+  code: <Text strong>当前步骤: </Text>
+
+241:22 [chinese] [attribute:message]
+  key:  processingpage.text_24
+  text: 处理完成
+  code: message="处理完成"
+
+242:26 [chinese] [attribute:description]
+  key:  processingpage.text_25
+  text: 视频已成功处理完成，正在跳转到项目详情页...
+  code: description="视频已成功处理完成，正在跳转到项目详情页..."
+
+
+[src\pages\ProjectDetailPage.tsx]
+------------------------------------------------------------------------------------------
+99:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text
+  text: 加载项目失败
+  code: message.error('加载项目失败')
+
+119:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_2
+  text: 开始处理
+  code: message.success('开始处理')
+
+123:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_3
+  text: 启动处理失败
+  code: message.error('启动处理失败')
+
+139:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_4
+  text: 合集创建成功
+  code: message.success('合集创建成功')
+
+142:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_5
+  text: 创建合集失败
+  code: message.error('创建合集失败')
+
+155:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_6
+  text: 切片已从合集中移除
+  code: message.success('切片已从合集中移除')
+
+158:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_7
+  text: 移除切片失败
+  code: message.error('移除切片失败')
+
+168:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_8
+  text: 合集已删除
+  code: message.success('合集已删除')
+
+171:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_9
+  text: 删除合集失败
+  code: message.error('删除合集失败')
+
+179:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_10
+  text: 合集顺序已更新
+  code: message.success('合集顺序已更新')
+
+182:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_11
+  text: 更新合集顺序失败
+  code: message.error('更新合集顺序失败')
+
+190:24 [chinese] [function:message.success]
+  key:  projectdetailpage.text_12
+  text: 切片已添加到合集
+  code: message.success('切片已添加到合集')
+
+193:22 [chinese] [function:message.error]
+  key:  projectdetailpage.text_13
+  text: 添加切片失败
+  code: message.error('添加切片失败')
+
+233:20 [chinese] [attribute:message]
+  key:  projectdetailpage.text_14
+  text: 加载失败
+  code: message="加载失败"
+
+285:58 [chinese] [jsx-text]
+  key:  projectdetailpage.ai
+  text: AI推荐合集
+  code: <Title level={4} style={{ margin: 0 }}>AI推荐合集</Title>
+
+360:91 [chinese] [jsx-text]
+  key:  projectdetailpage.text_15
+  text: 视频片段
+  code: <Title level={4} style={{ margin: 0, color: '#ffffff', fontWeight: 600 }}>视频片段</Title>
+
+369:95 [chinese] [jsx-text]
+  key:  projectdetailpage.text_16
+  text: 排序
+  code: <Text style={{ fontSize: '13px', color: 'var(--ac-sub)', fontWeight: 500 }}>排序</Text>
+
+486:71 [chinese] [jsx-text]
+  key:  projectdetailpage.text_17
+  text: 暂无视频片段
+  code: <Text style={{ color: '#888', fontSize: '14px' }}>暂无视频片段</Text>
+
+508:25 [chinese] [jsx-text]
+  key:  projectdetailpage.text_18
+  text: 项目还未完成处理
+  code: <Text>项目还未完成处理</Text>
+
+510:42 [chinese] [jsx-text]
+  key:  projectdetailpage.ai_2
+  text: 处理完成后可查看视频片段和AI合集
+  code: <Text type="secondary">处理完成后可查看视频片段和AI合集</Text>
+
+
+[src\pages\SettingsPage.tsx]
+------------------------------------------------------------------------------------------
+30:21 [chinese] [object-field:description]
+  key:  settingspage.text
+  text: 阿里云通义千问大模型服务
+  code: description: '阿里云通义千问大模型服务',
+
+38:21 [chinese] [object-field:description]
+  key:  settingspage.openai_gpt
+  text: OpenAI GPT系列模型
+  code: description: 'OpenAI GPT系列模型',
+
+46:21 [chinese] [object-field:description]
+  key:  settingspage.google_gemini
+  text: Google Gemini大模型
+  code: description: 'Google Gemini大模型',
+
+54:21 [chinese] [object-field:description]
+  key:  settingspage.text_2
+  text: 硅基流动模型服务
+  code: description: '硅基流动模型服务',
+
+163:23 [chinese] [function:message.info]
+  key:  settingspage.web
+  text: Web模式下配置无法保存，请在桌面应用中使用完整功能
+  code: message.info('Web模式下配置无法保存，请在桌面应用中使用完整功能')
+
+224:24 [chinese] [function:message.success]
+  key:  settingspage.text_3
+  text: 配置保存成功！
+  code: message.success('配置保存成功！')
+
+237:22 [chinese] [function:message.error]
+  key:  settingspage.text_4
+  text: 保存失败:
+  code: message.error('保存失败: ' + (error.message || '未知错误'))
+
+248:22 [chinese] [function:message.error]
+  key:  settingspage.api
+  text: 请先输入API密钥
+  code: message.error('请先输入API密钥')
+
+256:26 [chinese] [function:message.success]
+  key:  settingspage.api_2
+  text: API密钥测试成功！
+  code: message.success('API密钥测试成功！')
+
+258:24 [chinese] [function:message.error]
+  key:  settingspage.api_3
+  text: API密钥测试失败:
+  code: message.error('API密钥测试失败: ' + (result.error || '未知错误'))
+
+261:22 [chinese] [function:message.error]
+  key:  settingspage.text_5
+  text: 测试失败:
+  code: message.error('测试失败: ' + (error.message || '未知错误'))
+
+281:25 [chinese] [attribute:tab]
+  key:  settingspage.ai
+  text: AI 模型配置
+  code: <TabPane tab="AI 模型配置" key="api">
+
+282:26 [chinese] [attribute:title]
+  key:  settingspage.ai_2
+  text: AI 模型配置
+  code: <Card title="AI 模型配置" className="settings-card">
+
+284:26 [chinese] [attribute:message]
+  key:  settingspage.text_6
+  text: 多模型提供商支持
+  code: message="多模型提供商支持"
+
+285:30 [chinese] [attribute:description]
+  key:  settingspage.ai_3
+  text: 系统现在支持多个AI模型提供商，您可以根据需要选择不同的服务商和模型。
+  code: description="系统现在支持多个AI模型提供商，您可以根据需要选择不同的服务商和模型。"
+
+307:31 [chinese] [attribute-expression:message]
+  key:  settingspage.currentprovider_display_name_currentprovider_model
+  text: 当前使用: ${currentProvider.display_name} - ${currentProvider.model}
+  code: message={`当前使用: ${currentProvider.display_name} - ${currentProvider.model}`}
+
+316:26 [chinese] [attribute:label]
+  key:  settingspage.ai_4
+  text: 选择AI模型提供商
+  code: label="选择AI模型提供商"
+
+325:34 [chinese] [attribute:placeholder]
+  key:  settingspage.ai_5
+  text: 请选择AI模型提供商
+  code: placeholder="请选择AI模型提供商"
+
+358:26 [chinese] [attribute:label]
+  key:  settingspage.text_7
+  text: 选择模型
+  code: label="选择模型"
+
+362:26 [chinese] [attribute:extra]
+  key:  settingspage.text_8
+  text: 支持手动输入模型名称或从常用模型中选择
+  code: extra="支持手动输入模型名称或从常用模型中选择"
+
+366:34 [chinese] [attribute:placeholder]
+  key:  settingspage.text_9
+  text: 请输入或选择模型名称
+  code: placeholder="请输入或选择模型名称"
+
+383:45 [chinese] [attribute:label]
+  key:  settingspage.dashscope
+  text: 通义千问 (Dashscope)
+  code: <Select.OptGroup label="通义千问 (Dashscope)">
+
+407:45 [chinese] [attribute:label]
+  key:  settingspage.siliconflow
+  text: 硅基流动 (SiliconFlow)
+  code: <Select.OptGroup label="硅基流动 (SiliconFlow)">
+
+433:60 [chinese] [jsx-text]
+  key:  settingspage.text_10
+  text: 模型配置
+  code: <Title level={4} className="section-title">模型配置</Title>
+
+438:30 [chinese] [attribute:label]
+  key:  settingspage.text_11
+  text: 文本分块大小
+  code: label="文本分块大小"
+
+445:37 [chinese] [attribute:addonAfter]
+  key:  settingspage.text_12
+  text: 字符
+  code: addonAfter="字符"
+
+455:30 [chinese] [attribute:label]
+  key:  settingspage.text_13
+  text: 最低评分阈值
+  code: label="最低评分阈值"
+
+471:30 [chinese] [attribute:label]
+  key:  settingspage.text_14
+  text: 每个合集最大切片数
+  code: label="每个合集最大切片数"
+
+478:37 [chinese] [attribute:addonAfter]
+  key:  settingspage.text_15
+  text: 个
+  code: addonAfter="个"
+
+500:26 [chinese] [attribute:title]
+  key:  settingspage.text_16
+  text: 使用说明
+  code: <Card title="使用说明" className="settings-card">
+
+504:43 [chinese] [jsx-text]
+  key:  settingspage.text_1_ai
+  text: 1. 选择AI模型提供商
+  code: <InfoCircleOutlined /> 1. 选择AI模型提供商
+
+508:42 [chinese] [jsx-text]
+  key:  settingspage.text_17
+  text: 阿里通义千问
+  code: <br />• <Text strong>阿里通义千问</Text>：访问阿里云控制台获取API密钥
+
+508:55 [chinese] [jsx-text]
+  key:  settingspage.api_4
+  text: ：访问阿里云控制台获取API密钥
+  code: <br />• <Text strong>阿里通义千问</Text>：访问阿里云控制台获取API密钥
+
+509:55 [chinese] [jsx-text]
+  key:  settingspage.platform_openai_com_api
+  text: ：访问 platform.openai.com 获取API密钥
+  code: <br />• <Text strong>OpenAI</Text>：访问 platform.openai.com 获取API密钥
+
+510:62 [chinese] [jsx-text]
+  key:  settingspage.ai_google_dev_api
+  text: ：访问 ai.google.dev 获取API密钥
+  code: <br />• <Text strong>Google Gemini</Text>：访问 ai.google.dev 获取API密钥
+
+511:42 [chinese] [jsx-text]
+  key:  settingspage.text_18
+  text: 硅基流动
+  code: <br />• <Text strong>硅基流动</Text>：访问 docs.siliconflow.cn 获取API密钥
+
+511:53 [chinese] [jsx-text]
+  key:  settingspage.docs_siliconflow_cn_api
+  text: ：访问 docs.siliconflow.cn 获取API密钥
+  code: <br />• <Text strong>硅基流动</Text>：访问 docs.siliconflow.cn 获取API密钥
+
+517:43 [chinese] [jsx-text]
+  key:  settingspage.text_2
+  text: 2. 配置参数说明
+  code: <InfoCircleOutlined /> 2. 配置参数说明
+
+520:36 [chinese] [jsx-text]
+  key:  settingspage.text_19
+  text: 文本分块大小
+  code: • <Text strong>文本分块大小</Text>：影响处理速度和精度，建议5000字符<br />
+
+520:49 [chinese] [jsx-text]
+  key:  settingspage.text_5000
+  text: ：影响处理速度和精度，建议5000字符
+  code: • <Text strong>文本分块大小</Text>：影响处理速度和精度，建议5000字符<br />
+
+521:36 [chinese] [jsx-text]
+  key:  settingspage.text_20
+  text: 评分阈值
+  code: • <Text strong>评分阈值</Text>：只有高于此分数的片段才会被保留<br />
+
+521:47 [chinese] [jsx-text]
+  key:  settingspage.text_21
+  text: ：只有高于此分数的片段才会被保留
+  code: • <Text strong>评分阈值</Text>：只有高于此分数的片段才会被保留<br />
+
+522:36 [chinese] [jsx-text]
+  key:  settingspage.text_22
+  text: 合集切片数
+  code: • <Text strong>合集切片数</Text>：控制每个主题合集包含的片段数量
+
+522:48 [chinese] [jsx-text]
+  key:  settingspage.text_23
+  text: ：控制每个主题合集包含的片段数量
+  code: • <Text strong>合集切片数</Text>：控制每个主题合集包含的片段数量
+
+528:43 [chinese] [jsx-text]
+  key:  settingspage.text_3
+  text: 3. 测试连接
+  code: <InfoCircleOutlined /> 3. 测试连接
+
+547:26 [chinese] [attribute:title]
+  key:  settingspage.text_24
+  text: 语音转写配置
+  code: <Card title="语音转写配置" className="settings-card">
+
+549:26 [chinese] [attribute:message]
+  key:  settingspage.text_25
+  text: 语音识别服务配置
+  code: message="语音识别服务配置"
+
+550:30 [chinese] [attribute:description]
+  key:  settingspage.whisper_api
+  text: 配置语音转写服务，用于视频字幕生成和语音识别。支持本地Whisper模型和多种云服务API。
+  code: description="配置语音转写服务，用于视频字幕生成和语音识别。支持本地Whisper模型和多种云服务API。"
+
+574:26 [chinese] [attribute:title]
+  key:  settingspage.text_26
+  text: 应用设置
+  code: <Card title="应用设置" className="settings-card">
+
+576:26 [chinese] [attribute:message]
+  key:  settingspage.text_27
+  text: 应用行为配置
+  code: message="应用行为配置"
+
+577:30 [chinese] [attribute:description]
+  key:  settingspage.text_28
+  text: 配置应用的启动行为和系统集成选项。
+  code: description="配置应用的启动行为和系统集成选项。"
+
+586:26 [chinese] [attribute:title]
+  key:  settingspage.text_29
+  text: 隐私与数据
+  code: <Card title="隐私与数据" className="settings-card" style={{ marginTop: 16 }}>
+
+588:26 [chinese] [attribute:message]
+  key:  settingspage.text_30
+  text: 使用数据统计
+  code: message="使用数据统计"
+
+589:30 [chinese] [attribute:description]
+  key:  settingspage.api_5
+  text: 为了改进产品，我们会采集匿名的使用数据（如功能使用、出片成功/失败等），不包含你的视频内容、字幕文本或 API 密钥。你可以随时关闭。
+  code: description="为了改进产品，我们会采集匿名的使用数据（如功能使用、出片成功/失败等），不包含你的视频内容、字幕文本或 API 密钥。你可以随时关闭。"
+
+596:32 [chinese] [jsx-text]
+  key:  settingspage.text_31
+  text: 允许匿名使用统计
+  code: <Text strong>允许匿名使用统计</Text>
+
+613:25 [chinese] [attribute:tab]
+  key:  settingspage.b
+  text: B站管理
+  code: <TabPane tab="B站管理" key="bilibili">
+
+614:26 [chinese] [attribute:title]
+  key:  settingspage.b_2
+  text: B站账号管理
+  code: <Card title="B站账号管理" className="settings-card">
+
+631:50 [chinese] [function:message.info]
+  key:  settingspage.text_32
+  text: 开发中，敬请期待
+  code: onClick={() => message.info('开发中，敬请期待', 3)}
+
+657:65 [chinese] [jsx-text]
+  key:  settingspage.text_33
+  text: 多账号支持
+  code: <Text strong style={{ color: '#1890ff' }}>多账号支持</Text>
+
+669:65 [chinese] [jsx-text]
+  key:  settingspage.text_34
+  text: 安全登录
+  code: <Text strong style={{ color: '#52c41a' }}>安全登录</Text>
+
+681:65 [chinese] [jsx-text]
+  key:  settingspage.text_35
+  text: 快速投稿
+  code: <Text strong style={{ color: '#faad14' }}>快速投稿</Text>
+
+693:65 [chinese] [jsx-text]
+  key:  settingspage.text_36
+  text: 批量管理
+  code: <Text strong style={{ color: '#722ed1' }}>批量管理</Text>
+
+711:30 [chinese] [function:message.success]
+  key:  settingspage.text_37
+  text: 操作成功
+  code: message.success('操作成功')
+
+744:22 [chinese] [function:message.error]
+  key:  settingspage.text_38
+  text: 此功能仅在桌面应用中可用
+  code: message.error('此功能仅在桌面应用中可用')
+
+754:26 [chinese] [function:message.success]
+  key:  settingspage.text_39
+  text: 已启用自动启动
+  code: message.success('已启用自动启动')
+
+757:26 [chinese] [function:message.success]
+  key:  settingspage.text_40
+  text: 已禁用自动启动
+  code: message.success('已禁用自动启动')
+
+763:22 [chinese] [function:message.error]
+  key:  settingspage.error
+  text: 操作失败: ${error}
+  code: message.error(`操作失败: ${error}`)
+
+785:67 [chinese] [jsx-text]
+  key:  settingspage.text_41
+  text: 开机自动启动
+  code: <Text strong style={{ color: 'var(--ac-ink)' }}>开机自动启动</Text>
+
+804:18 [chinese] [attribute:message]
+  key:  settingspage.text_42
+  text: 提示
+  code: message="提示"
+
+805:22 [chinese] [attribute:description]
+  key:  settingspage.text_43
+  text: 自动启动功能仅在桌面应用中可用。启用后，应用将在系统启动时自动运行，您可以通过系统托盘图标访问应用。
+  code: description="自动启动功能仅在桌面应用中可用。启用后，应用将在系统启动时自动运行，您可以通过系统托盘图标访问应用。"
+
+
+[src\pages\SimpleProgressDemo.tsx]
+------------------------------------------------------------------------------------------
+36:13 [chinese] [object-field:title]
+  key:  simpleprogressdemo.ai
+  text: AI技术解析视频
+  code: title: 'AI技术解析视频',
+
+37:19 [chinese] [object-field:description]
+  key:  simpleprogressdemo.text
+  text: 深度解析人工智能技术发展历程
+  code: description: '深度解析人工智能技术发展历程',
+
+45:13 [chinese] [object-field:title]
+  key:  simpleprogressdemo.text_2
+  text: 创业经验分享
+  code: title: '创业经验分享',
+
+46:19 [chinese] [object-field:description]
+  key:  simpleprogressdemo.text_3
+  text: 分享创业路上的酸甜苦辣
+  code: description: '分享创业路上的酸甜苦辣',
+
+54:13 [chinese] [object-field:title]
+  key:  simpleprogressdemo.text_4
+  text: 游戏评测视频
+  code: title: '游戏评测视频',
+
+55:19 [chinese] [object-field:description]
+  key:  simpleprogressdemo.text_5
+  text: 最新游戏深度评测
+  code: description: '最新游戏深度评测',
+
+82:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.projectid
+  text: 开始处理项目: ${projectId}
+  code: message.success(`开始处理项目: ${projectId}`)
+
+87:19 [chinese] [function:message.info]
+  key:  simpleprogressdemo.projectid_2
+  text: 查看项目详情: ${projectId}
+  code: message.info(`查看项目详情: ${projectId}`)
+
+93:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.projectid_3
+  text: 删除项目: ${projectId}
+  code: message.success(`删除项目: ${projectId}`)
+
+101:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.projectid_4
+  text: 重试项目: ${projectId}
+  code: message.success(`重试项目: ${projectId}`)
+
+107:24 [chinese] [function:message.warning]
+  key:  simpleprogressdemo.id
+  text: 请输入项目ID
+  code: message.warning('请输入项目ID')
+
+113:15 [chinese] [object-field:title]
+  key:  simpleprogressdemo.newprojectid
+  text: 新项目 ${newProjectId}
+  code: title: `新项目 ${newProjectId}`,
+
+114:21 [chinese] [object-field:description]
+  key:  simpleprogressdemo.text_6
+  text: 这是一个新添加的演示项目
+  code: description: '这是一个新添加的演示项目',
+
+123:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.newprojectid_2
+  text: 添加项目: ${newProjectId}
+  code: message.success(`添加项目: ${newProjectId}`)
+
+129:24 [chinese] [function:message.warning]
+  key:  simpleprogressdemo.text_7
+  text: 请选择要轮询的项目
+  code: message.warning('请选择要轮询的项目')
+
+133:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.selectedprojectids_length
+  text: 开始轮询 ${selectedProjectIds.length} 个项目
+  code: message.success(`开始轮询 ${selectedProjectIds.length} 个项目`)
+
+139:19 [chinese] [function:message.info]
+  key:  simpleprogressdemo.text_8
+  text: 停止轮询
+  code: message.info('停止轮询')
+
+145:22 [chinese] [function:message.success]
+  key:  simpleprogressdemo.text_9
+  text: 清除所有进度数据
+  code: message.success('清除所有进度数据')
+
+152:24 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_10
+  text: 简化进度系统演示
+  code: <Title level={2}>简化进度系统演示</Title>
+
+162:20 [chinese] [attribute:title]
+  key:  simpleprogressdemo.text_11
+  text: 控制面板
+  code: <Card title="控制面板" style={{ marginBottom: '24px' }}>
+
+166:28 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_12
+  text: 轮询间隔:
+  code: <Text strong>轮询间隔:</Text>
+
+172:38 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_1
+  text: 1秒
+  code: <Option value={1000}>1秒</Option>
+
+173:38 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_2
+  text: 2秒
+  code: <Option value={2000}>2秒</Option>
+
+174:38 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_3
+  text: 3秒
+  code: <Option value={3000}>3秒</Option>
+
+175:38 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_5
+  text: 5秒
+  code: <Option value={5000}>5秒</Option>
+
+179:28 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_13
+  text: 轮询状态:
+  code: <Text strong>轮询状态:</Text>
+
+187:28 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_14
+  text: 进度数据:
+  code: <Text strong>进度数据:</Text>
+
+225:32 [chinese] [attribute:placeholder]
+  key:  simpleprogressdemo.id_2
+  text: 输入新项目ID
+  code: placeholder="输入新项目ID"
+
+243:28 [chinese] [jsx-text]
+  key:  simpleprogressdemo.text_15
+  text: 选择要轮询的项目:
+  code: <Text strong>选择要轮询的项目:</Text>
+
+247:32 [chinese] [attribute:placeholder]
+  key:  simpleprogressdemo.text_16
+  text: 选择项目
+  code: placeholder="选择项目"
+
+266:22 [chinese] [attribute:title]
+  key:  simpleprogressdemo.text_17
+  text: 批量进度显示
+  code: <Card title="批量进度显示" style={{ marginBottom: '24px' }}>
+
+280:20 [chinese] [attribute:title]
+  key:  simpleprogressdemo.text_18
+  text: 项目列表
+  code: <Card title="项目列表">
+
+298:22 [chinese] [attribute:title]
+  key:  simpleprogressdemo.text_19
+  text: 当前进度数据
+  code: <Card title="当前进度数据" style={{ marginTop: '24px' }}>
+
+
+[src\pages\UploadStatusPage.tsx]
+------------------------------------------------------------------------------------------
+51:22 [chinese] [function:message.error]
+  key:  uploadstatuspage.text
+  text: 获取投稿记录失败
+  code: message.error('获取投稿记录失败');
+
+60:19 [chinese] [function:message.info]
+  key:  uploadstatuspage.b
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3);
+
+66:24 [chinese] [function:message.success]
+  key:  uploadstatuspage.text_2
+  text: 重试任务已提交
+  code: message.success('重试任务已提交');
+
+69:22 [chinese] [function:message.error]
+  key:  uploadstatuspage.text_3
+  text: 重试失败
+  code: message.error('重试失败');
+
+76:19 [chinese] [function:message.info]
+  key:  uploadstatuspage.b_2
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3);
+
+82:24 [chinese] [function:message.success]
+  key:  uploadstatuspage.text_4
+  text: 任务已取消
+  code: message.success('任务已取消');
+
+85:22 [chinese] [function:message.error]
+  key:  uploadstatuspage.text_5
+  text: 取消失败
+  code: message.error('取消失败');
+
+92:19 [chinese] [function:message.info]
+  key:  uploadstatuspage.b_3
+  text: B站上传功能正在开发中，敬请期待！
+  code: message.info('B站上传功能正在开发中，敬请期待！', 3);
+
+98:24 [chinese] [function:message.success]
+  key:  uploadstatuspage.text_6
+  text: 任务已删除
+  code: message.success('任务已删除');
+
+101:22 [chinese] [function:message.error]
+  key:  uploadstatuspage.text_7
+  text: 删除失败
+  code: message.error('删除失败');
+
+115:74 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_8
+  text: 等待中
+  code: pending: { color: 'default', icon: <ClockCircleOutlined />, text: '等待中' },
+
+116:79 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_9
+  text: 处理中
+  code: processing: { color: 'processing', icon: <PlayCircleOutlined />, text: '处理中' },
+
+117:74 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_10
+  text: 成功
+  code: success: { color: 'success', icon: <CheckCircleOutlined />, text: '成功' },
+
+118:76 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_11
+  text: 完成
+  code: completed: { color: 'success', icon: <CheckCircleOutlined />, text: '完成' },
+
+119:77 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_12
+  text: 失败
+  code: failed: { color: 'error', icon: <ExclamationCircleOutlined />, text: '失败' },
+
+120:69 [chinese] [object-field:text]
+  key:  uploadstatuspage.text_13
+  text: 已取消
+  code: cancelled: { color: 'default', icon: <StopOutlined />, text: '已取消' }
+
+164:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.id
+  text: 任务ID
+  code: title: '任务ID',
+
+171:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_14
+  text: 标题
+  code: title: '标题',
+
+182:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_15
+  text: 投稿账号
+  code: title: '投稿账号',
+
+196:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_16
+  text: 分区
+  code: title: '分区',
+
+205:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_17
+  text: 状态
+  code: title: '状态',
+
+212:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_18
+  text: 进度
+  code: title: '进度',
+
+229:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_19
+  text: 文件大小
+  code: title: '文件大小',
+
+236:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_20
+  text: 创建时间
+  code: title: '创建时间',
+
+243:15 [chinese] [object-field:title]
+  key:  uploadstatuspage.text_21
+  text: 操作
+  code: title: '操作',
+
+259:22 [chinese] [attribute:title]
+  key:  uploadstatuspage.text_22
+  text: 确定要重试这个投稿任务吗？
+  code: title="确定要重试这个投稿任务吗？"
+
+261:23 [chinese] [attribute:okText]
+  key:  uploadstatuspage.text_23
+  text: 确定
+  code: okText="确定"
+
+262:27 [chinese] [attribute:cancelText]
+  key:  uploadstatuspage.text_24
+  text: 取消
+  code: cancelText="取消"
+
+276:22 [chinese] [attribute:title]
+  key:  uploadstatuspage.text_25
+  text: 确定要取消这个投稿任务吗？
+  code: title="确定要取消这个投稿任务吗？"
+
+278:23 [chinese] [attribute:okText]
+  key:  uploadstatuspage.text_26
+  text: 确定
+  code: okText="确定"
+
+279:27 [chinese] [attribute:cancelText]
+  key:  uploadstatuspage.text_27
+  text: 取消
+  code: cancelText="取消"
+
+294:22 [chinese] [attribute:title]
+  key:  uploadstatuspage.text_28
+  text: 确定要删除这个投稿任务吗？删除后无法恢复。
+  code: title="确定要删除这个投稿任务吗？删除后无法恢复。"
+
+296:23 [chinese] [attribute:okText]
+  key:  uploadstatuspage.text_29
+  text: 确定
+  code: okText="确定"
+
+297:27 [chinese] [attribute:cancelText]
+  key:  uploadstatuspage.text_30
+  text: 取消
+  code: cancelText="取消"
+
+452:68 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_31
+  text: 投稿任务状态
+  code: <Title level={3} style={{ margin: 0, color: '#ffffff' }}>投稿任务状态</Title>
+
+468:59 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_32
+  text: 总任务数
+  code: title={<span style={{ color: '#ffffff' }}>总任务数</span>}
+
+477:59 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_33
+  text: 成功
+  code: title={<span style={{ color: '#ffffff' }}>成功</span>}
+
+487:59 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_34
+  text: 失败
+  code: title={<span style={{ color: '#ffffff' }}>失败</span>}
+
+497:59 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_35
+  text: 进行中
+  code: title={<span style={{ color: '#ffffff' }}>进行中</span>}
+
+526:16 [chinese] [attribute:title]
+  key:  uploadstatuspage.text_36
+  text: 投稿任务详情
+  code: title="投稿任务详情"
+
+559:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.id_2
+  text: 任务ID
+  code: <Descriptions.Item label="任务ID" span={1}>
+
+562:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_37
+  text: 状态
+  code: <Descriptions.Item label="状态" span={1}>
+
+565:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_38
+  text: 标题
+  code: <Descriptions.Item label="标题" span={2}>
+
+568:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_39
+  text: 投稿账号
+  code: <Descriptions.Item label="投稿账号" span={1}>
+
+571:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_40
+  text: 分区
+  code: <Descriptions.Item label="分区" span={1}>
+
+574:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_41
+  text: 项目名称
+  code: <Descriptions.Item label="项目名称" span={1}>
+
+577:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.id_3
+  text: 切片ID
+  code: <Descriptions.Item label="切片ID" span={1}>
+
+580:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_42
+  text: 进度
+  code: <Descriptions.Item label="进度" span={2}>
+
+590:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_43
+  text: 文件大小
+  code: <Descriptions.Item label="文件大小" span={1}>
+
+593:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_44
+  text: 上传时长
+  code: <Descriptions.Item label="上传时长" span={1}>
+
+596:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.bv
+  text: BV号
+  code: <Descriptions.Item label="BV号" span={1}>
+
+599:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.av
+  text: AV号
+  code: <Descriptions.Item label="AV号" span={1}>
+
+602:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_45
+  text: 创建时间
+  code: <Descriptions.Item label="创建时间" span={1}>
+
+605:41 [chinese] [attribute:label]
+  key:  uploadstatuspage.text_46
+  text: 更新时间
+  code: <Descriptions.Item label="更新时间" span={1}>
+
+612:63 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_47
+  text: 描述
+  code: <Title level={5} style={{ color: '#ffffff' }}>描述</Title>
+
+619:63 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_48
+  text: 标签
+  code: <Title level={5} style={{ color: '#ffffff' }}>标签</Title>
+
+626:63 [chinese] [jsx-text]
+  key:  uploadstatuspage.text_49
+  text: 错误信息
+  code: <Title level={5} style={{ color: '#ffffff' }}>错误信息</Title>
+
+628:28 [chinese] [attribute:message]
+  key:  uploadstatuspage.text_50
+  text: 投稿失败
+  code: message="投稿失败"
+
+640:28 [chinese] [attribute:title]
+  key:  uploadstatuspage.text_51
+  text: 确定要重试这个投稿任务吗？
+  code: title="确定要重试这个投稿任务吗？"
+
+645:29 [chinese] [attribute:okText]
+  key:  uploadstatuspage.text_52
+  text: 确定
+  code: okText="确定"
+
+646:33 [chinese] [attribute:cancelText]
+  key:  uploadstatuspage.text_53
+  text: 取消
+  code: cancelText="取消"
+
+
+[src\utils\apiConfigCheck.ts]
+------------------------------------------------------------------------------------------
+8:20 [chinese] [function:message.error]
+  key:  apiconfigcheck.api
+  text: API配置检查失败
+  code: message.error('API配置检查失败')
+
+
+[src\utils\apiConfigCheck.tsx]
+------------------------------------------------------------------------------------------
+158:44 [chinese] [jsx-text]
+  key:  apiconfigcheck.api_2
+  text: 需要配置API
+  code: title: <span style={{ color: '#fff' }}>需要配置API</span>,
+
+161:78 [chinese] [jsx-text]
+  key:  apiconfigcheck.api_3
+  text: 创建项目需要配置以下API:
+  code: <p style={{ color: '#fff', marginBottom: '12px', fontSize: '14px' }}>创建项目需要配置以下API:</p>
+
+163:59 [chinese] [jsx-text]
+  key:  apiconfigcheck.text
+  text: 请前往设置页面进行配置.
+  code: <p style={{ color: '#f0f0f0', fontSize: '14px' }}>请前往设置页面进行配置.</p>
+
+
+[src\utils\statusUtils.tsx]
+------------------------------------------------------------------------------------------
+55:16 [chinese] [object-field:text]
+  key:  statusutils.text
+  text: 等待中
+  code: text: '等待中',
+
+64:16 [chinese] [object-field:text]
+  key:  statusutils.text_2
+  text: 处理中
+  code: text: '处理中',
+
+73:16 [chinese] [object-field:text]
+  key:  statusutils.text_3
+  text: 已完成
+  code: text: '已完成',
+
+82:16 [chinese] [object-field:text]
+  key:  statusutils.text_4
+  text: 失败
+  code: text: '失败',
+
+91:16 [chinese] [object-field:text]
+  key:  statusutils.text_5
+  text: 未知状态
+  code: text: '未知状态',
+
+108:16 [chinese] [object-field:text]
+  key:  statusutils.text_6
+  text: 等待中
+  code: text: '等待中',
+
+115:16 [chinese] [object-field:text]
+  key:  statusutils.text_7
+  text: 执行中
+  code: text: '执行中',
+
+122:16 [chinese] [object-field:text]
+  key:  statusutils.text_8
+  text: 已完成
+  code: text: '已完成',
+
+129:16 [chinese] [object-field:text]
+  key:  statusutils.text_9
+  text: 失败
+  code: text: '失败',
+
+136:16 [chinese] [object-field:text]
+  key:  statusutils.text_10
+  text: 已取消
+  code: text: '已取消',
+
+143:16 [chinese] [object-field:text]
+  key:  statusutils.text_11
+  text: 未知状态
+  code: text: '未知状态',
+
+158:16 [chinese] [object-field:text]
+  key:  statusutils.text_12
+  text: 待处理
+  code: text: '待处理',
+
+165:16 [chinese] [object-field:text]
+  key:  statusutils.text_13
+  text: 处理中
+  code: text: '处理中',
+
+172:16 [chinese] [object-field:text]
+  key:  statusutils.text_14
+  text: 成功
+  code: text: '成功',
+
+179:16 [chinese] [object-field:text]
+  key:  statusutils.text_15
+  text: 失败
+  code: text: '失败',
+
+186:16 [chinese] [object-field:text]
+  key:  statusutils.text_16
+  text: 未知状态
+  code: text: '未知状态',
+
+
+[src\locales\ru.ts]
+------------------------------------------------------------------------------------------
+21:13 [russian] [object-field:title]
+  key:  locales.ru.text
+  text: Управление сигналами
+  code: title: 'Управление сигналами',
+
+22:16 [russian] [object-field:title]
+  key:  locales.ru.text_2
+  text: Создавайте сигналы, выделяйте атомы и собирайте капсулы знаний
+  code: subtitle: 'Создавайте сигналы, выделяйте атомы и собирайте капсулы знаний',
+
+35:19 [russian] [object-field:description]
+  key:  locales.ru.text_3
+  text: Описание сигнала
+  code: description: 'Описание сигнала',
+
+60:13 [russian] [object-field:title]
+  key:  locales.ru.text_4
+  text: Загрузка файлов
+  code: title: 'Загрузка файлов',
+
+69:13 [russian] [object-field:title]
+  key:  locales.ru.text_5
+  text: Обработка
+  code: title: 'Обработка',
+
+78:13 [russian] [object-field:title]
+  key:  locales.ru.text_6
+  text: Настройки
+  code: title: 'Настройки',

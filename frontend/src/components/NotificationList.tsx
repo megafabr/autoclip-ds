@@ -61,7 +61,7 @@ const getNotificationColor = (level: Notification['level']) => {
 };
 
 const formatTime = (timestamp: string) => {
-  // 正确处理时区转换，确保显示本地时间
+  // 正确处理时区转换，确保显示本地Time
   const now = dayjs().tz('Asia/Shanghai');
   const notificationTime = dayjs(timestamp).tz('Asia/Shanghai');
   const diff = now.diff(notificationTime, 'millisecond');
@@ -115,7 +115,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           icon={<DeleteOutlined />}
           onClick={() => onRemove(notification.id)}
         >
-          删除
+          Delete
         </Button>
       ]}
     >
@@ -175,7 +175,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       <div style={{ maxHeight, overflowY: 'auto' }}>
         {notifications.length === 0 ? (
           <div style={{ textAlign: 'center', padding: 20, color: '#999' }}>
-            暂无通知
+            None通知
           </div>
         ) : (
           <List

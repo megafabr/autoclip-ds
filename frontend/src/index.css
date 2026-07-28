@@ -1,15 +1,30 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@500&family=Noto+Sans+SC:wght@400;500&display=swap');
 
-/* ===== AutoClip · Calm Premium design tokens (see DESIGN.md) ===== */
-:root{
-  --ac-bg:#F6F5F3; --ac-card:#FFFFFF; --ac-ink:#1A1A19; --ac-sub:#6E6B66; --ac-muted:#A8A59F;
-  --ac-line:#EBE9E4; --ac-line-2:#F0EEEA; --ac-accent:#2D6BFF; --ac-thumb:#EEECE8;
-  --ac-cta-bg:#1A1A19; --ac-cta-fg:#FFFFFF; --ac-ok:#5BB36A; --ac-error:#E66A5C; --ac-warn:#E6B23C;
+/* ===== DS OS · Calm Premium design tokens (see DESIGN.md) ===== */
+:root {
+  --ac-bg:#F3F6FB;
+  --ac-card:#FFFFFF;
+
+  --ac-ink:#111827;
+  --ac-sub:#374151;
+  --ac-muted:#6B7280;
+
+  --ac-line:#D7DFEA;
+  --ac-line-2:#E8EEF6;
+
+  --ac-accent:#2563EB;
+
+  --ac-thumb:#E5EAF2;
+
+  --ac-cta-bg:#111827;
+  --ac-cta-fg:#FFFFFF;
+
+  --ac-ok:#16A34A;
+  --ac-error:#DC2626;
+  --ac-warn:#D97706;
+
   --ac-font-sans:"Geist","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;
-  --ac-font-serif:"Instrument Serif",Georgia,serif;
-  --ac-font-mono:"Geist Mono",ui-monospace,monospace;
-  --ac-shadow:0 1px 2px rgba(26,26,25,.03), 0 8px 24px rgba(26,26,25,.05);
 }
 [data-theme="dark"]{
   --ac-bg:#19181A; --ac-card:#211F22; --ac-ink:#ECEAE6; --ac-sub:#A6A29B; --ac-muted:#76726C;

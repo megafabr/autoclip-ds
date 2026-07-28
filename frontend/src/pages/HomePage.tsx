@@ -27,16 +27,16 @@ const HomePage: React.FC = () => {
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [activeTab, setActiveTab] = useState<'upload' | 'bilibili'>('bilibili')
 
-  // 使用项目轮询Hook
+  // Использование Hook опроса состояния проектов
   useProjectPolling({
     onProjectsUpdate: (updatedProjects) => {
       setProjects(updatedProjects || [])
     },
     enabled: true,
-    interval: 30000 // 30秒轮询一次，减少频繁请求
+    interval: 30000 // Опрос каждые 30 секунд для снижения количества запросов
   })
 
-  // 全局保险：当没有运行中的项目时，强制停止进度轮询并清空缓存
+  // Глобальная защита: если нет активных проектов, остановить опрос прогресса и очистить кеш
   useEffect(() => {
     const hasActive = projects.some(p => p.status === 'processing' || p.status === 'pending')
     if (!hasActive) {
@@ -44,18 +44,18 @@ const HomePage: React.FC = () => {
         const { stopPolling, clearAllProgress } = useSimpleProgressStore.getState()
         stopPolling()
         clearAllProgress()
-        console.log('无运行项目，已全局停止进度轮询并清空进度缓存')
+        console.log('Нет активных проектов, опрос прогресса остановлен, кеш очищен')
       } catch (e) {
-        console.warn('停止全局进度轮询时出现问题:', e)
+        console.warn('Ошибка остановки глобального опроса прогресса:', e)
       }
     }
   }, [projects])
 
   useEffect(() => {
-    // 延迟加载项目，避免启动时立即发起大量请求
+    // Отложенная загрузка проектов, чтобы избежать большого количества запросов при запуске
     const timer = setTimeout(() => {
       loadProjects()
-    }, 1000) // 延迟1秒加载
+    }, 1000) // Загрузка через 1 секунду
     
     return () => clearTimeout(timer)
   }, [])
@@ -63,15 +63,15 @@ const HomePage: React.FC = () => {
   const loadProjects = async () => {
     setLoading(true)
     try {
-      // 从后端API获取真实项目数据
+      // Получение реальных данных проектов через Backend API
       const projects = await projectApi.getProjects()
-      // 确保projects是数组类型
+      // Проверка, что projects является массивом
       const safeProjects = Array.isArray(projects) ? projects : []
       setProjects(safeProjects)
     } catch (error) {
-      message.error('加载项目失败')
+      message.error('Не удалось загрузить проекты')
       console.error('Load projects error:', error)
-      // 如果API调用失败，设置空数组
+      // Если API недоступен, использовать пустой список
       setProjects([])
     } finally {
       setLoading(false)
@@ -82,19 +82,19 @@ const HomePage: React.FC = () => {
     try {
       await projectApi.deleteProject(id)
       deleteProject(id)
-      message.success('项目删除成功')
+      message.success('Проект успешно удалён')
     } catch (error) {
-      message.error('删除项目失败')
+      message.error('Не удалось удалить проект')
       console.error('Delete project error:', error)
     }
   }
 
-  // 由 ProjectCard 在「用户手动点重试」且重试请求已成功后调用。
-  // ProjectCard.handleRetry 已经发过 start/retryProcessing 请求，这里只负责
-  // 提示 + 刷新列表，绝不能再发一次重试请求（会和卡片自身的请求叠加，并制造
-  // loadProjects→重挂载→自动启动 的循环）。
+  // Called by ProjectCard after user retry succeeds.
+  // ProjectCard.handleRetry already sent start/retryProcessing request. Here we only:
+  // show notification and refresh list. Never send another retry request (avoids duplicate requests:
+  // loadProjects → remount → auto-start loop).
   const handleRetryProject = async () => {
-    message.success('已开始重试处理项目')
+    message.success('Повторная обработка проекта запущена')
     try {
       await loadProjects()
     } catch (error) {
@@ -103,13 +103,13 @@ const HomePage: React.FC = () => {
   }
 
   const handleProjectCardClick = (project: Project) => {
-    // 导入中状态的项目不能点击进入详情页
+    // Projects in importing state cannot open details page
     if (project.status === 'pending') {
-      message.warning('项目正在导入中，请稍后再查看详情')
+      message.warning('Проект импортируется, попробуйте открыть детали позже')
       return
     }
     
-    // 其他状态可以正常进入详情页
+    // Other states can open details page normally
     navigate(`/project/${project.id}`)
   }
 
@@ -119,7 +119,7 @@ const HomePage: React.FC = () => {
       return matchesStatus
     })
     .sort((a, b) => {
-      // 按创建时间倒序排列，最新的在前面
+      // Sort by creation time descending, newest first
       return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
     })
 
@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
     }}>
       <Content style={{ padding: '40px 56px 56px', position: 'relative' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
-          {/* 文件上传区域 */}
+          {/* Область загрузки файлов */}
           <div style={{ 
             marginBottom: '48px',
             marginTop: '20px',
@@ -139,7 +139,7 @@ const HomePage: React.FC = () => {
           }}>
             <div style={{ width: '100%', maxWidth: '820px' }}>
               <div style={{ fontSize: '13px', color: 'var(--ac-muted)', margin: '0 4px 14px', letterSpacing: '0.2px' }}>
-                粘贴链接，AI 自动切片
+                Вставьте ссылку, AI автоматически создаст фрагменты
               </div>
               <div style={{
                 background: 'var(--ac-card)',
@@ -148,7 +148,7 @@ const HomePage: React.FC = () => {
                 padding: '18px',
                 boxShadow: 'var(--ac-shadow)'
               }}>
-              {/* 标签页切换 — 胶囊分段 */}
+              {/* Переключение вкладок — сегментный режим */}
               <div style={{
                 display: 'inline-flex',
                 marginBottom: '14px',
@@ -172,7 +172,7 @@ const HomePage: React.FC = () => {
                    }}
                    onClick={() => setActiveTab('bilibili')}
                  >
-                   链接导入
+                   Импорт по ссылке
                  </button>
                 <button
                    style={{
@@ -189,24 +189,24 @@ const HomePage: React.FC = () => {
                    }}
                    onClick={() => setActiveTab('upload')}
                  >
-                   文件导入
+                   Импорт файлов
                  </button>
               </div>
               
-              {/* 内容区域 */}
+              {/* Область содержимого */}
               <div>
                 {activeTab === 'bilibili' && (
                   <BilibiliDownload onDownloadSuccess={async () => {
-                    // 处理完成后刷新项目列表
+                    // Refresh project list after processing completed
                     await loadProjects()
-                    // 不再显示重复的toast提示，BilibiliDownload组件已经显示了统一的提示
+                    // Do not show duplicate toast. BilibiliDownload already displays unified notification
                   }} />
                 )}
                 {activeTab === 'upload' && (
                   <FileUpload onUploadSuccess={async () => {
-                    // 处理完成后刷新项目列表
+                    // Refresh project list after processing completed
                     await loadProjects()
-                    message.success('项目创建成功，正在处理中...')
+                    message.success('Проект создан, обработка запущена...')
                   }} />
                 )}
               </div>
@@ -214,13 +214,13 @@ const HomePage: React.FC = () => {
             </div>
           </div>
 
-          {/* 项目管理区域 */}
+          {/* Область управления проектами */}
           <div style={{
             background: 'transparent',
             padding: '0',
             marginBottom: '32px'
           }}>
-            {/* 项目列表标题区域 */}
+            {/* Заголовок списка проектов */}
             <div style={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -233,20 +233,20 @@ const HomePage: React.FC = () => {
                   level={2}
                   style={{ margin: 0, color: 'var(--ac-ink)', fontSize: '16px', fontWeight: 600 }}
                 >
-                  我的项目
+                  Мои проекты
                 </Title>
                 <Text style={{ color: 'var(--ac-muted)', fontSize: '13px' }}>
                   {filteredProjects.length}
                 </Text>
               </div>
               
-              {/* 状态筛选移到右侧 */}
+              {/* Фильтр состояния перемещён вправо */}
               <div style={{ 
                 display: 'flex', 
                 alignItems: 'center'
               }}>
                 <Select
-                  placeholder="全部状态"
+                  placeholder="Все статусы"
                   value={statusFilter}
                   onChange={setStatusFilter}
                   variant="borderless"
@@ -254,15 +254,15 @@ const HomePage: React.FC = () => {
                   suffixIcon={<span style={{ color: 'var(--ac-muted)', fontSize: '10px' }}>⌄</span>}
                   allowClear
                 >
-                  <Option value="all">全部状态</Option>
-                  <Option value="completed">已完成</Option>
-                  <Option value="processing">处理中</Option>
-                  <Option value="error">处理失败</Option>
+                  <Option value="all">Все статусы</Option>
+                  <Option value="completed">Завершено</Option>
+                  <Option value="processing">В обработке</Option>
+                  <Option value="error">Ошибка обработки</Option>
                 </Select>
               </div>
             </div>
 
-            {/* 项目列表内容 */}
+            {/* Содержимое списка проектов */}
              <div>
                {loading ? (
                  <div style={{
@@ -274,7 +274,7 @@ const HomePage: React.FC = () => {
                  }}>
                    <Spin size="large" />
                    <div style={{ marginTop: '18px', color: 'var(--ac-muted)', fontSize: '14px' }}>
-                     正在加载项目列表…
+                     Загрузка списка проектов…
                    </div>
                  </div>
                ) : filteredProjects.length === 0 ? (
@@ -290,7 +290,7 @@ const HomePage: React.FC = () => {
                      description={
                        <div>
                          <Text type="secondary">
-                           {projects.length === 0 ? '还没有项目，请使用上方的导入区域创建第一个项目' : '没有找到匹配的项目'}
+                           {projects.length === 0 ? 'Нет проектов. Используйте область импорта выше для создания первого проекта' : 'Подходящие проекты не найдены'}
                          </Text>
                        </div>
                      }

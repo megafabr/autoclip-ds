@@ -25,18 +25,18 @@ export const openExternalLink = async (url: string) => {
       window.open(url, '_blank', 'noopener,noreferrer')
     }
   } catch (error) {
-    console.error('打开外部链接失败:', error)
+    console.error('打开外部链接Failed:', error)
     // 降级处理:尝试使用window.open
     try {
       window.open(url, '_blank', 'noopener,noreferrer')
     } catch (fallbackError) {
-      console.error('降级打开链接也失败:', fallbackError)
+      console.error('降级打开链接也Failed:', fallbackError)
       // 最后的降级:复制链接到剪贴板
       try {
         await navigator.clipboard.writeText(url)
         alert(`链接已复制到剪贴板:${url}`)
       } catch (clipboardError) {
-        console.error('复制到剪贴板失败:', clipboardError)
+        console.error('复制到剪贴板Failed:', clipboardError)
         alert(`请手动访问:${url}`)
       }
     }

@@ -66,7 +66,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   handleReload = () => {
-    // 清除错误状态
+    // 清除错误Status
     this.setState({
       hasError: false,
       error: null,
@@ -74,12 +74,12 @@ class ErrorBoundary extends Component<Props, State> {
       errorId: ''
     })
     
-    // 刷新页面
+    // Refresh页面
     window.location.reload()
   }
 
   handleGoHome = () => {
-    // 清除错误状态
+    // 清除错误Status
     this.setState({
       hasError: false,
       error: null,
@@ -111,7 +111,7 @@ class ErrorBoundary extends Component<Props, State> {
     // 这里可以发送错误报告到服务器
     console.log('Error Report:', errorReport)
     
-    // 显示成功消息
+    // 显示Success消息
     // message.success('错误报告已提交，感谢您的反馈！')
   }
 
@@ -153,7 +153,7 @@ class ErrorBoundary extends Component<Props, State> {
                       icon={<ReloadOutlined />} 
                       onClick={this.handleReload}
                     >
-                      刷新页面
+                      Refresh页面
                     </Button>
                     <Button 
                       icon={<HomeOutlined />} 
@@ -174,10 +174,10 @@ class ErrorBoundary extends Component<Props, State> {
               }
             />
             
-            {/* 错误详情 */}
+            {/* 错误Details */}
             {this.props.showDetails && error && (
               <div style={{ marginTop: '24px' }}>
-                <Title level={5}>错误详情</Title>
+                <Title level={5}>错误Details</Title>
                 <Paragraph>
                   <Text code>错误 ID: {errorId}</Text>
                 </Paragraph>
@@ -233,7 +233,7 @@ class ErrorBoundary extends Component<Props, State> {
             <div style={{ marginTop: '24px' }}>
               <Title level={5}>常见解决方案</Title>
               <ul style={{ paddingLeft: '20px' }}>
-                <li>刷新页面重试</li>
+                <li>Refresh页面重试</li>
                 <li>清除浏览器缓存和 Cookie</li>
                 <li>检查网络连接</li>
                 <li>尝试使用其他浏览器</li>

@@ -16,13 +16,13 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
 
   const steps = [
     {
-      title: '登录B站',
-      description: '在浏览器中登录B站账号',
+      title: 'LoginBilibili',
+      description: '在浏览器中LoginBilibiliAccount',
       content: (
         <div>
           <Alert
-            message="第一步：登录B站"
-            description="请确保您已经在浏览器中成功登录了B站账号"
+            message="第一步：LoginBilibili"
+            description="请确保您已经在浏览器中SuccessLogin了BilibiliAccount"
             type="info"
             showIcon
             style={{ marginBottom: 16 }}
@@ -32,13 +32,13 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
               1. 打开浏览器，访问 <Text code>https://www.bilibili.com</Text>
             </Paragraph>
             <Paragraph>
-              2. 点击右上角的"登录"按钮
+              2. 点击右上角的"Login"按钮
             </Paragraph>
             <Paragraph>
-              3. 使用您的B站账号登录
+              3. 使用您的BilibiliAccountLogin
             </Paragraph>
             <Paragraph>
-              4. 确认登录成功后，您应该能看到您的用户名显示在右上角
+              4. 确认LoginSuccess后，您应该能看到您的用户名显示在右上角
             </Paragraph>
           </Card>
         </div>
@@ -94,7 +94,7 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
               2. 点击 <Text code>Network</Text> 标签
             </Paragraph>
             <Paragraph>
-              3. 确保Network面板是空的（如果有内容，点击清除按钮）
+              3. 确保Network面板是空的（如果有Content，点击清除按钮）
             </Paragraph>
             <Divider />
             <Paragraph type="secondary">
@@ -105,13 +105,13 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
       )
     },
     {
-      title: '刷新页面',
-      description: '刷新B站页面以捕获请求',
+      title: 'Refresh页面',
+      description: 'RefreshBilibili页面以捕获请求',
       content: (
         <div>
           <Alert
-            message="第四步：刷新页面"
-            description="刷新B站页面以捕获网络请求"
+            message="第四步：Refresh页面"
+            description="RefreshBilibili页面以捕获网络请求"
             type="info"
             showIcon
             style={{ marginBottom: 16 }}
@@ -121,14 +121,14 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
               1. 确保Network标签页已打开
             </Paragraph>
             <Paragraph>
-              2. 按 <Text code>F5</Text> 或点击浏览器的刷新按钮
+              2. 按 <Text code>F5</Text> 或点击浏览器的Refresh按钮
             </Paragraph>
             <Paragraph>
-              3. 观察Network面板中出现的请求列表
+              3. 观察Network面板中出现的请求List
             </Paragraph>
             <Divider />
             <Paragraph type="secondary">
-              刷新后，Network面板会显示页面加载过程中的所有网络请求
+              Refresh后，Network面板会显示页面加载过程中的所有网络请求
             </Paragraph>
           </Card>
         </div>
@@ -195,7 +195,7 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
             </Paragraph>
             <Alert
               message="重要提示"
-              description="Cookie包含您的登录信息，请妥善保管，不要分享给他人"
+              description="Cookie包含您的Login信息，请妥善保管，不要分享给他人"
               type="warning"
               showIcon
             />
@@ -225,7 +225,7 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
       onCancel={onClose}
       footer={[
         <Button key="back" onClick={onClose}>
-          关闭
+          Close
         </Button>,
         <Button
           key="copy"
@@ -239,8 +239,8 @@ const CookieHelper: React.FC<CookieHelperProps> = ({ visible, onClose }) => {
     >
       <div style={{ marginBottom: 16 }}>
         <Alert
-          message="Cookie导入是最安全的登录方式"
-          description="相比扫码登录，Cookie导入不会触发B站的风控机制，是最推荐的登录方式。"
+          message="Cookie导入是最安全的Login方式"
+          description="相比QR Login，Cookie导入不会触发Bilibili的风控机制，是最Recommended的Login方式。"
           type="success"
           showIcon
         />

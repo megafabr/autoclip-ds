@@ -1,0 +1,4795 @@
+DS OS — отчёт локализации
+================================================================================
+Просканировано файлов: 96
+Найдено фрагментов: 2232
+
+По типам:
+  chinese: 1408
+  chinese+mojibake: 217
+  mojibake: 607
+
+По файлам:
+   142  src\components\BilibiliManager.tsx
+   137  src\pages\SettingsPage.tsx
+   132  src\components\FirstRunWizard.tsx
+    91  src\components\BilibiliAccountManager.tsx
+    81  src\pages\UploadStatusPage.tsx
+    76  src\components\UploadQueueManager.tsx
+    67  src\components\DesktopSettings.tsx
+    65  src\components\UploadTaskManager.tsx
+    63  src\components\ProjectCard.tsx
+    56  src\components\BilibiliDownload.tsx
+    55  src\pages\ProjectDetailPage.tsx
+    53  src\components\AccountHealthMonitor.tsx
+    50  src\components\UploadModal.tsx
+    48  src\components\CookieHelper.tsx
+    48  src\pages\DebugPage.tsx
+    47  src\components\FileUpload.tsx
+    44  src\components\CollectionPreviewModal.tsx
+    44  src\components\CollectionPreviewModal_fixed.tsx
+    43  src\utils\apiConfigCheck.tsx
+    42  src\locales\ru.ts
+    39  src\pages\SimpleProgressDemo.tsx
+    35  src\pages\ProcessingPage.tsx
+    34  src\pages\HomePage.tsx
+    32  src\components\ClipCard.tsx
+    32  src\components\TaskProgressDisplay.tsx
+    31  src\components\PipelineControl.tsx
+    31  src\components\SpeechRecognitionConfig.tsx
+    31  src\store\useProjectStore.ts
+    30  src\components\InlineProgressBar.tsx
+    30  src\services\uploadApi.ts
+    29  src\components\ProjectTaskManager.tsx
+    29  src\config\bilibiliPartitions.ts
+    26  src\utils\statusUtils.tsx
+    24  src\components\TaskProgressModal.tsx
+    21  src\components\ui\select.tsx
+    21  src\components\UnifiedStatusBar.tsx
+    21  src\services\api.ts
+    19  src\components\ErrorBoundary.tsx
+    18  src\components\CollectionCard.tsx
+    18  src\components\EditableTitle.tsx
+    18  src\stores\useSimpleProgressStore.ts
+    17  src\components\OfflineModeIndicator.tsx
+    16  src\components\EditableCollectionTitle.tsx
+    16  src\hooks\useWebSocket.ts
+    15  src\components\RealTimeStatus.tsx
+    15  src\components\SimpleProjectCard.tsx
+    14  src\components\ProjectStatusIndicator.tsx
+    13  src\components\TaskProgress.tsx
+    12  src\components\NotificationList.tsx
+    12  src\components\ui\button.tsx
+    11  src\components\AddClipToCollectionModal.tsx
+    11  src\index.css
+    10  src\components\Header.tsx
+     9  src\components\CreateCollectionModal.tsx
+     9  src\hooks\useTaskStatus.ts
+     8  src\components\ClipDetailModal.tsx
+     8  src\hooks\useProjectPolling.ts
+     7  src\hooks\useCollectionVideoDownload.ts
+     7  src\hooks\useFirstRun.ts
+     6  src\components\ui\alert.tsx
+     6  src\components\ui\card.tsx
+     5  src\components\icons\MagicWandIcon.tsx
+     5  src\components\ui\badge.tsx
+     5  src\components\ui\slider.tsx
+     5  src\hooks\useTaskProgress.ts
+     5  src\utils\externalLinks.tsx
+     4  src\components\SimpleProgressBar.tsx
+     4  src\components\ui\progress.tsx
+     4  src\components\UploadToBilibili.tsx
+     4  src\hooks\useNotifications.ts
+     3  src\components\ui\label.tsx
+     3  src\components\ui\switch.tsx
+     2  src\context\ThemeContext.tsx
+     2  src\utils\apiConfig.ts
+     2  src\utils\apiConfigCheck.ts
+     1  src\analytics\posthog.ts
+     1  src\App.tsx
+     1  src\components\ui\input.tsx
+     1  src\main.tsx
+
+================================================================================
+НАЙДЕННЫЕ ФРАГМЕНТЫ
+================================================================================
+
+[src\analytics\posthog.ts]
+--------------------------------------------------------------------------------
+42:21 [chinese+mojibake] [analytics] 未配置 VITE_PUBLIC_POSTHOG_KEY，埋点已禁用
+    console.info('[analytics] 未配置 VITE_PUBLIC_POSTHOG_KEY，埋点已禁用')
+
+[src\App.tsx]
+--------------------------------------------------------------------------------
+21:16 [chinese+mojibake] 🎬 App组件已加载
+    console.log('🎬 App组件已加载');
+
+[src\components\AccountHealthMonitor.tsx]
+--------------------------------------------------------------------------------
+75:69 [mojibake] (null); const [loading, setLoading] = useState(false); const [refreshing, setRefreshing] = useState
+    const [healthData, setHealthData] = useState<HealthSummary | null>(null);
+77:57 [mojibake] ([]); const [detailsVisible, setDetailsVisible] = useState(false); const [selectedAccount, setSelectedAccount] = useState
+    const [refreshing, setRefreshing] = useState<number[]>([]);
+79:79 [mojibake] (null); const [autoRefresh, setAutoRefresh] = useState(false); const [refreshInterval, setRefreshInterval] = useState
+    const [selectedAccount, setSelectedAccount] = useState<AccountHealth | null>(null);
+90:15 [chinese] 刚刚
+    return '刚刚';
+93:15 [chinese] ${minutes}分钟前
+    return `${minutes}分钟前`;
+96:15 [chinese] ${hours}小时前
+    return `${hours}小时前`;
+99:15 [chinese] ${days}天前
+    return `${days}天前`;
+120:26 [mojibake] HTTP ${response.status}
+    throw new Error(`HTTP ${response.status}`);
+127:26 [chinese] 健康检查完成
+    message.success('健康检查完成');
+130:22 [chinese] 获取健康状态失败:
+    console.error('获取健康状态失败:', error);
+131:22 [chinese] 获取健康状态失败
+    message.error('获取健康状态失败');
+147:26 [mojibake] HTTP ${response.status}
+    throw new Error(`HTTP ${response.status}`);
+183:24 [chinese+mojibake] 账号 ${updatedAccount.username} 检查完成
+    message.success(`账号 ${updatedAccount.username} 检查完成`);
+185:22 [chinese] 检查账号失败:
+    console.error('检查账号失败:', error);
+186:22 [chinese] 检查账号失败
+    message.error('检查账号失败');
+207:26 [mojibake] HTTP ${response.status}
+    throw new Error(`HTTP ${response.status}`);
+218:22 [chinese] 刷新Cookie失败:
+    console.error('刷新Cookie失败:', error);
+219:22 [chinese] 刷新Cookie失败
+    message.error('刷新Cookie失败');
+226:74 [chinese] 健康
+    healthy: { color: 'success', icon: <CheckCircleOutlined />, text: '健康' },
+227:80 [chinese] 警告
+    warning: { color: 'warning', icon: <ExclamationCircleOutlined />, text: '警告' },
+228:73 [chinese] 严重
+    critical: { color: 'error', icon: <CloseCircleOutlined />, text: '严重' },
+229:77 [chinese] 未知
+    unknown: { color: 'default', icon: <QuestionCircleOutlined />, text: '未知' }
+258:24 [chinese+mojibake] 还有 ${expiresIn} 天过期
+    <Tooltip title={`还有 ${expiresIn} 天过期`}>
+273:15 [chinese] 账号
+    title: '账号',
+280:30 [chinese+mojibake] 等级: ${record.details.login.user_info.level}
+    <Tooltip title={`等级: ${record.details.login.user_info.level}`}>
+288:15 [chinese] 健康状态
+    title: '健康状态',
+294:15 [chinese] Cookie状态
+    title: 'Cookie状态',
+304:15 [chinese] 最后检查
+    title: '最后检查',
+317:15 [chinese] 操作
+    title: '操作',
+386:22 [chinese] 总账号数
+    title="总账号数"
+395:22 [chinese] 健康账号
+    title="健康账号"
+405:22 [chinese] 警告账号
+    title="警告账号"
+415:22 [chinese] 严重问题
+    title="严重问题"
+446:29 [chinese] 停止自动刷新
+    {autoRefresh ? '停止自动刷新' : '开启自动刷新'}
+446:40 [chinese] 开启自动刷新
+    {autoRefresh ? '停止自动刷新' : '开启自动刷新'}
+458:82 [mojibake] 0) && (
+    {healthData && (healthData.critical_count > 0 || healthData.warning_count > 0) && (
+460:20 [chinese] 账号健康警告
+    message="账号健康警告"
+461:25 [chinese+mojibake] 发现 ${healthData.critical_count} 个严重问题和 ${healthData.warning_count} 个警告，请及时处理
+    description={`发现 ${healthData.critical_count} 个严重问题和 ${healthData.warning_count} 个警告，请及时处理`}
+469:20 [chinese] 账号健康状态
+    <Card title="账号健康状态">
+479:38 [chinese+mojibake] 共 ${total} 个账号
+    showTotal: (total) => `共 ${total} 个账号`,
+487:17 [chinese+mojibake] 账号详情 - ${selectedAccount?.username}
+    title={`账号详情 - ${selectedAccount?.username}`}
+513:30 [chinese] 基本信息
+    <Card title="基本信息" size="small">
+514:30 [chinese] 账号ID:
+    <p><strong>账号ID:</strong> {selectedAccount.account_id}</p>
+515:30 [chinese] 用户名:
+    <p><strong>用户名:</strong> {selectedAccount.username}</p>
+516:30 [chinese] 整体状态:
+    <p><strong>整体状态:</strong> {getStatusTag(selectedAccount.status)}</p>
+517:30 [chinese] 状态消息:
+    <p><strong>状态消息:</strong> {selectedAccount.message}</p>
+521:30 [chinese] 检查时间
+    <Card title="检查时间" size="small">
+522:30 [chinese] 最后检查:
+    <p><strong>最后检查:</strong> {new Date(selectedAccount.last_check).toLocaleString()}</p>
+524:32 [chinese] Cookie过期:
+    <p><strong>Cookie过期:</strong> {selectedAccount.expires_in} 天后</p>
+530:26 [chinese] 详细状态
+    <Card title="详细状态" size="small" style={{ marginTop: 16 }}>
+533:27 [chinese] Cookie状态:
+    <strong>Cookie状态:</strong> {getStatusTag(selectedAccount.details.cookie.status)}
+540:27 [chinese] 登录状态:
+    <strong>登录状态:</strong> {getStatusTag(selectedAccount.details.login.status)}
+550:27 [chinese] 上传权限:
+    <strong>上传权限:</strong> {getStatusTag(selectedAccount.details.upload.status)}
+
+[src\components\AddClipToCollectionModal.tsx]
+--------------------------------------------------------------------------------
+61:13 [mojibake] ${mins}:${String(secs).padStart(2, '0')}
+    return `${mins}:${String(secs).padStart(2, '0')}`
+96:14 [chinese] 添加切片到合集
+    title="添加切片到合集"
+119:26 [chinese] 搜索切片标题、内容或推荐理由...
+    placeholder="搜索切片标题、内容或推荐理由..."
+132:38 [mojibake] 0 && (
+    {filteredClips.length > 0 && (
+138:71 [chinese] 取消全选
+    {selectedClipIds.length === filteredClips.length ? '取消全选' : '全选'}
+138:80 [chinese] 全选
+    {selectedClipIds.length === filteredClips.length ? '取消全选' : '全选'}
+147:34 [mojibake] 0 ? (
+    {filteredClips.length > 0 ? (
+154:33 [mojibake] clip-list-item ${isSelected ? 'selected' : ''}
+    className={`clip-list-item ${isSelected ? 'selected' : ''}`}
+196:63 [mojibake] 0 && (
+    {clip.content && clip.content.length > 0 && (
+216:24 [chinese] 所有切片都已在合集中
+    ? "所有切片都已在合集中"
+217:24 [chinese] 没有找到匹配的切片
+    : "没有找到匹配的切片"
+
+[src\components\BilibiliAccountManager.tsx]
+--------------------------------------------------------------------------------
+21:62 [mojibake] ([]) const [loading, setLoading] = useState(false) const [modalVisible, setModalVisible] = useState(false) const [activeTab, setActiveTab] = useState('cookie') const [cookieHelperVisible, setCookieHelperVisible] = useState(false) const [accountsHealth, setAccountsHealth] = useState
+    const [accounts, setAccounts] = useState<BilibiliAccount[]>([])
+32:57 [mojibake] ('') const [qrLoginStatus, setQrLoginStatus] = useState
+    const [qrSessionId, setQrSessionId] = useState<string>('')
+33:61 [mojibake] ('') const [qrCodeUrl, setQrCodeUrl] = useState
+    const [qrLoginStatus, setQrLoginStatus] = useState<string>('')
+34:53 [mojibake] ('') const [statusCheckInterval, setStatusCheckInterval] = useState
+    const [qrCodeUrl, setQrCodeUrl] = useState<string>('')
+46:22 [chinese] 获取账号列表失败:
+    message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+46:55 [chinese] 未知错误
+    message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+81:22 [chinese] 获取账号健康状态失败:
+    console.error('获取账号健康状态失败:', error)
+90:24 [chinese] 健康状态已刷新
+    message.success('健康状态已刷新')
+92:22 [chinese] 刷新失败:
+    message.error('刷新失败: ' + (error.message || '未知错误'))
+92:51 [chinese] 未知错误
+    message.error('刷新失败: ' + (error.message || '未知错误'))
+114:24 [chinese] 账号密码登录成功！
+    message.success('账号密码登录成功！')
+119:22 [chinese] 账号密码登录失败:
+    message.error('账号密码登录失败: ' + (error.message || '未知错误'))
+119:55 [chinese] 未知错误
+    message.error('账号密码登录失败: ' + (error.message || '未知错误'))
+142:24 [chinese] Cookie格式不正确，请检查输入
+    message.error('Cookie格式不正确，请检查输入')
+147:24 [chinese] Cookie导入成功！
+    message.success('Cookie导入成功！')
+152:22 [chinese] Cookie导入失败:
+    message.error('Cookie导入失败: ' + (error.message || '未知错误'))
+152:57 [chinese] 未知错误
+    message.error('Cookie导入失败: ' + (error.message || '未知错误'))
+181:28 [chinese] 二维码登录超时，请重试
+    message.error('二维码登录超时，请重试')
+197:30 [chinese] 二维码登录成功！
+    message.success('二维码登录成功！')
+202:28 [chinese] 二维码登录失败，请重试
+    message.error('二维码登录失败，请重试')
+206:26 [chinese] 检查登录状态失败:
+    console.error('检查登录状态失败:', error)
+213:22 [chinese] 启动二维码登录失败:
+    message.error('启动二维码登录失败: ' + (error.message || '未知错误'))
+213:56 [chinese] 未知错误
+    message.error('启动二维码登录失败: ' + (error.message || '未知错误'))
+223:24 [chinese] 账号删除成功
+    message.success('账号删除成功')
+226:22 [chinese] 删除账号失败:
+    message.error('删除账号失败: ' + (error.message || '未知错误'))
+226:53 [chinese] 未知错误
+    message.error('删除账号失败: ' + (error.message || '未知错误'))
+232:30 [chinese] 未知
+    if (!health) return <Tag>未知</Tag>
+235:43 [chinese] 优秀
+    excellent: { color: 'green', text: '优秀', icon: <TrophyOutlined /> },
+236:37 [chinese] 良好
+    good: { color: 'blue', text: '良好', icon: <CheckCircleOutlined /> },
+237:42 [chinese] 警告
+    warning: { color: 'orange', text: '警告', icon: <ExclamationCircleOutlined /> },
+238:36 [chinese] 较差
+    poor: { color: 'red', text: '较差', icon: <CloseCircleOutlined /> }
+243:24 [chinese+mojibake] 健康分数: ${health.score}/100
+    <Tooltip title={`健康分数: ${health.score}/100`}>
+258:33 [chinese] 今天
+    if (diffDays === 0) return '今天'
+259:33 [chinese] 昨天
+    if (diffDays === 1) return '昨天'
+260:31 [chinese] ${diffDays}天前
+    if (diffDays < 7) return `${diffDays}天前`
+266:15 [chinese] 用户名
+    title: '用户名',
+277:15 [chinese] 昵称
+    title: '昵称',
+282:15 [chinese] 账号状态
+    title: '账号状态',
+287:35 [chinese] 正常
+    {status === 'active' ? '正常' : '异常'}
+287:42 [chinese] 异常
+    {status === 'active' ? '正常' : '异常'}
+292:15 [chinese] 健康状态
+    title: '健康状态',
+297:15 [chinese] 活跃度
+    title: '活跃度',
+321:15 [chinese] 操作
+    title: '操作',
+325:27 [chinese] 查看详情
+    <Tooltip title="查看详情">
+331:20 [chinese] 确定要删除这个账号吗？
+    title="确定要删除这个账号吗？"
+332:26 [chinese] 删除后将无法恢复，请谨慎操作。
+    description="删除后将无法恢复，请谨慎操作。"
+334:21 [chinese] 确定
+    okText="确定"
+335:25 [chinese] 取消
+    cancelText="取消"
+376:92 [mojibake] repeat(auto-fit, minmax(200px, 1fr))
+    <div style={{ marginBottom: '16px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+379:30 [chinese] 总账号数
+    title="总账号数"
+387:30 [chinese] 活跃账号
+    title="活跃账号"
+389:32 [mojibake] / ${stats.totalAccounts}
+    suffix={`/ ${stats.totalAccounts}`}
+396:30 [chinese] 平均健康分
+    title="平均健康分"
+398:31 [chinese] 分
+    suffix="分"
+405:30 [chinese] 优秀账号
+    title="优秀账号"
+414:26 [chinese] B站账号管理
+    title="B站账号管理"
+417:39 [chinese] 刷新健康状态
+    <Tooltip title="刷新健康状态">
+442:53 [chinese+mojibake] 第 ${range[0]}-${range[1]} 条，共 ${total} 条
+    showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+464:16 [chinese] 添加B站账号
+    title="添加B站账号"
+480:20 [chinese] 登录方式说明
+    message="登录方式说明"
+481:24 [chinese] 为了避免B站风控，建议使用Cookie导入方式。扫码登录可能触发风控机制。
+    description="为了避免B站风控，建议使用Cookie导入方式。扫码登录可能触发风控机制。"
+488:25 [chinese] Cookie导入
+    <TabPane tab="Cookie导入" key="cookie">
+492:24 [chinese] 昵称
+    label="昵称"
+493:53 [chinese] 请输入昵称
+    rules={[{ required: true, message: '请输入昵称' }]}
+495:37 [chinese] 请输入账号昵称
+    <Input placeholder="请输入账号昵称" />
+513:54 [chinese] 请输入Cookie
+    rules={[{ required: true, message: '请输入Cookie' }]}
+517:33 [chinese+mojibake] 请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx
+    placeholder="请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx"
+530:29 [chinese] 快速获取Cookie：
+    <Text strong>快速获取Cookie：</Text>
+532:22 [chinese] 获取帮助
+    点击上方的"获取帮助"按钮，查看详细的Cookie获取步骤指南
+536:25 [chinese] 账号密码
+    <TabPane tab="账号密码" key="password">
+540:24 [chinese] 用户名
+    label="用户名"
+541:53 [chinese] 请输入用户名
+    rules={[{ required: true, message: '请输入用户名' }]}
+543:37 [chinese] 请输入B站用户名或手机号
+    <Input placeholder="请输入B站用户名或手机号" />
+548:24 [chinese] 密码
+    label="密码"
+549:53 [chinese] 请输入密码
+    rules={[{ required: true, message: '请输入密码' }]}
+551:46 [chinese] 请输入密码
+    <Input.Password placeholder="请输入密码" />
+556:24 [chinese] 昵称
+    label="昵称"
+557:53 [chinese] 请输入昵称
+    rules={[{ required: true, message: '请输入昵称' }]}
+559:37 [chinese] 请输入账号昵称
+    <Input placeholder="请输入账号昵称" />
+570:24 [chinese] 注意
+    message="注意"
+571:28 [chinese] 账号密码登录可能需要处理验证码，如果遇到问题建议使用Cookie导入方式。
+    description="账号密码登录可能需要处理验证码，如果遇到问题建议使用Cookie导入方式。"
+577:25 [chinese] 扫码登录
+    <TabPane tab="扫码登录" key="qr">
+581:37 [chinese] 昵称
+    <Form.Item label="昵称">
+582:41 [chinese] 请输入账号昵称（可选）
+    <Input placeholder="请输入账号昵称（可选）" />
+598:49 [chinese] 二维码
+    <img src={qrCodeUrl} alt="二维码" style={{ maxWidth: '200px' }} />
+603:24 [chinese] 正在生成二维码...
+    <p>正在生成二维码...</p>
+607:24 [chinese] 请使用B站APP扫描二维码
+    <p>请使用B站APP扫描二维码</p>
+611:53 [chinese+mojibake] ✅ 登录成功！
+    <p style={{ color: '#52c41a' }}>✅ 登录成功！</p>
+615:53 [chinese+mojibake] ❌ 登录失败，请重试
+    <p style={{ color: '#ff4d4f' }}>❌ 登录失败，请重试</p>
+622:24 [chinese] 风险提示
+    message="风险提示"
+623:28 [chinese] 扫码登录可能触发B站风控机制，建议优先使用Cookie导入方式。
+    description="扫码登录可能触发B站风控机制，建议优先使用Cookie导入方式。"
+
+[src\components\BilibiliDownload.tsx]
+--------------------------------------------------------------------------------
+19:67 [mojibake] ('') const [selectedBrowser, setSelectedBrowser] = useState
+    const [selectedCategory, setSelectedCategory] = useState<string>('')
+20:65 [mojibake] ('') const [categories, setCategories] = useState
+    const [selectedBrowser, setSelectedBrowser] = useState<string>('')
+21:64 [mojibake] ([]) const [loadingCategories, setLoadingCategories] = useState(false) const [downloading, setDownloading] = useState(false) const [currentTask, setCurrentTask] = useState
+    const [categories, setCategories] = useState<VideoCategory[]>([])
+24:78 [mojibake] (null) const [pollingInterval, setPollingInterval] = useState
+    const [currentTask, setCurrentTask] = useState<BilibiliDownloadTask | null>(null)
+25:72 [mojibake] (null) const [videoInfo, setVideoInfo] = useState
+    const [pollingInterval, setPollingInterval] = useState<number | null>(null)
+45:24 [mojibake] Failed to load video categories:
+    console.error('Failed to load video categories:', error)
+46:24 [chinese] 加载视频分类失败
+    message.error('加载视频分类失败')
+110:17 [chinese] 请输入正确的视频链接
+    setError('请输入正确的视频链接')
+116:17 [chinese] 请输入正确的B站或YouTube视频链接
+    setError('请输入正确的B站或YouTube视频链接')
+143:17 [chinese] 请输入正确的视频链接
+    setError('请输入正确的视频链接')
+165:28 [chinese] 视频下载完成！
+    message.success('视频下载完成！')
+177:26 [chinese+mojibake] 下载失败: ${task.error_message || '未知错误'}
+    message.error(`下载失败: ${task.error_message || '未知错误'}`)
+181:24 [chinese] 轮询任务状态失败:
+    console.error('轮询任务状态失败:', error)
+190:22 [chinese] 请输入视频链接
+    message.error('请输入视频链接')
+196:22 [chinese] 请输入有效的B站或YouTube视频链接
+    message.error('请输入有效的B站或YouTube视频链接')
+233:61 [chinese] 新建项目
+    name: projectName.trim() || (videoInfo?.title ?? '新建项目'),
+244:58 [chinese] B站
+    const platformName = videoType === 'bilibili' ? 'B站' : 'YouTube'
+245:26 [chinese] ${platformName}项目创建成功，正在后台下载中，您可以继续添加其他项目
+    message.success(`${platformName}项目创建成功，正在后台下载中，您可以继续添加其他项目`)
+258:78 [chinese] 创建下载任务失败
+    const errorMessage = error.response?.data?.detail || error.message || '创建下载任务失败'
+281:19 [chinese] 已停止监控下载任务
+    message.info('已停止监控下载任务')
+287:16 [mojibake] 0 auto
+    margin: '0 auto'
+316:26 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+334:24 [chinese] 正在解析视频信息...
+    <span>正在解析视频信息...</span>
+354:28 [mojibake] rgba(102, 126, 234, 0.1)
+    background: 'rgba(102, 126, 234, 0.1)',
+355:24 [mojibake] 1px solid rgba(102, 126, 234, 0.3)
+    border: '1px solid rgba(102, 126, 234, 0.3)',
+366:38 [mojibake] rgba(255, 255, 255, 0.6)
+    <Text style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '12px' }}>
+367:54 [chinese] UP主
+    {getVideoType(url) === 'bilibili' ? 'UP主' : '频道'}: {videoInfo.uploader || '未知'} • 时长: {videoInfo.duration ? `${Math.floor(videoInfo.duration / 60)}:${String(Math.floor(videoInfo.duration % 60)).padStart(2, '0')}` : '未知'}
+367:62 [chinese] 频道
+    {getVideoType(url) === 'bilibili' ? 'UP主' : '频道'}: {videoInfo.uploader || '未知'} • 时长: {videoInfo.duration ? `${Math.floor(videoInfo.duration / 60)}:${String(Math.floor(videoInfo.duration % 60)).padStart(2, '0')}` : '未知'}
+367:92 [chinese] 未知
+    {getVideoType(url) === 'bilibili' ? 'UP主' : '频道'}: {videoInfo.uploader || '未知'} • 时长: {videoInfo.duration ? `${Math.floor(videoInfo.duration / 60)}:${String(Math.floor(videoInfo.duration % 60)).padStart(2, '0')}` : '未知'}
+367:126 [mojibake] ${Math.floor(videoInfo.duration / 60)}:${String(Math.floor(videoInfo.duration % 60)).padStart(2, '0')}
+    {getVideoType(url) === 'bilibili' ? 'UP主' : '频道'}: {videoInfo.uploader || '未知'} • 时长: {videoInfo.duration ? `${Math.floor(videoInfo.duration / 60)}:${String(Math.floor(videoInfo.duration % 60)).padStart(2, '0')}` : '未知'}
+376:127 [chinese] 项目名称（可选）
+    <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>项目名称（可选）</Text>
+378:32 [chinese] 留空将使用视频标题作为项目名称
+    placeholder="留空将使用视频标题作为项目名称"
+383:30 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+394:127 [chinese] 浏览器选择（获取AI字幕需要）
+    <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>浏览器选择（获取AI字幕需要）</Text>
+396:32 [chinese] 选择浏览器以获取cookie（可选）
+    placeholder="选择浏览器以获取cookie（可选）"
+406:30 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+416:40 [mojibake] rgba(255, 255, 255, 0.6)
+    <Text style={{ color: 'rgba(255, 255, 255, 0.6)', fontSize: '12px', marginTop: '8px', display: 'block' }}>
+422:127 [chinese] 视频分类
+    <Text style={{ color: '#ffffff', marginBottom: '12px', display: 'block', fontSize: '16px', fontWeight: 500 }}>视频分类</Text>
+441:39 [mojibake] 8px 12px
+    padding: '8px 12px',
+444:34 [mojibake] 2px solid ${category.color}
+    ? `2px solid ${category.color}`
+445:34 [mojibake] 2px solid var(--ac-line)
+    : '2px solid var(--ac-line)',
+449:62 [mojibake] rgba(255, 255, 255, 0.8)
+    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
+451:34 [mojibake] 0 0 12px ${category.color}40
+    ? `0 0 12px ${category.color}40`
+454:42 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+462:68 [mojibake] rgba(255, 255, 255, 0.2)
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+496:28 [mojibake] linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+    background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+500:25 [mojibake] 0 32px
+    padding: '0 32px',
+503:27 [mojibake] 0 4px 20px rgba(79, 172, 254, 0.3)
+    boxShadow: '0 4px 20px rgba(79, 172, 254, 0.3)',
+507:29 [chinese] 导入中...
+    {downloading ? '导入中...' : '开始导入'}
+507:40 [chinese] 开始导入
+    {downloading ? '导入中...' : '开始导入'}
+516:26 [mojibake] 1px solid rgba(255, 255, 255, 0.3)
+    border: '1px solid rgba(255, 255, 255, 0.3)',
+520:27 [mojibake] 0 24px
+    padding: '0 24px',
+535:22 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+545:83 [chinese] 导入进度
+    <Text style={{ color: '#ffffff', fontWeight: 600, fontSize: '18px' }}>导入进度</Text>
+577:28 [mojibake] rgba(255, 77, 79, 0.1)
+    background: 'rgba(255, 77, 79, 0.1)',
+578:24 [mojibake] 1px solid rgba(255, 77, 79, 0.3)
+    border: '1px solid rgba(255, 77, 79, 0.3)',
+
+[src\components\BilibiliManager.tsx]
+--------------------------------------------------------------------------------
+30:62 [mojibake] ([]) const [loading, setLoading] = useState(false) const [showAddAccount, setShowAddAccount] = useState(false) const [cookieForm] = Form.useForm() const [uploadForm] = Form.useForm() const [uploadRecords, setUploadRecords] = useState
+    const [accounts, setAccounts] = useState<BilibiliAccount[]>([])
+37:69 [mojibake] ([]) const [recordsLoading, setRecordsLoading] = useState(false) const [selectedRecord, setSelectedRecord] = useState
+    const [uploadRecords, setUploadRecords] = useState<UploadRecord[]>([])
+49:22 [chinese] 获取账号列表失败:
+    message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+49:55 [chinese] 未知错误
+    message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+62:22 [chinese] 获取投稿记录失败:
+    message.error('获取投稿记录失败: ' + (error.message || '未知错误'))
+62:55 [chinese] 未知错误
+    message.error('获取投稿记录失败: ' + (error.message || '未知错误'))
+72:24 [chinese] 重试任务已提交
+    message.success('重试任务已提交')
+75:22 [chinese] 重试失败:
+    message.error('重试失败: ' + (error.message || '未知错误'))
+75:51 [chinese] 未知错误
+    message.error('重试失败: ' + (error.message || '未知错误'))
+83:24 [chinese] 任务已取消
+    message.success('任务已取消')
+86:22 [chinese] 取消失败:
+    message.error('取消失败: ' + (error.message || '未知错误'))
+86:51 [chinese] 未知错误
+    message.error('取消失败: ' + (error.message || '未知错误'))
+94:24 [chinese] 任务已删除
+    message.success('任务已删除')
+97:22 [chinese] 删除失败:
+    message.error('删除失败: ' + (error.message || '未知错误'))
+97:51 [chinese] 未知错误
+    message.error('删除失败: ' + (error.message || '未知错误'))
+142:24 [chinese] Cookie格式不正确，请检查输入
+    message.error('Cookie格式不正确，请检查输入')
+147:24 [chinese] 账号添加成功！
+    message.success('账号添加成功！')
+152:22 [chinese] 添加账号失败:
+    message.error('添加账号失败: ' + (error.message || '未知错误'))
+152:53 [chinese] 未知错误
+    message.error('添加账号失败: ' + (error.message || '未知错误'))
+162:24 [chinese] 账号删除成功
+    message.success('账号删除成功')
+165:22 [chinese] 删除账号失败:
+    message.error('删除账号失败: ' + (error.message || '未知错误'))
+165:53 [chinese] 未知错误
+    message.error('删除账号失败: ' + (error.message || '未知错误'))
+172:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3)
+177:22 [chinese] 没有选择要上传的切片
+    message.error('没有选择要上传的切片')
+203:26 [chinese] 投稿任务已创建，正在后台处理中...
+    message.success('投稿任务已创建，正在后台处理中...')
+208:24 [chinese] 投稿失败:
+    message.error('投稿失败: ' + (error.detail || '未知错误'))
+208:52 [chinese] 未知错误
+    message.error('投稿失败: ' + (error.detail || '未知错误'))
+211:22 [chinese] 投稿失败:
+    message.error('投稿失败: ' + (error.message || '未知错误'))
+211:51 [chinese] 未知错误
+    message.error('投稿失败: ' + (error.message || '未知错误'))
+220:74 [chinese] 等待中
+    pending: { color: 'default', icon: <ClockCircleOutlined />, text: '等待中' },
+221:79 [chinese] 处理中
+    processing: { color: 'processing', icon: <PlayCircleOutlined />, text: '处理中' },
+222:74 [chinese] 成功
+    success: { color: 'success', icon: <CheckCircleOutlined />, text: '成功' },
+223:76 [chinese] 完成
+    completed: { color: 'success', icon: <CheckCircleOutlined />, text: '完成' },
+224:77 [chinese] 失败
+    failed: { color: 'error', icon: <ExclamationCircleOutlined />, text: '失败' },
+225:69 [chinese] 已取消
+    cancelled: { color: 'default', icon: <StopOutlined />, text: '已取消' }
+239:42 [chinese] 分区${partitionId}
+    return partition ? partition.name : `分区${partitionId}`
+247:13 [mojibake] ${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}
+    return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}`
+258:15 [chinese] ${hours}小时${minutes}分钟
+    return `${hours}小时${minutes}分钟`
+260:15 [chinese] ${minutes}分钟${secs}秒
+    return `${minutes}分钟${secs}秒`
+262:15 [chinese] ${secs}秒
+    return `${secs}秒`
+281:60 [chinese] Cookie获取步骤：
+    <div style={{ marginBottom: 8, fontWeight: 'bold' }}>Cookie获取步骤：</div>
+283:13 [chinese] 打开B站网站并登录
+    <li>打开B站网站并登录</li>
+284:13 [chinese] 按F12打开开发者工具
+    <li>按F12打开开发者工具</li>
+285:13 [chinese] 点击Network标签页
+    <li>点击Network标签页</li>
+286:13 [chinese] 刷新页面
+    <li>刷新页面</li>
+287:13 [chinese] 找到任意请求，点击查看
+    <li>找到任意请求，点击查看</li>
+288:13 [chinese+mojibake] 在Request Headers中找到Cookie字段
+    <li>在Request Headers中找到Cookie字段</li>
+289:13 [chinese+mojibake] 复制Cookie的值（不包含"Cookie: "前缀）
+    <li>复制Cookie的值（不包含"Cookie: "前缀）</li>
+297:15 [chinese] 昵称
+    title: '昵称',
+308:15 [chinese] 用户名
+    title: '用户名',
+313:15 [chinese] 状态
+    title: '状态',
+318:35 [chinese] 正常
+    {status === 'active' ? '正常' : '异常'}
+318:42 [chinese] 异常
+    {status === 'active' ? '正常' : '异常'}
+323:15 [chinese] 操作
+    title: '操作',
+327:18 [chinese] 确定要删除这个账号吗？
+    title="确定要删除这个账号吗？"
+328:24 [chinese] 删除后将无法恢复，请谨慎操作。
+    description="删除后将无法恢复，请谨慎操作。"
+330:19 [chinese] 确定
+    okText="确定"
+331:23 [chinese] 取消
+    cancelText="取消"
+344:15 [chinese] 任务ID
+    title: '任务ID',
+351:15 [chinese] 标题
+    title: '标题',
+362:15 [chinese] 投稿账号
+    title: '投稿账号',
+376:15 [chinese] 分区
+    title: '分区',
+385:15 [chinese] 状态
+    title: '状态',
+392:15 [chinese] 进度
+    title: '进度',
+409:15 [chinese] 文件大小
+    title: '文件大小',
+416:15 [chinese] 创建时间
+    title: '创建时间',
+423:15 [chinese] 操作
+    title: '操作',
+438:22 [chinese] 确定要重试这个投稿任务吗？
+    title="确定要重试这个投稿任务吗？"
+440:23 [chinese] 确定
+    okText="确定"
+441:27 [chinese] 取消
+    cancelText="取消"
+454:22 [chinese] 确定要取消这个投稿任务吗？
+    title="确定要取消这个投稿任务吗？"
+456:23 [chinese] 确定
+    okText="确定"
+457:27 [chinese] 取消
+    cancelText="取消"
+471:22 [chinese] 确定要删除这个投稿任务吗？删除后无法恢复。
+    title="确定要删除这个投稿任务吗？删除后无法恢复。"
+473:23 [chinese] 确定
+    okText="确定"
+474:27 [chinese] 取消
+    cancelText="取消"
+506:57 [chinese] B站管理
+    <h2 className="bilibili-manager-header-title">B站管理</h2>
+509:18 [chinese+mojibake] 准备上传 ${clipIds.length} 个切片到B站
+    ? `准备上传 ${clipIds.length} 个切片到B站`
+510:18 [chinese] 管理您的B站账号和投稿设置
+    : '管理您的B站账号和投稿设置'
+519:26 [mojibake] 0 && (
+    {clipIds.length > 0 && (
+531:26 [chinese] 投稿信息
+    message="投稿信息"
+532:31 [chinese+mojibake] 准备上传 ${clipIds.length} 个切片到B站
+    description={`准备上传 ${clipIds.length} 个切片到B站`}
+543:67 [chinese+mojibake] ${clipTitles[0]} 等${clipIds.length}个视频
+    title: clipTitles.length === 1 ? clipTitles[0] : `${clipTitles[0]} 等${clipIds.length}个视频`,
+550:28 [chinese] 选择账号
+    label="选择账号"
+552:57 [chinese] 请选择B站账号
+    rules={[{ required: true, message: '请选择B站账号' }]}
+555:36 [chinese] 选择要使用的B站账号
+    placeholder="选择要使用的B站账号"
+558:30 [chinese] 暂无可用账号
+    <p>暂无可用账号</p>
+579:28 [chinese] 视频分区
+    label="视频分区"
+581:57 [chinese] 请选择视频分区
+    rules={[{ required: true, message: '请选择视频分区' }]}
+583:42 [chinese] 选择视频分区
+    <Select placeholder="选择视频分区" showSearch>
+595:24 [chinese] 标题
+    label="标题"
+597:53 [chinese] 请输入视频标题
+    rules={[{ required: true, message: '请输入视频标题' }]}
+599:37 [chinese] 输入视频标题
+    <Input placeholder="输入视频标题" maxLength={80} showCount />
+603:24 [chinese] 描述
+    label="描述"
+607:32 [chinese] 输入视频描述（可选）
+    placeholder="输入视频描述（可选）"
+615:24 [chinese] 标签
+    label="标签"
+618:37 [chinese] 输入标签，用逗号分隔（可选）
+    <Input placeholder="输入标签，用逗号分隔（可选）" />
+625:50 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+684:59 [chinese] 投稿任务状态
+    <h3 style={{ margin: 0, color: '#ffffff' }}>投稿任务状态</h3>
+701:68 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+703:67 [chinese] 总任务数
+    title={<span style={{ color: '#ffffff' }}>总任务数</span>}
+710:68 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+712:67 [chinese] 成功
+    title={<span style={{ color: '#ffffff' }}>成功</span>}
+720:68 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+722:67 [chinese] 失败
+    title={<span style={{ color: '#ffffff' }}>失败</span>}
+730:68 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+732:67 [chinese] 进行中
+    title={<span style={{ color: '#ffffff' }}>进行中</span>}
+753:47 [chinese+mojibake] 第 ${range[0]}-${range[1]} 条，共 ${total} 条
+    showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+765:16 [chinese] 添加B站账号
+    title="添加B站账号"
+775:20 [chinese] 推荐使用Cookie导入
+    message="推荐使用Cookie导入"
+776:24 [chinese] Cookie导入是最安全、最稳定的登录方式，不会触发B站风控。
+    description="Cookie导入是最安全、最稳定的登录方式，不会触发B站风控。"
+785:20 [chinese] 账号昵称
+    label="账号昵称"
+786:49 [chinese] 请输入账号昵称
+    rules={[{ required: true, message: '请输入账号昵称' }]}
+788:33 [chinese] 请输入账号昵称，用于识别
+    <Input placeholder="请输入账号昵称，用于识别" />
+808:43 [chinese] 请输入Cookie
+    { required: true, message: '请输入Cookie' },
+809:36 [chinese] Cookie长度不能少于10个字符
+    { min: 10, message: 'Cookie长度不能少于10个字符' }
+814:28 [chinese+mojibake] 请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx
+    placeholder="请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx"
+833:16 [chinese] 投稿任务详情
+    title="投稿任务详情"
+849:31 [mojibake] 1px solid #303030
+    borderRight: '1px solid #303030'
+854:30 [mojibake] 1px solid #303030
+    borderLeft: '1px solid #303030'
+858:26 [mojibake] 1px solid #303030
+    border: '1px solid #303030'
+861:41 [chinese] 任务ID
+    <Descriptions.Item label="任务ID" span={1}>
+864:41 [chinese] 状态
+    <Descriptions.Item label="状态" span={1}>
+867:41 [chinese] 标题
+    <Descriptions.Item label="标题" span={2}>
+870:41 [chinese] 投稿账号
+    <Descriptions.Item label="投稿账号" span={1}>
+873:41 [chinese] 分区
+    <Descriptions.Item label="分区" span={1}>
+876:41 [chinese] 项目名称
+    <Descriptions.Item label="项目名称" span={1}>
+879:41 [chinese] 切片ID
+    <Descriptions.Item label="切片ID" span={1}>
+882:41 [chinese] 进度
+    <Descriptions.Item label="进度" span={2}>
+892:41 [chinese] 文件大小
+    <Descriptions.Item label="文件大小" span={1}>
+895:41 [chinese] 上传时长
+    <Descriptions.Item label="上传时长" span={1}>
+898:41 [chinese] BV号
+    <Descriptions.Item label="BV号" span={1}>
+901:41 [chinese] AV号
+    <Descriptions.Item label="AV号" span={1}>
+904:41 [chinese] 创建时间
+    <Descriptions.Item label="创建时间" span={1}>
+907:41 [chinese] 更新时间
+    <Descriptions.Item label="更新时间" span={1}>
+914:50 [chinese] 描述
+    <h4 style={{ color: '#ffffff' }}>描述</h4>
+921:50 [chinese] 标签
+    <h4 style={{ color: '#ffffff' }}>标签</h4>
+928:50 [chinese] 错误信息
+    <h4 style={{ color: '#ffffff' }}>错误信息</h4>
+930:28 [chinese] 投稿失败
+    message="投稿失败"
+942:28 [chinese] 确定要重试这个投稿任务吗？
+    title="确定要重试这个投稿任务吗？"
+947:29 [chinese] 确定
+    okText="确定"
+948:33 [chinese] 取消
+    cancelText="取消"
+
+[src\components\ClipCard.tsx]
+--------------------------------------------------------------------------------
+13:34 [mojibake] void projectId?: string onClipUpdate?: (clipId: string, updates: Partial
+    onDownload: (clipId: string) => void
+26:70 [mojibake] (null) const [showBilibiliManager, setShowBilibiliManager] = useState(false) const playerRef = useRef
+    const [videoThumbnail, setVideoThumbnail] = useState<string | null>(null)
+65:22 [chinese] 下载失败:
+    console.error('下载失败:', error)
+66:22 [chinese] 下载失败
+    message.error('下载失败')
+84:13 [mojibake] ${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}
+    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`
+109:22 [mojibake] Error calculating duration:
+    console.error('Error calculating duration:', error)
+118:13 [mojibake] ${start.substring(0, 8)} - ${end.substring(0, 8)}
+    return `${start.substring(0, 8)} - ${end.substring(0, 8)}`
+150:13 [chinese] 暂无内容要点
+    return '暂无内容要点'
+153:41 [mojibake] (null) return (
+    const textRef = useRef<HTMLDivElement>(null)
+163:22 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+178:22 [mojibake] url(${videoThumbnail}) center/cover
+    ? `url(${videoThumbnail}) center/cover`
+201:32 [mojibake] opacity 0.3s ease
+    transition: 'opacity 0.3s ease'
+217:29 [mojibake] 4px 9px
+    padding: '4px 9px',
+238:29 [mojibake] 4px 9px
+    padding: '4px 9px',
+259:29 [mojibake] 4px 9px
+    padding: '4px 9px',
+294:65 [chinese] 未命名片段
+    title={clip.title || clip.generated_title || '未命名片段'}
+357:28 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+361:29 [mojibake] 0 14px
+    padding: '0 14px',
+374:28 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+378:29 [mojibake] 0 14px
+    padding: '0 14px',
+388:46 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+391:28 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+395:29 [mojibake] 0 14px
+    padding: '0 14px',
+417:42 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+427:28 [mojibake] 1px solid #303030
+    borderBottom: '1px solid #303030',
+442:61 [chinese] 视频预览
+    title={clip.title || clip.generated_title || '视频预览'}
+446:30 [chinese] 播放器标题已更新:
+    console.log('播放器标题已更新:', newTitle)
+457:28 [mojibake] calc(100% - 40px)
+    maxWidth: 'calc(100% - 40px)' // 确保不会与关闭按钮重叠
+482:28 [mojibake] Video ready for seeking
+    console.log('Video ready for seeking')
+485:30 [mojibake] ReactPlayer error:
+    console.error('ReactPlayer error:', error)
+497:61 [chinese] 视频片段
+    clipTitles={[clip.title || clip.generated_title || '视频片段']}
+500:24 [chinese] 投稿成功
+    console.log('投稿成功')
+
+[src\components\ClipDetailModal.tsx]
+--------------------------------------------------------------------------------
+46:13 [mojibake] ${start.substring(0, 8)} - ${end.substring(0, 8)}
+    return `${start.substring(0, 8)} - ${end.substring(0, 8)}`
+88:26 [mojibake] rgba(26, 26, 46, 0.95)
+    background: 'rgba(26, 26, 46, 0.95)',
+165:31 [chinese] 暂停
+    {playing ? '暂停' : '播放'}
+165:38 [chinese] 播放
+    {playing ? '暂停' : '播放'}
+185:69 [chinese] 未命名片段
+    title={clip.generated_title || clip.title || '未命名片段'}
+189:38 [chinese] 标题已更新:
+    console.log('标题已更新:', newTitle)
+203:55 [mojibake] 0 && (
+    {clip.content && clip.content.length > 0 && (
+214:37 [mojibake] 4px 8px
+    padding: '4px 8px',
+
+[src\components\CollectionCard.tsx]
+--------------------------------------------------------------------------------
+13:39 [mojibake] void onUpdate?: (collectionId: string, updates: Partial
+    onDelete?: (collectionId: string) => void
+40:13 [mojibake] ${mins}:${String(secs).padStart(2, '0')}
+    return `${mins}:${String(secs).padStart(2, '0')}`
+59:18 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+107:28 [mojibake] opacity 0.3s ease
+    transition: 'opacity 0.3s ease'
+123:25 [mojibake] 4px 9px
+    padding: '4px 9px',
+131:65 [chinese+mojibake] AI 推荐
+    {collection.collection_type === 'ai_recommended' ? 'AI 推荐' : '手动创建'}
+131:75 [chinese] 手动创建
+    {collection.collection_type === 'ai_recommended' ? 'AI 推荐' : '手动创建'}
+142:25 [mojibake] 4px 8px
+    padding: '4px 8px',
+162:25 [mojibake] 4px 8px
+    padding: '4px 8px',
+229:56 [chinese] 暂无描述
+    title={collection.collection_summary || '暂无描述'}
+249:52 [chinese] 暂无描述
+    {collection.collection_summary || '暂无描述'}
+270:24 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+274:25 [mojibake] 0 12px
+    padding: '0 12px',
+288:26 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+292:27 [mojibake] 0 12px
+    padding: '0 12px',
+303:42 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+306:24 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+310:25 [mojibake] 0 12px
+    padding: '0 12px',
+
+[src\components\CollectionPreviewModal.tsx]
+--------------------------------------------------------------------------------
+21:17 [mojibake] void onUpdateCollection: (collectionId: string, updates: Partial
+    onClose: () => void
+106:18 [chinese] 拖拽开始
+    console.log('拖拽开始')
+111:18 [chinese] 拖拽结束:
+    console.log('拖拽结束:', result)
+117:20 [chinese] 拖拽取消或无目标位置
+    console.log('拖拽取消或无目标位置')
+123:20 [chinese] 位置未变化，跳过更新
+    console.log('位置未变化，跳过更新')
+131:18 [chinese] 原始顺序:
+    console.log('原始顺序:', latestCollection.clip_ids)
+132:18 [chinese] 新顺序:
+    console.log('新顺序:', newClipIds)
+135:42 [chinese] 正在更新切片顺序...
+    const hideLoading = message.loading('正在更新切片顺序...', 0)
+150:22 [mojibake] Failed to reorder clips:
+    console.error('Failed to reorder clips:', error)
+152:22 [chinese] 切片顺序修改失败
+    message.error('切片顺序修改失败')
+161:42 [chinese] 正在移除切片...
+    const hideLoading = message.loading('正在移除切片...', 0)
+177:22 [mojibake] Failed to remove clip:
+    console.error('Failed to remove clip:', error)
+179:22 [chinese] 移除切片失败
+    message.error('移除切片失败')
+198:42 [chinese] 正在添加切片...
+    const hideLoading = message.loading('正在添加切片...', 0)
+206:22 [mojibake] Failed to add clips:
+    console.error('Failed to add clips:', error)
+208:22 [chinese] 添加切片失败
+    message.error('添加切片失败')
+222:13 [mojibake] ${mins}:${String(secs).padStart(2, '0')}
+    return `${mins}:${String(secs).padStart(2, '0')}`
+235:46 [mojibake] min(90dvh, calc(100dvh - 40px))
+    styles={{ body: { padding: 0, height: 'min(90dvh, calc(100dvh - 40px))' } }}
+265:46 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+271:26 [chinese] 删除合集
+    title="删除合集"
+272:32 [chinese] 确定要删除这个合集吗？此操作不可撤销。
+    description="确定要删除这个合集吗？此操作不可撤销。"
+274:27 [chinese] 确定
+    okText="确定"
+275:31 [chinese] 取消
+    cancelText="取消"
+290:29 [chinese] 关闭合集预览
+    aria-label="关闭合集预览"
+291:24 [chinese] 关闭
+    title="关闭"
+294:28 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+324:70 [chinese] 暂无视频内容
+    <Text style={{ color: '#999', marginTop: 16 }}>暂无视频内容</Text>
+336:89 [chinese] 未命名片段
+    title={currentClip.title || currentClip.generated_title || '未命名片段'}
+340:44 [chinese] 标题已更新:
+    console.log('标题已更新:', newTitle)
+346:106 [mojibake] 1px solid var(--ac-line)
+    <Tag style={{ background: 'var(--ac-line-2)', color: 'var(--ac-sub)', border: '1px solid var(--ac-line)', borderRadius: '6px' }}>
+353:40 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+357:106 [chinese] 分
+    <span className="ac-mono">{(currentClip.final_score * 100).toFixed(0)}</span> 分
+371:34 [chinese] 上一个切片
+    title="上一个切片"
+379:34 [chinese] 下一个切片
+    title="下一个切片"
+394:60 [chinese] 播放列表
+    <Title level={5} style={{ margin: 0 }}>播放列表</Title>
+395:44 [chinese] 拖拽调整顺序
+    <Text type="secondary">拖拽调整顺序</Text>
+410:35 [mojibake] 0 16px
+    padding: '0 16px',
+459:50 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+460:51 [mojibake] 2px 6px
+    padding: '2px 6px',
+479:44 [chinese] 确定要从合集中移除这个切片吗？
+    title="确定要从合集中移除这个切片吗？"
+484:45 [chinese] 确定
+    okText="确定"
+485:49 [chinese] 取消
+    cancelText="取消"
+535:88 [chinese] 视频片段
+    clipTitles={collectionClips.map(clip => clip.generated_title || clip.title || '视频片段')}
+538:24 [chinese] 合集投稿成功
+    console.log('合集投稿成功')
+
+[src\components\CollectionPreviewModal_fixed.tsx]
+--------------------------------------------------------------------------------
+18:17 [mojibake] void onUpdateCollection: (collectionId: string, updates: Partial
+    onClose: () => void
+40:72 [mojibake] (null) const [downloadingCollection, setDownloadingCollection] = useState(false) const [generatingVideo, setGeneratingVideo] = useState(false) const [showAddClipModal, setShowAddClipModal] = useState(false) const [isUpdating, setIsUpdating] = useState(false) const playerRef = useRef
+    const [downloadingClip, setDownloadingClip] = useState<string | null>(null)
+98:18 [chinese] 拖拽开始
+    console.log('拖拽开始')
+103:18 [chinese] 拖拽结束:
+    console.log('拖拽结束:', result)
+109:20 [chinese] 拖拽取消或无目标位置
+    console.log('拖拽取消或无目标位置')
+115:20 [chinese] 位置未变化，跳过更新
+    console.log('位置未变化，跳过更新')
+123:18 [chinese] 原始顺序:
+    console.log('原始顺序:', collection.clip_ids)
+124:18 [chinese] 新顺序:
+    console.log('新顺序:', newClipIds)
+127:42 [chinese] 正在更新切片顺序...
+    const hideLoading = message.loading('正在更新切片顺序...', 0)
+141:24 [chinese] 切片顺序更新成功
+    message.success('切片顺序更新成功')
+143:22 [mojibake] Failed to reorder clips:
+    console.error('Failed to reorder clips:', error)
+145:22 [chinese] 切片顺序修改失败
+    message.error('切片顺序修改失败')
+154:42 [chinese] 正在移除切片...
+    const hideLoading = message.loading('正在移除切片...', 0)
+169:24 [chinese] 切片移除成功
+    message.success('切片移除成功')
+171:22 [mojibake] Failed to remove clip:
+    console.error('Failed to remove clip:', error)
+173:22 [chinese] 移除切片失败
+    message.error('移除切片失败')
+183:24 [chinese] 切片下载成功
+    message.success('切片下载成功')
+185:22 [mojibake] Download clip failed:
+    console.error('Download clip failed:', error)
+186:22 [chinese] 切片下载失败
+    message.error('切片下载失败')
+198:24 [chinese] 合集下载成功
+    message.success('合集下载成功')
+200:22 [mojibake] Download collection failed:
+    console.error('Download collection failed:', error)
+201:22 [chinese] 合集下载失败
+    message.error('合集下载失败')
+213:24 [chinese] 开始生成合集视频，请稍后查看下载
+    message.success('开始生成合集视频，请稍后查看下载')
+215:22 [chinese] 生成合集视频失败
+    message.error('生成合集视频失败')
+224:42 [chinese] 正在添加切片...
+    const hideLoading = message.loading('正在添加切片...', 0)
+231:24 [chinese+mojibake] 成功添加 ${selectedClipIds.length} 个切片到合集
+    message.success(`成功添加 ${selectedClipIds.length} 个切片到合集`)
+233:22 [mojibake] Failed to add clips:
+    console.error('Failed to add clips:', error)
+235:22 [chinese] 添加切片失败
+    message.error('添加切片失败')
+249:13 [mojibake] ${mins}:${String(secs).padStart(2, '0')}
+    return `${mins}:${String(secs).padStart(2, '0')}`
+262:46 [mojibake] min(90dvh, calc(100dvh - 40px))
+    styles={{ body: { padding: 0, height: 'min(90dvh, calc(100dvh - 40px))' } }}
+299:26 [chinese] 删除合集
+    title="删除合集"
+300:32 [chinese] 确定要删除这个合集吗？此操作不可撤销。
+    description="确定要删除这个合集吗？此操作不可撤销。"
+302:27 [chinese] 确定
+    okText="确定"
+303:31 [chinese] 取消
+    cancelText="取消"
+346:70 [chinese] 暂无视频内容
+    <Text style={{ color: '#999', marginTop: 16 }}>暂无视频内容</Text>
+374:34 [chinese] 上一个切片
+    title="上一个切片"
+382:34 [chinese] 下一个切片
+    title="下一个切片"
+397:60 [chinese] 播放列表
+    <Title level={5} style={{ margin: 0 }}>播放列表</Title>
+398:44 [chinese] 拖拽调整顺序
+    <Text type="secondary">拖拽调整顺序</Text>
+409:38 [mojibake] linear-gradient(45deg, #1890ff, #36cfc9)
+    background: 'linear-gradient(45deg, #1890ff, #36cfc9)',
+466:51 [chinese] 下载切片
+    <Tooltip title="下载切片">
+480:44 [chinese] 确定要从合集中移除这个切片吗？
+    title="确定要从合集中移除这个切片吗？"
+485:45 [chinese] 确定
+    okText="确定"
+486:49 [chinese] 取消
+    cancelText="取消"
+
+[src\components\CookieHelper.tsx]
+--------------------------------------------------------------------------------
+19:15 [chinese] 登录B站
+    title: '登录B站',
+20:21 [chinese] 在浏览器中登录B站账号
+    description: '在浏览器中登录B站账号',
+24:22 [chinese] 第一步：登录B站
+    message="第一步：登录B站"
+25:26 [chinese] 请确保您已经在浏览器中成功登录了B站账号
+    description="请确保您已经在浏览器中成功登录了B站账号"
+35:25 [chinese] 登录
+    2. 点击右上角的"登录"按钮
+48:15 [chinese] 打开开发者工具
+    title: '打开开发者工具',
+49:21 [chinese] 按F12打开浏览器开发者工具
+    description: '按F12打开浏览器开发者工具',
+53:22 [chinese] 第二步：打开开发者工具
+    message="第二步：打开开发者工具"
+54:26 [chinese] 使用快捷键打开浏览器的开发者工具
+    description="使用快捷键打开浏览器的开发者工具"
+61:49 [chinese] 按
+    <Text strong>Windows/Linux:</Text> 按 <Text code>F12</Text> 键
+61:73 [chinese] 键
+    <Text strong>Windows/Linux:</Text> 按 <Text code>F12</Text> 键
+64:39 [chinese] 按
+    <Text strong>Mac:</Text> 按 <Text code>Command + Option + I</Text>
+64:53 [mojibake] Command + Option + I
+    <Text strong>Mac:</Text> 按 <Text code>Command + Option + I</Text>
+67:30 [chinese] 检查
+    或者右键点击页面空白处，选择"检查"或"Inspect"
+78:15 [chinese] 切换到Network标签
+    title: '切换到Network标签',
+79:21 [chinese] 找到Network（网络）标签页
+    description: '找到Network（网络）标签页',
+83:22 [chinese] 第三步：切换到Network标签
+    message="第三步：切换到Network标签"
+84:26 [chinese] 在开发者工具中找到Network标签页
+    description="在开发者工具中找到Network标签页"
+94:46 [chinese] 标签
+    2. 点击 <Text code>Network</Text> 标签
+108:15 [chinese] 刷新页面
+    title: '刷新页面',
+109:21 [chinese] 刷新B站页面以捕获请求
+    description: '刷新B站页面以捕获请求',
+113:22 [chinese] 第四步：刷新页面
+    message="第四步：刷新页面"
+114:26 [chinese] 刷新B站页面以捕获网络请求
+    description="刷新B站页面以捕获网络请求"
+124:40 [chinese] 或点击浏览器的刷新按钮
+    2. 按 <Text code>F5</Text> 或点击浏览器的刷新按钮
+138:15 [chinese] 找到Cookie
+    title: '找到Cookie',
+139:21 [chinese] 在请求头中找到Cookie信息
+    description: '在请求头中找到Cookie信息',
+143:22 [chinese] 第五步：找到Cookie信息
+    message="第五步：找到Cookie信息"
+144:26 [chinese] 在任意请求中找到Cookie字段
+    description="在任意请求中找到Cookie字段"
+154:58 [chinese] 标签
+    2. 点击该请求，在右侧面板中找到 <Text code>Headers</Text> 标签
+157:31 [mojibake] Request Headers
+    3. 在 <Text code>Request Headers</Text> 部分找到 <Text code>Cookie</Text> 字段
+157:53 [chinese] 部分找到
+    3. 在 <Text code>Request Headers</Text> 部分找到 <Text code>Cookie</Text> 字段
+157:83 [chinese] 字段
+    3. 在 <Text code>Request Headers</Text> 部分找到 <Text code>Cookie</Text> 字段
+171:15 [chinese] 复制Cookie
+    title: '复制Cookie',
+172:21 [chinese] 复制完整的Cookie字符串
+    description: '复制完整的Cookie字符串',
+176:22 [chinese] 第六步：复制Cookie
+    message="第六步：复制Cookie"
+177:26 [chinese] 复制完整的Cookie字符串到剪贴板
+    description="复制完整的Cookie字符串到剪贴板"
+187:21 [chinese] 复制值
+    2. 选择"复制值"或"Copy value"
+187:27 [mojibake] Copy value
+    2. 选择"复制值"或"Copy value"
+190:62 [chinese] 复制
+    3. 或者双击选中整个Cookie值，然后按 <Text code>Ctrl+C</Text> 复制
+197:24 [chinese] 重要提示
+    message="重要提示"
+198:28 [chinese] Cookie包含您的登录信息，请妥善保管，不要分享给他人
+    description="Cookie包含您的登录信息，请妥善保管，不要分享给他人"
+209:28 [mojibake] SESSDATA=your_sessdata_here; bili_jct=your_bili_jct_here; DedeUserID=your_dedeuserid_here
+    const cookieExample = "SESSDATA=your_sessdata_here; bili_jct=your_bili_jct_here; DedeUserID=your_dedeuserid_here"
+221:17 [chinese] Cookie获取指南
+    <span>Cookie获取指南</span>
+235:22 [chinese] 已复制
+    {copied ? '已复制' : '复制示例'}
+235:30 [chinese] 复制示例
+    {copied ? '已复制' : '复制示例'}
+242:20 [chinese] Cookie导入是最安全的登录方式
+    message="Cookie导入是最安全的登录方式"
+243:24 [chinese] 相比扫码登录，Cookie导入不会触发B站的风控机制，是最推荐的登录方式。
+    description="相比扫码登录，Cookie导入不会触发B站的风控机制，是最推荐的登录方式。"
+261:33 [chinese] Cookie格式示例
+    <Card size="small" title="Cookie格式示例">
+
+[src\components\CreateCollectionModal.tsx]
+--------------------------------------------------------------------------------
+84:54 [chinese] 创建新合集
+    <Title level={3} className="modal-title">创建新合集</Title>
+85:46 [chinese] 将精选片段组合成一个主题合集
+    <Text className="modal-subtitle">将精选片段组合成一个主题合集</Text>
+97:28 [chinese] 合集标题
+    <Text strong>合集标题</Text>
+101:28 [chinese] 请输入合集标题
+    placeholder="请输入合集标题"
+114:28 [chinese] 合集描述
+    <Text strong>合集描述</Text>
+117:28 [chinese] 请输入合集描述（可选）
+    placeholder="请输入合集描述（可选）"
+131:28 [chinese] 选择片段
+    <Text strong>选择片段</Text>
+164:33 [mojibake] clip-item ${selectedClips.includes(clip.id) ? 'selected' : ''}
+    className={`clip-item ${selectedClips.includes(clip.id) ? 'selected' : ''}`}
+174:65 [chinese] 未命名片段
+    {clip.generated_title || clip.title || '未命名片段'}
+
+[src\components\DesktopSettings.tsx]
+--------------------------------------------------------------------------------
+81:61 [mojibake] (null); const [systemInfo, setSystemInfo] = useState
+    const [config, setConfig] = useState<DesktopConfig | null>(null);
+82:66 [mojibake] (null); const [serviceStatus, setServiceStatus] = useState
+    const [systemInfo, setSystemInfo] = useState<SystemInfo | null>(null);
+94:24 [chinese] 加载配置失败
+    message.error('加载配置失败');
+97:22 [chinese] 加载配置错误:
+    console.error('加载配置错误:', error);
+98:22 [chinese] 加载配置失败
+    message.error('加载配置失败');
+111:22 [chinese] 加载系统信息失败:
+    console.error('加载系统信息失败:', error);
+124:22 [chinese] 加载服务状态失败:
+    console.error('加载服务状态失败:', error);
+134:39 [mojibake] AutoClip Desktop
+    app_name: values.app_name || "AutoClip Desktop",
+168:26 [chinese] 配置保存成功
+    message.success('配置保存成功');
+172:24 [chinese+mojibake] 配置保存失败: ${errorData.detail || '未知错误'}
+    message.error(`配置保存失败: ${errorData.detail || '未知错误'}`);
+175:22 [chinese] 配置保存错误:
+    console.error('配置保存错误:', error);
+176:22 [chinese] 配置保存失败
+    message.error('配置保存失败');
+189:30 [mojibake] 0 Bytes
+    if (bytes === 0) return '0 Bytes';
+199:28 [chinese] 桌面设置
+    <SettingOutlined /> 桌面设置
+204:48 [chinese] 基础设置
+    <TabPane tab={<span><SettingOutlined />基础设置</span>} key="basic">
+216:28 [chinese] 应用名称
+    label="应用名称"
+217:57 [chinese] 请输入应用名称
+    rules={[{ required: true, message: '请输入应用名称' }]}
+225:28 [chinese] 应用版本
+    label="应用版本"
+226:57 [chinese] 请输入应用版本
+    rules={[{ required: true, message: '请输入应用版本' }]}
+235:24 [chinese] 调试模式
+    label="调试模式"
+243:32 [chinese] 服务配置
+    <Title level={4}>服务配置</Title>
+248:28 [chinese] 主机地址
+    label="主机地址"
+249:57 [chinese] 请输入主机地址
+    rules={[{ required: true, message: '请输入主机地址' }]}
+257:28 [chinese] 端口
+    label="端口"
+258:57 [chinese] 请输入端口
+    rules={[{ required: true, message: '请输入端口' }]}
+267:24 [chinese+mojibake] 最大内存使用 (MB)
+    label="最大内存使用 (MB)"
+268:53 [chinese] 请输入最大内存使用
+    rules={[{ required: true, message: '请输入最大内存使用' }]}
+296:44 [chinese] API设置
+    <TabPane tab={<span><ApiOutlined />API设置</span>} key="api">
+304:32 [chinese] API密钥
+    <Title level={4}>API密钥</Title>
+307:24 [mojibake] DashScope API Key
+    label="DashScope API Key"
+309:46 [chinese+mojibake] 请输入DashScope API Key
+    <Input.Password placeholder="请输入DashScope API Key" />
+314:24 [mojibake] OpenAI API Key
+    label="OpenAI API Key"
+316:46 [chinese+mojibake] 请输入OpenAI API Key
+    <Input.Password placeholder="请输入OpenAI API Key" />
+321:24 [mojibake] Gemini API Key
+    label="Gemini API Key"
+323:46 [chinese+mojibake] 请输入Gemini API Key
+    <Input.Password placeholder="请输入Gemini API Key" />
+328:24 [mojibake] SiliconFlow API Key
+    label="SiliconFlow API Key"
+330:46 [chinese+mojibake] 请输入SiliconFlow API Key
+    <Input.Password placeholder="请输入SiliconFlow API Key" />
+335:32 [chinese] 模型配置
+    <Title level={4}>模型配置</Title>
+340:28 [chinese] 默认模型
+    label="默认模型"
+341:57 [chinese] 请输入默认模型
+    rules={[{ required: true, message: '请输入默认模型' }]}
+349:28 [chinese] 最大Token数
+    label="最大Token数"
+350:57 [chinese] 请输入最大Token数
+    rules={[{ required: true, message: '请输入最大Token数' }]}
+359:24 [chinese+mojibake] 超时时间 (秒)
+    label="超时时间 (秒)"
+360:53 [chinese] 请输入超时时间
+    rules={[{ required: true, message: '请输入超时时间' }]}
+380:45 [chinese] 处理设置
+    <TabPane tab={<span><ToolOutlined />处理设置</span>} key="processing">
+392:28 [chinese] 块大小
+    label="块大小"
+393:57 [chinese] 请输入块大小
+    rules={[{ required: true, message: '请输入块大小' }]}
+401:28 [chinese] 最小评分阈值
+    label="最小评分阈值"
+402:57 [chinese] 请输入最小评分阈值
+    rules={[{ required: true, message: '请输入最小评分阈值' }]}
+413:28 [chinese] 每个合集最大片段数
+    label="每个合集最大片段数"
+414:57 [chinese] 请输入最大片段数
+    rules={[{ required: true, message: '请输入最大片段数' }]}
+422:28 [chinese] 最大重试次数
+    label="最大重试次数"
+423:57 [chinese] 请输入最大重试次数
+    rules={[{ required: true, message: '请输入最大重试次数' }]}
+445:49 [chinese] 系统信息
+    <TabPane tab={<span><DatabaseOutlined />系统信息</span>} key="system">
+451:28 [chinese] 操作系统
+    title="操作系统"
+458:28 [chinese] 架构
+    title="架构"
+464:28 [chinese] Python版本
+    title="Python版本"
+477:30 [chinese] 总内存
+    title="总内存"
+483:30 [chinese] 可用内存
+    title="可用内存"
+491:30 [chinese] 内存使用率
+    title="内存使用率"
+498:30 [chinese] 磁盘使用率
+    title="磁盘使用率"
+510:34 [chinese] 服务状态
+    <Title level={4}>服务状态</Title>
+514:30 [chinese] 服务状态
+    title="服务状态"
+515:58 [chinese] 运行中
+    value={serviceStatus.is_running ? "运行中" : "已停止"}
+515:66 [chinese] 已停止
+    value={serviceStatus.is_running ? "运行中" : "已停止"}
+521:30 [chinese] 端口
+    title="端口"
+527:30 [chinese] 运行时间
+    title="运行时间"
+
+[src\components\EditableCollectionTitle.tsx]
+--------------------------------------------------------------------------------
+64:22 [chinese] 标题不能为空
+    message.error('标题不能为空')
+69:22 [chinese] 标题长度不能超过${maxLength}个字符
+    message.error(`标题长度不能超过${maxLength}个字符`)
+81:24 [chinese] 标题更新成功
+    message.success('标题更新成功')
+85:22 [chinese] 更新标题失败:
+    console.error('更新标题失败:', error)
+86:60 [chinese] 更新标题失败
+    message.error(error.userMessage || error.message || '更新标题失败')
+93:18 [chinese] 开始生成合集标题，collectionId:
+    console.log('开始生成合集标题，collectionId:', collectionId)
+97:20 [chinese] 生成合集标题结果:
+    console.log('生成合集标题结果:', result)
+100:26 [chinese] 标题生成成功，您可以继续编辑或点击保存
+    message.success('标题生成成功，您可以继续编辑或点击保存')
+102:24 [chinese] 标题生成失败
+    message.error('标题生成失败')
+105:22 [chinese] 生成标题失败:
+    console.error('生成标题失败:', error)
+106:60 [chinese] 生成标题失败
+    message.error(error.userMessage || error.message || '生成标题失败')
+123:16 [chinese] 编辑合集标题
+    title="编辑合集标题"
+138:26 [chinese] 请输入合集标题
+    placeholder="请输入合集标题"
+196:19 [mojibake] 4px 0
+    padding: '4px 0',
+201:14 [chinese] 点击编辑合集标题
+    title="点击编辑合集标题"
+216:26 [mojibake] opacity 0.2s
+    transition: 'opacity 0.2s',
+
+[src\components\EditableTitle.tsx]
+--------------------------------------------------------------------------------
+67:22 [chinese] 标题不能为空
+    message.error('标题不能为空')
+72:22 [chinese] 标题长度不能超过${maxLength}个字符
+    message.error(`标题长度不能超过${maxLength}个字符`)
+84:24 [chinese] 标题更新成功
+    message.success('标题更新成功')
+89:22 [chinese] 更新标题失败:
+    console.error('更新标题失败:', error)
+90:60 [chinese] 更新标题失败
+    message.error(error.userMessage || error.message || '更新标题失败')
+97:18 [chinese] 开始生成标题，clipId:
+    console.log('开始生成标题，clipId:', clipId)
+101:20 [chinese] 生成标题结果:
+    console.log('生成标题结果:', result)
+104:26 [chinese] 标题生成成功，您可以继续编辑或点击保存
+    message.success('标题生成成功，您可以继续编辑或点击保存')
+106:24 [chinese] 标题生成失败
+    message.error('标题生成失败')
+109:22 [chinese] 生成标题失败:
+    console.error('生成标题失败:', error)
+110:60 [chinese] 生成标题失败
+    message.error(error.userMessage || error.message || '生成标题失败')
+127:16 [chinese] 编辑标题
+    title="编辑标题"
+142:26 [chinese] 请输入标题
+    placeholder="请输入标题"
+156:29 [chinese] AI生成标题
+    <Tooltip title="AI生成标题">
+161:32 [chinese] AI生成标题按钮被点击
+    console.log('AI生成标题按钮被点击');
+191:19 [mojibake] 4px 0
+    padding: '4px 0',
+196:14 [chinese] 点击编辑标题
+    title="点击编辑标题"
+211:26 [mojibake] opacity 0.2s
+    transition: 'opacity 0.2s',
+
+[src\components\ErrorBoundary.tsx]
+--------------------------------------------------------------------------------
+44:17 [mojibake] error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
+    errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+61:20 [mojibake] 🚨 React Error Boundary
+    console.group('🚨 React Error Boundary')
+63:20 [mojibake] Error Info:
+    console.error('Error Info:', errorInfo)
+64:20 [mojibake] Error ID:
+    console.error('Error ID:', this.state.errorId)
+112:18 [mojibake] Error Report:
+    console.log('Error Report:', errorReport)
+134:24 [mojibake] linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+    background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+140:27 [mojibake] 0 8px 32px rgba(0,0,0,0.1)
+    boxShadow: '0 8px 32px rgba(0,0,0,0.1)',
+146:22 [chinese] 页面出现错误
+    title="页面出现错误"
+147:25 [chinese] 抱歉，页面遇到了一个意外错误。我们已经记录了这个问题，请尝试以下解决方案：
+    subTitle="抱歉，页面遇到了一个意外错误。我们已经记录了这个问题，请尝试以下解决方案："
+180:34 [chinese] 错误详情
+    <Title level={5}>错误详情</Title>
+186:34 [chinese] 错误信息
+    <Panel header="错误信息" key="1">
+200:36 [chinese] 错误堆栈
+    <Panel header="错误堆栈" key="2">
+215:36 [chinese] 组件堆栈
+    <Panel header="组件堆栈" key="3">
+234:32 [chinese] 常见解决方案
+    <Title level={5}>常见解决方案</Title>
+236:21 [chinese] 刷新页面重试
+    <li>刷新页面重试</li>
+237:21 [chinese+mojibake] 清除浏览器缓存和 Cookie
+    <li>清除浏览器缓存和 Cookie</li>
+238:21 [chinese] 检查网络连接
+    <li>检查网络连接</li>
+239:21 [chinese] 尝试使用其他浏览器
+    <li>尝试使用其他浏览器</li>
+240:21 [chinese] 如果问题持续存在，请联系技术支持
+    <li>如果问题持续存在，请联系技术支持</li>
+
+[src\components\FileUpload.tsx]
+--------------------------------------------------------------------------------
+19:67 [mojibake] ('') const [categories, setCategories] = useState
+    const [selectedCategory, setSelectedCategory] = useState<string>('')
+20:64 [mojibake] ([]) const [, setLoadingCategories] = useState(false) const [files, setFiles] = useState
+    const [categories, setCategories] = useState<VideoCategory[]>([])
+43:24 [mojibake] Failed to load video categories:
+    console.error('Failed to load video categories:', error)
+44:24 [chinese] 加载视频分类失败
+    message.error('加载视频分类失败')
+223:22 [mojibake] radial-gradient(circle, rgba(79, 172, 254, 0.08) 0%, transparent 70%)
+    background: 'radial-gradient(circle, rgba(79, 172, 254, 0.08) 0%, transparent 70%)',
+231:21 [mojibake] upload-area ${isDragActive ? 'dragover' : ''}
+    className={`upload-area ${isDragActive ? 'dragover' : ''}`}
+233:21 [mojibake] 24px 16px
+    padding: '24px 16px',
+236:39 [mojibake] rgba(79, 172, 254, 0.15)
+    background: isDragActive ? 'rgba(79, 172, 254, 0.15)' : 'var(--ac-line-2)',
+237:20 [mojibake] 2px dashed ${isDragActive ? '#4facfe' : 'rgba(79, 172, 254, 0.3)'}
+    border: `2px dashed ${isDragActive ? '#4facfe' : 'rgba(79, 172, 254, 0.3)'}`,
+240:24 [mojibake] all 0.3s ease
+    transition: 'all 0.3s ease',
+249:20 [mojibake] 0 auto 12px
+    margin: '0 auto 12px',
+250:39 [mojibake] rgba(79, 172, 254, 0.3)
+    background: isDragActive ? 'rgba(79, 172, 254, 0.3)' : 'rgba(79, 172, 254, 0.1)',
+250:67 [mojibake] rgba(79, 172, 254, 0.1)
+    background: isDragActive ? 'rgba(79, 172, 254, 0.3)' : 'rgba(79, 172, 254, 0.1)',
+255:24 [mojibake] all 0.3s ease
+    transition: 'all 0.3s ease',
+256:20 [mojibake] 1px solid rgba(79, 172, 254, 0.2)
+    border: '1px solid rgba(79, 172, 254, 0.2)'
+271:30 [chinese] 松开鼠标导入文件
+    {isDragActive ? '松开鼠标导入文件' : '点击或拖拽文件到此区域'}
+271:43 [chinese] 点击或拖拽文件到此区域
+    {isDragActive ? '松开鼠标导入文件' : '点击或拖拽文件到此区域'}
+274:92 [chinese] 可选择导入字幕文件(.srt)或使用AI自动生成
+    支持 MP4、AVI、MOV、MKV、WebM 格式，<Text style={{ color: '#52c41a', fontWeight: 600 }}>可选择导入字幕文件(.srt)或使用AI自动生成</Text>
+288:26 [chinese] 请输入项目名称，用于标识您的视频项目
+    placeholder="请输入项目名称，用于标识您的视频项目"
+294:24 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+322:31 [mojibake] 8px 12px
+    padding: '8px 12px',
+325:26 [mojibake] 2px solid ${category.color}
+    ? `2px solid ${category.color}`
+326:26 [mojibake] 2px solid var(--ac-line)
+    : '2px solid var(--ac-line)',
+330:54 [mojibake] rgba(255, 255, 255, 0.8)
+    color: isSelected ? '#ffffff' : 'rgba(255, 255, 255, 0.8)',
+332:26 [mojibake] 0 0 12px ${category.color}40
+    ? `0 0 12px ${category.color}40`
+335:34 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+343:60 [mojibake] rgba(255, 255, 255, 0.2)
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+363:35 [mojibake] 0 && (
+    {Object.keys(files).length > 0 && (
+377:26 [mojibake] 1px solid rgba(79, 172, 254, 0.2)
+    border: '1px solid rgba(79, 172, 254, 0.2)',
+384:34 [mojibake] linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+    background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+389:33 [mojibake] 0 4px 12px rgba(79, 172, 254, 0.3)
+    boxShadow: '0 4px 12px rgba(79, 172, 254, 0.3)'
+409:31 [mojibake] 4px 12px
+    padding: '4px 12px',
+425:26 [mojibake] 1px solid rgba(82, 196, 26, 0.3)
+    border: '1px solid rgba(82, 196, 26, 0.3)',
+432:34 [mojibake] linear-gradient(135deg, #52c41a 0%, #73d13d 100%)
+    background: 'linear-gradient(135deg, #52c41a 0%, #73d13d 100%)',
+437:33 [mojibake] 0 4px 12px rgba(82, 196, 26, 0.3)
+    boxShadow: '0 4px 12px rgba(82, 196, 26, 0.3)'
+457:31 [mojibake] 4px 12px
+    padding: '4px 12px',
+471:25 [mojibake] 12px 16px
+    padding: '12px 16px',
+472:28 [mojibake] rgba(82, 196, 26, 0.1)
+    background: 'rgba(82, 196, 26, 0.1)',
+473:24 [mojibake] 1px solid rgba(82, 196, 26, 0.3)
+    border: '1px solid rgba(82, 196, 26, 0.3)',
+495:20 [mojibake] 1px solid rgba(79, 172, 254, 0.3)
+    border: '1px solid rgba(79, 172, 254, 0.3)',
+499:83 [chinese] 导入进度
+    <Text style={{ color: '#ffffff', fontWeight: 600, fontSize: '14px' }}>导入进度</Text>
+533:25 [mojibake] 0 32px
+    padding: '0 32px',
+535:52 [mojibake] linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)
+    background: uploading ? '#666666' : 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+539:48 [mojibake] 0 4px 20px rgba(79, 172, 254, 0.4)
+    boxShadow: uploading ? 'none' : '0 4px 20px rgba(79, 172, 254, 0.4)',
+540:28 [mojibake] all 0.3s ease
+    transition: 'all 0.3s ease'
+543:27 [chinese] 导入中...
+    {uploading ? '导入中...' : '开始导入并处理'}
+543:38 [chinese] 开始导入并处理
+    {uploading ? '导入中...' : '开始导入并处理'}
+
+[src\components\FirstRunWizard.tsx]
+--------------------------------------------------------------------------------
+42:42 [mojibake] () const [config, setConfig] = useState
+    const [form] = Form.useForm<ConfigForm>()
+55:18 [chinese] 表单初始化完成，初始值:
+    console.log('表单初始化完成，初始值:', config)
+62:20 [chinese+mojibake] 下一步按钮点击 - 表单值:
+    console.log('下一步按钮点击 - 表单值:', values)
+67:24 [chinese+mojibake] 请选择LLM提供商并输入API Key
+    message.error('请选择LLM提供商并输入API Key')
+85:24 [chinese] 请选择语音识别方案
+    message.error('请选择语音识别方案')
+94:24 [chinese] LLM配置保存成功
+    console.log('LLM配置保存成功')
+96:26 [chinese] LLM配置保存失败:
+    console.error('LLM配置保存失败:', error)
+97:26 [chinese] LLM配置保存失败，请重试
+    message.error('LLM配置保存失败，请重试')
+107:23 [chinese] 语音识别配置保存失败，使用默认配置:
+    console.warn('语音识别配置保存失败，使用默认配置:', error)
+117:24 [chinese] 配置完成!欢迎使用AutoClip
+    message.success('配置完成!欢迎使用AutoClip')
+120:22 [chinese] 配置保存失败:
+    console.error('配置保存失败:', error)
+121:70 [chinese] 配置保存失败,请重试
+    const errorMessage = error instanceof Error ? error.message : '配置保存失败,请重试'
+122:22 [chinese+mojibake] 配置保存失败: ${errorMessage}
+    message.error(`配置保存失败: ${errorMessage}`)
+133:21 [chinese] 已跳过AI模型配置,请稍后在配置页中进行设置
+    message.info('已跳过AI模型配置,请稍后在配置页中进行设置', 3)
+144:25 [chinese] 语音识别配置保存失败，使用默认配置:
+    console.warn('语音识别配置保存失败，使用默认配置:', error)
+147:23 [chinese] 已跳过语音识别配置,请稍后在配置页中进行设置
+    message.info('已跳过语音识别配置,请稍后在配置页中进行设置', 3)
+150:24 [chinese] 配置保存失败,请重试
+    message.error('配置保存失败,请重试')
+151:24 [chinese] 配置保存失败:
+    console.error('配置保存失败:', error)
+160:20 [chinese] 桌面模式检测结果:
+    console.log('桌面模式检测结果:', isDesktop)
+162:20 [chinese] 开始保存LLM配置:
+    console.log('开始保存LLM配置:', {
+172:23 [chinese] 获取现有配置失败，将使用默认配置:
+    console.warn('获取现有配置失败，将使用默认配置:', error)
+180:22 [mojibake] AutoClip Desktop
+    app_name: "AutoClip Desktop",
+220:20 [chinese] 发送设置到后端:
+    console.log('发送设置到后端:', settings)
+222:20 [chinese] LLM配置保存成功，后端响应:
+    console.log('LLM配置保存成功，后端响应:', result)
+224:22 [chinese] LLM配置保存失败:
+    console.error('LLM配置保存失败:', error)
+225:64 [chinese] 未知错误
+    const detail = error instanceof Error ? error.message : '未知错误'
+226:24 [chinese+mojibake] LLM配置保存失败: ${detail}
+    throw new Error(`LLM配置保存失败: ${detail}`)
+235:23 [chinese] 非桌面模式，跳过语音配置保存
+    console.warn('非桌面模式，跳过语音配置保存')
+292:26 [chinese+mojibake] 语音识别配置保存失败: ${response.status} ${errorText}
+    throw new Error(`语音识别配置保存失败: ${response.status} ${errorText}`)
+295:20 [chinese] 语音识别配置保存成功
+    console.log('语音识别配置保存成功')
+297:22 [chinese] 语音识别配置保存失败:
+    console.error('语音识别配置保存失败:', error)
+299:26 [chinese+mojibake] 语音识别配置保存失败: ${error.message}
+    throw new Error(`语音识别配置保存失败: ${error.message}`)
+301:26 [chinese] 语音识别配置保存失败
+    throw new Error('语音识别配置保存失败')
+315:26 [chinese] 模型下载失败
+    throw new Error('模型下载失败')
+318:22 [chinese] Whisper模型下载失败:
+    console.error('Whisper模型下载失败:', error)
+329:18 [chinese+mojibake] testApiConnection 调用参数:
+    console.log('testApiConnection 调用参数:', { provider, apiKey })
+330:18 [chinese+mojibake] testApiConnection 表单值:
+    console.log('testApiConnection 表单值:', formValues)
+331:18 [chinese+mojibake] testApiConnection 当前API Key:
+    console.log('testApiConnection 当前API Key:', currentApiKey)
+334:24 [chinese+mojibake] 请先输入API Key
+    message.warning('请先输入API Key')
+346:26 [mojibake] HTTP ${response.status}: ${response.statusText}
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+351:26 [chinese] API连接测试成功!
+    message.success('API连接测试成功!')
+353:24 [chinese+mojibake] API连接测试失败: ${result.error || '未知错误'}
+    message.error(`API连接测试失败: ${result.error || '未知错误'}`)
+356:22 [chinese] API测试错误:
+    console.error('API测试错误:', error)
+357:64 [chinese] 网络错误
+    const detail = error instanceof Error ? error.message : '网络错误'
+358:22 [chinese+mojibake] API连接测试失败: ${detail}
+    message.error(`API连接测试失败: ${detail}`)
+366:16 [chinese] 阿里云通义千问
+    name: '阿里云通义千问',
+368:23 [chinese+mojibake] 注册阿里云账号,开通DashScope服务,创建API Key
+    description: '注册阿里云账号,开通DashScope服务,创建API Key'
+373:23 [chinese+mojibake] 注册OpenAI账号,在API Keys页面创建新的密钥
+    description: '注册OpenAI账号,在API Keys页面创建新的密钥'
+376:16 [mojibake] Google Gemini
+    name: 'Google Gemini',
+378:23 [chinese+mojibake] 使用Google账号登录,在API Keys页面创建密钥
+    description: '使用Google账号登录,在API Keys页面创建密钥'
+383:23 [chinese+mojibake] 注册SiliconFlow账号,在控制台创建API Key
+    description: '注册SiliconFlow账号,在控制台创建API Key'
+392:16 [mojibake] 0 auto
+    margin: '0 auto',
+393:17 [mojibake] 24px 16px
+    padding: '24px 16px',
+423:37 [chinese] 配置AI模型
+    {currentStep === 0 ? '配置AI模型' : '配置语音识别'}
+423:48 [chinese] 配置语音识别
+    {currentStep === 0 ? '配置AI模型' : '配置语音识别'}
+428:18 [chinese+mojibake] 选择大语言模型提供商并输入API Key
+    ? '选择大语言模型提供商并输入API Key'
+429:18 [chinese] 选择语音识别方案
+    : '选择语音识别方案'
+439:26 [chinese] 表单值变化:
+    console.log('表单值变化:', { changedValues, allValues })
+447:24 [chinese] 选择AI模型提供商
+    label="选择AI模型提供商"
+448:53 [chinese] 请选择AI模型提供商
+    rules={[{ required: true, message: '请选择AI模型提供商' }]}
+451:52 [chinese] 选择提供商
+    <Select size="middle" placeholder="选择提供商">
+454:36 [chinese] 阿里云通义千问
+    <Text strong>阿里云通义千问</Text>
+455:46 [chinese] (推荐国内用户)
+    <Text type="secondary">(推荐国内用户)</Text>
+460:36 [mojibake] OpenAI GPT
+    <Text strong>OpenAI GPT</Text>
+461:46 [chinese] (需要科学上网)
+    <Text type="secondary">(需要科学上网)</Text>
+466:36 [mojibake] Google Gemini
+    <Text strong>Google Gemini</Text>
+467:46 [chinese] (需要科学上网)
+    <Text type="secondary">(需要科学上网)</Text>
+473:46 [chinese] (国内替代方案)
+    <Text type="secondary">(国内替代方案)</Text>
+482:24 [mojibake] API Key
+    label="API Key"
+483:53 [chinese+mojibake] 请输入API Key
+    rules={[{ required: true, message: '请输入API Key' }]}
+489:34 [chinese+mojibake] 请输入您的API Key
+    placeholder="请输入您的API Key"
+501:36 [chinese+mojibake] 测试按钮点击 - 表单值:
+    console.log('测试按钮点击 - 表单值:', values)
+527:48 [mojibake] 4px 0
+    <p style={{ margin: '4px 0', fontSize: '12px' }}>{help.description}</p>
+528:48 [mojibake] 4px 0
+    <p style={{ margin: '4px 0', fontSize: '12px' }}>
+546:24 [chinese] 选择语音识别方案
+    label="选择语音识别方案"
+547:53 [chinese] 请选择语音识别方案
+    rules={[{ required: true, message: '请选择语音识别方案' }]}
+550:52 [chinese] 选择方案
+    <Select size="middle" placeholder="选择方案">
+554:36 [chinese+mojibake] 本地 Whisper 模型
+    <Text strong>本地 Whisper 模型</Text>
+555:46 [chinese] (免费离线，推荐新手)
+    <Text type="secondary">(免费离线，推荐新手)</Text>
+561:36 [mojibake] OpenAI Whisper API
+    <Text strong>OpenAI Whisper API</Text>
+562:46 [chinese] (云端处理，准确度更高)
+    <Text type="secondary">(云端处理，准确度更高)</Text>
+568:36 [mojibake] Azure Speech Services
+    <Text strong>Azure Speech Services</Text>
+569:46 [chinese] (企业级服务)
+    <Text type="secondary">(企业级服务)</Text>
+575:36 [mojibake] Google Speech-to-Text
+    <Text strong>Google Speech-to-Text</Text>
+576:46 [chinese] (多语言支持)
+    <Text type="secondary">(多语言支持)</Text>
+582:36 [chinese] 阿里云语音识别
+    <Text strong>阿里云语音识别</Text>
+583:46 [chinese] (中文优化)
+    <Text type="secondary">(中文优化)</Text>
+589:36 [chinese] 自定义API
+    <Text strong>自定义API</Text>
+590:46 [chinese] (自定义服务端点)
+    <Text type="secondary">(自定义服务端点)</Text>
+604:32 [chinese] 选择模型大小
+    label="选择模型大小"
+607:60 [chinese] 选择模型
+    <Select size="middle" placeholder="选择模型">
+608:48 [chinese+mojibake] Tiny (39MB) - 最快速度
+    <Option value="tiny">Tiny (39MB) - 最快速度</Option>
+609:48 [chinese+mojibake] Base (74MB) - 平衡选择 (推荐)
+    <Option value="base">Base (74MB) - 平衡选择 (推荐)</Option>
+610:49 [chinese+mojibake] Small (244MB) - 较好准确度
+    <Option value="small">Small (244MB) - 较好准确度</Option>
+611:50 [chinese+mojibake] Medium (769MB) - 高准确度
+    <Option value="medium">Medium (769MB) - 高准确度</Option>
+612:49 [chinese+mojibake] Large (1550MB) - 最高准确度
+    <Option value="large">Large (1550MB) - 最高准确度</Option>
+622:32 [mojibake] OpenAI API Key
+    label="OpenAI API Key"
+623:61 [chinese+mojibake] 请输入OpenAI API Key
+    rules={[{ required: true, message: '请输入OpenAI API Key' }]}
+628:40 [chinese+mojibake] 请输入OpenAI API Key
+    placeholder="请输入OpenAI API Key"
+639:34 [mojibake] Azure API Key
+    label="Azure API Key"
+640:63 [chinese+mojibake] 请输入Azure API Key
+    rules={[{ required: true, message: '请输入Azure API Key' }]}
+645:42 [chinese+mojibake] 请输入Azure Speech API Key
+    placeholder="请输入Azure Speech API Key"
+650:34 [chinese+mojibake] Azure 区域
+    label="Azure 区域"
+655:42 [chinese+mojibake] 例如: eastus, westus2
+    placeholder="例如: eastus, westus2"
+666:32 [mojibake] Google API Key
+    label="Google API Key"
+667:61 [chinese+mojibake] 请输入Google API Key
+    rules={[{ required: true, message: '请输入Google API Key' }]}
+672:40 [chinese+mojibake] 请输入Google Speech-to-Text API Key
+    placeholder="请输入Google Speech-to-Text API Key"
+682:32 [chinese+mojibake] 阿里云 API Key
+    label="阿里云 API Key"
+683:61 [chinese+mojibake] 请输入阿里云 API Key
+    rules={[{ required: true, message: '请输入阿里云 API Key' }]}
+688:40 [chinese+mojibake] 请输入阿里云语音识别 API Key
+    placeholder="请输入阿里云语音识别 API Key"
+699:34 [chinese+mojibake] 自定义 API Key
+    label="自定义 API Key"
+700:63 [chinese+mojibake] 请输入自定义 API Key
+    rules={[{ required: true, message: '请输入自定义 API Key' }]}
+705:42 [chinese+mojibake] 请输入自定义 API Key
+    placeholder="请输入自定义 API Key"
+710:34 [chinese+mojibake] API 端点
+    label="API 端点"
+711:63 [chinese] 请输入API端点
+    rules={[{ required: true, message: '请输入API端点' }]}
+736:32 [chinese+mojibake] 本地 Whisper 模型
+    name: '本地 Whisper 模型',
+737:39 [chinese] 免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。
+    description: '免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。'
+741:32 [mojibake] OpenAI Whisper API
+    name: 'OpenAI Whisper API',
+742:39 [chinese] 云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。
+    description: '云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。'
+746:32 [mojibake] Azure Speech Services
+    name: 'Azure Speech Services',
+747:39 [chinese] 企业级语音识别服务，支持多种语言和方言，适合商业使用。
+    description: '企业级语音识别服务，支持多种语言和方言，适合商业使用。'
+751:32 [mojibake] Google Speech-to-Text
+    name: 'Google Speech-to-Text',
+752:39 [chinese] 多语言支持，识别准确度高，支持实时语音识别。
+    description: '多语言支持，识别准确度高，支持实时语音识别。'
+756:32 [chinese] 阿里云语音识别
+    name: '阿里云语音识别',
+757:39 [chinese] 中文优化，国内访问速度快，支持多种中文方言识别。
+    description: '中文优化，国内访问速度快，支持多种中文方言识别。'
+761:32 [chinese] 自定义API
+    name: '自定义API',
+762:39 [chinese] 支持自定义服务端点，可以接入自己的语音识别服务。
+    description: '支持自定义服务端点，可以接入自己的语音识别服务。'
+780:48 [mojibake] 4px 0
+    <p style={{ margin: '4px 0' }}>{methodInfo.description}</p>
+803:25 [mojibake] 0 && (
+    {currentStep > 0 && (
+830:35 [chinese] 下一步
+    {currentStep === 0 ? '下一步' : '开始使用'}
+830:43 [chinese] 开始使用
+    {currentStep === 0 ? '下一步' : '开始使用'}
+844:17 [chinese] 正在保存配置并创建示例项目...
+    <Text>正在保存配置并创建示例项目...</Text>
+
+[src\components\Header.tsx]
+--------------------------------------------------------------------------------
+20:19 [mojibake] 0 56px
+    padding: '0 56px',
+29:22 [mojibake] color-mix(in srgb, var(--ac-bg) 78%, transparent)
+    background: 'color-mix(in srgb, var(--ac-bg) 78%, transparent)',
+30:24 [mojibake] 1px solid var(--ac-line-2)
+    borderBottom: '1px solid var(--ac-line-2)',
+71:43 [chinese] 切换到亮色模式
+    aria-label={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
+71:55 [chinese] 切换到暗色模式
+    aria-label={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
+72:38 [chinese] 切换到亮色模式
+    title={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
+72:50 [chinese] 切换到暗色模式
+    title={theme === 'dark' ? '切换到亮色模式' : '切换到暗色模式'}
+75:22 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+89:22 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+92:23 [mojibake] 0 16px
+    padding: '0 16px',
+
+[src\components\icons\MagicWandIcon.tsx]
+--------------------------------------------------------------------------------
+13:16 [mojibake] 0 0 16 16
+    viewBox="0 0 16 16"
+21:12 [mojibake] M2 14L14 2
+    d="M2 14L14 2"
+28:12 [mojibake] M12 2L14 4L12 6L10 4L12 2Z
+    d="M12 2L14 4L12 6L10 4L12 2Z"
+33:12 [mojibake] M3 3L3.5 4.5L5 4.5L3.5 5.5L4 7L3 6L2 7L2.5 5.5L1 4.5L2.5 4.5L3 3Z
+    d="M3 3L3.5 4.5L5 4.5L3.5 5.5L4 7L3 6L2 7L2.5 5.5L1 4.5L2.5 4.5L3 3Z"
+38:12 [mojibake] M13 13L13.5 14.5L15 14.5L13.5 15.5L14 17L13 16L12 17L12.5 15.5L11 14.5L12.5 14.5L13 13Z
+    d="M13 13L13.5 14.5L15 14.5L13.5 15.5L14 17L13 16L12 17L12.5 15.5L11 14.5L12.5 14.5L13 13Z"
+
+[src\components\InlineProgressBar.tsx]
+--------------------------------------------------------------------------------
+22:19 [chinese] 大纲提取
+    { id: 1, name: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+22:40 [chinese] 从视频转写文本中提取结构性大纲
+    { id: 1, name: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+23:19 [chinese] 时间定位
+    { id: 2, name: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+23:40 [chinese] 基于SRT字幕定位话题时间区间
+    { id: 2, name: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+24:19 [chinese] 内容评分
+    { id: 3, name: '内容评分', description: '多维度评估片段质量与传播潜力' },
+24:40 [chinese] 多维度评估片段质量与传播潜力
+    { id: 3, name: '内容评分', description: '多维度评估片段质量与传播潜力' },
+25:19 [chinese] 标题生成
+    { id: 4, name: '标题生成', description: '为高分片段生成吸引人的标题' },
+25:40 [chinese] 为高分片段生成吸引人的标题
+    { id: 4, name: '标题生成', description: '为高分片段生成吸引人的标题' },
+26:19 [chinese] 主题聚类
+    { id: 5, name: '主题聚类', description: '将相关片段聚合为合集推荐' },
+26:40 [chinese] 将相关片段聚合为合集推荐
+    { id: 5, name: '主题聚类', description: '将相关片段聚合为合集推荐' },
+27:19 [chinese] 视频切割
+    { id: 6, name: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+27:40 [chinese] 使用FFmpeg生成切片与合集视频
+    { id: 6, name: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+40:32 [chinese] 处理中...
+    return step ? step.name : '处理中...';
+47:61 [chinese] 初始化中...
+    stepName: currentStep > 0 ? getStepName(currentStep) : '初始化中...',
+55:20 [chinese] InlineProgressBar收到WebSocket消息:
+    console.log('InlineProgressBar收到WebSocket消息:', message);
+65:18 [chinese] InlineProgressBar处理进度更新:
+    console.log('InlineProgressBar处理进度更新:', message);
+68:44 [chinese] 处理中...
+    const stepName = message.step_name || '处理中...';
+73:20 [chinese] 忽略旧快照消息:
+    console.log('忽略旧快照消息:', { current: progressData.progress, snapshot: newProgress });
+77:18 [chinese] 更新进度数据:
+    console.log('更新进度数据:', { newProgress, stepName, stepDetails });
+93:71 [chinese] 初始化中...
+    const newStepName = currentStep > 0 ? getStepName(currentStep) : '初始化中...';
+106:18 [chinese+mojibake] InlineProgressBar WebSocket状态:
+    console.log('InlineProgressBar WebSocket状态:', { isConnected, projectId });
+108:20 [chinese] 订阅项目进度:
+    console.log('订阅项目进度:', projectId);
+138:20 [mojibake] rgba(24, 144, 255, 0.15)
+    background: 'rgba(24, 144, 255, 0.15)',
+139:16 [mojibake] 1px solid rgba(24, 144, 255, 0.3)
+    border: '1px solid rgba(24, 144, 255, 0.3)',
+141:17 [mojibake] 6px 12px
+    padding: '6px 12px',
+192:24 [mojibake] rgba(24, 144, 255, 0.2)
+    background: 'rgba(24, 144, 255, 0.2)',
+201:16 [mojibake] linear-gradient(90deg, #1890ff, #40a9ff, #1890ff)
+    'linear-gradient(90deg, #1890ff, #40a9ff, #1890ff)' :
+202:16 [mojibake] linear-gradient(90deg, #1890ff, #40a9ff)
+    'linear-gradient(90deg, #1890ff, #40a9ff)',
+204:26 [mojibake] width 0.3s ease-in-out
+    transition: 'width 0.3s ease-in-out',
+206:16 [mojibake] progressBarPulse 2s infinite ease-in-out
+    'progressBarPulse 2s infinite ease-in-out' : 'none'
+
+[src\components\NotificationList.tsx]
+--------------------------------------------------------------------------------
+36:65 [mojibake] ; case 'success': return
+    return <InfoCircleOutlined style={{ color: '#1890ff' }} />;
+38:66 [mojibake] ; case 'warning': return
+    return <CheckCircleOutlined style={{ color: '#52c41a' }} />;
+40:72 [mojibake] ; case 'error': return
+    return <ExclamationCircleOutlined style={{ color: '#faad14' }} />;
+42:66 [mojibake] ; default: return
+    return <CloseCircleOutlined style={{ color: '#ff4d4f' }} />;
+70:13 [chinese] 刚刚
+    return '刚刚';
+72:13 [chinese+mojibake] ${Math.floor(diff / 60000)}分钟前
+    return `${Math.floor(diff / 60000)}分钟前`;
+74:13 [chinese+mojibake] ${Math.floor(diff / 3600000)}小时前
+    return `${Math.floor(diff / 3600000)}小时前`;
+76:37 [mojibake] MM-DD HH:mm
+    return notificationTime.format('MM-DD HH:mm');
+93:19 [mojibake] 8px 0
+    padding: '8px 0',
+153:17 [chinese] 通知
+    <span>通知</span>
+154:25 [mojibake] 0 && (
+    {unreadCount > 0 && (
+161:25 [mojibake] 0 && (
+    {unreadCount > 0 && (
+
+[src\components\OfflineModeIndicator.tsx]
+--------------------------------------------------------------------------------
+78:22 [chinese] 网络检查失败:
+    console.error('网络检查失败:', error);
+132:61 [mojibake] ; case 'good': return
+    return <WifiOutlined style={{ color: '#52c41a' }} />;
+134:61 [mojibake] ; case 'poor': return
+    return <WifiOutlined style={{ color: '#1890ff' }} />;
+136:61 [mojibake] ; default: return
+    return <WifiOutlined style={{ color: '#faad14' }} />;
+145:15 [chinese] 离线模式
+    return '离线模式';
+150:17 [chinese] 网络优秀
+    return '网络优秀';
+152:17 [chinese] 网络良好
+    return '网络良好';
+154:17 [chinese] 网络较差
+    return '网络较差';
+156:17 [chinese] 网络未知
+    return '网络未知';
+163:15 [chinese] 当前处于离线模式，部分功能可能受限
+    return '当前处于离线模式，部分功能可能受限';
+166:50 [chinese+mojibake] 延迟: ${networkStatus.latency}ms
+    const latencyText = networkStatus.latency ? `延迟: ${networkStatus.latency}ms` : '';
+169:13 [chinese+mojibake] 最后检查: ${lastCheck} ${latencyText}
+    return `最后检查: ${lastCheck} ${latencyText}`.trim();
+194:16 [chinese] 检查网络状态
+    title="检查网络状态"
+197:20 [mojibake] 1px solid transparent
+    border: '1px solid transparent',
+204:24 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+208:52 [mojibake] rgba(255, 255, 255, 0.1)
+    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+209:48 [mojibake] rgba(255, 255, 255, 0.2)
+    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.2)'
+
+[src\components\PipelineControl.tsx]
+--------------------------------------------------------------------------------
+48:78 [mojibake] (null); const [loading, setLoading] = useState(false); const [actionLoading, setActionLoading] = useState(false); const [error, setError] = useState
+    const [pipelineStatus, setPipelineStatus] = useState<PipelineStatus | null>(null);
+62:26 [chinese] 获取流水线状态失败
+    throw new Error('获取流水线状态失败');
+74:54 [chinese] 未知错误
+    setError(err instanceof Error ? err.message : '未知错误');
+90:26 [chinese] 启动流水线失败
+    throw new Error('启动流水线失败');
+100:59 [chinese] 启动失败
+    message.error(err instanceof Error ? err.message : '启动失败');
+116:26 [chinese] 停止流水线失败
+    throw new Error('停止流水线失败');
+126:59 [chinese] 停止失败
+    message.error(err instanceof Error ? err.message : '停止失败');
+142:26 [chinese] 重启流水线失败
+    throw new Error('重启流水线失败');
+152:59 [chinese] 重启失败
+    message.error(err instanceof Error ? err.message : '重启失败');
+173:46 [chinese] 处理中
+    return { color: 'processing', text: '处理中', icon: <PlayCircleOutlined /> };
+175:43 [chinese] 已完成
+    return { color: 'success', text: '已完成', icon: <CheckCircleOutlined /> };
+177:41 [chinese] 失败
+    return { color: 'error', text: '失败', icon: <CloseCircleOutlined /> };
+179:43 [chinese] 等待中
+    return { color: 'default', text: '等待中', icon: <ClockCircleOutlined /> };
+181:43 [chinese] 已暂停
+    return { color: 'warning', text: '已暂停', icon: <PauseCircleOutlined /> };
+191:46 [chinese] 运行中
+    return { color: 'processing', text: '运行中' };
+193:43 [chinese] 已完成
+    return { color: 'success', text: '已完成' };
+195:41 [chinese] 失败
+    return { color: 'error', text: '失败' };
+197:43 [chinese] 等待中
+    return { color: 'default', text: '等待中' };
+199:43 [chinese] 已取消
+    return { color: 'warning', text: '已取消' };
+211:19 [chinese] 正在获取流水线状态...
+    <Text>正在获取流水线状态...</Text>
+222:20 [chinese] 获取流水线状态失败
+    message="获取流水线状态失败"
+308:62 [chinese] 总任务
+    <div style={{ fontSize: '12px', color: '#666' }}>总任务</div>
+315:62 [chinese] 运行中
+    <div style={{ fontSize: '12px', color: '#666' }}>运行中</div>
+322:62 [chinese] 已完成
+    <div style={{ fontSize: '12px', color: '#666' }}>已完成</div>
+329:62 [chinese] 失败
+    <div style={{ fontSize: '12px', color: '#666' }}>失败</div>
+334:39 [mojibake] 0 && (
+    {pipelineStatus.tasks.length > 0 && (
+336:26 [chinese] 当前任务:
+    <Text strong>当前任务:</Text>
+361:34 [chinese] 状态每10秒自动更新
+    <Text type="secondary">状态每10秒自动更新</Text>
+367:16 [chinese] 流水线状态详情
+    title="流水线状态详情"
+376:28 [chinese] 项目状态:
+    <Text strong>项目状态: </Text>
+381:36 [chinese] 任务列表
+    header={<Text strong>任务列表</Text>}
+
+[src\components\ProjectCard.tsx]
+--------------------------------------------------------------------------------
+75:27 [chinese] 默认
+    'default': { name: '默认', icon: '🎬', color: '#4facfe' },
+76:29 [chinese] 知识科普
+    'knowledge': { name: '知识科普', icon: '📚', color: '#52c41a' },
+77:28 [chinese] 商业财经
+    'business': { name: '商业财经', icon: '💼', color: '#faad14' },
+78:27 [chinese] 观点评论
+    'opinion': { name: '观点评论', icon: '💭', color: '#722ed1' },
+79:30 [chinese] 经验分享
+    'experience': { name: '经验分享', icon: '🌟', color: '#13c2c2' },
+80:26 [chinese] 演讲脱口秀
+    'speech': { name: '演讲脱口秀', icon: '🎤', color: '#eb2f96' },
+81:34 [chinese] 内容解说
+    'content_review': { name: '内容解说', icon: '🎭', color: '#f5222d' },
+82:33 [chinese] 娱乐内容
+    'entertainment': { name: '娱乐内容', icon: '🎪', color: '#fa8c16' }
+96:22 [chinese+mojibake] 使用后端提供的缩略图: ${project.id}
+    console.log(`使用后端提供的缩略图: ${project.id}`)
+101:22 [chinese] 项目没有视频路径:
+    console.log('项目没有视频路径:', project.id)
+135:26 [chinese] 尝试加载视频:
+    console.log('尝试加载视频:', videoUrl)
+139:35 [chinese] 视频加载超时
+    reject(new Error('视频加载超时'))
+144:30 [chinese] 视频元数据加载成功:
+    console.log('视频元数据加载成功:', videoUrl)
+154:39 [chinese] 无法获取canvas上下文
+    reject(new Error('无法获取canvas上下文'))
+200:32 [chinese] 视频加载失败:
+    console.error('视频加载失败:', videoUrl, error)
+209:27 [chinese+mojibake] 路径 ${path} 加载失败:
+    console.warn(`路径 ${path} 加载失败:`, error)
+215:26 [chinese] 所有视频路径都加载失败
+    console.error('所有视频路径都加载失败')
+218:24 [chinese] 生成缩略图时发生错误:
+    console.error('生成缩略图时发生错误:', error)
+229:75 [mojibake] 0 && downloadProgress
+    const isDownloading = project.status === 'pending' && downloadProgress > 0 && downloadProgress < 100
+238:16 [mojibake] ProjectCard Debug:
+    console.log('ProjectCard Debug:', {
+297:22 [chinese] 重试失败:
+    console.error('重试失败:', error)
+300:24 [chinese] 重试失败，请稍后再试
+    message.error('重试失败，请稍后再试')
+316:18 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+318:22 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+331:19 [mojibake] 18px 20px 20px
+    padding: '18px 20px 20px',
+342:18 [mojibake] url(${videoThumbnail}) center/cover
+    ? `url(${videoThumbnail}) center/cover`
+352:32 [chinese] 项目正在导入中，请稍后再查看详情
+    message.warning('项目正在导入中，请稍后再查看详情')
+358:32 [chinese] 项目处理中，请完成后再查看
+    message.warning('项目处理中，请完成后再查看')
+373:49 [chinese] 生成封面中…
+    <div style={{ fontSize: '12px' }}>生成封面中…</div>
+392:28 [mojibake] 1px solid ${getCategoryInfo(project.video_category).color}40
+    border: `1px solid ${getCategoryInfo(project.video_category).color}40`,
+397:29 [mojibake] 2px 6px
+    padding: '2px 6px',
+420:26 [mojibake] linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0))
+    background: 'linear-gradient(to top, rgba(0,0,0,0.42), rgba(0,0,0,0))',
+422:23 [mojibake] 10px 12px
+    padding: '10px 12px',
+425:54 [mojibake] rgba(255, 255, 255, 0.92)
+    <Text style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.92)' }}>
+436:30 [mojibake] opacity 0.3s ease
+    transition: 'opacity 0.3s ease'
+455:32 [mojibake] 1px solid rgba(82, 196, 26, 0.5)
+    border: '1px solid rgba(82, 196, 26, 0.5)',
+456:36 [mojibake] rgba(82, 196, 26, 0.1)
+    background: 'rgba(82, 196, 26, 0.1)',
+464:28 [chinese] 确定要删除这个项目吗？
+    title="确定要删除这个项目吗？"
+465:34 [chinese] 删除后无法恢复
+    description="删除后无法恢复"
+473:29 [chinese] 确定
+    okText="确定"
+474:33 [chinese] 取消
+    cancelText="取消"
+487:34 [mojibake] 1px solid rgba(255, 107, 107, 0.5)
+    border: '1px solid rgba(255, 107, 107, 0.5)',
+488:38 [mojibake] rgba(255, 107, 107, 0.1)
+    background: 'rgba(255, 107, 107, 0.1)',
+502:71 [chinese] 开始处理
+    <Tooltip title={project.status === 'pending' ? "开始处理" : "重新提交任务"}>
+502:80 [chinese] 重新提交任务
+    <Tooltip title={project.status === 'pending' ? "开始处理" : "重新提交任务"}>
+516:38 [mojibake] 1px solid rgba(24, 144, 255, 0.5)
+    border: '1px solid rgba(24, 144, 255, 0.5)',
+517:42 [mojibake] rgba(24, 144, 255, 0.1)
+    background: 'rgba(24, 144, 255, 0.1)',
+534:41 [chinese] 下载功能开发中...
+    message.info('下载功能开发中...')
+540:35 [mojibake] rgba(255, 255, 255, 0.8)
+    color: 'rgba(255, 255, 255, 0.8)',
+541:36 [mojibake] 1px solid rgba(255, 255, 255, 0.2)
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+542:40 [mojibake] rgba(255, 255, 255, 0.1)
+    background: 'rgba(255, 255, 255, 0.1)',
+552:30 [chinese] 确定要删除这个项目吗？
+    title="确定要删除这个项目吗？"
+553:36 [chinese] 删除后无法恢复
+    description="删除后无法恢复"
+561:31 [chinese] 确定
+    okText="确定"
+562:35 [chinese] 取消
+    cancelText="取消"
+574:35 [mojibake] rgba(255, 255, 255, 0.8)
+    color: 'rgba(255, 255, 255, 0.8)',
+575:36 [mojibake] 1px solid rgba(255, 255, 255, 0.2)
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+576:40 [mojibake] rgba(255, 255, 255, 0.1)
+    background: 'rgba(255, 255, 255, 0.1)',
+626:32 [chinese+mojibake] 项目 ${project.id} 状态变化: ${normalizedStatus} -> ${newStatus}
+    console.log(`项目 ${project.id} 状态变化: ${normalizedStatus} -> ${newStatus}`)
+629:32 [chinese+mojibake] 项目 ${project.id} 下载进度更新: ${progress}%
+    console.log(`项目 ${project.id} 下载进度更新: ${progress}%`)
+643:76 [chinese] 切片
+    <span className="ac-mono">{project.total_clips || 0}</span> 切片
+644:41 [mojibake] 0 6px
+    <span style={{ margin: '0 6px' }}>·</span>
+645:82 [chinese] 合集
+    <span className="ac-mono">{project.total_collections || 0}</span> 合集
+
+[src\components\ProjectStatusIndicator.tsx]
+--------------------------------------------------------------------------------
+25:13 [chinese] 内容大纲分析
+    1: '内容大纲分析',
+26:13 [chinese] 时间轴生成
+    2: '时间轴生成',
+27:13 [chinese] 片段评分
+    3: '片段评分',
+28:13 [chinese] 标题生成
+    4: '标题生成',
+29:13 [chinese] 主题聚类
+    5: '主题聚类',
+30:13 [chinese] 视频生成
+    6: '视频生成'
+32:76 [chinese] 处理中
+    return stepNames[project.current_step as keyof typeof stepNames] || '处理中'
+34:13 [chinese] 处理中
+    return '处理中'
+40:25 [chinese] 处理中
+    return { text: '处理中', badgeStatus: 'processing' as const, color: '#1890ff' }
+42:25 [chinese] 已完成
+    return { text: '已完成', badgeStatus: 'success' as const, color: '#52c41a' }
+44:25 [chinese] 失败
+    return { text: '失败', badgeStatus: 'error' as const, color: '#ff4d4f' }
+46:25 [chinese] 未知
+    return { text: '未知', badgeStatus: 'default' as const, color: '#d9d9d9' }
+66:17 [mojibake] 4px 8px
+    padding: '4px 8px',
+69:16 [mojibake] 1px solid ${config.color}30
+    border: `1px solid ${config.color}30`,
+
+[src\components\ProjectTaskManager.tsx]
+--------------------------------------------------------------------------------
+34:22 [chinese] 任务列表已刷新
+    message.success('任务列表已刷新')
+46:15 [chinese] 确认删除
+    title: '确认删除',
+48:17 [chinese] 确定要删除这个任务吗？删除后无法恢复。
+    content: '确定要删除这个任务吗？删除后无法恢复。',
+49:16 [chinese] 删除
+    okText: '删除',
+51:20 [chinese] 取消
+    cancelText: '取消',
+53:26 [chinese+mojibake] 任务已删除: ${taskId}
+    message.success(`任务已删除: ${taskId}`)
+77:15 [chinese] 任务名称
+    title: '任务名称',
+88:15 [chinese] 状态
+    title: '状态',
+93:38 [chinese] 已完成
+    {status === 'completed' ? '已完成' :
+94:36 [chinese] 执行中
+    status === 'running' ? '执行中' :
+95:35 [chinese] 失败
+    status === 'failed' ? '失败' :
+96:36 [chinese] 等待中
+    status === 'pending' ? '等待中' : status}
+101:15 [chinese] 进度
+    title: '进度',
+113:15 [chinese] 当前步骤
+    title: '当前步骤',
+119:15 [chinese] 创建时间
+    title: '创建时间',
+129:15 [chinese] 操作
+    title: '操作',
+139:20 [chinese] 查看详情
+    title="查看详情"
+146:20 [chinese] 删除任务
+    title="删除任务"
+156:20 [chinese] 任务管理
+    <Card title="任务管理" size="small">
+158:34 [chinese] 该项目暂无任务记录
+    <Text type="secondary">该项目暂无任务记录</Text>
+168:17 [chinese] 任务管理
+    <span>任务管理</span>
+186:20 [chinese] 总任务数
+    title="总任务数"
+193:20 [chinese] 活跃任务
+    title="活跃任务"
+201:20 [chinese] 已完成
+    title="已完成"
+209:20 [chinese] 失败任务
+    title="失败任务"
+218:28 [mojibake] 0 && (
+    {activeTasks.length > 0 && (
+222:19 [chinese+mojibake] 活跃任务 (${activeTasks.length})
+    title={`活跃任务 (${activeTasks.length})`}
+244:14 [chinese+mojibake] 第 ${range[0]}-${range[1]} 条，共 ${total} 条
+    `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+252:16 [chinese] 任务详情
+    title="任务详情"
+
+[src\components\RealTimeStatus.tsx]
+--------------------------------------------------------------------------------
+14:52 [mojibake] state.currentProject); const [tasks, setTasks] = useState
+    const currentProject = useProjectStore((state) => state.currentProject);
+30:18 [chinese+mojibake] 📤 开始加载项目任务:
+    console.log('📤 开始加载项目任务:', projectId);
+34:20 [chinese+mojibake] 📡 API响应状态:
+    console.log('📡 API响应状态:', response.status);
+39:22 [chinese+mojibake] 📋 获取到任务数量:
+    console.log('📋 获取到任务数量:', projectTasks.length);
+46:34 [chinese+mojibake] 任务 ${task.id}
+    message: task.name || `任务 ${task.id}`, // 使用name字段或默认值
+53:24 [chinese+mojibake] ❌ API调用失败:
+    console.error('❌ API调用失败:', response.status, response.statusText);
+56:22 [chinese+mojibake] ❌ 加载项目任务失败:
+    console.error('❌ 加载项目任务失败:', error);
+59:20 [chinese+mojibake] ✅ 任务加载完成
+    console.log('✅ 任务加载完成');
+79:18 [chinese+mojibake] 🔄 开始加载项目任务:
+    console.log('🔄 开始加载项目任务:', activeProjectId);
+90:22 [chinese] 任务总数
+    title="任务总数"
+99:22 [chinese] 加载状态
+    title="加载状态"
+100:33 [chinese] 加载中
+    value={loading ? '加载中' : '已完成'}
+100:41 [chinese] 已完成
+    value={loading ? '加载中' : '已完成'}
+108:22 [chinese] 未读通知
+    title="未读通知"
+118:20 [chinese] 任务进度
+    title="任务进度"
+
+[src\components\SimpleProgressBar.tsx]
+--------------------------------------------------------------------------------
+62:44 [mojibake] 8px 0
+    <Card size="small" style={{ margin: '8px 0' }}>
+64:34 [chinese] 等待开始处理...
+    <Text type="secondary">等待开始处理...</Text>
+93:42 [mojibake] 8px 0
+    <Card size="small" style={{ margin: '8px 0' }}>
+122:29 [mojibake] 0 && (
+    {showDetails && ts > 0 && (
+
+[src\components\SimpleProjectCard.tsx]
+--------------------------------------------------------------------------------
+87:15 [chinese] 确认删除
+    title: '确认删除',
+88:17 [chinese+mojibake] 确定要删除项目 "${project.title}" 吗？此操作不可撤销。
+    content: `确定要删除项目 "${project.title}" 吗？此操作不可撤销。`,
+89:16 [chinese] 删除
+    okText: '删除',
+91:20 [chinese] 取消
+    cancelText: '取消',
+112:16 [chinese] 处理失败
+    text: '处理失败'
+120:16 [chinese] 处理完成
+    text: '处理完成'
+128:16 [chinese] 处理中
+    text: '处理中'
+135:14 [chinese] 等待处理
+    text: '等待处理'
+146:25 [mojibake] 8px 0
+    style={{ margin: '8px 0' }}
+149:27 [chinese] 开始处理
+    <Tooltip title="开始处理">
+160:27 [chinese] 重试
+    <Tooltip title="重试">
+169:25 [chinese] 查看详情
+    <Tooltip title="查看详情">
+177:25 [chinese] 删除项目
+    <Tooltip title="删除项目">
+227:34 [chinese] 项目处理完成！
+    message.success('项目处理完成！')
+229:32 [chinese] 项目处理失败！
+    message.error('项目处理失败！')
+
+[src\components\SpeechRecognitionConfig.tsx]
+--------------------------------------------------------------------------------
+22:70 [mojibake] (null) const [models, setModels] = useState
+    const [runtime, setRuntime] = useState<WhisperRuntimeStatus | null>(null)
+23:55 [mojibake] ([]) const [loading, setLoading] = useState(true) const timer = useRef
+    const [models, setModels] = useState<WhisperModel[]>([])
+58:34 [chinese] 已开始安装
+    message.info(r.message || '已开始安装')
+62:51 [chinese] 安装失败
+    message.error(e?.response?.data?.detail || '安装失败')
+69:37 [chinese] 已卸载
+    message.success(r.message || '已卸载')
+72:22 [chinese] 卸载失败
+    message.error('卸载失败')
+79:21 [chinese+mojibake] 开始下载模型 ${model}
+    message.info(`开始下载模型 ${model}`)
+83:51 [chinese] 下载失败
+    message.error(e?.response?.data?.detail || '下载失败')
+90:24 [chinese+mojibake] 已删除模型 ${model}
+    message.success(`已删除模型 ${model}`)
+93:22 [chinese] 删除失败
+    message.error('删除失败')
+108:18 [chinese+mojibake] 什么时候需要 Whisper？
+    message="什么时候需要 Whisper？"
+109:22 [chinese+mojibake] 当导入的视频自带字幕（例如 B站 的 AI 字幕）时，会直接使用现成字幕，无需 Whisper。只有当视频没有字幕时，才需要本地 Whisper 来自动转写生成字幕。Whisper 为按需安装，装不装、装哪个模型都由你决定。
+    description="当导入的视频自带字幕（例如 B站 的 AI 字幕）时，会直接使用现成字幕，无需 Whisper。只有当视频没有字幕时，才需要本地 Whisper 来自动转写生成字幕。Whisper 为按需安装，装不装、装哪个模型都由你决定。"
+113:49 [chinese] 当前平台不支持
+    <Alert type="warning" showIcon message="当前平台不支持"
+114:24 [chinese+mojibake] mlx-whisper 仅支持 Apple Silicon (M 系列) Mac。
+    description="mlx-whisper 仅支持 Apple Silicon (M 系列) Mac。" />
+118:63 [chinese+mojibake] Whisper 运行时
+    <Card size="small" title={<Space><ThunderboltOutlined />Whisper 运行时</Space>}>
+123:28 [chinese] 已安装
+    <Text strong>已安装</Text>
+126:32 [chinese+mojibake] 卸载 Whisper 运行时？已下载的模型不会被删除。
+    <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+126:97 [chinese] 卸载
+    <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+126:113 [chinese] 取消
+    <Popconfirm title="卸载 Whisper 运行时？已下载的模型不会被删除。" onConfirm={handleUninstall} okText="卸载" cancelText="取消">
+127:69 [chinese] 卸载运行时
+    <Button danger size="small" icon={<DeleteOutlined />}>卸载运行时</Button>
+157:51 [chinese] 安装出错
+    <Alert type="error" showIcon message="安装出错" description={runtime?.message} />
+158:93 [chinese] 重试安装
+    <Button icon={<ReloadOutlined />} onClick={handleInstall} disabled={!supported}>重试安装</Button>
+164:33 [chinese+mojibake] Whisper 模型
+    <Card size="small" title="Whisper 模型">
+166:34 [chinese+mojibake] 请先安装 Whisper 运行时，然后在这里下载模型。
+    <Text type="secondary">请先安装 Whisper 运行时，然后在这里下载模型。</Text>
+178:43 [chinese+mojibake] 删除模型 ${m.name}？
+    <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+178:108 [chinese] 删除
+    <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+178:124 [chinese] 取消
+    <Popconfirm title={`删除模型 ${m.name}？`} onConfirm={() => handleDelete(m.name)} okText="删除" cancelText="取消">
+179:79 [chinese] 删除
+    <Button size="small" danger icon={<DeleteOutlined />}>删除</Button>
+182:61 [chinese] 下载中
+    <Button size="small" loading disabled>下载中</Button>
+195:59 [chinese] 已下载
+    {downloaded && <Tag color="green">已下载</Tag>}
+197:41 [chinese] 速度
+    <Tooltip title="速度"><Tag>{m.speed}</Tag></Tooltip>
+
+[src\components\TaskProgress.tsx]
+--------------------------------------------------------------------------------
+34:76 [mojibake] (null); const [loading, setLoading] = useState(false); const [error, setError] = useState
+    const [progressData, setProgressData] = useState<TaskProgressData | null>(null);
+48:26 [chinese] 获取进度失败
+    throw new Error('获取进度失败');
+68:54 [chinese] 未知错误
+    setError(err instanceof Error ? err.message : '未知错误');
+90:76 [chinese] 处理中
+    return { icon: <PlayCircleOutlined />, color: 'processing', text: '处理中' };
+92:74 [chinese] 已完成
+    return { icon: <CheckCircleOutlined />, color: 'success', text: '已完成' };
+94:72 [chinese] 失败
+    return { icon: <CloseCircleOutlined />, color: 'error', text: '失败' };
+96:74 [chinese] 等待中
+    return { icon: <ClockCircleOutlined />, color: 'default', text: '等待中' };
+122:19 [chinese] 正在获取任务进度...
+    <Text>正在获取任务进度...</Text>
+157:36 [chinese] 视频处理任务
+    {progressData.name || '视频处理任务'}
+177:22 [chinese] 当前步骤:
+    <Text strong>当前步骤: </Text>
+178:32 [chinese] 未知
+    <Text>{currentStep || '未知'}</Text>
+183:24 [chinese] 详细信息:
+    <Text strong>详细信息: </Text>
+210:34 [chinese] 进度每5秒自动更新
+    <Text type="secondary">进度每5秒自动更新</Text>
+
+[src\components\TaskProgressDisplay.tsx]
+--------------------------------------------------------------------------------
+32:20 [chinese] 任务进度更新:
+    console.log('任务进度更新:', state);
+35:20 [chinese] 任务完成:
+    console.log('任务完成:', state);
+36:24 [chinese] 任务处理完成！
+    message.success('任务处理完成！');
+40:20 [chinese] 任务失败:
+    console.log('任务失败:', state);
+41:22 [chinese+mojibake] 任务处理失败: ${state.message}
+    message.error(`任务处理失败: ${state.message}`);
+59:34 [chinese] 语音识别
+    case 'transcribe': return '语音识别';
+60:31 [chinese] 内容分析
+    case 'analyze': return '内容分析';
+61:28 [chinese] 视频切片
+    case 'clip': return '视频切片';
+62:30 [chinese] 视频编码
+    case 'encode': return '视频编码';
+63:30 [chinese] 上传处理
+    case 'upload': return '上传处理';
+80:31 [chinese] 等待中
+    case 'PENDING': return '等待中';
+81:32 [chinese] 进行中
+    case 'PROGRESS': return '进行中';
+82:28 [chinese] 已完成
+    case 'DONE': return '已完成';
+83:28 [chinese] 失败
+    case 'FAIL': return '失败';
+94:29 [chinese] 已连接
+    {isConnected ? '已连接' : '未连接'}
+94:37 [chinese] 未连接
+    {isConnected ? '已连接' : '未连接'}
+97:30 [chinese] 已订阅
+    {isSubscribed ? '已订阅' : '未订阅'}
+97:38 [chinese] 未订阅
+    {isSubscribed ? '已订阅' : '未订阅'}
+110:24 [chinese] 任务进度
+    <Text strong>任务进度</Text>
+125:20 [chinese] 终态校准
+    title="终态校准"
+132:28 [chinese] 收起
+    {isExpanded ? '收起' : '展开'}
+132:35 [chinese] 展开
+    {isExpanded ? '收起' : '展开'}
+167:30 [chinese] 任务ID:
+    <Text strong>任务ID:</Text> {taskState.task_id}
+170:30 [chinese] 序列号:
+    <Text strong>序列号:</Text> {taskState.seq}
+173:30 [chinese] 时间戳:
+    <Text strong>时间戳:</Text> {new Date(taskState.ts * 1000).toLocaleString()}
+176:30 [chinese] 最后更新:
+    <Text strong>最后更新:</Text> {new Date(taskState.last_updated).toLocaleString()}
+180:32 [chinese] 元数据:
+    <Text strong>元数据:</Text> {JSON.stringify(taskState.meta, null, 2)}
+184:30 [chinese] 连接状态:
+    <Text strong>连接状态:</Text>
+186:35 [chinese] 已连接
+    {isConnected ? '已连接' : '未连接'}
+186:43 [chinese] 未连接
+    {isConnected ? '已连接' : '未连接'}
+189:36 [chinese] 已订阅
+    {isSubscribed ? '已订阅' : '未订阅'}
+189:44 [chinese] 未订阅
+    {isSubscribed ? '已订阅' : '未订阅'}
+
+[src\components\TaskProgressModal.tsx]
+--------------------------------------------------------------------------------
+42:15 [chinese] 大纲提取
+    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+42:36 [chinese] 从视频转写文本中提取结构性大纲
+    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+43:15 [chinese] 时间定位
+    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+43:36 [chinese] 基于SRT字幕定位话题时间区间
+    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+44:15 [chinese] 内容评分
+    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+44:36 [chinese] 多维度评估片段质量与传播潜力
+    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+45:15 [chinese] 标题生成
+    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+45:36 [chinese] 为高分片段生成吸引人的标题
+    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+46:15 [chinese] 主题聚类
+    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+46:36 [chinese] 将相关片段聚合为合集推荐
+    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+47:15 [chinese] 视频切割
+    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+47:36 [chinese] 使用FFmpeg生成切片与合集视频
+    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+74:24 [mojibake] Check status error:
+    console.error('Check status error:', error)
+102:22 [mojibake] Retry error:
+    console.error('Retry error:', error)
+149:17 [chinese] 任务处理进度
+    <span>任务处理进度</span>
+157:18 [mojibake] , ...(status?.status === 'error' ? [
+    </Button>,
+175:31 [mojibake] 16px 0
+    <div style={{ padding: '16px 0' }}>
+177:56 [mojibake] 40px 0
+    <div style={{ textAlign: 'center', padding: '40px 0' }}>
+193:30 [chinese] 整体进度
+    <Text strong>整体进度</Text>
+213:24 [mojibake] 1px solid #e9ecef
+    border: '1px solid #e9ecef'
+229:26 [chinese] 处理失败
+    message="处理失败"
+238:79 [chinese] 处理步骤
+    <Text strong style={{ marginBottom: '16px', display: 'block' }}>处理步骤</Text>
+260:26 [chinese] 处理完成
+    message="处理完成"
+261:30 [chinese] 视频已成功处理，您可以查看生成的片段和合集。
+    description="视频已成功处理，您可以查看生成的片段和合集。"
+
+[src\components\ui\alert.tsx]
+--------------------------------------------------------------------------------
+7:4 [mojibake] relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground
+    "relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground",
+11:19 [mojibake] bg-background text-foreground
+    default: "bg-background text-foreground",
+13:12 [mojibake] border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive
+    "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
+24:39 [mojibake] & VariantProps
+    React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
+41:20 [mojibake] mb-1 font-medium leading-none tracking-tight
+    className={cn("mb-1 font-medium leading-none tracking-tight", className)}
+53:20 [mojibake] text-sm [&_p]:leading-relaxed
+    className={cn("text-sm [&_p]:leading-relaxed", className)}
+
+[src\components\ui\badge.tsx]
+--------------------------------------------------------------------------------
+7:4 [mojibake] inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2
+    "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+12:12 [mojibake] border-transparent bg-primary text-primary-foreground hover:bg-primary/80
+    "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+14:12 [mojibake] border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80
+    "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+16:12 [mojibake] border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80
+    "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
+27:47 [mojibake] , VariantProps
+    extends React.HTMLAttributes<HTMLDivElement>,
+
+[src\components\ui\button.tsx]
+--------------------------------------------------------------------------------
+8:4 [mojibake] inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+    "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+12:19 [mojibake] bg-primary text-primary-foreground hover:bg-primary/90
+    default: "bg-primary text-primary-foreground hover:bg-primary/90",
+14:12 [mojibake] bg-destructive text-destructive-foreground hover:bg-destructive/90
+    "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+16:12 [mojibake] border border-input bg-background hover:bg-accent hover:text-accent-foreground
+    "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+18:12 [mojibake] bg-secondary text-secondary-foreground hover:bg-secondary/80
+    "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+19:17 [mojibake] hover:bg-accent hover:text-accent-foreground
+    ghost: "hover:bg-accent hover:text-accent-foreground",
+20:16 [mojibake] text-primary underline-offset-4 hover:underline
+    link: "text-primary underline-offset-4 hover:underline",
+23:19 [mojibake] h-10 px-4 py-2
+    default: "h-10 px-4 py-2",
+24:14 [mojibake] h-9 rounded-md px-3
+    sm: "h-9 rounded-md px-3",
+25:14 [mojibake] h-11 rounded-md px-8
+    lg: "h-11 rounded-md px-8",
+26:16 [mojibake] h-10 w-10
+    icon: "h-10 w-10",
+37:56 [mojibake] , VariantProps
+    extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+
+[src\components\ui\card.tsx]
+--------------------------------------------------------------------------------
+12:8 [mojibake] rounded-lg border bg-card text-card-foreground shadow-sm
+    "rounded-lg border bg-card text-card-foreground shadow-sm",
+26:20 [mojibake] flex flex-col space-y-1.5 p-6
+    className={cn("flex flex-col space-y-1.5 p-6", className)}
+39:8 [mojibake] text-2xl font-semibold leading-none tracking-tight
+    "text-2xl font-semibold leading-none tracking-tight",
+53:20 [mojibake] text-sm text-muted-foreground
+    className={cn("text-sm text-muted-foreground", className)}
+63:33 [mojibake] p-6 pt-0
+    <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />
+73:20 [mojibake] flex items-center p-6 pt-0
+    className={cn("flex items-center p-6 pt-0", className)}
+
+[src\components\ui\input.tsx]
+--------------------------------------------------------------------------------
+14:12 [mojibake] flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50
+    "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+
+[src\components\ui\label.tsx]
+--------------------------------------------------------------------------------
+8:4 [mojibake] text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70
+    "text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+12:47 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof LabelPrimitive.Root>,
+13:61 [mojibake] & VariantProps
+    React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root> &
+
+[src\components\ui\progress.tsx]
+--------------------------------------------------------------------------------
+7:50 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof ProgressPrimitive.Root>,
+13:8 [mojibake] relative h-4 w-full overflow-hidden rounded-full bg-secondary
+    "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
+19:18 [mojibake] h-full w-full flex-1 bg-primary transition-all
+    className="h-full w-full flex-1 bg-primary transition-all"
+20:28 [mojibake] translateX(-${100 - (value || 0)}%)
+    style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+
+[src\components\ui\select.tsx]
+--------------------------------------------------------------------------------
+14:51 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.Trigger>,
+20:8 [mojibake] flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1
+    "flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+27:31 [mojibake] h-4 w-4 opacity-50
+    <ChevronDown className="h-4 w-4 opacity-50" />
+34:58 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
+40:8 [mojibake] flex cursor-default items-center justify-center py-1
+    "flex cursor-default items-center justify-center py-1",
+45:27 [mojibake] h-4 w-4
+    <ChevronUp className="h-4 w-4" />
+51:60 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
+57:8 [mojibake] flex cursor-default items-center justify-center py-1
+    "flex cursor-default items-center justify-center py-1",
+62:29 [mojibake] h-4 w-4
+    <ChevronDown className="h-4 w-4" />
+69:51 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.Content>,
+76:10 [mojibake] relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2
+    "relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+78:12 [mojibake] data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1
+    "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
+89:14 [mojibake] h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]
+    "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
+101:49 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.Label>,
+106:20 [mojibake] py-1.5 pl-8 pr-2 text-sm font-semibold
+    className={cn("py-1.5 pl-8 pr-2 text-sm font-semibold", className)}
+113:48 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.Item>,
+119:8 [mojibake] relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50
+    "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+124:22 [mojibake] absolute left-2 flex h-3.5 w-3.5 items-center justify-center
+    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
+126:27 [mojibake] h-4 w-4
+    <Check className="h-4 w-4" />
+136:53 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SelectPrimitive.Separator>,
+141:20 [mojibake] -mx-1 my-1 h-px bg-muted
+    className={cn("-mx-1 my-1 h-px bg-muted", className)}
+
+[src\components\ui\slider.tsx]
+--------------------------------------------------------------------------------
+7:48 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SliderPrimitive.Root>,
+13:8 [mojibake] relative flex w-full touch-none select-none items-center
+    "relative flex w-full touch-none select-none items-center",
+18:39 [mojibake] relative h-2 w-full grow overflow-hidden rounded-full bg-secondary
+    <SliderPrimitive.Track className="relative h-2 w-full grow overflow-hidden rounded-full bg-secondary">
+19:41 [mojibake] absolute h-full bg-primary
+    <SliderPrimitive.Range className="absolute h-full bg-primary" />
+21:39 [mojibake] block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+    <SliderPrimitive.Thumb className="block h-5 w-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50" />
+
+[src\components\ui\switch.tsx]
+--------------------------------------------------------------------------------
+7:49 [mojibake] , React.ComponentPropsWithoutRef
+    React.ElementRef<typeof SwitchPrimitives.Root>,
+12:8 [mojibake] peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input
+    "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+20:10 [mojibake] pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0
+    "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+
+[src\components\UnifiedStatusBar.tsx]
+--------------------------------------------------------------------------------
+38:22 [chinese+mojibake] 进度已终态，停止轮询: ${projectId}
+    console.log(`进度已终态，停止轮询: ${projectId}`)
+46:20 [chinese+mojibake] 开始轮询处理进度: ${projectId}
+    console.log(`开始轮询处理进度: ${projectId}`)
+50:20 [chinese+mojibake] 停止轮询处理进度: ${projectId}
+    console.log(`停止轮询处理进度: ${projectId}`)
+57:22 [chinese+mojibake] 清理轮询: ${projectId}
+    console.log(`清理轮询: ${projectId}`)
+69:24 [chinese+mojibake] 轮询下载进度: ${projectId}
+    console.log(`轮询下载进度: ${projectId}`)
+73:26 [chinese] 项目数据:
+    console.log('项目数据:', projectData)
+75:26 [chinese+mojibake] 下载进度更新: ${newProgress}%
+    console.log(`下载进度更新: ${newProgress}%`)
+81:28 [chinese] 下载完成，切换到处理状态
+    console.log('下载完成，切换到处理状态')
+87:28 [chinese] 获取项目数据失败:
+    console.error('获取项目数据失败:', response.status, response.statusText)
+90:26 [chinese] 获取下载进度失败:
+    console.error('获取下载进度失败:', error)
+110:24 [chinese+mojibake] 进度达到终态，停止轮询: ${projectId}
+    console.log(`进度达到终态，停止轮询: ${projectId}`)
+126:47 [mojibake] ${Math.max(0, Math.min(100, percent))}%
+    <div style={{ height: '100%', width: `${Math.max(0, Math.min(100, percent))}%`, background: 'var(--ac-accent)', borderRadius: 999, transition: 'width .4s ease' }} />
+126:153 [mojibake] width .4s ease
+    <div style={{ height: '100%', width: `${Math.max(0, Math.min(100, percent))}%`, background: 'var(--ac-accent)', borderRadius: 999, transition: 'width .4s ease' }} />
+137:88 [mojibake] 0 0 auto
+    <span style={{ width: 6, height: 6, borderRadius: '50%', background: dot, flex: '0 0 auto' }} />
+142:58 [chinese] 导入中
+    if (status === 'importing') return <ProgressRow label="导入中" percent={downloadProgress} />
+143:60 [chinese] 下载中
+    if (status === 'downloading') return <ProgressRow label="下载中" percent={currentDownloadProgress} />
+146:47 [chinese] 初始化中
+    if (!progress) return <ProgressRow label="初始化中" percent={0} />
+148:53 [chinese] 处理失败
+    if (isFailed(message)) return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+152:56 [chinese] 已完成
+    if (status === 'completed') return <StatusRow label="已完成" dot="var(--ac-ok)" color="var(--ac-sub)" />
+153:53 [chinese] 处理失败
+    if (status === 'failed') return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+156:28 [chinese] 等待中
+    return <StatusRow label="等待中" dot="var(--ac-muted)" color="var(--ac-muted)" />
+
+[src\components\UploadModal.tsx]
+--------------------------------------------------------------------------------
+62:15 [chinese] 准备上传...
+    message: '准备上传...',
+65:63 [mojibake] ('') const [pollingInterval, setPollingInterval] = useState
+    const [uploadRecordId, setUploadRecordId] = useState<string>('')
+70:55 [chinese+mojibake] ${clipTitles[0]} 等${clipIds.length}个视频
+    title: clipTitles.length === 1 ? clipTitles[0] : `${clipTitles[0]} 等${clipIds.length}个视频`,
+87:26 [chinese] 获取B站账号列表失败:
+    console.error('获取B站账号列表失败:', error)
+90:31 [chinese] 主账号
+    { id: '1', name: '主账号', username: 'main_account' }
+99:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3)
+104:22 [chinese] 请选择B站账号
+    message.error('请选择B站账号')
+111:17 [chinese] 正在创建投稿任务...
+    message: '正在创建投稿任务...',
+129:19 [chinese+mojibake] 投稿任务已创建，正在处理 ${response.clip_count} 个视频...
+    message: `投稿任务已创建，正在处理 ${response.clip_count} 个视频...`,
+136:24 [chinese] 投稿任务创建成功！
+    message.success('投稿任务创建成功！')
+138:22 [chinese] 创建投稿任务失败:
+    console.error('创建投稿任务失败:', error)
+141:19 [chinese+mojibake] 创建投稿任务失败: ${error.message || '未知错误'}
+    message: `创建投稿任务失败: ${error.message || '未知错误'}`,
+158:23 [chinese] 投稿成功！
+    message: '投稿成功！',
+173:23 [chinese+mojibake] 投稿失败: ${status.error_message || '未知错误'}
+    message: `投稿失败: ${status.error_message || '未知错误'}`,
+182:23 [chinese] 正在上传到B站...
+    message: '正在上传到B站...',
+188:23 [chinese] 任务排队中，请稍候...
+    message: '任务排队中，请稍候...',
+195:23 [chinese+mojibake] 任务状态: ${status.status}
+    message: `任务状态: ${status.status}`,
+200:24 [chinese] 获取上传状态失败:
+    console.error('获取上传状态失败:', error)
+203:21 [chinese] 获取上传状态失败
+    message: '获取上传状态失败',
+205:19 [chinese] 网络错误
+    error: '网络错误'
+232:17 [chinese] 准备上传...
+    message: '准备上传...',
+258:19 [chinese] 准备上传...
+    message: '准备上传...',
+265:24 [chinese] 投稿任务已取消
+    message.success('投稿任务已取消')
+268:22 [chinese] 取消投稿失败:
+    console.error('取消投稿失败:', error)
+269:22 [chinese] 取消投稿失败，请重试
+    message.error('取消投稿失败，请重试')
+301:17 [chinese] 投稿到B站
+    <span>投稿到B站</span>
+302:28 [mojibake] 1 && (
+    {clipIds.length > 1 && (
+326:24 [chinese] B站账号
+    label="B站账号"
+328:53 [chinese] 请选择B站账号
+    rules={[{ required: true, message: '请选择B站账号' }]}
+330:38 [chinese] 选择要使用的B站账号
+    <Select placeholder="选择要使用的B站账号">
+341:24 [chinese] 分区
+    label="分区"
+343:53 [chinese] 请选择视频分区
+    rules={[{ required: true, message: '请选择视频分区' }]}
+345:38 [chinese] 选择视频分区
+    <Select placeholder="选择视频分区" showSearch>
+357:20 [chinese] 标题
+    label="标题"
+359:49 [chinese] 请输入视频标题
+    rules={[{ required: true, message: '请输入视频标题' }]}
+361:33 [chinese] 输入视频标题
+    <Input placeholder="输入视频标题" maxLength={80} showCount />
+365:20 [chinese] 描述
+    label="描述"
+367:49 [chinese] 请输入视频描述
+    rules={[{ required: true, message: '请输入视频描述' }]}
+370:28 [chinese] 输入视频描述
+    placeholder="输入视频描述"
+378:20 [chinese] 标签
+    label="标签"
+380:20 [chinese] 最多添加10个标签，用逗号分隔
+    extra="最多添加10个标签，用逗号分隔"
+384:28 [chinese] 输入标签，按回车确认
+    placeholder="输入标签，按回车确认"
+399:46 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+409:54 [mojibake] 20px 0
+    <div style={{ textAlign: 'center', padding: '20px 0' }}>
+426:24 [chinese] 投稿成功！
+    message="投稿成功！"
+427:29 [chinese+mojibake] BV号: ${uploadProgress.bvid}
+    description={`BV号: ${uploadProgress.bvid}`}
+436:24 [chinese] 投稿失败
+    message="投稿失败"
+464:31 [chinese] 准备上传...
+    message: '准备上传...',
+478:55 [chinese] 关闭
+    {uploadProgress.status === 'success' ? '关闭' : '取消投稿'}
+478:62 [chinese] 取消投稿
+    {uploadProgress.status === 'success' ? '关闭' : '取消投稿'}
+
+[src\components\UploadQueueManager.tsx]
+--------------------------------------------------------------------------------
+60:5 [mojibake] ; processing_details: Array
+    }>;
+80:51 [mojibake] ([]); const [queueStatus, setQueueStatus] = useState
+    const [tasks, setTasks] = useState<UploadTask[]>([]);
+81:69 [mojibake] (null); const [accounts, setAccounts] = useState
+    const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null);
+98:22 [chinese] 获取队列状态失败:
+    console.error('获取队列状态失败:', error);
+112:22 [chinese] 获取上传历史失败:
+    console.error('获取上传历史失败:', error);
+113:22 [chinese] 获取上传历史失败
+    message.error('获取上传历史失败');
+128:22 [chinese] 获取账号列表失败:
+    console.error('获取账号列表失败:', error);
+145:26 [chinese+mojibake] 任务已添加: ${data.task_id}
+    message.success(`任务已添加: ${data.task_id}`);
+152:24 [chinese+mojibake] 添加任务失败: ${error.detail}
+    message.error(`添加任务失败: ${error.detail}`);
+155:22 [chinese] 添加任务失败:
+    console.error('添加任务失败:', error);
+156:22 [chinese] 添加任务失败
+    message.error('添加任务失败');
+184:26 [chinese+mojibake] 批量添加了 ${data.count} 个任务
+    message.success(`批量添加了 ${data.count} 个任务`);
+191:24 [chinese+mojibake] 批量添加失败: ${error.detail}
+    message.error(`批量添加失败: ${error.detail}`);
+194:22 [chinese] 批量添加失败:
+    console.error('批量添加失败:', error);
+195:22 [chinese] 批量添加失败
+    message.error('批量添加失败');
+207:26 [chinese] 任务已取消
+    message.success('任务已取消');
+212:24 [chinese+mojibake] 取消任务失败: ${error.detail}
+    message.error(`取消任务失败: ${error.detail}`);
+215:22 [chinese] 取消任务失败:
+    console.error('取消任务失败:', error);
+216:22 [chinese] 取消任务失败
+    message.error('取消任务失败');
+229:26 [chinese+mojibake] 任务已重新添加: ${data.new_task_id}
+    message.success(`任务已重新添加: ${data.new_task_id}`);
+234:24 [chinese+mojibake] 重试任务失败: ${error.detail}
+    message.error(`重试任务失败: ${error.detail}`);
+237:22 [chinese] 重试任务失败:
+    console.error('重试任务失败:', error);
+238:22 [chinese] 重试任务失败
+    message.error('重试任务失败');
+245:43 [chinese] 等待中
+    pending: { color: 'default', text: '等待中' },
+246:39 [chinese] 队列中
+    queued: { color: 'blue', text: '队列中' },
+247:45 [chinese] 处理中
+    processing: { color: 'orange', text: '处理中' },
+248:43 [chinese] 已完成
+    completed: { color: 'green', text: '已完成' },
+249:38 [chinese] 失败
+    failed: { color: 'red', text: '失败' },
+250:42 [chinese] 已取消
+    cancelled: { color: 'gray', text: '已取消' }
+260:37 [chinese] 低
+    1: { color: 'default', text: '低' },
+261:34 [chinese] 普通
+    2: { color: 'blue', text: '普通' },
+262:36 [chinese] 高
+    3: { color: 'orange', text: '高' },
+263:33 [chinese] 紧急
+    4: { color: 'red', text: '紧急' }
+266:75 [chinese] 普通
+    const config = priorityConfig[priority] || { color: 'default', text: '普通' };
+273:15 [chinese] 任务ID
+    title: '任务ID',
+284:15 [chinese] 标题
+    title: '标题',
+290:15 [chinese] 状态
+    title: '状态',
+297:15 [chinese] 优先级
+    title: '优先级',
+304:15 [chinese] 进度
+    title: '进度',
+317:15 [chinese] 账号ID
+    title: '账号ID',
+323:15 [chinese] BV号
+    title: 'BV号',
+327:32 [mojibake] bvId ? (
+    render: (bvId: string) => bvId ? (
+334:15 [chinese] 创建时间
+    title: '创建时间',
+341:15 [chinese] 操作
+    title: '操作',
+401:24 [chinese] 队列中任务
+    title="队列中任务"
+410:24 [chinese] 处理中任务
+    title="处理中任务"
+419:24 [chinese] 最大并发数
+    title="最大并发数"
+428:24 [chinese] 可用账号
+    title="可用账号"
+466:20 [chinese] 上传任务
+    <Card title="上传任务">
+476:36 [chinese+mojibake] 共 ${total} 条记录
+    showTotal: (total) => `共 ${total} 条记录`,
+484:16 [chinese] 添加上传任务
+    title="添加上传任务"
+497:20 [chinese] 视频文件路径
+    label="视频文件路径"
+498:49 [chinese] 请输入视频文件路径
+    rules={[{ required: true, message: '请输入视频文件路径' }]}
+505:20 [chinese] 视频标题
+    label="视频标题"
+506:49 [chinese] 请输入视频标题
+    rules={[{ required: true, message: '请输入视频标题' }]}
+508:33 [chinese] 视频标题
+    <Input placeholder="视频标题" maxLength={80} />
+513:20 [chinese] 视频描述
+    label="视频描述"
+515:45 [chinese] 视频描述
+    <TextArea rows={4} placeholder="视频描述" maxLength={2000} />
+520:20 [chinese] 标签
+    label="标签"
+522:33 [chinese] 标签1,标签2,标签3
+    <Input placeholder="标签1,标签2,标签3" />
+527:20 [chinese] 指定账号
+    label="指定账号"
+529:34 [chinese] 自动选择最佳账号
+    <Select placeholder="自动选择最佳账号" allowClear>
+542:20 [chinese] 优先级
+    label="优先级"
+546:35 [chinese] 低
+    <Option value="low">低</Option>
+547:38 [chinese] 普通
+    <Option value="normal">普通</Option>
+548:36 [chinese] 高
+    <Option value="high">高</Option>
+549:38 [chinese] 紧急
+    <Option value="urgent">紧急</Option>
+557:16 [chinese] 批量上传任务
+    title="批量上传任务"
+570:20 [chinese] 任务列表
+    label="任务列表"
+571:49 [chinese] 请输入任务列表
+    rules={[{ required: true, message: '请输入任务列表' }]}
+572:20 [chinese] 每行一个任务，格式：视频路径|标题|描述|标签
+    extra="每行一个任务，格式：视频路径|标题|描述|标签"
+583:20 [chinese] 批量优先级
+    label="批量优先级"
+587:35 [chinese] 低
+    <Option value="low">低</Option>
+588:38 [chinese] 普通
+    <Option value="normal">普通</Option>
+589:36 [chinese] 高
+    <Option value="high">高</Option>
+590:38 [chinese] 紧急
+    <Option value="urgent">紧急</Option>
+
+[src\components\UploadTaskManager.tsx]
+--------------------------------------------------------------------------------
+58:27 [chinese] 未命名任务
+    title: record.title || '未命名任务',
+75:51 [mojibake] ([]) const [loading, setLoading] = useState(false) const [filteredTasks, setFilteredTasks] = useState
+    const [tasks, setTasks] = useState<UploadTask[]>([])
+77:67 [mojibake] ([]) const [selectedTask, setSelectedTask] = useState
+    const [filteredTasks, setFilteredTasks] = useState<UploadTask[]>([])
+96:22 [chinese] 获取投稿任务失败:
+    message.error('获取投稿任务失败: ' + (error.message || '未知错误'))
+96:55 [chinese] 未知错误
+    message.error('获取投稿任务失败: ' + (error.message || '未知错误'))
+106:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3);
+112:24 [chinese] 任务重试已启动
+    message.success('任务重试已启动')
+115:22 [chinese] 重试任务失败:
+    message.error('重试任务失败: ' + (error.message || '未知错误'))
+115:53 [chinese] 未知错误
+    message.error('重试任务失败: ' + (error.message || '未知错误'))
+121:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3);
+127:24 [chinese] 任务已取消
+    message.success('任务已取消')
+130:22 [chinese] 取消任务失败:
+    message.error('取消任务失败: ' + (error.message || '未知错误'))
+130:53 [chinese] 未知错误
+    message.error('取消任务失败: ' + (error.message || '未知错误'))
+219:17 [chinese] 待处理
+    return '待处理'
+221:17 [chinese] 处理中
+    return '处理中'
+223:17 [chinese] 成功
+    return '成功'
+225:17 [chinese] 失败
+    return '失败'
+253:15 [chinese] 任务信息
+    title: '任务信息',
+265:15 [chinese] 切片数量
+    title: '切片数量',
+268:65 [mojibake] id.trim()).length return
+    const clipCount = record.clip_id.split(',').filter(id => id.trim()).length
+273:15 [chinese] 分区
+    title: '分区',
+277:46 [chinese] 分区${record.partition_id}
+    return partition ? partition.name : `分区${record.partition_id}`
+281:15 [chinese] 状态
+    title: '状态',
+290:15 [chinese] 进度
+    title: '进度',
+304:15 [chinese] 创建时间
+    title: '创建时间',
+306:72 [mojibake] YYYY-MM-DD HH:mm
+    render: (record: UploadTask) => dayjs(record.created_at).format('YYYY-MM-DD HH:mm')
+309:15 [chinese] 操作
+    title: '操作',
+335:22 [chinese] 确定要取消这个任务吗？
+    title="确定要取消这个任务吗？"
+337:23 [chinese] 确定
+    okText="确定"
+338:27 [chinese] 取消
+    cancelText="取消"
+363:31 [chinese] 总任务数
+    <Statistic title="总任务数" value={stats.total} />
+368:31 [chinese] 待处理
+    <Statistic title="待处理" value={stats.pending} valueStyle={{ color: '#faad14' }} />
+373:31 [chinese] 处理中
+    <Statistic title="处理中" value={stats.processing} valueStyle={{ color: '#1890ff' }} />
+378:31 [chinese] 成功
+    <Statistic title="成功" value={stats.success} valueStyle={{ color: '#52c41a' }} />
+383:31 [chinese] 失败
+    <Statistic title="失败" value={stats.failed} valueStyle={{ color: '#ff4d4f' }} />
+389:22 [chinese] 成功率
+    title="成功率"
+402:31 [chinese] 状态
+    <Form.Item label="状态" style={{ marginBottom: 0 }}>
+404:30 [chinese] 选择状态
+    placeholder="选择状态"
+409:41 [chinese] 待处理
+    <Option value="pending">待处理</Option>
+410:44 [chinese] 处理中
+    <Option value="processing">处理中</Option>
+411:41 [chinese] 成功
+    <Option value="success">成功</Option>
+412:40 [chinese] 失败
+    <Option value="failed">失败</Option>
+417:31 [chinese] 时间范围
+    <Form.Item label="时间范围" style={{ marginBottom: 0 }}>
+421:32 [chinese] 开始日期
+    placeholder={['开始日期', '结束日期']}
+421:40 [chinese] 结束日期
+    placeholder={['开始日期', '结束日期']}
+426:31 [chinese] 关键词
+    <Form.Item label="关键词" style={{ marginBottom: 0 }}>
+428:30 [chinese] 搜索标题或描述
+    placeholder="搜索标题或描述"
+451:21 [chinese+mojibake] 投稿任务列表 (${filteredTasks.length})
+    <Card title={`投稿任务列表 (${filteredTasks.length})`}>
+461:43 [chinese+mojibake] 第 ${range[0]}-${range[1]} 条，共 ${total} 条
+    showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+468:16 [chinese] 任务详情
+    title="任务详情"
+482:30 [chinese] 任务ID:
+    <div><strong>任务ID:</strong> {selectedTask.id}</div>
+483:30 [chinese] 项目ID:
+    <div><strong>项目ID:</strong> {selectedTask.project_id}</div>
+484:30 [chinese] 标题:
+    <div><strong>标题:</strong> {selectedTask.title}</div>
+485:30 [chinese] 描述:
+    <div><strong>描述:</strong> {selectedTask.description}</div>
+488:30 [chinese] 状态:
+    <div><strong>状态:</strong>
+493:30 [chinese] 分区:
+    <div><strong>分区:</strong>
+496:58 [chinese] 分区${selectedTask.partition_id}
+    return partition ? partition.name : `分区${selectedTask.partition_id}`
+499:30 [chinese] 创建时间:
+    <div><strong>创建时间:</strong> {dayjs(selectedTask.created_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+499:85 [mojibake] YYYY-MM-DD HH:mm:ss
+    <div><strong>创建时间:</strong> {dayjs(selectedTask.created_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+500:30 [chinese] 更新时间:
+    <div><strong>更新时间:</strong> {dayjs(selectedTask.updated_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+500:85 [mojibake] YYYY-MM-DD HH:mm:ss
+    <div><strong>更新时间:</strong> {dayjs(selectedTask.updated_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+507:23 [chinese] 切片信息:
+    <strong>切片信息:</strong>
+519:27 [chinese] 标签:
+    <strong>标签:</strong>
+533:27 [chinese] BV号:
+    <strong>BV号:</strong> {selectedTask.bvid}
+542:27 [chinese] 错误信息:
+    <strong>错误信息:</strong>
+
+[src\components\UploadToBilibili.tsx]
+--------------------------------------------------------------------------------
+15:42 [chinese] 未知分区
+    return partition ? partition.name : '未知分区'
+22:17 [chinese] B站分区信息
+    <span>B站分区信息</span>
+36:24 [chinese] 分区ID:
+    <Text strong>分区ID: </Text>
+37:39 [chinese] 未设置
+    <Text code>{partitionId || '未设置'}</Text>
+
+[src\config\bilibiliPartitions.ts]
+--------------------------------------------------------------------------------
+3:19 [chinese] 动画
+    { id: 1, name: "动画" },
+4:19 [chinese] 游戏
+    { id: 4, name: "游戏" },
+5:19 [chinese] 鬼畜
+    { id: 8, name: "鬼畜" },
+6:19 [chinese] 音乐
+    { id: 3, name: "音乐" },
+7:21 [chinese] 舞蹈
+    { id: 129, name: "舞蹈" },
+8:21 [chinese] 影视
+    { id: 181, name: "影视" },
+9:19 [chinese] 娱乐
+    { id: 5, name: "娱乐" },
+10:20 [chinese] 知识
+    { id: 36, name: "知识" },
+11:21 [chinese] 科技数码
+    { id: 188, name: "科技数码" },
+12:21 [chinese] 资讯
+    { id: 202, name: "资讯" },
+13:20 [chinese] 美食
+    { id: 76, name: "美食" },
+14:21 [chinese] 小剧场
+    { id: 138, name: "小剧场" },
+15:21 [chinese] 汽车
+    { id: 176, name: "汽车" },
+16:21 [chinese] 时尚美妆
+    { id: 155, name: "时尚美妆" },
+17:21 [chinese] 体育运动
+    { id: 235, name: "体育运动" },
+18:20 [chinese] 动物
+    { id: 75, name: "动物" },
+20:21 [chinese] 绘画
+    { id: 162, name: "绘画" },
+21:21 [chinese] 人工智能
+    { id: 207, name: "人工智能" },
+22:21 [chinese] 家装房产
+    { id: 208, name: "家装房产" },
+23:21 [chinese] 户外潮流
+    { id: 209, name: "户外潮流" },
+24:21 [chinese] 健身
+    { id: 164, name: "健身" },
+25:21 [chinese] 手工
+    { id: 161, name: "手工" },
+26:21 [chinese] 旅游出行
+    { id: 165, name: "旅游出行" },
+27:21 [chinese] 三农
+    { id: 158, name: "三农" },
+28:21 [chinese] 亲子
+    { id: 159, name: "亲子" },
+29:21 [chinese] 健康
+    { id: 160, name: "健康" },
+30:21 [chinese] 情感
+    { id: 163, name: "情感" },
+31:20 [chinese] 生活兴趣
+    { id: 22, name: "生活兴趣" },
+32:20 [chinese] 生活经验
+    { id: 23, name: "生活经验" }
+
+[src\context\ThemeContext.tsx]
+--------------------------------------------------------------------------------
+17:29 [mojibake] (prefers-color-scheme: dark)
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+41:34 [mojibake] useTheme must be used within ThemeProvider
+    if (!context) throw new Error('useTheme must be used within ThemeProvider')
+
+[src\hooks\useCollectionVideoDownload.ts]
+--------------------------------------------------------------------------------
+19:21 [chinese] 正在按您的顺序生成合集视频...
+    message.info('正在按您的顺序生成合集视频...')
+25:24 [chinese] 合集视频生成成功，正在下载...
+    message.success('合集视频生成成功，正在下载...')
+30:28 [chinese] 合集视频下载完成
+    message.success('合集视频下载完成')
+32:26 [chinese] 下载失败:
+    console.error('下载失败:', downloadError)
+33:26 [chinese] 下载失败，请稍后重试
+    message.error('下载失败，请稍后重试')
+38:22 [chinese] 生成合集视频失败:
+    console.error('生成合集视频失败:', error)
+39:22 [chinese] 生成合集视频失败
+    message.error('生成合集视频失败')
+
+[src\hooks\useFirstRun.ts]
+--------------------------------------------------------------------------------
+22:20 [chinese+mojibake] 🔍 开始检查首次运行状态...
+    console.log('🔍 开始检查首次运行状态...')
+37:24 [chinese+mojibake] 📋 获取到设置:
+    console.log('📋 获取到设置:', settings)
+45:24 [chinese+mojibake] 🔑 API Key状态:
+    console.log('🔑 API Key状态:', hasApiKey)
+54:24 [chinese+mojibake] ❌ 设置API响应失败:
+    console.log('❌ 设置API响应失败:', response.status)
+65:24 [chinese+mojibake] ⏰ API请求超时，假设为首次运行
+    console.log('⏰ API请求超时，假设为首次运行')
+67:24 [chinese+mojibake] ❌ API请求失败:
+    console.log('❌ API请求失败:', fetchError)
+76:22 [chinese+mojibake] ❌ 检查首次运行状态失败:
+    console.error('❌ 检查首次运行状态失败:', error)
+
+[src\hooks\useNotifications.ts]
+--------------------------------------------------------------------------------
+15:69 [mojibake] ([]); const [unreadCount, setUnreadCount] = useState(0); const notifiedKeys = useRef
+    const [notifications, setNotifications] = useState<Notification[]>([]);
+17:43 [mojibake] (new Set()); const lastNotificationTime = useRef
+    const notifiedKeys = useRef<Set<string>>(new Set()); // 防重复通知
+18:46 [mojibake] (0); const addNotification = useCallback((notification: Omit
+    const lastNotificationTime = useRef<number>(0); // 节流控制
+95:15 [chinese+mojibake] 错误: ${message.error_type}
+    title: `错误: ${message.error_type}`,
+
+[src\hooks\useProjectPolling.ts]
+--------------------------------------------------------------------------------
+17:44 [mojibake] (null) const [lastUpdateTime, setLastUpdateTime] = useState
+    const intervalRef = useRef<number | null>(null)
+32:24 [mojibake] Skipping poll: dragging in progress
+    console.log('Skipping poll: dragging in progress')
+36:22 [mojibake] Polling projects...
+    console.log('Polling projects...')
+38:22 [mojibake] Polled projects:
+    console.log('Polled projects:', projects)
+45:24 [mojibake] Calling onProjectsUpdate with:
+    console.log('Calling onProjectsUpdate with:', safeProjects)
+54:24 [chinese] 无活跃项目，将减少轮询频率
+    console.log('无活跃项目，将减少轮询频率')
+57:24 [mojibake] Polling error:
+    console.error('Polling error:', error)
+87:22 [mojibake] Manual refresh error:
+    console.error('Manual refresh error:', error)
+
+[src\hooks\useTaskProgress.ts]
+--------------------------------------------------------------------------------
+42:22 [chinese+mojibake] 忽略过期消息: seq=${progressMessage.seq}, ts=${progressMessage.ts}
+    console.log(`忽略过期消息: seq=${progressMessage.seq}, ts=${progressMessage.ts}`);
+96:20 [chinese+mojibake] 执行终态校准: ${taskId}
+    console.log(`执行终态校准: ${taskId}`);
+118:22 [chinese] 终态校准失败:
+    console.error('终态校准失败:', error);
+128:22 [chinese+mojibake] 已订阅任务进度: ${taskId}
+    console.log(`已订阅任务进度: ${taskId}`);
+139:22 [chinese+mojibake] 已取消订阅任务进度: ${taskId}
+    console.log(`已取消订阅任务进度: ${taskId}`);
+
+[src\hooks\useTaskStatus.ts]
+--------------------------------------------------------------------------------
+23:16 [chinese+mojibake] 🔧 useTaskStatus Hook已初始化
+    console.log('🔧 useTaskStatus Hook已初始化');
+25:62 [mojibake] (new Map()); const [projects, setProjects] = useState
+    const [tasks, setTasks] = useState<Map<string, TaskStatus>>(new Map());
+114:18 [chinese+mojibake] 📤 开始加载项目任务:
+    console.log('📤 开始加载项目任务:', projectId);
+118:20 [chinese+mojibake] 📡 API响应状态:
+    console.log('📡 API响应状态:', response.status);
+123:22 [chinese+mojibake] 📋 获取到任务数量:
+    console.log('📋 获取到任务数量:', projectTasks.length);
+128:26 [chinese+mojibake] 📝 添加任务:
+    console.log('📝 添加任务:', task.task_id, task.status, task.progress);
+141:24 [chinese+mojibake] ❌ API调用失败:
+    console.error('❌ API调用失败:', response.status, response.statusText);
+144:22 [chinese+mojibake] ❌ 加载项目任务失败:
+    console.error('❌ 加载项目任务失败:', error);
+147:20 [chinese+mojibake] ✅ 任务加载完成
+    console.log('✅ 任务加载完成');
+
+[src\hooks\useWebSocket.ts]
+--------------------------------------------------------------------------------
+109:22 [chinese] 发送心跳ping
+    console.log('发送心跳ping');
+117:24 [chinese] 心跳超时，准备重连
+    console.log('心跳超时，准备重连');
+145:20 [chinese+mojibake] 用户ID变更: ${globalUserId} -> ${userId}，关闭旧连接
+    console.log(`用户ID变更: ${globalUserId} -> ${userId}，关闭旧连接`);
+163:22 [chinese] WebSocket连接已建立
+    console.log('WebSocket连接已建立');
+173:24 [chinese] 重连后重新订阅项目:
+    console.log('重连后重新订阅项目:', Array.from(globalDesiredSubscriptions));
+186:24 [chinese] 收到WebSocket消息:
+    console.log('收到WebSocket消息:', data);
+190:26 [chinese] 收到心跳pong响应
+    console.log('收到心跳pong响应');
+200:26 [chinese] 解析WebSocket消息失败:
+    console.error('解析WebSocket消息失败:', error);
+205:22 [chinese] WebSocket连接已关闭:
+    console.log('WebSocket连接已关闭:', event.code, event.reason);
+218:24 [chinese+mojibake] 将在 ${delay}ms 后尝试重连 (${reconnectAttempts}/${maxReconnectAttempts})
+    console.log(`将在 ${delay}ms 后尝试重连 (${reconnectAttempts}/${maxReconnectAttempts})`);
+224:24 [chinese] 达到最大重连次数，停止重连
+    console.log('达到最大重连次数，停止重连');
+229:24 [chinese] WebSocket错误:
+    console.error('WebSocket错误:', error);
+235:22 [chinese] 创建WebSocket连接失败:
+    console.error('创建WebSocket连接失败:', error);
+247:29 [chinese] 用户主动断开连接
+    globalWs.close(1000, '用户主动断开连接');
+260:19 [chinese] WebSocket未连接，无法发送消息
+    console.warn('WebSocket未连接，无法发送消息');
+320:22 [chinese] 同步订阅项目:
+    console.log('同步订阅项目:', Array.from(desired));
+
+[src\index.css]
+--------------------------------------------------------------------------------
+9:27 [mojibake] PingFang SC
+    --ac-font-sans:"Geist","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;
+9:41 [mojibake] Noto Sans SC
+    --ac-font-sans:"Geist","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif;
+10:20 [mojibake] Instrument Serif
+    --ac-font-serif:"Instrument Serif",Georgia,serif;
+11:19 [mojibake] Geist Mono
+    --ac-font-mono:"Geist Mono",ui-monospace,monospace;
+79:52 [mojibake] Segoe UI
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+80:29 [mojibake] Fira Sans
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+80:42 [mojibake] Droid Sans
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+80:56 [mojibake] Helvetica Neue
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+634:32 [mojibake] color: rgb(255, 107, 107)
+    .project-card .ant-btn[style*="color: rgb(255, 107, 107)"]:hover {
+641:50 [mojibake] background: rgb(38, 38, 38)
+    .project-card .ant-card-body > div > div[style*="background: rgb(38, 38, 38)"] {
+645:56 [mojibake] background: rgb(38, 38, 38)
+    .project-card:hover .ant-card-body > div > div[style*="background: rgb(38, 38, 38)"] {
+
+[src\locales\ru.ts]
+--------------------------------------------------------------------------------
+5:12 [mojibake] DS OS
+    name: 'DS OS',
+6:19 [mojibake] DS OS Desktop
+    desktopName: 'DS OS Desktop',
+7:15 [mojibake] Добро пожаловать в DS OS
+    welcome: 'Добро пожаловать в DS OS',
+8:21 [mojibake] Настройка завершена. Добро пожаловать в DS OS
+    setupComplete: 'Настройка завершена. Добро пожаловать в DS OS',
+21:13 [mojibake] Управление сигналами
+    title: 'Управление сигналами',
+22:16 [mojibake] Создавайте сигналы, выделяйте атомы и собирайте капсулы знаний
+    subtitle: 'Создавайте сигналы, выделяйте атомы и собирайте капсулы знаний',
+23:21 [mojibake] Создать сигнал
+    createProject: 'Создать сигнал',
+24:19 [mojibake] Загрузить видео
+    uploadVideo: 'Загрузить видео',
+25:18 [mojibake] Сигналы пока не созданы
+    noProjects: 'Сигналы пока не созданы',
+31:14 [mojibake] Создать сигнал
+    create: 'Создать сигнал',
+32:14 [mojibake] Удалить сигнал
+    delete: 'Удалить сигнал',
+33:12 [mojibake] Открыть сигнал
+    open: 'Открыть сигнал',
+34:12 [mojibake] Название сигнала
+    name: 'Название сигнала',
+35:19 [mojibake] Описание сигнала
+    description: 'Описание сигнала',
+42:14 [mojibake] Создать атом
+    create: 'Создать атом',
+43:14 [mojibake] Удалить атом
+    delete: 'Удалить атом',
+44:15 [mojibake] Просмотреть атом
+    preview: 'Просмотреть атом',
+53:14 [mojibake] Создать капсулу
+    create: 'Создать капсулу',
+54:14 [mojibake] Удалить капсулу
+    delete: 'Удалить капсулу',
+55:15 [mojibake] Добавить атом
+    addClip: 'Добавить атом',
+56:15 [mojibake] Просмотреть капсулу
+    preview: 'Просмотреть капсулу',
+60:13 [mojibake] Загрузка файлов
+    title: 'Загрузка файлов',
+61:18 [mojibake] Выбрать файл
+    selectFile: 'Выбрать файл',
+64:17 [mojibake] Загрузка завершена
+    completed: 'Загрузка завершена',
+65:14 [mojibake] Ошибка загрузки
+    failed: 'Ошибка загрузки',
+70:13 [mojibake] Начать обработку
+    start: 'Начать обработку',
+73:17 [mojibake] Обработка завершена
+    completed: 'Обработка завершена',
+74:14 [mojibake] Ошибка обработки
+    failed: 'Ошибка обработки',
+80:15 [mojibake] Настройки приложения
+    desktop: 'Настройки приложения',
+81:16 [mojibake] База данных
+    database: 'База данных',
+82:21 [mojibake] Папка данных
+    dataDirectory: 'Папка данных',
+83:22 [mojibake] Папка кэша
+    cacheDirectory: 'Папка кэша',
+84:21 [mojibake] Временная папка
+    tempDirectory: 'Временная папка',
+85:12 [mojibake] Сохранить
+    save: 'Сохранить',
+86:13 [mojibake] Настройки сохранены
+    saved: 'Настройки сохранены',
+91:12 [mojibake] Сохранить
+    save: 'Сохранить',
+94:12 [mojibake] Редактировать
+    edit: 'Редактировать',
+107:15 [mojibake] Ожидание
+    pending: 'Ожидание',
+116:15 [mojibake] Операция выполнена
+    success: 'Операция выполнена',
+117:13 [mojibake] Произошла ошибка
+    error: 'Произошла ошибка',
+119:14 [mojibake] Нет данных
+    noData: 'Нет данных',
+120:21 [mojibake] Подтвердите удаление
+    confirmDelete: 'Подтвердите удаление',
+
+[src\main.tsx]
+--------------------------------------------------------------------------------
+61:22 [mojibake] "Geist","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif
+    fontFamily: '"Geist","PingFang SC","Noto Sans SC",system-ui,-apple-system,sans-serif',
+
+[src\pages\DebugPage.tsx]
+--------------------------------------------------------------------------------
+76:24 [chinese] 桌面模式检测完成
+    message.success('桌面模式检测完成')
+78:25 [chinese+mojibake] 桌面模式检测失败: ${error.message}
+    const errorMsg = `桌面模式检测失败: ${error.message}`
+106:22 [chinese+mojibake] 设置API失败: ${error.message}
+    errors.push(`设置API失败: ${error.message}`)
+113:22 [chinese] 桌面模式API响应:
+    console.log('桌面模式API响应:', desktopMode)
+115:22 [chinese+mojibake] 桌面模式API失败: ${error.message}
+    errors.push(`桌面模式API失败: ${error.message}`)
+122:22 [chinese] API测试响应:
+    console.log('API测试响应:', testResult)
+124:22 [chinese+mojibake] API测试接口失败: ${error.message}
+    errors.push(`API测试接口失败: ${error.message}`)
+134:26 [chinese] 所有API连接测试通过
+    message.success('所有API连接测试通过')
+136:26 [chinese+mojibake] 部分API测试失败: ${errors.length}个错误
+    message.warning(`部分API测试失败: ${errors.length}个错误`)
+139:25 [chinese+mojibake] API连接测试失败: ${error.message}
+    const errorMsg = `API连接测试失败: ${error.message}`
+157:24 [chinese+mojibake] 请填写API Key和提供商
+    message.error('请填写API Key和提供商')
+163:22 [mojibake] AutoClip Desktop
+    app_name: "AutoClip Desktop",
+201:24 [chinese+mojibake] API Key保存测试成功！
+    message.success('API Key保存测试成功！')
+203:25 [chinese+mojibake] API Key保存失败: ${error.message}
+    const errorMsg = `API Key保存失败: ${error.message}`
+229:52 [mojibake] 0 auto
+    <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+231:28 [chinese+mojibake] AutoClip 调试页面
+    <BugOutlined /> AutoClip 调试页面
+241:28 [chinese] 桌面模式检测
+    <Card title="桌面模式检测" extra={
+260:45 [chinese] 桌面模式状态
+    <Descriptions.Item label="桌面模式状态">
+262:59 [chinese] 是
+    {debugInfo.desktopMode.isDesktop ? '是' : '否'}
+262:65 [chinese] 否
+    {debugInfo.desktopMode.isDesktop ? '是' : '否'}
+265:45 [chinese] 检测来源
+    <Descriptions.Item label="检测来源">
+268:45 [chinese] 环境信息
+    <Descriptions.Item label="环境信息" span={2}>
+279:28 [chinese] API连接测试
+    <Card title="API连接测试" extra={
+296:31 [chinese] 设置API
+    <Text>设置API</Text>
+307:31 [chinese] 桌面模式API
+    <Text>桌面模式API</Text>
+318:31 [chinese] API测试接口
+    <Text>API测试接口</Text>
+328:28 [chinese+mojibake] API Key保存测试
+    <Card title="API Key保存测试" extra={
+343:32 [chinese] API提供商
+    label="API提供商"
+344:61 [chinese] 请选择提供商
+    rules={[{ required: true, message: '请选择提供商' }]}
+346:45 [mojibake] dashscope, openai, gemini, siliconflow
+    <Input placeholder="dashscope, openai, gemini, siliconflow" />
+352:32 [mojibake] API Key
+    label="API Key"
+353:61 [chinese+mojibake] 请输入API Key
+    rules={[{ required: true, message: '请输入API Key' }]}
+355:54 [chinese+mojibake] 请输入API Key
+    <Input.Password placeholder="请输入API Key" />
+366:30 [chinese] 当前设置信息
+    <Card title="当前设置信息">
+368:36 [chinese] 查看完整设置
+    <Panel header="查看完整设置" key="1">
+386:39 [mojibake] 0 && (
+    {debugInfo.errors.length > 0 && (
+388:30 [chinese] 错误信息
+    <Card title="错误信息" style={{ borderColor: '#ff4d4f' }}>
+404:28 [chinese] 使用说明
+    <Card title="使用说明">
+406:28 [chinese] 调试步骤
+    message="调试步骤"
+409:26 [chinese+mojibake] 1. 首先检查"桌面模式检测"是否显示为"是"
+    <p>1. 首先检查"桌面模式检测"是否显示为"是"</p>
+409:34 [chinese] 桌面模式检测
+    <p>1. 首先检查"桌面模式检测"是否显示为"是"</p>
+409:47 [chinese] 是
+    <p>1. 首先检查"桌面模式检测"是否显示为"是"</p>
+410:26 [chinese+mojibake] 2. 然后测试"API连接测试"，确保所有连接都显示绿色
+    <p>2. 然后测试"API连接测试"，确保所有连接都显示绿色</p>
+410:34 [chinese] API连接测试
+    <p>2. 然后测试"API连接测试"，确保所有连接都显示绿色</p>
+411:26 [chinese+mojibake] 3. 最后在"API Key保存测试"中输入真实的API Key进行测试
+    <p>3. 最后在"API Key保存测试"中输入真实的API Key进行测试</p>
+411:33 [chinese+mojibake] API Key保存测试
+    <p>3. 最后在"API Key保存测试"中输入真实的API Key进行测试</p>
+412:26 [chinese+mojibake] 4. 如果出现错误，请查看"错误信息"部分
+    <p>4. 如果出现错误，请查看"错误信息"部分</p>
+412:40 [chinese] 错误信息
+    <p>4. 如果出现错误，请查看"错误信息"部分</p>
+
+[src\pages\HomePage.tsx]
+--------------------------------------------------------------------------------
+27:59 [mojibake] ('all') const [activeTab, setActiveTab] = useState
+    const [statusFilter, setStatusFilter] = useState<string>('all')
+47:22 [chinese] 无运行项目，已全局停止进度轮询并清空进度缓存
+    console.log('无运行项目，已全局停止进度轮询并清空进度缓存')
+49:23 [chinese] 停止全局进度轮询时出现问题:
+    console.warn('停止全局进度轮询时出现问题:', e)
+72:22 [chinese] 加载项目失败
+    message.error('加载项目失败')
+73:22 [mojibake] Load projects error:
+    console.error('Load projects error:', error)
+85:24 [chinese] 项目删除成功
+    message.success('项目删除成功')
+87:22 [chinese] 删除项目失败
+    message.error('删除项目失败')
+88:22 [mojibake] Delete project error:
+    console.error('Delete project error:', error)
+97:22 [chinese] 已开始重试处理项目
+    message.success('已开始重试处理项目')
+101:22 [mojibake] Refresh after retry error:
+    console.error('Refresh after retry error:', error)
+108:24 [chinese] 项目正在导入中，请稍后再查看详情
+    message.warning('项目正在导入中，请稍后再查看详情')
+131:35 [mojibake] 40px 56px 56px
+    <Content style={{ padding: '40px 56px 56px', position: 'relative' }}>
+132:52 [mojibake] 0 auto
+    <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative' }}>
+141:82 [mojibake] 0 4px 14px
+    <div style={{ fontSize: '13px', color: 'var(--ac-muted)', margin: '0 4px 14px', letterSpacing: '0.2px' }}>
+147:26 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)',
+162:32 [mojibake] 8px 18px
+    padding: '8px 18px',
+169:35 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+171:61 [mojibake] 0 1px 2px rgba(0,0,0,.08)
+    boxShadow: activeTab === 'bilibili' ? '0 1px 2px rgba(0,0,0,.08)' : 'none'
+179:32 [mojibake] 8px 18px
+    padding: '8px 18px',
+186:35 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease',
+188:59 [mojibake] 0 1px 2px rgba(0,0,0,.08)
+    boxShadow: activeTab === 'upload' ? '0 1px 2px rgba(0,0,0,.08)' : 'none'
+209:38 [chinese] 项目创建成功，正在处理中...
+    message.success('项目创建成功，正在处理中...')
+249:32 [chinese] 全部状态
+    placeholder="全部状态"
+257:39 [chinese] 全部状态
+    <Option value="all">全部状态</Option>
+258:45 [chinese] 已完成
+    <Option value="completed">已完成</Option>
+259:46 [chinese] 处理中
+    <Option value="processing">处理中</Option>
+260:41 [chinese] 处理失败
+    <Option value="error">处理失败</Option>
+270:30 [mojibake] 72px 0
+    padding: '72px 0',
+273:29 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)'
+283:30 [mojibake] 72px 0
+    padding: '72px 0',
+286:29 [mojibake] 1px solid var(--ac-line)
+    border: '1px solid var(--ac-line)'
+293:54 [chinese] 还没有项目，请使用上方的导入区域创建第一个项目
+    {projects.length === 0 ? '还没有项目，请使用上方的导入区域创建第一个项目' : '没有找到匹配的项目'}
+293:82 [chinese] 没有找到匹配的项目
+    {projects.length === 0 ? '还没有项目，请使用上方的导入区域创建第一个项目' : '没有找到匹配的项目'}
+302:42 [mojibake] repeat(auto-fill, minmax(300px, 1fr))
+    gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+
+[src\pages\ProcessingPage.tsx]
+--------------------------------------------------------------------------------
+29:15 [chinese] 大纲提取
+    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+29:36 [chinese] 从视频转写文本中提取结构性大纲
+    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
+30:15 [chinese] 时间定位
+    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+30:36 [chinese] 基于SRT字幕定位话题时间区间
+    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
+31:15 [chinese] 内容评分
+    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+31:36 [chinese] 多维度评估片段质量与传播潜力
+    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
+32:15 [chinese] 标题生成
+    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+32:36 [chinese] 为高分片段生成吸引人的标题
+    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
+33:15 [chinese] 主题聚类
+    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+33:36 [chinese] 将相关片段聚合为合集推荐
+    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
+34:15 [chinese] 视频切割
+    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+34:36 [chinese] 使用FFmpeg生成切片与合集视频
+    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+64:22 [chinese] 加载项目失败
+    message.error('加载项目失败')
+65:22 [mojibake] Load project error:
+    console.error('Load project error:', error)
+76:24 [chinese] 开始处理项目
+    message.success('开始处理项目')
+78:22 [chinese] 启动处理失败
+    message.error('启动处理失败')
+79:22 [mojibake] Start processing error:
+    console.error('Start processing error:', error)
+92:26 [chinese+mojibake] 🎉 视频处理完成！正在跳转到结果页面...
+    message.success('🎉 视频处理完成！正在跳转到结果页面...')
+100:55 [chinese] 处理过程中发生未知错误
+    const errorMsg = statusData.error_message || '处理过程中发生未知错误'
+101:24 [chinese+mojibake] 处理失败: ${errorMsg}
+    message.error(`处理失败: ${errorMsg}`)
+104:23 [chinese] 您可以返回首页重新上传文件或联系技术支持
+    message.info('您可以返回首页重新上传文件或联系技术支持', 5)
+108:22 [mojibake] Check status error:
+    console.error('Check status error:', error)
+112:24 [chinese] 项目不存在或已被删除
+    message.error('项目不存在或已被删除')
+115:26 [chinese] 网络连接超时，正在重试...
+    message.warning('网络连接超时，正在重试...')
+117:24 [chinese] 获取处理状态失败，请刷新页面重试
+    message.error('获取处理状态失败，请刷新页面重试')
+146:33 [chinese] 加载中...
+    <Spin size="large" tip="加载中..." />
+152:69 [mojibake] 0 auto
+    <Content style={{ padding: '24px', maxWidth: '1000px', margin: '0 auto' }}>
+155:28 [chinese] 视频处理进度
+    <Title level={2}>视频处理进度</Title>
+173:22 [chinese] 处理失败
+    message="处理失败"
+176:46 [chinese] 处理过程中发生未知错误
+    <p>{status.error_message || '处理过程中发生未知错误'}</p>
+198:24 [chinese] 处理进度
+    <Card title="处理进度">
+202:32 [chinese] 总体进度
+    <Text strong>总体进度</Text>
+216:30 [chinese] 当前步骤:
+    <Text strong>当前步骤: </Text>
+241:22 [chinese] 处理完成
+    message="处理完成"
+242:26 [chinese] 视频已成功处理完成，正在跳转到项目详情页...
+    description="视频已成功处理完成，正在跳转到项目详情页..."
+
+[src\pages\ProjectDetailPage.tsx]
+--------------------------------------------------------------------------------
+51:57 [mojibake] ('score') const [showCollectionDetail, setShowCollectionDetail] = useState(false) const [selectedCollection, setSelectedCollection] = useState
+    const [sortBy, setSortBy] = useState<'time' | 'score'>('score')
+75:24 [mojibake] 🎬 Loaded clips in ProjectDetailPage:
+    console.log('🎬 Loaded clips in ProjectDetailPage:', clips)
+76:24 [mojibake] 📚 Loaded collections in ProjectDetailPage:
+    console.log('📚 Loaded collections in ProjectDetailPage:', collections)
+84:24 [mojibake] 🎯 Final project with data:
+    console.log('🎯 Final project with data:', projectWithData)
+90:26 [mojibake] Failed to load clips/collections:
+    console.error('Failed to load clips/collections:', error)
+98:22 [mojibake] Failed to load project:
+    console.error('Failed to load project:', error)
+99:22 [chinese] 加载项目失败
+    message.error('加载项目失败')
+109:22 [mojibake] Failed to load processing status:
+    console.error('Failed to load processing status:', error)
+119:24 [chinese] 开始处理
+    message.success('开始处理')
+122:22 [mojibake] Failed to start processing:
+    console.error('Failed to start processing:', error)
+123:22 [chinese] 启动处理失败
+    message.error('启动处理失败')
+139:24 [chinese] 合集创建成功
+    message.success('合集创建成功')
+141:22 [mojibake] Failed to create collection:
+    console.error('Failed to create collection:', error)
+142:22 [chinese] 创建合集失败
+    message.error('创建合集失败')
+155:24 [chinese] 切片已从合集中移除
+    message.success('切片已从合集中移除')
+157:22 [mojibake] Failed to remove clip from collection:
+    console.error('Failed to remove clip from collection:', error)
+158:22 [chinese] 移除切片失败
+    message.error('移除切片失败')
+168:24 [chinese] 合集已删除
+    message.success('合集已删除')
+170:22 [mojibake] Failed to delete collection:
+    console.error('Failed to delete collection:', error)
+171:22 [chinese] 删除合集失败
+    message.error('删除合集失败')
+179:24 [chinese] 合集顺序已更新
+    message.success('合集顺序已更新')
+181:22 [mojibake] Failed to reorder collection clips:
+    console.error('Failed to reorder collection clips:', error)
+182:22 [chinese] 更新合集顺序失败
+    message.error('更新合集顺序失败')
+190:24 [chinese] 切片已添加到合集
+    message.success('切片已添加到合集')
+192:22 [mojibake] Failed to add clip to collection:
+    console.error('Failed to add clip to collection:', error)
+193:22 [chinese] 添加切片失败
+    message.error('添加切片失败')
+233:20 [chinese] 加载失败
+    message="加载失败"
+234:34 [chinese] 项目不存在
+    description={error || '项目不存在'}
+281:77 [mojibake] 0 && (
+    {currentProject.collections && currentProject.collections.length > 0 && (
+285:58 [chinese] AI推荐合集
+    <Title level={4} style={{ margin: 0 }}>AI推荐合集</Title>
+300:31 [mojibake] 0 20px
+    padding: '0 20px',
+354:24 [mojibake] 1px solid #303030
+    border: '1px solid #303030',
+360:91 [chinese] 视频片段
+    <Title level={4} style={{ margin: 0, color: '#ffffff', fontWeight: 600 }}>视频片段</Title>
+369:95 [chinese] 排序
+    <Text style={{ fontSize: '13px', color: 'var(--ac-sub)', fontWeight: 500 }}>排序</Text>
+388:36 [mojibake] 0 16px
+    padding: '0 16px',
+390:55 [mojibake] 1px solid #1890ff
+    border: sortBy === 'time' ? '1px solid #1890ff' : '1px solid var(--ac-line)',
+390:77 [mojibake] 1px solid var(--ac-line)
+    border: sortBy === 'time' ? '1px solid #1890ff' : '1px solid var(--ac-line)',
+392:41 [mojibake] 6px 0 0 6px
+    borderRadius: '6px 0 0 6px',
+394:58 [mojibake] 0 2px 8px rgba(24, 144, 255, 0.3)
+    boxShadow: sortBy === 'time' ? '0 2px 8px rgba(24, 144, 255, 0.3)' : 'none',
+395:39 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease'
+406:36 [mojibake] 0 16px
+    padding: '0 16px',
+408:56 [mojibake] 1px solid #1890ff
+    border: sortBy === 'score' ? '1px solid #1890ff' : '1px solid var(--ac-line)',
+408:78 [mojibake] 1px solid var(--ac-line)
+    border: sortBy === 'score' ? '1px solid #1890ff' : '1px solid var(--ac-line)',
+411:41 [mojibake] 0 6px 6px 0
+    borderRadius: '0 6px 6px 0',
+413:59 [mojibake] 0 2px 8px rgba(24, 144, 255, 0.3)
+    boxShadow: sortBy === 'score' ? '0 2px 8px rgba(24, 144, 255, 0.3)' : 'none',
+414:39 [mojibake] all 0.2s ease
+    transition: 'all 0.2s ease'
+434:35 [mojibake] 0 20px
+    padding: '0 20px',
+445:67 [mojibake] 0 ? (
+    {currentProject.clips && currentProject.clips.length > 0 ? (
+449:41 [mojibake] repeat(auto-fill, minmax(320px, 1fr))
+    gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))',
+451:29 [mojibake] 8px 0
+    padding: '8px 0'
+478:27 [mojibake] 60px 0
+    padding: '60px 0',
+482:26 [mojibake] 1px dashed var(--ac-line)
+    border: '1px dashed var(--ac-line)'
+486:71 [chinese] 暂无视频片段
+    <Text style={{ color: '#888', fontSize: '14px' }}>暂无视频片段</Text>
+508:25 [chinese] 项目还未完成处理
+    <Text>项目还未完成处理</Text>
+510:42 [chinese] 处理完成后可查看视频片段和AI合集
+    <Text type="secondary">处理完成后可查看视频片段和AI合集</Text>
+
+[src\pages\SettingsPage.tsx]
+--------------------------------------------------------------------------------
+27:14 [chinese] 阿里通义千问
+    name: '阿里通义千问',
+30:21 [chinese] 阿里云通义千问大模型服务
+    description: '阿里云通义千问大模型服务',
+32:21 [chinese] 请输入通义千问API密钥
+    placeholder: '请输入通义千问API密钥'
+38:21 [chinese+mojibake] OpenAI GPT系列模型
+    description: 'OpenAI GPT系列模型',
+40:21 [chinese+mojibake] 请输入OpenAI API密钥
+    placeholder: '请输入OpenAI API密钥'
+43:14 [mojibake] Google Gemini
+    name: 'Google Gemini',
+46:21 [chinese+mojibake] Google Gemini大模型
+    description: 'Google Gemini大模型',
+48:21 [chinese+mojibake] 请输入Gemini API密钥
+    placeholder: '请输入Gemini API密钥'
+51:14 [chinese] 硅基流动
+    name: '硅基流动',
+54:21 [chinese] 硅基流动模型服务
+    description: '硅基流动模型服务',
+56:21 [chinese] 请输入硅基流动API密钥
+    placeholder: '请输入硅基流动API密钥'
+81:25 [chinese] 部分API请求失败:
+    console.warn('部分API请求失败:', failedRequests.map(r => (r as PromiseRejectedResult).reason))
+93:71 [chinese] 阿里通义千问
+    : { available: false, provider: 'dashscope', display_name: '阿里通义千问', model: 'qwen-plus' }
+116:22 [chinese+mojibake] Desktop模式 - 设置表单值:
+    console.log('Desktop模式 - 设置表单值:', flatSettings)
+117:22 [chinese] 可用模型:
+    console.log('可用模型:', modelsData)
+118:22 [chinese] 当前提供商:
+    console.log('当前提供商:', providerData)
+121:22 [chinese+mojibake] Web模式 - 使用默认配置
+    console.log('Web模式 - 使用默认配置')
+144:26 [chinese] 阿里通义千问
+    display_name: '阿里通义千问',
+149:22 [chinese] 加载数据失败:
+    console.error('加载数据失败:', error)
+163:23 [chinese] Web模式下配置无法保存，请在桌面应用中使用完整功能
+    message.info('Web模式下配置无法保存，请在桌面应用中使用完整功能')
+173:23 [chinese] 获取现有配置失败，将使用默认配置:
+    console.warn('获取现有配置失败，将使用默认配置:', error)
+182:22 [mojibake] AutoClip Desktop
+    app_name: "AutoClip Desktop",
+217:28 [mojibake] /Users/zhoukk/Library/Application Support/AutoClip
+    data_directory: "/Users/zhoukk/Library/Application Support/AutoClip",
+218:29 [mojibake] /Users/zhoukk/Library/Application Support/AutoClip/cache
+    cache_directory: "/Users/zhoukk/Library/Application Support/AutoClip/cache",
+219:28 [mojibake] /Users/zhoukk/Library/Application Support/AutoClip/temp
+    temp_directory: "/Users/zhoukk/Library/Application Support/AutoClip/temp"
+224:24 [chinese] 配置保存成功！
+    message.success('配置保存成功！')
+237:22 [chinese] 保存失败:
+    message.error('保存失败: ' + (error.message || '未知错误'))
+237:51 [chinese] 未知错误
+    message.error('保存失败: ' + (error.message || '未知错误'))
+248:22 [chinese] 请先输入API密钥
+    message.error('请先输入API密钥')
+256:26 [chinese] API密钥测试成功！
+    message.success('API密钥测试成功！')
+258:24 [chinese] API密钥测试失败:
+    message.error('API密钥测试失败: ' + (result.error || '未知错误'))
+258:57 [chinese] 未知错误
+    message.error('API密钥测试失败: ' + (result.error || '未知错误'))
+261:22 [chinese] 测试失败:
+    message.error('测试失败: ' + (error.message || '未知错误'))
+261:51 [chinese] 未知错误
+    message.error('测试失败: ' + (error.message || '未知错误'))
+281:25 [chinese+mojibake] AI 模型配置
+    <TabPane tab="AI 模型配置" key="api">
+282:26 [chinese+mojibake] AI 模型配置
+    <Card title="AI 模型配置" className="settings-card">
+284:26 [chinese] 多模型提供商支持
+    message="多模型提供商支持"
+285:30 [chinese] 系统现在支持多个AI模型提供商，您可以根据需要选择不同的服务商和模型。
+    description="系统现在支持多个AI模型提供商，您可以根据需要选择不同的服务商和模型。"
+307:31 [chinese+mojibake] 当前使用: ${currentProvider.display_name} - ${currentProvider.model}
+    message={`当前使用: ${currentProvider.display_name} - ${currentProvider.model}`}
+316:26 [chinese] 选择AI模型提供商
+    label="选择AI模型提供商"
+319:55 [chinese] 请选择AI模型提供商
+    rules={[{ required: true, message: '请选择AI模型提供商' }]}
+325:34 [chinese] 请选择AI模型提供商
+    placeholder="请选择AI模型提供商"
+341:27 [mojibake] ${providerConfig[selectedProvider as keyof typeof providerConfig].name} API Key
+    label={`${providerConfig[selectedProvider as keyof typeof providerConfig].name} API Key`}
+345:49 [chinese] 请输入API密钥
+    { required: true, message: '请输入API密钥' },
+346:42 [chinese] API密钥长度不能少于10位
+    { min: 10, message: 'API密钥长度不能少于10位' }
+358:26 [chinese] 选择模型
+    label="选择模型"
+361:55 [chinese] 请输入或选择模型名称
+    rules={[{ required: true, message: '请输入或选择模型名称' }]}
+362:26 [chinese] 支持手动输入模型名称或从常用模型中选择
+    extra="支持手动输入模型名称或从常用模型中选择"
+366:34 [chinese] 请输入或选择模型名称
+    placeholder="请输入或选择模型名称"
+373:52 [mojibake] 8px 0
+    <Divider style={{ margin: '8px 0' }} />
+374:49 [mojibake] 0 8px 4px
+    <div style={{ padding: '0 8px 4px' }}>
+383:45 [chinese+mojibake] 通义千问 (Dashscope)
+    <Select.OptGroup label="通义千问 (Dashscope)">
+384:56 [chinese+mojibake] qwen-plus (通义千问增强版)
+    <Select.Option value="qwen-plus">qwen-plus (通义千问增强版)</Select.Option>
+385:57 [chinese+mojibake] qwen-turbo (通义千问标准版)
+    <Select.Option value="qwen-turbo">qwen-turbo (通义千问标准版)</Select.Option>
+386:55 [chinese+mojibake] qwen-max (通义千问旗舰版)
+    <Select.Option value="qwen-max">qwen-max (通义千问旗舰版)</Select.Option>
+387:56 [chinese+mojibake] qwen-long (通义千问长文本版)
+    <Select.Option value="qwen-long">qwen-long (通义千问长文本版)</Select.Option>
+392:53 [mojibake] gpt-4o (GPT-4 Omni)
+    <Select.Option value="gpt-4o">gpt-4o (GPT-4 Omni)</Select.Option>
+393:58 [mojibake] gpt-4o-mini (GPT-4 Omni Mini)
+    <Select.Option value="gpt-4o-mini">gpt-4o-mini (GPT-4 Omni Mini)</Select.Option>
+394:58 [mojibake] gpt-4-turbo (GPT-4 Turbo)
+    <Select.Option value="gpt-4-turbo">gpt-4-turbo (GPT-4 Turbo)</Select.Option>
+395:52 [mojibake] gpt-4 (GPT-4)
+    <Select.Option value="gpt-4">gpt-4 (GPT-4)</Select.Option>
+396:60 [mojibake] gpt-3.5-turbo (GPT-3.5 Turbo)
+    <Select.Option value="gpt-3.5-turbo">gpt-3.5-turbo (GPT-3.5 Turbo)</Select.Option>
+400:45 [mojibake] Google Gemini
+    <Select.OptGroup label="Google Gemini">
+401:61 [mojibake] gemini-1.5-pro (Gemini 1.5 Pro)
+    <Select.Option value="gemini-1.5-pro">gemini-1.5-pro (Gemini 1.5 Pro)</Select.Option>
+402:63 [mojibake] gemini-1.5-flash (Gemini 1.5 Flash)
+    <Select.Option value="gemini-1.5-flash">gemini-1.5-flash (Gemini 1.5 Flash)</Select.Option>
+403:57 [mojibake] gemini-pro (Gemini Pro)
+    <Select.Option value="gemini-pro">gemini-pro (Gemini Pro)</Select.Option>
+407:45 [chinese+mojibake] 硅基流动 (SiliconFlow)
+    <Select.OptGroup label="硅基流动 (SiliconFlow)">
+408:60 [mojibake] deepseek-chat (DeepSeek Chat)
+    <Select.Option value="deepseek-chat">deepseek-chat (DeepSeek Chat)</Select.Option>
+409:61 [mojibake] deepseek-coder (DeepSeek Coder)
+    <Select.Option value="deepseek-coder">deepseek-coder (DeepSeek Coder)</Select.Option>
+410:56 [chinese+mojibake] qwen-plus (通义千问增强版)
+    <Select.Option value="qwen-plus">qwen-plus (通义千问增强版)</Select.Option>
+411:57 [chinese+mojibake] qwen-turbo (通义千问标准版)
+    <Select.Option value="qwen-turbo">qwen-turbo (通义千问标准版)</Select.Option>
+433:60 [chinese] 模型配置
+    <Title level={4} className="section-title">模型配置</Title>
+438:30 [chinese] 文本分块大小
+    label="文本分块大小"
+445:37 [chinese] 字符
+    addonAfter="字符"
+455:30 [chinese] 最低评分阈值
+    label="最低评分阈值"
+471:30 [chinese] 每个合集最大切片数
+    label="每个合集最大切片数"
+478:37 [chinese] 个
+    addonAfter="个"
+500:26 [chinese] 使用说明
+    <Card title="使用说明" className="settings-card">
+504:43 [chinese+mojibake] 1. 选择AI模型提供商
+    <InfoCircleOutlined /> 1. 选择AI模型提供商
+508:42 [chinese] 阿里通义千问
+    <br />• <Text strong>阿里通义千问</Text>：访问阿里云控制台获取API密钥
+508:55 [chinese] ：访问阿里云控制台获取API密钥
+    <br />• <Text strong>阿里通义千问</Text>：访问阿里云控制台获取API密钥
+509:55 [chinese+mojibake] ：访问 platform.openai.com 获取API密钥
+    <br />• <Text strong>OpenAI</Text>：访问 platform.openai.com 获取API密钥
+510:42 [mojibake] Google Gemini
+    <br />• <Text strong>Google Gemini</Text>：访问 ai.google.dev 获取API密钥
+510:62 [chinese+mojibake] ：访问 ai.google.dev 获取API密钥
+    <br />• <Text strong>Google Gemini</Text>：访问 ai.google.dev 获取API密钥
+511:42 [chinese] 硅基流动
+    <br />• <Text strong>硅基流动</Text>：访问 docs.siliconflow.cn 获取API密钥
+511:53 [chinese+mojibake] ：访问 docs.siliconflow.cn 获取API密钥
+    <br />• <Text strong>硅基流动</Text>：访问 docs.siliconflow.cn 获取API密钥
+517:43 [chinese+mojibake] 2. 配置参数说明
+    <InfoCircleOutlined /> 2. 配置参数说明
+520:36 [chinese] 文本分块大小
+    • <Text strong>文本分块大小</Text>：影响处理速度和精度，建议5000字符<br />
+520:49 [chinese] ：影响处理速度和精度，建议5000字符
+    • <Text strong>文本分块大小</Text>：影响处理速度和精度，建议5000字符<br />
+521:36 [chinese] 评分阈值
+    • <Text strong>评分阈值</Text>：只有高于此分数的片段才会被保留<br />
+521:47 [chinese] ：只有高于此分数的片段才会被保留
+    • <Text strong>评分阈值</Text>：只有高于此分数的片段才会被保留<br />
+522:36 [chinese] 合集切片数
+    • <Text strong>合集切片数</Text>：控制每个主题合集包含的片段数量
+522:48 [chinese] ：控制每个主题合集包含的片段数量
+    • <Text strong>合集切片数</Text>：控制每个主题合集包含的片段数量
+528:43 [chinese+mojibake] 3. 测试连接
+    <InfoCircleOutlined /> 3. 测试连接
+547:26 [chinese] 语音转写配置
+    <Card title="语音转写配置" className="settings-card">
+549:26 [chinese] 语音识别服务配置
+    message="语音识别服务配置"
+550:30 [chinese] 配置语音转写服务，用于视频字幕生成和语音识别。支持本地Whisper模型和多种云服务API。
+    description="配置语音转写服务，用于视频字幕生成和语音识别。支持本地Whisper模型和多种云服务API。"
+558:32 [chinese] 语音配置已更新:
+    console.log('语音配置已更新:', config)
+574:26 [chinese] 应用设置
+    <Card title="应用设置" className="settings-card">
+576:26 [chinese] 应用行为配置
+    message="应用行为配置"
+577:30 [chinese] 配置应用的启动行为和系统集成选项。
+    description="配置应用的启动行为和系统集成选项。"
+586:26 [chinese] 隐私与数据
+    <Card title="隐私与数据" className="settings-card" style={{ marginTop: 16 }}>
+588:26 [chinese] 使用数据统计
+    message="使用数据统计"
+589:30 [chinese+mojibake] 为了改进产品，我们会采集匿名的使用数据（如功能使用、出片成功/失败等），不包含你的视频内容、字幕文本或 API 密钥。你可以随时关闭。
+    description="为了改进产品，我们会采集匿名的使用数据（如功能使用、出片成功/失败等），不包含你的视频内容、字幕文本或 API 密钥。你可以随时关闭。"
+596:32 [chinese] 允许匿名使用统计
+    <Text strong>允许匿名使用统计</Text>
+597:65 [mojibake] 4px 0 0
+    <Paragraph type="secondary" style={{ margin: '4px 0 0' }}>
+606:48 [chinese] 已开启匿名使用统计
+    message.success(checked ? '已开启匿名使用统计' : '已关闭匿名使用统计')
+606:62 [chinese] 已关闭匿名使用统计
+    message.success(checked ? '已开启匿名使用统计' : '已关闭匿名使用统计')
+613:25 [chinese] B站管理
+    <TabPane tab="B站管理" key="bilibili">
+614:26 [chinese] B站账号管理
+    <Card title="B站账号管理" className="settings-card">
+615:60 [mojibake] 40px 20px
+    <div style={{ textAlign: 'center', padding: '40px 20px' }}>
+618:78 [mojibake] 0 0 8px 0
+    <Title level={3} style={{ color: 'var(--ac-ink)', margin: '0 0 8px 0' }}>
+631:50 [chinese] 开发中，敬请期待
+    onClick={() => message.info('开发中，敬请期待', 3)}
+634:36 [mojibake] linear-gradient(45deg, #1890ff, #36cfc9)
+    background: 'linear-gradient(45deg, #1890ff, #36cfc9)',
+638:33 [mojibake] 0 32px
+    padding: '0 32px',
+646:97 [mojibake] 32px auto 0
+    <div style={{ marginTop: '32px', textAlign: 'left', maxWidth: '600px', margin: '32px auto 0' }}>
+650:72 [mojibake] repeat(auto-fit, minmax(250px, 1fr))
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
+655:32 [mojibake] 1px solid #404040
+    border: '1px solid #404040'
+657:65 [chinese] 多账号支持
+    <Text strong style={{ color: '#1890ff' }}>多账号支持</Text>
+667:32 [mojibake] 1px solid #404040
+    border: '1px solid #404040'
+669:65 [chinese] 安全登录
+    <Text strong style={{ color: '#52c41a' }}>安全登录</Text>
+679:32 [mojibake] 1px solid #404040
+    border: '1px solid #404040'
+681:65 [chinese] 快速投稿
+    <Text strong style={{ color: '#faad14' }}>快速投稿</Text>
+691:32 [mojibake] 1px solid #404040
+    border: '1px solid #404040'
+693:65 [chinese] 批量管理
+    <Text strong style={{ color: '#722ed1' }}>批量管理</Text>
+711:30 [chinese] 操作成功
+    message.success('操作成功')
+737:22 [chinese] 检查自动启动状态失败:
+    console.error('检查自动启动状态失败:', error)
+744:22 [chinese] 此功能仅在桌面应用中可用
+    message.error('此功能仅在桌面应用中可用')
+754:26 [chinese] 已启用自动启动
+    message.success('已启用自动启动')
+757:26 [chinese] 已禁用自动启动
+    message.success('已禁用自动启动')
+762:22 [chinese] 切换自动启动状态失败:
+    console.error('切换自动启动状态失败:', error)
+763:22 [chinese+mojibake] 操作失败: ${error}
+    message.error(`操作失败: ${error}`)
+777:24 [mojibake] 1px solid #404040
+    border: '1px solid #404040',
+785:67 [chinese] 开机自动启动
+    <Text strong style={{ color: 'var(--ac-ink)' }}>开机自动启动</Text>
+795:34 [chinese] 开启
+    checkedChildren="开启"
+796:36 [chinese] 关闭
+    unCheckedChildren="关闭"
+804:18 [chinese] 提示
+    message="提示"
+805:22 [chinese] 自动启动功能仅在桌面应用中可用。启用后，应用将在系统启动时自动运行，您可以通过系统托盘图标访问应用。
+    description="自动启动功能仅在桌面应用中可用。启用后，应用将在系统启动时自动运行，您可以通过系统托盘图标访问应用。"
+
+[src\pages\SimpleProgressDemo.tsx]
+--------------------------------------------------------------------------------
+36:13 [chinese] AI技术解析视频
+    title: 'AI技术解析视频',
+37:19 [chinese] 深度解析人工智能技术发展历程
+    description: '深度解析人工智能技术发展历程',
+45:13 [chinese] 创业经验分享
+    title: '创业经验分享',
+46:19 [chinese] 分享创业路上的酸甜苦辣
+    description: '分享创业路上的酸甜苦辣',
+54:13 [chinese] 游戏评测视频
+    title: '游戏评测视频',
+55:19 [chinese] 最新游戏深度评测
+    description: '最新游戏深度评测',
+82:22 [chinese+mojibake] 开始处理项目: ${projectId}
+    message.success(`开始处理项目: ${projectId}`)
+87:19 [chinese+mojibake] 查看项目详情: ${projectId}
+    message.info(`查看项目详情: ${projectId}`)
+93:22 [chinese+mojibake] 删除项目: ${projectId}
+    message.success(`删除项目: ${projectId}`)
+101:22 [chinese+mojibake] 重试项目: ${projectId}
+    message.success(`重试项目: ${projectId}`)
+107:24 [chinese] 请输入项目ID
+    message.warning('请输入项目ID')
+113:15 [chinese+mojibake] 新项目 ${newProjectId}
+    title: `新项目 ${newProjectId}`,
+114:21 [chinese] 这是一个新添加的演示项目
+    description: '这是一个新添加的演示项目',
+123:22 [chinese+mojibake] 添加项目: ${newProjectId}
+    message.success(`添加项目: ${newProjectId}`)
+129:24 [chinese] 请选择要轮询的项目
+    message.warning('请选择要轮询的项目')
+133:22 [chinese+mojibake] 开始轮询 ${selectedProjectIds.length} 个项目
+    message.success(`开始轮询 ${selectedProjectIds.length} 个项目`)
+139:19 [chinese] 停止轮询
+    message.info('停止轮询')
+145:22 [chinese] 清除所有进度数据
+    message.success('清除所有进度数据')
+151:65 [mojibake] 0 auto
+    <div style={{ padding: '24px', maxWidth: '1200px', margin: '0 auto' }}>
+152:24 [chinese] 简化进度系统演示
+    <Title level={2}>简化进度系统演示</Title>
+162:20 [chinese] 控制面板
+    <Card title="控制面板" style={{ marginBottom: '24px' }}>
+166:28 [chinese] 轮询间隔:
+    <Text strong>轮询间隔:</Text>
+172:38 [chinese] 1秒
+    <Option value={1000}>1秒</Option>
+173:38 [chinese] 2秒
+    <Option value={2000}>2秒</Option>
+174:38 [chinese] 3秒
+    <Option value={3000}>3秒</Option>
+175:38 [chinese] 5秒
+    <Option value={5000}>5秒</Option>
+179:28 [chinese] 轮询状态:
+    <Text strong>轮询状态:</Text>
+182:33 [chinese] 正在轮询
+    {isPolling ? '正在轮询' : '未轮询'}
+182:42 [chinese] 未轮询
+    {isPolling ? '正在轮询' : '未轮询'}
+187:28 [chinese] 进度数据:
+    <Text strong>进度数据:</Text>
+225:32 [chinese] 输入新项目ID
+    placeholder="输入新项目ID"
+243:28 [chinese] 选择要轮询的项目:
+    <Text strong>选择要轮询的项目:</Text>
+247:32 [chinese] 选择项目
+    placeholder="选择项目"
+265:35 [mojibake] 0 && (
+    {selectedProjectIds.length > 0 && (
+266:22 [chinese] 批量进度显示
+    <Card title="批量进度显示" style={{ marginBottom: '24px' }}>
+273:28 [chinese+mojibake] 项目 ${projectId} 进度更新:
+    console.log(`项目 ${projectId} 进度更新:`, progress)
+280:20 [chinese] 项目列表
+    <Card title="项目列表">
+297:41 [mojibake] 0 && (
+    {Object.keys(allProgress).length > 0 && (
+298:22 [chinese] 当前进度数据
+    <Card title="当前进度数据" style={{ marginTop: '24px' }}>
+
+[src\pages\UploadStatusPage.tsx]
+--------------------------------------------------------------------------------
+39:57 [mojibake] ([]); const [loading, setLoading] = useState(false); const [selectedRecord, setSelectedRecord] = useState
+    const [records, setRecords] = useState<UploadRecord[]>([]);
+51:22 [chinese] 获取投稿记录失败
+    message.error('获取投稿记录失败');
+52:22 [chinese] 获取投稿记录失败:
+    console.error('获取投稿记录失败:', error);
+60:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3);
+66:24 [chinese] 重试任务已提交
+    message.success('重试任务已提交');
+69:22 [chinese] 重试失败
+    message.error('重试失败');
+70:22 [chinese] 重试失败:
+    console.error('重试失败:', error);
+76:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3);
+82:24 [chinese] 任务已取消
+    message.success('任务已取消');
+85:22 [chinese] 取消失败
+    message.error('取消失败');
+86:22 [chinese] 取消失败:
+    console.error('取消失败:', error);
+92:19 [chinese] B站上传功能正在开发中，敬请期待！
+    message.info('B站上传功能正在开发中，敬请期待！', 3);
+98:24 [chinese] 任务已删除
+    message.success('任务已删除');
+101:22 [chinese] 删除失败
+    message.error('删除失败');
+102:22 [chinese] 删除失败:
+    console.error('删除失败:', error);
+115:74 [chinese] 等待中
+    pending: { color: 'default', icon: <ClockCircleOutlined />, text: '等待中' },
+116:79 [chinese] 处理中
+    processing: { color: 'processing', icon: <PlayCircleOutlined />, text: '处理中' },
+117:74 [chinese] 成功
+    success: { color: 'success', icon: <CheckCircleOutlined />, text: '成功' },
+118:76 [chinese] 完成
+    completed: { color: 'success', icon: <CheckCircleOutlined />, text: '完成' },
+119:77 [chinese] 失败
+    failed: { color: 'error', icon: <ExclamationCircleOutlined />, text: '失败' },
+120:69 [chinese] 已取消
+    cancelled: { color: 'default', icon: <StopOutlined />, text: '已取消' }
+134:42 [chinese] 分区${partitionId}
+    return partition ? partition.name : `分区${partitionId}`;
+142:13 [mojibake] ${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}
+    return `${(bytes / Math.pow(1024, i)).toFixed(1)} ${sizes[i]}`;
+153:15 [chinese] ${hours}小时${minutes}分钟
+    return `${hours}小时${minutes}分钟`;
+155:15 [chinese] ${minutes}分钟${secs}秒
+    return `${minutes}分钟${secs}秒`;
+157:15 [chinese] ${secs}秒
+    return `${secs}秒`;
+164:15 [chinese] 任务ID
+    title: '任务ID',
+171:15 [chinese] 标题
+    title: '标题',
+182:15 [chinese] 投稿账号
+    title: '投稿账号',
+196:15 [chinese] 分区
+    title: '分区',
+205:15 [chinese] 状态
+    title: '状态',
+212:15 [chinese] 进度
+    title: '进度',
+229:15 [chinese] 文件大小
+    title: '文件大小',
+236:15 [chinese] 创建时间
+    title: '创建时间',
+243:15 [chinese] 操作
+    title: '操作',
+259:22 [chinese] 确定要重试这个投稿任务吗？
+    title="确定要重试这个投稿任务吗？"
+261:23 [chinese] 确定
+    okText="确定"
+262:27 [chinese] 取消
+    cancelText="取消"
+276:22 [chinese] 确定要取消这个投稿任务吗？
+    title="确定要取消这个投稿任务吗？"
+278:23 [chinese] 确定
+    okText="确定"
+279:27 [chinese] 取消
+    cancelText="取消"
+294:22 [chinese] 确定要删除这个投稿任务吗？删除后无法恢复。
+    title="确定要删除这个投稿任务吗？删除后无法恢复。"
+296:23 [chinese] 确定
+    okText="确定"
+297:27 [chinese] 取消
+    cancelText="取消"
+450:54 [mojibake] 1px solid #303030
+    <Card style={{ background: '#1f1f1f', border: '1px solid #303030' }}>
+452:68 [chinese] 投稿任务状态
+    <Title level={3} style={{ margin: 0, color: '#ffffff' }}>投稿任务状态</Title>
+466:60 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+468:59 [chinese] 总任务数
+    title={<span style={{ color: '#ffffff' }}>总任务数</span>}
+475:60 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+477:59 [chinese] 成功
+    title={<span style={{ color: '#ffffff' }}>成功</span>}
+485:60 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+487:59 [chinese] 失败
+    title={<span style={{ color: '#ffffff' }}>失败</span>}
+495:60 [mojibake] 1px solid #404040
+    <Card style={{ background: '#262626', border: '1px solid #404040' }}>
+497:59 [chinese] 进行中
+    title={<span style={{ color: '#ffffff' }}>进行中</span>}
+516:43 [chinese+mojibake] 第 ${range[0]}-${range[1]} 条，共 ${total} 条
+    showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+526:16 [chinese] 投稿任务详情
+    title="投稿任务详情"
+534:77 [mojibake] 1px solid #303030
+    header: { background: '#1f1f1f', color: '#ffffff', borderBottom: '1px solid #303030' }
+547:31 [mojibake] 1px solid #303030
+    borderRight: '1px solid #303030'
+552:30 [mojibake] 1px solid #303030
+    borderLeft: '1px solid #303030'
+556:26 [mojibake] 1px solid #303030
+    border: '1px solid #303030'
+559:41 [chinese] 任务ID
+    <Descriptions.Item label="任务ID" span={1}>
+562:41 [chinese] 状态
+    <Descriptions.Item label="状态" span={1}>
+565:41 [chinese] 标题
+    <Descriptions.Item label="标题" span={2}>
+568:41 [chinese] 投稿账号
+    <Descriptions.Item label="投稿账号" span={1}>
+571:41 [chinese] 分区
+    <Descriptions.Item label="分区" span={1}>
+574:41 [chinese] 项目名称
+    <Descriptions.Item label="项目名称" span={1}>
+577:41 [chinese] 切片ID
+    <Descriptions.Item label="切片ID" span={1}>
+580:41 [chinese] 进度
+    <Descriptions.Item label="进度" span={2}>
+590:41 [chinese] 文件大小
+    <Descriptions.Item label="文件大小" span={1}>
+593:41 [chinese] 上传时长
+    <Descriptions.Item label="上传时长" span={1}>
+596:41 [chinese] BV号
+    <Descriptions.Item label="BV号" span={1}>
+599:41 [chinese] AV号
+    <Descriptions.Item label="AV号" span={1}>
+602:41 [chinese] 创建时间
+    <Descriptions.Item label="创建时间" span={1}>
+605:41 [chinese] 更新时间
+    <Descriptions.Item label="更新时间" span={1}>
+612:63 [chinese] 描述
+    <Title level={5} style={{ color: '#ffffff' }}>描述</Title>
+619:63 [chinese] 标签
+    <Title level={5} style={{ color: '#ffffff' }}>标签</Title>
+626:63 [chinese] 错误信息
+    <Title level={5} style={{ color: '#ffffff' }}>错误信息</Title>
+628:28 [chinese] 投稿失败
+    message="投稿失败"
+640:28 [chinese] 确定要重试这个投稿任务吗？
+    title="确定要重试这个投稿任务吗？"
+645:29 [chinese] 确定
+    okText="确定"
+646:33 [chinese] 取消
+    cancelText="取消"
+
+[src\services\api.ts]
+--------------------------------------------------------------------------------
+82:23 [mojibake] Slow API request: ${response.config.url} took ${duration}ms
+    console.warn(`Slow API request: ${response.config.url} took ${duration}ms`)
+106:56 [chinese] 系统正在处理其他项目，请稍后再试
+    const message = error.response?.data?.detail || '系统正在处理其他项目，请稍后再试'
+110:28 [chinese] 请求超时，项目可能仍在后台处理中，请稍后查看项目状态
+    error.userMessage = '请求超时，项目可能仍在后台处理中，请稍后查看项目状态'
+113:28 [chinese] 网络连接失败，请检查网络连接
+    error.userMessage = '网络连接失败，请检查网络连接'
+116:28 [chinese] 服务器内部错误，请稍后重试
+    error.userMessage = '服务器内部错误，请稍后重试'
+305:20 [mojibake] 🔍 Calling clips API for project:
+    console.log('🔍 Calling clips API for project:', projectId)
+307:20 [mojibake] 📦 Raw API response:
+    console.log('📦 Raw API response:', response)
+309:20 [mojibake] 📋 Extracted clips:
+    console.log('📋 Extracted clips:', clips.length, 'clips found')
+309:56 [mojibake] clips found
+    console.log('📋 Extracted clips:', clips.length, 'clips found')
+318:19 [mojibake] ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}
+    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
+340:20 [mojibake] ✅ Converted clips:
+    console.log('✅ Converted clips:', convertedClips.length, 'clips')
+341:20 [mojibake] 📄 First clip sample:
+    console.log('📄 First clip sample:', convertedClips[0])
+344:22 [mojibake] ❌ Failed to get clips:
+    console.error('❌ Failed to get clips:', error)
+368:22 [mojibake] Failed to get collections:
+    console.error('Failed to get collections:', error)
+379:73 [mojibake] ): Promise
+    updateClip: (projectId: string, clipId: string, updates: Partial<Clip>): Promise<Clip> => {
+405:92 [mojibake] ): Promise
+    updateCollection: (_projectId: string, collectionId: string, updates: Partial<Collection>): Promise<Collection> => {
+512:22 [chinese] 下载失败:
+    console.error('下载失败:', error)
+652:57 [mojibake] api.get('/whisper/runtime-status'), installRuntime: (): Promise
+    getRuntimeStatus: (): Promise<WhisperRuntimeStatus> => api.get('/whisper/runtime-status'),
+653:72 [mojibake] api.post('/whisper/install'), uninstallRuntime: (): Promise
+    installRuntime: (): Promise<{ started: boolean; message: string }> => api.post('/whisper/install'),
+654:74 [mojibake] api.post('/whisper/uninstall'), getModels: (): Promise
+    uninstallRuntime: (): Promise<{ success: boolean; message: string }> => api.post('/whisper/uninstall'),
+655:44 [mojibake] api.get('/whisper-models'), downloadModel: (model: string): Promise
+    getModels: (): Promise<WhisperModel[]> => api.get('/whisper-models'),
+
+[src\services\uploadApi.ts]
+--------------------------------------------------------------------------------
+61:19 [chinese] 动画
+    { id: 1, name: "动画" },
+62:19 [chinese] 游戏
+    { id: 4, name: "游戏" },
+63:19 [chinese] 鬼畜
+    { id: 8, name: "鬼畜" },
+64:19 [chinese] 音乐
+    { id: 3, name: "音乐" },
+65:21 [chinese] 舞蹈
+    { id: 129, name: "舞蹈" },
+66:21 [chinese] 影视
+    { id: 181, name: "影视" },
+67:19 [chinese] 娱乐
+    { id: 5, name: "娱乐" },
+68:20 [chinese] 知识
+    { id: 36, name: "知识" },
+69:21 [chinese] 科技数码
+    { id: 188, name: "科技数码" },
+70:21 [chinese] 资讯
+    { id: 202, name: "资讯" },
+71:20 [chinese] 美食
+    { id: 76, name: "美食" },
+72:21 [chinese] 小剧场
+    { id: 138, name: "小剧场" },
+73:21 [chinese] 汽车
+    { id: 176, name: "汽车" },
+74:21 [chinese] 时尚美妆
+    { id: 155, name: "时尚美妆" },
+75:21 [chinese] 体育运动
+    { id: 235, name: "体育运动" },
+76:20 [chinese] 动物
+    { id: 75, name: "动物" },
+78:21 [chinese] 绘画
+    { id: 162, name: "绘画" },
+79:21 [chinese] 人工智能
+    { id: 207, name: "人工智能" },
+80:21 [chinese] 家装房产
+    { id: 208, name: "家装房产" },
+81:21 [chinese] 户外潮流
+    { id: 209, name: "户外潮流" },
+82:21 [chinese] 健身
+    { id: 164, name: "健身" },
+83:21 [chinese] 手工
+    { id: 161, name: "手工" },
+84:21 [chinese] 旅游出行
+    { id: 165, name: "旅游出行" },
+85:21 [chinese] 三农
+    { id: 158, name: "三农" },
+86:21 [chinese] 亲子
+    { id: 159, name: "亲子" },
+87:21 [chinese] 健康
+    { id: 160, name: "健康" },
+88:21 [chinese] 情感
+    { id: 163, name: "情感" },
+89:20 [chinese] 生活兴趣
+    { id: 22, name: "生活兴趣" },
+90:20 [chinese] 生活经验
+    { id: 23, name: "生活经验" }
+118:54 [mojibake] , nickname?: string): Promise
+    cookieLogin: async (cookies: Record<string, string>, nickname?: string): Promise<BilibiliAccount> => {
+
+[src\store\useProjectStore.ts]
+--------------------------------------------------------------------------------
+75:36 [mojibake] void updateProject: (id: string, updates: Partial
+    addProject: (project: Project) => void
+79:38 [mojibake] void updateClip: (projectId: string, clipId: string, updates: Partial
+    setError: (error: string | null) => void
+80:77 [mojibake] void updateCollection: (projectId: string, collectionId: string, updates: Partial
+    updateClip: (projectId: string, clipId: string, updates: Partial<Clip>) => void
+104:18 [mojibake] setProjects called:
+    console.log('setProjects called:', {
+112:20 [mojibake] Skipping update: dragging in progress
+    console.log('Skipping update: dragging in progress')
+116:18 [mojibake] Applying update with new data
+    console.log('Applying update with new data')
+237:24 [mojibake] Collection not found
+    throw new Error('Collection not found')
+245:20 [mojibake] Clip not found in collection, skipping update
+    console.log('Clip not found in collection, skipping update')
+289:20 [mojibake] Removing clip from collection:
+    console.log('Removing clip from collection:', { projectId, collectionId, clipId })
+291:20 [mojibake] Clip removed successfully
+    console.log('Clip removed successfully')
+293:22 [mojibake] Failed to remove clip from collection, rolling back:
+    console.error('Failed to remove clip from collection, rolling back:', error)
+294:22 [mojibake] Error details:
+    console.error('Error details:', {
+295:60 [mojibake] Unknown error
+    message: error instanceof Error ? error.message : 'Unknown error',
+309:18 [mojibake] Starting reorderCollectionClips:
+    console.log('Starting reorderCollectionClips:', { projectId, collectionId, newClipIds })
+313:18 [mojibake] Current state projects:
+    console.log('Current state projects:', state.projects.map(p => ({ id: p.id, collectionsCount: p.collections?.length || 0 })))
+314:18 [mojibake] Current state currentProject:
+    console.log('Current state currentProject:', state.currentProject ? { id: state.currentProject.id, collectionsCount: state.currentProject.collections?.length || 0 } : null)
+329:18 [mojibake] Found project:
+    console.log('Found project:', originalProject ? { id: originalProject.id, collectionsCount: originalProject.collections?.length || 0 } : null)
+332:20 [mojibake] Project collections:
+    console.log('Project collections:', originalProject.collections.map(c => ({ id: c.id, title: c.collection_title })))
+335:18 [mojibake] Found collection:
+    console.log('Found collection:', originalCollection ? { id: originalCollection.id, title: originalCollection.collection_title } : null)
+338:22 [mojibake] Collection not found in store. Available collections:
+    console.error('Collection not found in store. Available collections:',
+340:24 [mojibake] Collection not found
+    throw new Error('Collection not found')
+347:20 [mojibake] No changes detected, skipping update
+    console.log('No changes detected, skipping update')
+388:20 [mojibake] Calling backend API for reorder...
+    console.log('Calling backend API for reorder...')
+390:20 [mojibake] Backend API call successful
+    console.log('Backend API call successful')
+392:22 [mojibake] Backend API call failed:
+    console.error('Backend API call failed:', error)
+400:18 [mojibake] Starting addClipToCollection:
+    console.log('Starting addClipToCollection:', { projectId, collectionId, clipIds })
+419:24 [mojibake] Collection not found
+    throw new Error('Collection not found')
+427:20 [mojibake] No new clips to add, skipping update
+    console.log('No new clips to add, skipping update')
+465:20 [mojibake] Adding clips to collection:
+    console.log('Adding clips to collection:', { projectId, collectionId, clipIds })
+467:20 [mojibake] Clips added to collection successfully
+    console.log('Clips added to collection successfully')
+469:22 [mojibake] Failed to add clips to collection, rolling back:
+    console.error('Failed to add clips to collection, rolling back:', error)
+
+[src\stores\useSimpleProgressStore.ts]
+--------------------------------------------------------------------------------
+64:23 [chinese] 没有项目ID，跳过轮询
+    console.warn('没有项目ID，跳过轮询')
+68:20 [chinese+mojibake] 开始轮询进度: ${projectIds.join(', ')}
+    console.log(`开始轮询进度: ${projectIds.join(', ')}`)
+77:30 [mojibake] HTTP ${response.status}: ${response.statusText}
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+84:26 [chinese+mojibake] 更新进度: ${snapshot.project_id} - ${snapshot.stage} (${snapshot.percent}%)
+    console.log(`更新进度: ${snapshot.project_id} - ${snapshot.stage} (${snapshot.percent}%)`)
+88:24 [chinese+mojibake] 轮询更新: ${snapshots.length} 个项目
+    console.log(`轮询更新: ${snapshots.length} 个项目`)
+98:28 [chinese] 所有项目已完成，自动停止轮询
+    console.log('所有项目已完成，自动停止轮询')
+101:28 [chinese] 项目可能还在pending状态，继续轮询等待
+    console.log('项目可能还在pending状态，继续轮询等待')
+105:27 [chinese] 检测终态时出现问题，但不影响继续运行:
+    console.warn('检测终态时出现问题，但不影响继续运行:', e)
+109:26 [chinese] 轮询进度失败:
+    console.error('轮询进度失败:', error)
+137:20 [chinese] 停止轮询进度
+    console.log('停止轮询进度')
+168:14 [chinese] 素材准备
+    'INGEST': '素材准备',
+169:16 [chinese] 字幕处理
+    'SUBTITLE': '字幕处理',
+170:15 [chinese] 内容分析
+    'ANALYZE': '内容分析',
+171:17 [chinese] 片段定位
+    'HIGHLIGHT': '片段定位',
+172:14 [chinese] 视频导出
+    'EXPORT': '视频导出',
+173:12 [chinese] 处理完成
+    'DONE': '处理完成'
+203:28 [chinese] 失败
+    return message.includes('失败') || message.includes('错误') || message.includes('失败')
+203:54 [chinese] 错误
+    return message.includes('失败') || message.includes('错误') || message.includes('失败')
+
+[src\utils\apiConfig.ts]
+--------------------------------------------------------------------------------
+61:23 [chinese+mojibake] 无法初始化 Tauri 事件监听:
+    console.warn('无法初始化 Tauri 事件监听:', error);
+164:21 [chinese+mojibake] API 健康检查失败:
+    console.warn('API 健康检查失败:', error);
+
+[src\utils\apiConfigCheck.ts]
+--------------------------------------------------------------------------------
+7:20 [chinese] API配置检查失败:
+    console.error('API配置检查失败:', error)
+8:20 [chinese] API配置检查失败
+    message.error('API配置检查失败')
+
+[src\utils\apiConfigCheck.tsx]
+--------------------------------------------------------------------------------
+23:18 [chinese+mojibake] === 开始API配置检查 ===
+    console.log('=== 开始API配置检查 ===')
+27:18 [chinese] Desktop模式检查结果:
+    console.log('Desktop模式检查结果:', isDesktop)
+33:20 [chinese] 获取设置成功:
+    console.log('获取设置成功:', settings)
+35:21 [chinese] 获取设置失败，可能不在Desktop模式:
+    console.warn('获取设置失败，可能不在Desktop模式:', error)
+38:22 [chinese] 非Desktop模式，返回无配置状态
+    console.log('非Desktop模式，返回无配置状态')
+41:31 [mojibake] LLM API
+    missingProviders: ['LLM API'],
+47:20 [chinese] Desktop模式下获取设置失败，返回无配置状态
+    console.log('Desktop模式下获取设置失败，返回无配置状态')
+50:29 [mojibake] LLM API
+    missingProviders: ['LLM API'],
+57:20 [chinese] 设置数据不完整:
+    console.log('设置数据不完整:', { settings, hasApi: !!settings?.api, hasApiKeys: !!settings?.api?.api_keys })
+60:29 [mojibake] LLM API
+    missingProviders: ['LLM API'],
+71:18 [chinese] API配置详情:
+    console.log('API配置详情:', {
+74:79 [chinese] 未配置
+    dashscope: apiKeys.dashscope ? '***' + apiKeys.dashscope.slice(-4) : '未配置',
+75:70 [chinese] 未配置
+    openai: apiKeys.openai ? '***' + apiKeys.openai.slice(-4) : '未配置',
+76:70 [chinese] 未配置
+    gemini: apiKeys.gemini ? '***' + apiKeys.gemini.slice(-4) : '未配置',
+77:85 [chinese] 未配置
+    siliconflow: apiKeys.siliconflow ? '***' + apiKeys.siliconflow.slice(-4) : '未配置',
+78:91 [chinese] 未配置
+    jimeng_access: apiKeys.jimeng_access ? '***' + apiKeys.jimeng_access.slice(-4) : '未配置',
+79:91 [chinese] 未配置
+    jimeng_secret: apiKeys.jimeng_secret ? '***' + apiKeys.jimeng_secret.slice(-4) : '未配置'
+91:22 [chinese+mojibake] DashScope API Key检查:
+    console.log('DashScope API Key检查:', { hasKey: !!currentApiKey, keyLength: currentApiKey.length, isValid: hasValidKey })
+96:22 [chinese+mojibake] OpenAI API Key检查:
+    console.log('OpenAI API Key检查:', { hasKey: !!currentApiKey, keyLength: currentApiKey.length, isValid: hasValidKey })
+101:22 [chinese+mojibake] Gemini API Key检查:
+    console.log('Gemini API Key检查:', { hasKey: !!currentApiKey, keyLength: currentApiKey.length, isValid: hasValidKey })
+106:22 [chinese+mojibake] SiliconFlow API Key检查:
+    console.log('SiliconFlow API Key检查:', { hasKey: !!currentApiKey, keyLength: currentApiKey.length, isValid: hasValidKey })
+111:22 [chinese+mojibake] Jimeng API Key检查:
+    console.log('Jimeng API Key检查:', {
+119:22 [chinese] 未知提供商:
+    console.log('未知提供商:', currentProvider)
+122:18 [chinese+mojibake] === API配置检查最终结果 ===
+    console.log('=== API配置检查最终结果 ===', {
+131:46 [mojibake] LLM API
+    missingProviders: hasValidKey ? [] : ['LLM API'],
+136:20 [chinese] 检查API配置失败:
+    console.error('检查API配置失败:', error)
+139:27 [mojibake] LLM API
+    missingProviders: ['LLM API'],
+151:6 [mojibake] LLM API
+    'LLM API': 'AI模型API',
+151:17 [chinese] AI模型API
+    'LLM API': 'AI模型API',
+152:6 [mojibake] Speech API
+    'Speech API': '语音识别API'
+152:20 [chinese] 语音识别API
+    'Speech API': '语音识别API'
+158:44 [chinese] 需要配置API
+    title: <span style={{ color: '#fff' }}>需要配置API</span>,
+158:58 [mojibake] , content: (
+    title: <span style={{ color: '#fff' }}>需要配置API</span>,
+161:78 [chinese] 创建项目需要配置以下API:
+    <p style={{ color: '#fff', marginBottom: '12px', fontSize: '14px' }}>创建项目需要配置以下API:</p>
+163:59 [chinese] 请前往设置页面进行配置.
+    <p style={{ color: '#f0f0f0', fontSize: '14px' }}>请前往设置页面进行配置.</p>
+166:14 [chinese] 去配置
+    okText: '去配置',
+167:18 [chinese] 取消
+    cancelText: '取消',
+189:16 [chinese] 开始验证API配置...
+    console.log('开始验证API配置...')
+192:16 [chinese] API配置验证结果:
+    console.log('API配置验证结果:', configStatus)
+195:18 [chinese] API配置无效，显示配置弹窗
+    console.log('API配置无效，显示配置弹窗')
+200:16 [chinese] API配置有效，允许创建项目
+    console.log('API配置有效，允许创建项目')
+209:13 [chinese+mojibake] 已配置 ${status.currentProvider} API
+    return `已配置 ${status.currentProvider} API`
+211:13 [chinese] 未配置API,无法创建项目
+    return '未配置API,无法创建项目'
+
+[src\utils\externalLinks.tsx]
+--------------------------------------------------------------------------------
+28:20 [chinese] 打开外部链接失败:
+    console.error('打开外部链接失败:', error)
+33:22 [chinese] 降级打开链接也失败:
+    console.error('降级打开链接也失败:', fallbackError)
+37:16 [chinese] 链接已复制到剪贴板:${url}
+    alert(`链接已复制到剪贴板:${url}`)
+39:24 [chinese] 复制到剪贴板失败:
+    console.error('复制到剪贴板失败:', clipboardError)
+40:16 [chinese] 请手动访问:${url}
+    alert(`请手动访问:${url}`)
+
+[src\utils\statusUtils.tsx]
+--------------------------------------------------------------------------------
+55:16 [chinese] 等待中
+    text: '等待中',
+57:27 [mojibake] rgba(217, 217, 217, 0.15)
+    backgroundColor: 'rgba(217, 217, 217, 0.15)',
+58:23 [mojibake] rgba(217, 217, 217, 0.3)
+    borderColor: 'rgba(217, 217, 217, 0.3)'
+64:16 [chinese] 处理中
+    text: '处理中',
+66:27 [mojibake] rgba(24, 144, 255, 0.15)
+    backgroundColor: 'rgba(24, 144, 255, 0.15)',
+67:23 [mojibake] rgba(24, 144, 255, 0.3)
+    borderColor: 'rgba(24, 144, 255, 0.3)'
+73:16 [chinese] 已完成
+    text: '已完成',
+75:27 [mojibake] rgba(82, 196, 26, 0.15)
+    backgroundColor: 'rgba(82, 196, 26, 0.15)',
+76:23 [mojibake] rgba(82, 196, 26, 0.3)
+    borderColor: 'rgba(82, 196, 26, 0.3)'
+82:16 [chinese] 失败
+    text: '失败',
+84:27 [mojibake] rgba(255, 77, 79, 0.15)
+    backgroundColor: 'rgba(255, 77, 79, 0.15)',
+85:23 [mojibake] rgba(255, 77, 79, 0.3)
+    borderColor: 'rgba(255, 77, 79, 0.3)'
+91:16 [chinese] 未知状态
+    text: '未知状态',
+93:27 [mojibake] rgba(217, 217, 217, 0.15)
+    backgroundColor: 'rgba(217, 217, 217, 0.15)',
+94:23 [mojibake] rgba(217, 217, 217, 0.3)
+    borderColor: 'rgba(217, 217, 217, 0.3)'
+108:16 [chinese] 等待中
+    text: '等待中',
+115:16 [chinese] 执行中
+    text: '执行中',
+122:16 [chinese] 已完成
+    text: '已完成',
+129:16 [chinese] 失败
+    text: '失败',
+136:16 [chinese] 已取消
+    text: '已取消',
+143:16 [chinese] 未知状态
+    text: '未知状态',
+158:16 [chinese] 待处理
+    text: '待处理',
+165:16 [chinese] 处理中
+    text: '处理中',
+172:16 [chinese] 成功
+    text: '成功',
+179:16 [chinese] 失败
+    text: '失败',
+186:16 [chinese] 未知状态
+    text: '未知状态',

@@ -61,12 +61,12 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
     const trimmedValue = editValue.trim()
 
     if (!trimmedValue) {
-      message.error('标题不能为空')
+      message.error('Title不能为空')
       return
     }
 
     if (trimmedValue.length > maxLength) {
-      message.error(`标题长度不能超过${maxLength}个字符`)
+      message.error(`Title长度不能超过${maxLength}个字符`)
       return
     }
 
@@ -78,32 +78,32 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
     setLoading(true)
     try {
       await projectApi.updateCollectionTitle(collectionId, trimmedValue)
-      message.success('标题更新成功')
+      message.success('Title更新Success')
       setIsEditing(false)
       onTitleUpdate?.(trimmedValue)
     } catch (error: any) {
-      console.error('更新标题失败:', error)
-      message.error(error.userMessage || error.message || '更新标题失败')
+      console.error('更新TitleFailed:', error)
+      message.error(error.userMessage || error.message || '更新TitleFailed')
     } finally {
       setLoading(false)
     }
   }
 
   const handleGenerateTitle = async () => {
-    console.log('开始生成合集标题，collectionId:', collectionId)
+    console.log('开始生成CollectionTitle，collectionId:', collectionId)
     setGenerating(true)
     try {
       const result = await projectApi.generateCollectionTitle(collectionId)
-      console.log('生成合集标题结果:', result)
+      console.log('生成CollectionTitle结果:', result)
       if (result.success && result.generated_title) {
         setEditValue(result.generated_title)
-        message.success('标题生成成功，您可以继续编辑或点击保存')
+        message.success('Title生成Success，您可以继续Edit或点击Save')
       } else {
-        message.error('标题生成失败')
+        message.error('Title生成Failed')
       }
     } catch (error: any) {
-      console.error('生成标题失败:', error)
-      message.error(error.userMessage || error.message || '生成标题失败')
+      console.error('生成TitleFailed:', error)
+      message.error(error.userMessage || error.message || '生成TitleFailed')
     } finally {
       setGenerating(false)
     }
@@ -120,7 +120,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
   if (isEditing) {
     return (
       <Modal
-        title="编辑合集标题"
+        title="EditCollectionTitle"
         open={isEditing}
         onCancel={handleCancel}
         footer={null}
@@ -135,7 +135,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
             onChange={(e) => setEditValue(e.target.value)}
             onKeyDown={handleKeyPress}
             maxLength={maxLength}
-            placeholder="请输入合集标题"
+            placeholder="请输入CollectionTitle"
             autoSize={{ minRows: 3, maxRows: 8 }}
             style={{ 
               resize: 'none',
@@ -162,7 +162,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
             onClick={handleCancel}
             disabled={loading || generating}
           >
-            取消
+            Cancel
           </Button>
           
           <Space>
@@ -172,7 +172,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
               onClick={handleGenerateTitle}
               disabled={loading}
             >
-              AI生成标题
+              AI生成Title
             </Button>
             <Button
               type="primary"
@@ -181,7 +181,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
               onClick={handleSave}
               disabled={generating}
             >
-              保存
+              Save
             </Button>
           </Space>
         </div>
@@ -198,7 +198,7 @@ const EditableCollectionTitle: React.FC<EditableCollectionTitleProps> = ({
       }}
       className={className}
       onClick={handleStartEdit}
-      title="点击编辑合集标题"
+      title="点击EditCollectionTitle"
     >
       <span style={{ 
         wordBreak: 'break-word',

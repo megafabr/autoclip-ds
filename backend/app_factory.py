@@ -40,9 +40,9 @@ def create_app(mode: str = "web") -> FastAPI:
     
     # 创建 FastAPI 应用
     app = FastAPI(
-        title="AutoClip API",
-        description="AI视频切片处理API",
-        version="1.0.0",
+        title="DS OS API",
+        description="Backend API for DS OS",
+        version="0.1.0",
         docs_url="/docs",
         redoc_url="/redoc"
     )

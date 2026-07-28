@@ -45,7 +45,7 @@ const TaskProgress: React.FC<TaskProgressProps> = ({
       
       const response = await fetch(`/api/v1/progress/project/${projectId}`);
       if (!response.ok) {
-        throw new Error('获取进度失败');
+        throw new Error('获取进度Failed');
       }
       
       const data = await response.json();
@@ -83,23 +83,23 @@ const TaskProgress: React.FC<TaskProgressProps> = ({
     }
   }, [projectId, taskId, status]);
 
-  // 获取状态图标和颜色
+  // 获取Status图标和颜色
   const getStatusConfig = (status: string) => {
     switch (status) {
       case 'running':
-        return { icon: <PlayCircleOutlined />, color: 'processing', text: '处理中' };
+        return { icon: <PlayCircleOutlined />, color: 'processing', text: 'Processing' };
       case 'completed':
-        return { icon: <CheckCircleOutlined />, color: 'success', text: '已完成' };
+        return { icon: <CheckCircleOutlined />, color: 'success', text: 'Completed' };
       case 'failed':
-        return { icon: <CloseCircleOutlined />, color: 'error', text: '失败' };
+        return { icon: <CloseCircleOutlined />, color: 'error', text: 'Failed' };
       case 'pending':
-        return { icon: <ClockCircleOutlined />, color: 'default', text: '等待中' };
+        return { icon: <ClockCircleOutlined />, color: 'default', text: 'Waiting' };
       default:
         return { icon: <ClockCircleOutlined />, color: 'default', text: status };
     }
   };
 
-  // 获取进度条状态
+  // 获取进度条Status
   const getProgressStatus = (status: string) => {
     switch (status) {
       case 'running':
@@ -154,7 +154,7 @@ const TaskProgress: React.FC<TaskProgressProps> = ({
         <Space>
           {statusConfig.icon}
           <Title level={5} style={{ margin: 0 }}>
-            {progressData.name || '视频处理任务'}
+            {progressData.name || 'Video处理任务'}
           </Title>
           <Tag color={statusConfig.color}>
             {statusConfig.text}
@@ -199,7 +199,7 @@ const TaskProgress: React.FC<TaskProgressProps> = ({
           )}
           {progressData.completed_at && (
             <Text type="secondary">
-              完成: {new Date(progressData.completed_at).toLocaleString()}
+              Completed: {new Date(progressData.completed_at).toLocaleString()}
             </Text>
           )}
         </Space>
