@@ -21,54 +21,54 @@ const SettingsPage: React.FC = () => {
   const [selectedProvider, setSelectedProvider] = useState('dashscope')
   const [analyticsOn, setAnalyticsOn] = useState(isAnalyticsEnabled())
 
-  // 提供商配置
+  // Настройка провайдеров
   const providerConfig = {
     dashscope: {
-      name: '阿里通义千问',
+      name: 'Alibaba Tongyi Qianwen',
       icon: <RobotOutlined />,
       color: '#1890ff',
-      description: '阿里云通义千问大模型服务',
+      description: 'Сервис AI-моделей Alibaba Tongyi Qianwen',
       apiKeyField: 'dashscope_api_key',
-      placeholder: '请输入通义千问API密钥'
+      placeholder: 'Введите API ключ Tongyi Qianwen'
     },
     openai: {
       name: 'OpenAI',
       icon: <RobotOutlined />,
       color: '#52c41a',
-      description: 'OpenAI GPT系列模型',
+      description: 'Модели OpenAI GPT',
       apiKeyField: 'openai_api_key',
-      placeholder: '请输入OpenAI API密钥'
+      placeholder: 'Введите API ключ OpenAI'
     },
     gemini: {
       name: 'Google Gemini',
       icon: <RobotOutlined />,
       color: '#faad14',
-      description: 'Google Gemini大模型',
+      description: 'Большая AI-модель Google Gemini',
       apiKeyField: 'gemini_api_key',
-      placeholder: '请输入Gemini API密钥'
+      placeholder: 'Введите API ключ Gemini'
     },
     siliconflow: {
-      name: '硅基流动',
+      name: 'SiliconFlow',
       icon: <RobotOutlined />,
       color: '#722ed1',
-      description: '硅基流动模型服务',
+      description: 'Сервис моделей SiliconFlow',
       apiKeyField: 'siliconflow_api_key',
-      placeholder: '请输入硅基流动API密钥'
+      placeholder: 'Введите API ключ SiliconFlow'
     }
   }
 
-  // 加载数据
+  // Загрузка данных
   useEffect(() => {
     loadData()
   }, [])
 
   const loadData = async () => {
     try {
-      // 检查是否在Desktop模式下运行
+      // Проверка запуска в Desktop-режиме
       const isDesktop = await isDesktopMode()
       
       if (isDesktop) {
-        // Desktop模式：调用完整的API
+        // Desktop-режим: вызов полного API
         const [settings, models, provider] = await Promise.allSettled([
           settingsApi.getSettings(),
           settingsApi.getAvailableModels(),
@@ -81,20 +81,20 @@ const SettingsPage: React.FC = () => {
           console.warn('部分API请求失败:', failedRequests.map(r => (r as PromiseRejectedResult).reason))
         }
         
-        // 处理设置数据
+        // Обработка данных настроек
         const settingsData = settings.status === 'fulfilled' ? settings.value : {}
         
-        // 处理模型数据
+        // Обработка данных моделей
         const modelsData = models.status === 'fulfilled' ? models.value.models : {}
         
-        // 处理提供商数据
+        // Обработка данных провайдеров
         const providerData = provider.status === 'fulfilled'
           ? provider.value
-          : { available: false, provider: 'dashscope', display_name: '阿里通义千问', model: 'qwen-plus' }
+          : { available: false, provider: 'dashscope', display_name: 'Alibaba Tongyi Qianwen', model: 'qwen-plus' }
         const providerName = providerData.provider || 'dashscope'
         setCurrentProvider(providerData)
         
-        // 将嵌套的settings结构转换为扁平结构
+        // Преобразование вложенной структуры настроек
         const flatSettings = {
           llm_provider: providerName, // 使用实际的提供商
           dashscope_api_key: settingsData.api?.api_keys?.dashscope || '',
@@ -111,14 +111,14 @@ const SettingsPage: React.FC = () => {
         
         setSelectedProvider(providerName)
         
-        // 设置表单初始值
+        // Начальные значения формы настроек
         form.setFieldsValue(flatSettings)
-        console.log('Desktop模式 - 设置表单值:', flatSettings)
+        console.log('Desktop-режим - Значения формы настроек:', flatSettings)
         console.log('可用模型:', modelsData)
         console.log('当前提供商:', providerData)
       } else {
-        // Web模式：使用默认配置，不调用Desktop API
-        console.log('Web模式 - 使用默认配置')
+        // Web-режим: используется конфигурация по умолчанию, Desktop API не вызывается
+        console.log('Web-режим - используется конфигурация по умолчанию')
         
         const flatSettings = {
           llm_provider: 'dashscope',
@@ -137,30 +137,30 @@ const SettingsPage: React.FC = () => {
         setSelectedProvider('dashscope')
         form.setFieldsValue(flatSettings)
         
-        // 设置默认模型数据
+        // Данные модели по умолчанию
         setCurrentProvider({
           available: false,
           provider: 'dashscope',
-          display_name: '阿里通义千问',
+          display_name: 'Alibaba Tongyi Qianwen',
           model: 'qwen-plus'
         })
       }
     } catch (error) {
-      console.error('加载数据失败:', error)
+      console.error('Ошибка загрузки данных:', error)
     }
   }
 
-  // 保存配置
+  // Сохранить настройки
   const handleSave = async (values: any) => {
     try {
       setLoading(true)
       
-      // 检查是否在Desktop模式下运行
+      // Проверка запуска в Desktop-режиме
       const isDesktop = await isDesktopMode()
       
       if (!isDesktop) {
-        // Web模式：只显示提示，不实际保存
-        message.info('Web模式下配置无法保存，请在桌面应用中使用完整功能')
+        // Web-режим：только показывает подсказку, без сохранения
+        message.info('В Web-режиме настройки нельзя сохранить. Используйте настольное приложение.')
         setLoading(false)
         return
       }
@@ -221,9 +221,9 @@ const SettingsPage: React.FC = () => {
       }
       
       await settingsApi.updateSettings(backendSettings)
-      message.success('配置保存成功！')
+      message.success('Настройки успешно сохранены!')
 
-      // 埋点：记录配置了哪个 provider 的 key（不传 key 明文）
+      // Аналитика: запись настроенного provider key без передачи самого ключа
       const apiKeyField = providerConfig[selectedProvider as keyof typeof providerConfig]?.apiKeyField
       if (apiKeyField) {
         trackApiKeyConfigured({
@@ -232,9 +232,9 @@ const SettingsPage: React.FC = () => {
         })
       }
 
-      await loadData() // 重新加载数据
+      await loadData() // Повторная загрузка данных
     } catch (error: any) {
-      message.error('保存失败: ' + (error.message || '未知错误'))
+      message.error('Ошибка сохранения: ' + (error.message || 'Неизвестная ошибка'))
     } finally {
       setLoading(false)
     }
@@ -245,7 +245,7 @@ const SettingsPage: React.FC = () => {
     const apiKey = form.getFieldValue(providerConfig[selectedProvider as keyof typeof providerConfig].apiKeyField)
     
     if (!apiKey || apiKey.trim() === '') {
-      message.error('请先输入API密钥')
+      message.error('Сначала введите API ключ')
       return
     }
 
@@ -253,12 +253,12 @@ const SettingsPage: React.FC = () => {
       setLoading(true)
       const result = await settingsApi.testApiKey(selectedProvider, apiKey)
       if (result.success) {
-        message.success('API密钥测试成功！')
+        message.success('Проверка API ключа успешна!')
       } else {
-        message.error('API密钥测试失败: ' + (result.error || '未知错误'))
+        message.error('Ошибка проверки API ключа: ' + (result.error || 'Неизвестная ошибка'))
       }
     } catch (error: any) {
-      message.error('测试失败: ' + (error.message || '未知错误'))
+      message.error('Ошибка тестирования: ' + (error.message || 'Неизвестная ошибка'))
     } finally {
       setLoading(false)
     }
@@ -274,15 +274,15 @@ const SettingsPage: React.FC = () => {
     <Content className="settings-page">
       <div className="settings-container">
         <Title level={2} className="settings-title">
-          <SettingOutlined /> 系统设置
+          <SettingOutlined /> {locale.settings.title}
         </Title>
         
         <Tabs defaultActiveKey="api" className="settings-tabs">
-          <TabPane tab="AI 模型配置" key="api">
-            <Card title="AI 模型配置" className="settings-card">
+          <TabPane tab="Настройки AI моделей" key="api">
+            <Card title="Настройки AI моделей" className="settings-card">
               <Alert
-                message="多模型提供商支持"
-                description="系统现在支持多个AI模型提供商，您可以根据需要选择不同的服务商和模型。"
+                message="Поддержка нескольких AI-провайдеров"
+                description="Система поддерживает несколько AI-провайдеров. Вы можете выбрать нужный сервис и модель."
                 type="info"
                 showIcon
                 className="settings-alert"
@@ -304,7 +304,7 @@ const SettingsPage: React.FC = () => {
                 {/* 当前提供商状态 */}
                 {currentProvider.available && (
                   <Alert
-                    message={`当前使用: ${currentProvider.display_name} - ${currentProvider.model}`}
+                    message={`Используется сейчас: ${currentProvider.display_name} - ${currentProvider.model}`}
                     type="success"
                     showIcon
                     style={{ marginBottom: 24 }}
@@ -313,16 +313,16 @@ const SettingsPage: React.FC = () => {
 
                 {/* 提供商选择 */}
                 <Form.Item
-                  label="选择AI模型提供商"
+                  label="Выберите AI-провайдера"
                   name="llm_provider"
                   className="form-item"
-                  rules={[{ required: true, message: '请选择AI模型提供商' }]}
+                  rules={[{ required: true, message: 'Выберите AI-провайдера' }]}
                 >
                   <Select
                     value={selectedProvider}
                     onChange={handleProviderChange}
                     className="settings-input"
-                    placeholder="请选择AI模型提供商"
+                    placeholder="Выберите AI-провайдера"
                   >
                     {Object.entries(providerConfig).map(([key, config]) => (
                       <Select.Option key={key} value={key}>
@@ -342,8 +342,8 @@ const SettingsPage: React.FC = () => {
                   name={providerConfig[selectedProvider as keyof typeof providerConfig].apiKeyField}
                   className="form-item"
                   rules={[
-                    { required: true, message: '请输入API密钥' },
-                    { min: 10, message: 'API密钥长度不能少于10位' }
+                    { required: true, message: 'Введите API ключ' },
+                    { min: 10, message: 'Длина API ключа должна быть не менее 10 символов' }
                   ]}
                 >
                   <Input.Password
@@ -355,15 +355,15 @@ const SettingsPage: React.FC = () => {
 
                 {/* 模型选择 - 改进版本 */}
                 <Form.Item
-                  label="选择模型"
+                  label="Выберите модель"
                   name="model_name"
                   className="form-item"
-                  rules={[{ required: true, message: '请输入或选择模型名称' }]}
-                  extra="支持手动输入模型名称或从常用模型中选择"
+                  rules={[{ required: true, message: 'Введите или выберите название модели' }]}
+                  extra="Можно ввести модель вручную или выбрать из списка"
                 >
                   <Select
                     className="settings-input"
-                    placeholder="请输入或选择模型名称"
+                    placeholder="Введите или выберите название модели"
                     showSearch
                     allowClear
                     mode="tags"
@@ -373,18 +373,18 @@ const SettingsPage: React.FC = () => {
                         <Divider style={{ margin: '8px 0' }} />
                         <div style={{ padding: '0 8px 4px' }}>
                           <Text type="secondary" style={{ fontSize: '12px' }}>
-                            常用模型列表（按供应商分类）
+                            Список моделей (по провайдерам)
                           </Text>
                         </div>
                       </div>
                     )}
                   >
-                    {/* 通义千问模型 */}
-                    <Select.OptGroup label="通义千问 (Dashscope)">
-                      <Select.Option value="qwen-plus">qwen-plus (通义千问增强版)</Select.Option>
-                      <Select.Option value="qwen-turbo">qwen-turbo (通义千问标准版)</Select.Option>
-                      <Select.Option value="qwen-max">qwen-max (通义千问旗舰版)</Select.Option>
-                      <Select.Option value="qwen-long">qwen-long (通义千问长文本版)</Select.Option>
+                    {/* Модели Tongyi Qianwen */}
+                    <Select.OptGroup label="Tongyi Qianwen (Dashscope)">
+                      <Select.Option value="qwen-plus">qwen-plus (Tongyi Qianwen Enhanced)</Select.Option>
+                      <Select.Option value="qwen-turbo">qwen-turbo (Tongyi Qianwen Standard)</Select.Option>
+                      <Select.Option value="qwen-max">qwen-max (Tongyi Qianwen Flagship)</Select.Option>
+                      <Select.Option value="qwen-long">qwen-long (Tongyi Qianwen Long Context)</Select.Option>
                     </Select.OptGroup>
                     
                     {/* OpenAI模型 */}
@@ -403,12 +403,12 @@ const SettingsPage: React.FC = () => {
                       <Select.Option value="gemini-pro">gemini-pro (Gemini Pro)</Select.Option>
                     </Select.OptGroup>
                     
-                    {/* 硅基流动模型 */}
-                    <Select.OptGroup label="硅基流动 (SiliconFlow)">
+                    {/* SiliconFlow模型 */}
+                    <Select.OptGroup label="SiliconFlow (SiliconFlow)">
                       <Select.Option value="deepseek-chat">deepseek-chat (DeepSeek Chat)</Select.Option>
                       <Select.Option value="deepseek-coder">deepseek-coder (DeepSeek Coder)</Select.Option>
-                      <Select.Option value="qwen-plus">qwen-plus (通义千问增强版)</Select.Option>
-                      <Select.Option value="qwen-turbo">qwen-turbo (通义千问标准版)</Select.Option>
+                      <Select.Option value="qwen-plus">qwen-plus (Tongyi Qianwen Enhanced)</Select.Option>
+                      <Select.Option value="qwen-turbo">qwen-turbo (Tongyi Qianwen Standard)</Select.Option>
                     </Select.OptGroup>
                     
                   </Select>
@@ -423,26 +423,26 @@ const SettingsPage: React.FC = () => {
                       onClick={handleTestApiKey}
                       loading={loading}
                     >
-                      测试连接
+                      Проверить соединение
                     </Button>
                   </Space>
                 </Form.Item>
 
                 <Divider className="settings-divider" />
 
-                <Title level={4} className="section-title">模型配置</Title>
+                <Title level={4} className="section-title">Настройки модели</Title>
                 
                 <Row gutter={16}>
                   <Col span={12}>
                     <Form.Item
-                      label="文本分块大小"
+                      label="Размер текстового блока"
                       name="chunk_size"
                       className="form-item"
                     >
                       <Input 
                         type="number" 
                         placeholder="5000" 
-                        addonAfter="字符" 
+                        addonAfter="символов" 
                         className="settings-input"
                       />
                     </Form.Item>
@@ -452,7 +452,7 @@ const SettingsPage: React.FC = () => {
                 <Row gutter={16}>
                   <Col span={12}>
                     <Form.Item
-                      label="最低评分阈值"
+                      label="Минимальный порог оценки"
                       name="min_score_threshold"
                       className="form-item"
                     >
@@ -468,14 +468,14 @@ const SettingsPage: React.FC = () => {
                   </Col>
                   <Col span={12}>
                     <Form.Item
-                      label="每个合集最大切片数"
+                      label="Максимальное количество фрагментов"
                       name="max_clips_per_collection"
                       className="form-item"
                     >
                       <Input 
                         type="number" 
                         placeholder="5" 
-                        addonAfter="个" 
+                        addonAfter="шт." 
                         className="settings-input"
                       />
                     </Form.Item>
@@ -491,44 +491,44 @@ const SettingsPage: React.FC = () => {
                     className="save-button"
                     loading={loading}
                   >
-                    保存配置
+                    Сохранить настройки
                   </Button>
                 </Form.Item>
               </Form>
             </Card>
 
-            <Card title="使用说明" className="settings-card">
+            <Card title="Инструкция" className="settings-card">
               <Space direction="vertical" size="large" className="instructions-space">
                 <div className="instruction-item">
                   <Title level={5} className="instruction-title">
-                    <InfoCircleOutlined /> 1. 选择AI模型提供商
+                    <InfoCircleOutlined /> 1. Выберите AI-провайдера
                   </Title>
                   <Paragraph className="instruction-text">
-                    系统支持多个AI模型提供商：
-                    <br />• <Text strong>阿里通义千问</Text>：访问阿里云控制台获取API密钥
-                    <br />• <Text strong>OpenAI</Text>：访问 platform.openai.com 获取API密钥
-                    <br />• <Text strong>Google Gemini</Text>：访问 ai.google.dev 获取API密钥
-                    <br />• <Text strong>硅基流动</Text>：访问 docs.siliconflow.cn 获取API密钥
+                    Система поддерживает несколько AI-провайдеров:
+                    <br />• <Text strong>Alibaba Tongyi Qianwen</Text>：открыть консоль Alibaba Cloudполучить API ключ
+                    <br />• <Text strong>OpenAI</Text>：Откройте platform.openai.com получить API ключ
+                    <br />• <Text strong>Google Gemini</Text>：Откройте ai.google.dev получить API ключ
+                    <br />• <Text strong>SiliconFlow</Text>：Откройте docs.siliconflow.cn получить API ключ
                   </Paragraph>
                 </div>
                 
                 <div className="instruction-item">
                   <Title level={5} className="instruction-title">
-                    <InfoCircleOutlined /> 2. 配置参数说明
+                    <InfoCircleOutlined /> 2. Описание параметров настройки
                   </Title>
                   <Paragraph className="instruction-text">
-                    • <Text strong>文本分块大小</Text>：影响处理速度和精度，建议5000字符<br />
-                    • <Text strong>评分阈值</Text>：只有高于此分数的片段才会被保留<br />
-                    • <Text strong>合集切片数</Text>：控制每个主题合集包含的片段数量
+                    • <Text strong>Размер текстового блока</Text>：Влияет на скорость и точность обработки, рекомендуется 5000 символов<br />
+                    • <Text strong>Порог оценки</Text>：Сохраняются только фрагменты выше этого порога<br />
+                    • <Text strong>Количество фрагментов в коллекции</Text>：Определяет количество фрагментов в каждой коллекции
                   </Paragraph>
                 </div>
                 
                 <div className="instruction-item">
                   <Title level={5} className="instruction-title">
-                    <InfoCircleOutlined /> 3. 测试连接
+                    <InfoCircleOutlined /> 3. Проверить соединение
                   </Title>
                   <Paragraph className="instruction-text">
-                    保存前建议先测试API密钥是否有效，确保服务正常运行
+                    Перед сохранением рекомендуется проверить API ключ.
                   </Paragraph>
                 </div>
               </Space>
@@ -539,15 +539,15 @@ const SettingsPage: React.FC = () => {
             tab={
               <span>
                 <SoundOutlined />
-                语音转写配置
+                Настройки распознавания речи
               </span>
             } 
             key="speech"
           >
-            <Card title="语音转写配置" className="settings-card">
+            <Card title="Настройки распознавания речи" className="settings-card">
               <Alert
-                message="语音识别服务配置"
-                description="配置语音转写服务，用于视频字幕生成和语音识别。支持本地Whisper模型和多种云服务API。"
+                message="Настройки сервиса распознавания речи"
+                description="Настройка распознавания речи для создания субтитров. Поддерживаются Whisper и облачные API."
                 type="info"
                 showIcon
                 className="settings-alert"
@@ -555,8 +555,8 @@ const SettingsPage: React.FC = () => {
               
               <SpeechRecognitionConfig
                 onConfigChange={(config) => {
-                  console.log('语音配置已更新:', config)
-                  // 移除重复的成功提示，SpeechRecognitionConfig内部已经处理
+                  console.log('Настройки распознавания речи обновлены:', config)
+                  // Удаление повторного сообщения об успехе, обработка выполняется внутри SpeechRecognitionConfig
                 }}
               />
             </Card>
@@ -566,15 +566,15 @@ const SettingsPage: React.FC = () => {
             tab={
               <span>
                 <SettingOutlined />
-                应用设置
+                Настройки приложения
               </span>
             } 
             key="app"
           >
-            <Card title="应用设置" className="settings-card">
+            <Card title="Настройки приложения" className="settings-card">
               <Alert
-                message="应用行为配置"
-                description="配置应用的启动行为和系统集成选项。"
+                message="Настройки поведения приложения"
+                description="Настройки запуска и интеграции системы."
                 type="info"
                 showIcon
                 className="settings-alert"
@@ -583,19 +583,19 @@ const SettingsPage: React.FC = () => {
               <AppSettings />
             </Card>
 
-            <Card title="隐私与数据" className="settings-card" style={{ marginTop: 16 }}>
+            <Card title="Конфиденциальность и данные" className="settings-card" style={{ marginTop: 16 }}>
               <Alert
-                message="使用数据统计"
-                description="为了改进产品，我们会采集匿名的使用数据（如功能使用、出片成功/失败等），不包含你的视频内容、字幕文本或 API 密钥。你可以随时关闭。"
+                message="Статистика использования"
+                description="Для улучшения продукта мы собираем анонимную статистику использования. Она не содержит видео, субтитры или API ключи. Вы можете отключить её в любое время."
                 type="info"
                 showIcon
                 className="settings-alert"
               />
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 16 }}>
                 <div>
-                  <Text strong>允许匿名使用统计</Text>
+                  <Text strong>Разрешить анонимную статистику</Text>
                   <Paragraph type="secondary" style={{ margin: '4px 0 0' }}>
-                    关闭后将不再上报任何使用数据。
+                    После отключения данные использования больше не отправляются.
                   </Paragraph>
                 </div>
                 <Switch
@@ -603,23 +603,23 @@ const SettingsPage: React.FC = () => {
                   onChange={(checked) => {
                     setAnalyticsEnabled(checked)
                     setAnalyticsOn(checked)
-                    message.success(checked ? '已开启匿名使用统计' : '已关闭匿名使用统计')
+                    message.success(checked ? 'Анонимная статистика включена' : 'Анонимная статистика отключена')
                   }}
                 />
               </div>
             </Card>
           </TabPane>
 
-          <TabPane tab="B站管理" key="bilibili">
-            <Card title="B站账号管理" className="settings-card">
+          <TabPane tab="Управление Bilibili" key="bilibili">
+            <Card title="Управление аккаунтами Bilibili" className="settings-card">
               <div style={{ textAlign: 'center', padding: '40px 20px' }}>
                 <div style={{ marginBottom: '24px' }}>
                   <UserOutlined style={{ fontSize: '48px', color: '#1890ff', marginBottom: '16px' }} />
                   <Title level={3} style={{ color: 'var(--ac-ink)', margin: '0 0 8px 0' }}>
-                    B站账号管理
+                    Управление аккаунтами Bilibili
                   </Title>
                   <Text type="secondary" style={{ color: '#b0b0b0', fontSize: '16px' }}>
-                    管理您的B站账号，支持多账号切换和快速投稿
+                    Управление аккаунтами Bilibili, переключение и публикация.
                   </Text>
                 </div>
                 
@@ -628,7 +628,7 @@ const SettingsPage: React.FC = () => {
                     type="primary"
                     size="large"
                     icon={<UserOutlined />}
-                    onClick={() => message.info('开发中，敬请期待', 3)}
+                    onClick={() => message.info('В разработке', 3)}
                     style={{
                       borderRadius: '8px',
                       background: 'linear-gradient(45deg, #1890ff, #36cfc9)',
@@ -639,13 +639,13 @@ const SettingsPage: React.FC = () => {
                       fontSize: '16px'
                     }}
                   >
-                    管理B站账号
+                    Управление аккаунтом Bilibili
                   </Button>
                 </Space>
                 
                 <div style={{ marginTop: '32px', textAlign: 'left', maxWidth: '600px', margin: '32px auto 0' }}>
                   <Title level={4} style={{ color: 'var(--ac-ink)', marginBottom: '16px' }}>
-                    功能特点
+                    Основные возможности
                   </Title>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '16px' }}>
                     <div style={{ 
@@ -654,10 +654,10 @@ const SettingsPage: React.FC = () => {
                       borderRadius: '8px',
                       border: '1px solid #404040'
                     }}>
-                      <Text strong style={{ color: '#1890ff' }}>多账号支持</Text>
+                      <Text strong style={{ color: '#1890ff' }}>Поддержка нескольких аккаунтов</Text>
                       <br />
                       <Text type="secondary" style={{ color: '#b0b0b0' }}>
-                        支持添加多个B站账号，方便管理和切换
+                        Поддержка нескольких аккаунтов Bilibili для удобного управления
                       </Text>
                     </div>
                     <div style={{ 
@@ -666,10 +666,10 @@ const SettingsPage: React.FC = () => {
                       borderRadius: '8px',
                       border: '1px solid #404040'
                     }}>
-                      <Text strong style={{ color: '#52c41a' }}>安全登录</Text>
+                      <Text strong style={{ color: '#52c41a' }}>Безопасный вход</Text>
                       <br />
                       <Text type="secondary" style={{ color: '#b0b0b0' }}>
-                        使用Cookie导入，避免风控，安全可靠
+                        Импорт Cookie для безопасной работы
                       </Text>
                     </div>
                     <div style={{ 
@@ -678,10 +678,10 @@ const SettingsPage: React.FC = () => {
                       borderRadius: '8px',
                       border: '1px solid #404040'
                     }}>
-                      <Text strong style={{ color: '#faad14' }}>快速投稿</Text>
+                      <Text strong style={{ color: '#faad14' }}>Быстрая публикация</Text>
                       <br />
                       <Text type="secondary" style={{ color: '#b0b0b0' }}>
-                        在切片详情页直接选择账号投稿，操作简单
+                        Выбор аккаунта для публикации из страницы клипа
                       </Text>
                     </div>
                     <div style={{ 
@@ -690,10 +690,10 @@ const SettingsPage: React.FC = () => {
                       borderRadius: '8px',
                       border: '1px solid #404040'
                     }}>
-                      <Text strong style={{ color: '#722ed1' }}>批量管理</Text>
+                      <Text strong style={{ color: '#722ed1' }}>Массовое управление</Text>
                       <br />
                       <Text type="secondary" style={{ color: '#b0b0b0' }}>
-                        支持批量上传多个切片，提高效率
+                        Поддержка массовой загрузки нескольких клипов
                       </Text>
                     </div>
                   </div>
@@ -703,12 +703,12 @@ const SettingsPage: React.FC = () => {
           </TabPane>
         </Tabs>
 
-        {/* B站管理弹窗 */}
+        {/* Окно управления Bilibili */}
         <BilibiliManager
           visible={showBilibiliManager}
           onClose={() => setShowBilibiliManager(false)}
           onUploadSuccess={() => {
-            message.success('操作成功')
+            message.success('Операция выполнена успешно')
           }}
         />
       </div>
@@ -716,7 +716,7 @@ const SettingsPage: React.FC = () => {
   )
 }
 
-// 应用设置组件
+// Компонент настроек приложения
 const AppSettings: React.FC = () => {
   const [autostartEnabled, setAutostartEnabled] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -734,14 +734,14 @@ const AppSettings: React.FC = () => {
         setAutostartEnabled(Boolean(enabled))
       }
     } catch (error) {
-      console.error('检查自动启动状态失败:', error)
+      console.error('Не удалось проверить состояние автозапуска:', error)
     }
   }
 
   const handleAutostartToggle = async (enabled: boolean) => {
     const isDesktop = await isDesktopMode()
     if (!isDesktop) {
-      message.error('此功能仅在桌面应用中可用')
+      message.error('Эта функция доступна только в Desktop-приложении')
       return
     }
 
@@ -751,16 +751,16 @@ const AppSettings: React.FC = () => {
       
       if (enabled) {
         await invoke('enable_autostart')
-        message.success('已启用自动启动')
+        message.success('Автозапуск включён')
       } else {
         await invoke('disable_autostart')
-        message.success('已禁用自动启动')
+        message.success('Автозапуск отключён')
       }
       
       setAutostartEnabled(enabled)
     } catch (error) {
-      console.error('切换自动启动状态失败:', error)
-      message.error(`操作失败: ${error}`)
+      console.error('Не удалось изменить состояние автозапуска:', error)
+      message.error(`Ошибка выполнения: ${error}`)
     } finally {
       setLoading(false)
     }
@@ -782,18 +782,18 @@ const AppSettings: React.FC = () => {
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '8px' }}>
                   <PoweroffOutlined style={{ color: '#1890ff', marginRight: '8px' }} />
-                  <Text strong style={{ color: 'var(--ac-ink)' }}>开机自动启动</Text>
+                  <Text strong style={{ color: 'var(--ac-ink)' }}>Автозапуск при включении компьютера</Text>
                 </div>
                 <Text type="secondary" style={{ color: '#b0b0b0' }}>
-                  启用后，应用将在系统启动时自动运行
+                  После включения приложение будет запускаться вместе с системой
                 </Text>
               </div>
               <Switch
                 checked={autostartEnabled}
                 onChange={handleAutostartToggle}
                 loading={loading}
-                checkedChildren="开启"
-                unCheckedChildren="关闭"
+                checkedChildren="Включить"
+                unCheckedChildren="Выключить"
               />
             </div>
           </Card>
@@ -801,8 +801,8 @@ const AppSettings: React.FC = () => {
       </Row>
       
       <Alert
-        message="提示"
-        description="自动启动功能仅在桌面应用中可用。启用后，应用将在系统启动时自动运行，您可以通过系统托盘图标访问应用。"
+        message="Подсказка"
+        description="Автозапуск доступен только в Desktop-приложении. После включения приложение запускается вместе с системой. Доступ к приложению осуществляется через значок в системном трее."
         type="info"
         showIcon
         style={{ marginTop: '16px' }}

@@ -3,6 +3,7 @@ import { Layout, Button } from 'antd'
 import { SettingOutlined, ArrowLeftOutlined, BulbOutlined, MoonOutlined } from '@ant-design/icons'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
+import { locale } from '../locales'
 
 const { Header: AntHeader } = Layout
 
@@ -42,7 +43,12 @@ const Header: React.FC = () => {
             letterSpacing: '0.3px',
           }}
         >
-          Auto<em style={{ fontStyle: 'italic' }}>Clip</em>
+         <>
+  {locale.app.logoLeft}
+  <em style={{ fontStyle: 'italic' }}>
+    {locale.app.logoRight}
+  </em>
+</>
         </span>
       </div>
 

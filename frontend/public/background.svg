@@ -97,11 +97,11 @@
     </circle>
   </g>
   
-  <!-- AutoClip 主标题 -->
+  <!--DS OS -->
   <text x="960" y="540" text-anchor="middle" dominant-baseline="middle" 
         font-family="Arial, sans-serif" font-size="180" font-weight="bold" 
         fill="url(#textGradient)" filter="url(#textGlow)">
-    AutoClip
+    DS OS
   </text>
   
   <!-- 装饰线条 -->
