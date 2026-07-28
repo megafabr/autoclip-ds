@@ -1,7 +1,3 @@
-import { ru } from "./ru";
-
-export const locale = ru;
-
 export const ru = {
   app: {
     logoLeft: "DS",
@@ -31,3 +27,5 @@ export const ru = {
     cancel: "Отмена",
   },
 } as const;
+
+export const locale = ru;
