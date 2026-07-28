@@ -1,0 +1,149 @@
+23: // 语音识别配置
+28: // LLM配置
+52: // 确保表单在组件挂载时正确初始化
+55: console.log('表单初始化完成，初始值:', config)
+60: // 验证第一步的配置
+62: console.log('下一步按钮点击 - 表单值:', values)
+67: message.error('请选择LLM提供商并输入API Key')
+83: // 验证语音识别配置
+85: message.error('请选择语音识别方案')
+90: // 只有当用户输入了API key时才保存LLM配置
+94: console.log('LLM配置保存成功')
+96: console.error('LLM配置保存失败:', error)
+97: message.error('LLM配置保存失败，请重试')
+103: // 保存语音识别配置 - 添加错误处理
+107: console.warn('语音识别配置保存失败，使用默认配置:', error)
+108: // 不抛出错误，允许用户继续完成向导
+111: // 如果是本地Whisper，下载模型
+116: // 配置保存完成，直接进入工具首页
+117: message.success('配置完成!欢迎使用AutoClip')
+120: console.error('配置保存失败:', error)
+121: const errorMessage = error instanceof Error ? error.message : '配置保存失败,请重试'
+122: message.error(`配置保存失败: ${errorMessage}`)
+128: // 跳过当前步骤，稍后设置
+131: // 跳过AI模型配置，进入语音识别配置
+133: message.info('已跳过AI模型配置,请稍后在配置页中进行设置', 3)
+135: // 跳过语音识别配置，完成向导
+136: // 确保不保存任何空的API配置
+138: // 只保存语音识别配置，不保存LLM配置
+144: console.warn('语音识别配置保存失败，使用默认配置:', error)
+147: message.info('已跳过语音识别配置,请稍后在配置页中进行设置', 3)
+150: message.error('配置保存失败,请重试')
+151: console.error('配置保存失败:', error)
+158: // 在Web模式下也允许保存配置，用于测试和开发
+160: console.log('桌面模式检测结果:', isDesktop)
+162: console.log('开始保存LLM配置:', {
+167: // 先获取现有配置，避免清空已有的API key
+172: console.warn('获取现有配置失败，将使用默认配置:', error)
+175: // 获取现有的API keys，只更新当前提供商的key
+192: // 只更新当前提供商的API key，保持其他提供商的值
+220: console.log('发送设置到后端:', settings)
+222: console.log('LLM配置保存成功，后端响应:', result)
+224: console.error('LLM配置保存失败:', error)
+225: const detail = error instanceof Error ? error.message : '未知错误'
+226: throw new Error(`LLM配置保存失败: ${detail}`)
+232: // 检查是否在桌面模式
+235: console.warn('非桌面模式，跳过语音配置保存')
+292: throw new Error(`语音识别配置保存失败: ${response.status} ${errorText}`)
+295: console.log('语音识别配置保存成功')
+297: console.error('语音识别配置保存失败:', error)
+299: throw new Error(`语音识别配置保存失败: ${error.message}`)
+301: throw new Error('语音识别配置保存失败')
+315: throw new Error('模型下载失败')
+318: console.error('Whisper模型下载失败:', error)
+319: // 不阻止向导完成
+325: // 从表单中获取最新的API Key值
+329: console.log('testApiConnection 调用参数:', { provider, apiKey })
+330: console.log('testApiConnection 表单值:', formValues)
+331: console.log('testApiConnection 当前API Key:', currentApiKey)
+334: message.warning('请先输入API Key')
+351: message.success('API连接测试成功!')
+353: message.error(`API连接测试失败: ${result.error || '未知错误'}`)
+356: console.error('API测试错误:', error)
+357: const detail = error instanceof Error ? error.message : '网络错误'
+358: message.error(`API连接测试失败: ${detail}`)
+362: // 获取API Key获取方式的智能提示
+366: name: '阿里云通义千问',
+368: description: '注册阿里云账号,开通DashScope服务,创建API Key'
+373: description: '注册OpenAI账号,在API Keys页面创建新的密钥'
+378: description: '使用Google账号登录,在API Keys页面创建密钥'
+383: description: '注册SiliconFlow账号,在控制台创建API Key'
+399: {/* 头部标题区域 - 更紧凑 */}
+403: 欢迎使用 AutoClip
+406: 让我们快速配置您的AI视频切片工具
+410: {/* 主配置卡片 - 更紧凑的间距 */}
+412: {/* 步骤标题 - 更紧凑 */}
+423: {currentStep === 0 ? '配置AI模型' : '配置语音识别'}
+428: ? '选择大语言模型提供商并输入API Key'
+429: : '选择语音识别方案'
+439: console.log('表单值变化:', { changedValues, allValues })
+443: // LLM配置步骤 - 更紧凑的布局
+447: label="选择AI模型提供商"
+448: rules={[{ required: true, message: '请选择AI模型提供商' }]}
+451: <Select size="middle" placeholder="选择提供商">
+454: <Text strong>阿里云通义千问</Text>
+455: <Text type="secondary">(推荐国内用户)</Text>
+461: <Text type="secondary">(需要科学上网)</Text>
+467: <Text type="secondary">(需要科学上网)</Text>
+473: <Text type="secondary">(国内替代方案)</Text>
+479: {/* API Key输入框和测试按钮 - 水平布局 */}
+483: rules={[{ required: true, message: '请输入API Key' }]}
+489: placeholder="请输入您的API Key"
+501: console.log('测试按钮点击 - 表单值:', values)
+507: 测试
+512: {/* 智能API Key获取方式提示 */}
+522: <span>{help.name} API Key获取方式</span>
+529: 访问: <ExternalLink url={help.url} text={help.url} />
+542: // 语音识别配置步骤 - 更紧凑的布局
+546: label="选择语音识别方案"
+547: rules={[{ required: true, message: '请选择语音识别方案' }]}
+550: <Select size="middle" placeholder="选择方案">
+554: <Text strong>本地 Whisper 模型</Text>
+555: <Text type="secondary">(免费离线，推荐新手)</Text>
+562: <Text type="secondary">(云端处理，准确度更高)</Text>
+569: <Text type="secondary">(企业级服务)</Text>
+576: <Text type="secondary">(多语言支持)</Text>
+582: <Text strong>阿里云语音识别</Text>
+583: <Text type="secondary">(中文优化)</Text>
+589: <Text strong>自定义API</Text>
+590: <Text type="secondary">(自定义服务端点)</Text>
+604: label="选择模型大小"
+607: <Select size="middle" placeholder="选择模型">
+608: <Option value="tiny">Tiny (39MB) - 最快速度</Option>
+609: <Option value="base">Base (74MB) - 平衡选择 (推荐)</Option>
+610: <Option value="small">Small (244MB) - 较好准确度</Option>
+611: <Option value="medium">Medium (769MB) - 高准确度</Option>
+612: <Option value="large">Large (1550MB) - 最高准确度</Option>
+623: rules={[{ required: true, message: '请输入OpenAI API Key' }]}
+628: placeholder="请输入OpenAI API Key"
+640: rules={[{ required: true, message: '请输入Azure API Key' }]}
+645: placeholder="请输入Azure Speech API Key"
+650: label="Azure 区域"
+655: placeholder="例如: eastus, westus2"
+667: rules={[{ required: true, message: '请输入Google API Key' }]}
+672: placeholder="请输入Google Speech-to-Text API Key"
+682: label="阿里云 API Key"
+683: rules={[{ required: true, message: '请输入阿里云 API Key' }]}
+688: placeholder="请输入阿里云语音识别 API Key"
+699: label="自定义 API Key"
+700: rules={[{ required: true, message: '请输入自定义 API Key' }]}
+705: placeholder="请输入自定义 API Key"
+710: label="API 端点"
+711: rules={[{ required: true, message: '请输入API端点' }]}
+716: placeholder="例如: https://api.example.com/speech"
+727: {/* 智能配置说明 - 根据选择的方案显示对应说明 */}
+736: name: '本地 Whisper 模型',
+737: description: '免费离线使用，首次使用会自动下载模型，后续无需网络连接。推荐新手用户使用。'
+742: description: '云端处理，识别准确度更高，按使用量计费。需要稳定的网络连接。'
+747: description: '企业级语音识别服务，支持多种语言和方言，适合商业使用。'
+752: description: '多语言支持，识别准确度高，支持实时语音识别。'
+756: name: '阿里云语音识别',
+757: description: '中文优化，国内访问速度快，支持多种中文方言识别。'
+761: name: '自定义API',
+762: description: '支持自定义服务端点，可以接入自己的语音识别服务。'
+775: <span>{methodInfo.name} 配置说明</span>
+795: {/* 底部按钮区域 - 移除步骤指示器，统一按钮样式 */}
+809: 上一步
+821: 稍后设置
+830: {currentStep === 0 ? '下一步' : '开始使用'}
+844: <Text>正在保存配置并创建示例项目...</Text>

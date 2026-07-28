@@ -1,0 +1,171 @@
+36: // 投稿状态相关状态
+42: // 获取账号列表
+49: message.error('获取账号列表失败: ' + (error.message || '未知错误'))
+55: // 获取投稿记录
+62: message.error('获取投稿记录失败: ' + (error.message || '未知错误'))
+68: // 重试投稿
+72: message.success('重试任务已提交')
+75: message.error('重试失败: ' + (error.message || '未知错误'))
+79: // 取消投稿
+83: message.success('任务已取消')
+86: message.error('取消失败: ' + (error.message || '未知错误'))
+90: // 删除投稿
+94: message.success('任务已删除')
+97: message.error('删除失败: ' + (error.message || '未知错误'))
+101: // 查看详情
+111: // 如果有切片数据，默认显示上传标签页
+120: // Cookie导入登录
+125: // 解析Cookie字符串
+142: message.error('Cookie格式不正确，请检查输入')
+147: message.success('账号添加成功！')
+152: message.error('添加账号失败: ' + (error.message || '未知错误'))
+158: // 删除账号
+162: message.success('账号删除成功')
+165: message.error('删除账号失败: ' + (error.message || '未知错误'))
+169: // 提交上传
+171: // 显示开发中提示
+172: message.info('B站上传功能正在开发中，敬请期待！', 3)
+175: // 原有代码已禁用
+177: message.error('没有选择要上传的切片')
+193: // 调用上传API
+203: message.success('投稿任务已创建，正在后台处理中...')
+208: message.error('投稿失败: ' + (error.detail || '未知错误'))
+211: message.error('投稿失败: ' + (error.message || '未知错误'))
+217: // 获取状态标签
+220: pending: { color: 'default', icon: <ClockCircleOutlined />, text: '等待中' },
+221: processing: { color: 'processing', icon: <PlayCircleOutlined />, text: '处理中' },
+222: success: { color: 'success', icon: <CheckCircleOutlined />, text: '成功' },
+223: completed: { color: 'success', icon: <CheckCircleOutlined />, text: '完成' },
+224: failed: { color: 'error', icon: <ExclamationCircleOutlined />, text: '失败' },
+225: cancelled: { color: 'default', icon: <StopOutlined />, text: '已取消' }
+236: // 获取分区名称
+239: return partition ? partition.name : `分区${partitionId}`
+242: // 格式化文件大小
+250: // 格式化时长
+258: return `${hours}小时${minutes}分钟`
+260: return `${minutes}分钟${secs}秒`
+262: return `${secs}秒`
+266: // 获取统计信息
+278: // Cookie获取指南内容
+281: <div style={{ marginBottom: 8, fontWeight: 'bold' }}>Cookie获取步骤：</div>
+283: <li>打开B站网站并登录</li>
+284: <li>按F12打开开发者工具</li>
+285: <li>点击Network标签页</li>
+286: <li>刷新页面</li>
+287: <li>找到任意请求，点击查看</li>
+288: <li>在Request Headers中找到Cookie字段</li>
+289: <li>复制Cookie的值（不包含"Cookie: "前缀）</li>
+294: // 账号管理表格列
+297: title: '昵称',
+308: title: '用户名',
+313: title: '状态',
+318: {status === 'active' ? '正常' : '异常'}
+323: title: '操作',
+327: title="确定要删除这个账号吗？"
+328: description="删除后将无法恢复，请谨慎操作。"
+330: okText="确定"
+331: cancelText="取消"
+334: 删除
+341: // 投稿状态表格列
+344: title: '任务ID',
+351: title: '标题',
+362: title: '投稿账号',
+376: title: '分区',
+385: title: '状态',
+392: title: '进度',
+409: title: '文件大小',
+416: title: '创建时间',
+423: title: '操作',
+434: 详情
+438: title="确定要重试这个投稿任务吗？"
+440: okText="确定"
+441: cancelText="取消"
+448: 重试
+454: title="确定要取消这个投稿任务吗？"
+456: okText="确定"
+457: cancelText="取消"
+465: 取消
+471: title="确定要删除这个投稿任务吗？删除后无法恢复。"
+473: okText="确定"
+474: cancelText="取消"
+482: 删除
+500: {/* 自定义标题栏 */}
+506: <h2 className="bilibili-manager-header-title">B站管理</h2>
+509: ? `准备上传 ${clipIds.length} 个切片到B站`
+510: : '管理您的B站账号和投稿设置'
+518: {/* 上传标签页 */}
+524: 投稿上传
+531: message="投稿信息"
+532: description={`准备上传 ${clipIds.length} 个切片到B站`}
+543: title: clipTitles.length === 1 ? clipTitles[0] : `${clipTitles[0]} 等${clipIds.length}个视频`,
+544: partition_id: 4 // 默认游戏分区
+550: label="选择账号"
+552: rules={[{ required: true, message: '请选择B站账号' }]}
+555: placeholder="选择要使用的B站账号"
+558: <p>暂无可用账号</p>
+564: 添加账号
+579: label="视频分区"
+581: rules={[{ required: true, message: '请选择视频分区' }]}
+583: <Select placeholder="选择视频分区" showSearch>
+595: label="标题"
+597: rules={[{ required: true, message: '请输入视频标题' }]}
+599: <Input placeholder="输入视频标题" maxLength={80} showCount />
+603: label="描述"
+607: placeholder="输入视频描述（可选）"
+615: label="标签"
+618: <Input placeholder="输入标签，用逗号分隔（可选）" />
+625: onClick={() => message.info('开发中，敬请期待', 3)}
+628: 开始投稿
+631: 取消
+640: {/* 账号管理标签页 */}
+645: 账号管理
+657: 添加账号
+672: {/* 投稿状态标签页 */}
+677: 投稿状态
+684: <h3 style={{ margin: 0, color: '#ffffff' }}>投稿任务状态</h3>
+691: 刷新
+695: {/* 统计信息 */}
+703: title={<span style={{ color: '#ffffff' }}>总任务数</span>}
+712: title={<span style={{ color: '#ffffff' }}>成功</span>}
+722: title={<span style={{ color: '#ffffff' }}>失败</span>}
+732: title={<span style={{ color: '#ffffff' }}>进行中</span>}
+743: {/* 任务列表 */}
+753: showTotal: (total, range) => `第 ${range[0]}-${range[1]} 条，共 ${total} 条`
+763: {/* 添加账号弹窗 */}
+765: title="添加B站账号"
+775: message="推荐使用Cookie导入"
+776: description="Cookie导入是最安全、最稳定的登录方式，不会触发B站风控。"
+785: label="账号昵称"
+786: rules={[{ required: true, message: '请输入账号昵称' }]}
+788: <Input placeholder="请输入账号昵称，用于识别" />
+802: 获取指南
+808: { required: true, message: '请输入Cookie' },
+809: { min: 10, message: 'Cookie长度不能少于10个字符' }
+814: placeholder="请从浏览器开发者工具中复制Cookie，格式如：SESSDATA=xxx; bili_jct=xxx; DedeUserID=xxx"
+821: 添加账号
+824: 取消
+831: {/* 投稿状态详情模态框 */}
+833: title="投稿任务详情"
+861: <Descriptions.Item label="任务ID" span={1}>
+864: <Descriptions.Item label="状态" span={1}>
+867: <Descriptions.Item label="标题" span={2}>
+870: <Descriptions.Item label="投稿账号" span={1}>
+873: <Descriptions.Item label="分区" span={1}>
+876: <Descriptions.Item label="项目名称" span={1}>
+879: <Descriptions.Item label="切片ID" span={1}>
+882: <Descriptions.Item label="进度" span={2}>
+892: <Descriptions.Item label="文件大小" span={1}>
+895: <Descriptions.Item label="上传时长" span={1}>
+898: <Descriptions.Item label="BV号" span={1}>
+901: <Descriptions.Item label="AV号" span={1}>
+904: <Descriptions.Item label="创建时间" span={1}>
+907: <Descriptions.Item label="更新时间" span={1}>
+914: <h4 style={{ color: '#ffffff' }}>描述</h4>
+921: <h4 style={{ color: '#ffffff' }}>标签</h4>
+928: <h4 style={{ color: '#ffffff' }}>错误信息</h4>
+930: message="投稿失败"
+942: title="确定要重试这个投稿任务吗？"
+947: okText="确定"
+948: cancelText="取消"
+951: 重试
+956: 关闭
