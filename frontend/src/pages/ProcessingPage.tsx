@@ -26,19 +26,19 @@ const ProcessingPage: React.FC = () => {
   const [loading, setLoading] = useState(true)
 
   const steps = [
-    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
-    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
-    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
-    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
-    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
-    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+    { title: '大纲提取', description: '从Video转写文本中提取结构性大纲' },
+    { title: 'Time定位', description: '基于SRT字幕定位话题Time区间' },
+    { title: 'ContentScore', description: '多维度评估Clip质量与传播潜力' },
+    { title: 'Title生成', description: '为高分Clip生成吸引人的Title' },
+    { title: '主题聚类', description: '将相关Clip聚合为CollectionRecommended' },
+    { title: 'Video切割', description: '使用FFmpeg生成Clip与CollectionVideo' }
   ]
 
   useEffect(() => {
     if (!id) return
     
     loadProject()
-    const interval = setInterval(checkStatus, 2000) // 每2秒检查一次状态
+    const interval = setInterval(checkStatus, 2000) // 每2秒检查一次Status
     
     return () => clearInterval(interval)
   }, [id])
@@ -50,18 +50,18 @@ const ProcessingPage: React.FC = () => {
       const project = await projectApi.getProject(id)
       setCurrentProject(project)
       
-      // 如果项目已完成，直接跳转到详情页
+      // 如果ProjectCompleted，直接跳转到Details页
       if (project.status === 'completed') {
         navigate(`/project/${id}`)
         return
       }
       
-      // 如果项目状态是等待处理，开始处理
+      // 如果ProjectStatus是Waiting处理，开始处理
       if (project.status === 'pending') {
         await startProcessing()
       }
     } catch (error) {
-      message.error('加载项目失败')
+      message.error('加载ProjectFailed')
       console.error('Load project error:', error)
     } finally {
       setLoading(false)
@@ -73,9 +73,9 @@ const ProcessingPage: React.FC = () => {
     
     try {
       await projectApi.startProcessing(id)
-      message.success('开始处理项目')
+      message.success('开始处理Project')
     } catch (error) {
-      message.error('启动处理失败')
+      message.error('启动Processing failed')
       console.error('Start processing error:', error)
     }
   }
@@ -87,21 +87,21 @@ const ProcessingPage: React.FC = () => {
       const statusData = await projectApi.getProcessingStatus(id)
       setStatus(statusData)
       
-      // 如果处理完成，跳转到项目详情页
+      // 如果Processing completed，跳转到Project details页
       if (statusData.status === 'completed') {
-        message.success('🎉 视频处理完成！正在跳转到结果页面...')
+        message.success('🎉 VideoProcessing completed！正在跳转到结果页面...')
         setTimeout(() => {
           navigate(`/project/${id}`)
         }, 2000)
       }
       
-      // 如果处理失败，显示详细错误信息
+      // 如果Processing failed，显示详细错误信息
       if (statusData.status === 'error') {
         const errorMsg = statusData.error_message || '处理过程中发生未知错误'
-        message.error(`处理失败: ${errorMsg}`)
+        message.error(`Processing failed: ${errorMsg}`)
         
         // 提供重试选项
-        message.info('您可以返回首页重新上传文件或联系技术支持', 5)
+        message.info('您可以返回首页重新Upload文件或联系技术支持', 5)
       }
       
     } catch (error: any) {
@@ -109,12 +109,12 @@ const ProcessingPage: React.FC = () => {
       
       // 根据错误类型提供不同的处理建议
       if (error.response?.status === 404) {
-        message.error('项目不存在或已被删除')
+        message.error('Project不存在或已被Delete')
         setTimeout(() => navigate('/'), 2000)
       } else if (error.code === 'ECONNABORTED') {
         message.warning('网络连接超时，正在重试...')
       } else {
-        message.error('获取处理状态失败，请刷新页面重试')
+        message.error('获取处理StatusFailed，请Refresh页面重试')
       }
     }
   }
@@ -152,7 +152,7 @@ const ProcessingPage: React.FC = () => {
     <Content style={{ padding: '24px', maxWidth: '1000px', margin: '0 auto' }}>
       <Space direction="vertical" size="large" style={{ width: '100%' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Title level={2}>视频处理进度</Title>
+          <Title level={2}>Video processing progress</Title>
           <Button 
             icon={<ArrowLeftOutlined />} 
             onClick={() => navigate('/')}
@@ -164,13 +164,13 @@ const ProcessingPage: React.FC = () => {
         {currentProject && (
           <Card>
             <Title level={4}>{currentProject.name}</Title>
-            <Text type="secondary">项目ID: {currentProject.id}</Text>
+            <Text type="secondary">ProjectID: {currentProject.id}</Text>
           </Card>
         )}
 
         {status?.status === 'error' && (
           <Alert
-            message="处理失败"
+            message="Processing failed"
             description={
               <div>
                 <p>{status.error_message || '处理过程中发生未知错误'}</p>
@@ -184,7 +184,7 @@ const ProcessingPage: React.FC = () => {
             action={
               <Space>
                 <Button size="small" onClick={() => window.location.reload()}>
-                  刷新页面
+                  Refresh页面
                 </Button>
                 <Button size="small" onClick={() => navigate('/')}>
                   返回首页
@@ -238,8 +238,8 @@ const ProcessingPage: React.FC = () => {
 
         {status?.status === 'completed' && (
           <Alert
-            message="处理完成"
-            description="视频已成功处理完成，正在跳转到项目详情页..."
+            message="Processing completed"
+            description="VideoSuccessProcessing completed，正在跳转到Project details页..."
             type="success"
             showIcon
           />

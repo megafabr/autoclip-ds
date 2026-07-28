@@ -56,12 +56,12 @@ export const SimpleProgressBar: React.FC<SimpleProgressBarProps> = ({
     }
   }, [progress, onProgressUpdate])
 
-  // 如果没有进度数据，显示等待状态
+  // 如果没有进度数据，显示WaitingStatus
   if (!progress) {
     return (
       <Card size="small" style={{ margin: '8px 0' }}>
         <Space direction="vertical" style={{ width: '100%' }}>
-          <Text type="secondary">等待开始处理...</Text>
+          <Text type="secondary">Waiting开始处理...</Text>
           <Progress 
             percent={0} 
             status="active" 
@@ -79,7 +79,7 @@ export const SimpleProgressBar: React.FC<SimpleProgressBarProps> = ({
   const completed = isCompleted(stage)
   const failed = isFailed(message)
 
-  // 确定进度条状态
+  // Confirm进度条Status
   let progressStatus: 'normal' | 'active' | 'success' | 'exception' = 'normal'
   if (failed) {
     progressStatus = 'exception'
@@ -118,10 +118,10 @@ export const SimpleProgressBar: React.FC<SimpleProgressBarProps> = ({
           </Text>
         )}
 
-        {/* 时间戳 */}
+        {/* Time戳 */}
         {showDetails && ts > 0 && (
           <Text type="secondary" style={{ fontSize: '11px' }}>
-            更新时间: {new Date(ts * 1000).toLocaleTimeString()}
+            更新Time: {new Date(ts * 1000).toLocaleTimeString()}
           </Text>
         )}
       </Space>

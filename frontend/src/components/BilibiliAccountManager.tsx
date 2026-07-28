@@ -78,7 +78,7 @@ const BilibiliAccountManager: React.FC = () => {
       
       setAccountsHealth(healthData)
     } catch (error: any) {
-      console.error('Получение состояния здоровья аккаунтовошибка:', error)
+      console.error('Получение состояния здоровья аккаунтов. Ошибка:', error)
     }
   }
 
@@ -116,7 +116,7 @@ const BilibiliAccountManager: React.FC = () => {
       passwordForm.resetFields()
       fetchAccounts()
     } catch (error: any) {
-      message.error('Вход по логину и паролюошибка: ' + (error.message || 'Неизвестная ошибка'))
+      message.error('Ошибка входа по логину и паролю: ' + (error.message || 'Неизвестная ошибка'))
     } finally {
       setLoading(false)
     }
@@ -199,7 +199,7 @@ const BilibiliAccountManager: React.FC = () => {
             setModalVisible(false)
             fetchAccounts()
           } else if (statusResponse.status === 'failed') {
-            message.error('QR-кодОшибка входа, попробуйте снова')
+            message.error('Ошибка входа по QR-коду, попробуйте снова')
             clearInterval(interval)
           }
         } catch (error: any) {

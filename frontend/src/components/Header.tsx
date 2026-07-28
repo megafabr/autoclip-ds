@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             background: 'var(--ac-card)',
           }}
         >
-          设置
+          Settings
         </Button>
       </div>
     </AntHeader>

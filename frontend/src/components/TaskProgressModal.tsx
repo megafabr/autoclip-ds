@@ -39,12 +39,12 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
   const { updateProject } = useProjectStore()
 
   const steps = [
-    { title: '大纲提取', description: '从视频转写文本中提取结构性大纲' },
-    { title: '时间定位', description: '基于SRT字幕定位话题时间区间' },
-    { title: '内容评分', description: '多维度评估片段质量与传播潜力' },
-    { title: '标题生成', description: '为高分片段生成吸引人的标题' },
-    { title: '主题聚类', description: '将相关片段聚合为合集推荐' },
-    { title: '视频切割', description: '使用FFmpeg生成切片与合集视频' }
+    { title: '大纲提取', description: '从Video转写文本中提取结构性大纲' },
+    { title: 'Time定位', description: '基于SRT字幕定位话题Time区间' },
+    { title: 'ContentScore', description: '多维度评估Clip质量与传播潜力' },
+    { title: 'Title生成', description: '为高分Clip生成吸引人的Title' },
+    { title: '主题聚类', description: '将相关Clip聚合为CollectionRecommended' },
+    { title: 'Video切割', description: '使用FFmpeg生成Clip与CollectionVideo' }
   ]
 
   useEffect(() => {
@@ -58,7 +58,7 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
         const statusData = await projectApi.getProcessingStatus(projectId)
         setStatus(statusData)
         
-        // 更新项目状态
+        // 更新ProjectStatus
         updateProject(projectId, {
           status: statusData.status,
           current_step: statusData.current_step,
@@ -66,7 +66,7 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
           error_message: statusData.error_message
         })
         
-        // 如果处理完成，通知父组件
+        // 如果Processing completed，通知父组件
         if (statusData.status === 'completed') {
           onComplete?.(projectId)
         }
@@ -75,10 +75,10 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
       }
     }
 
-    // 立即检查一次状态
+    // 立即检查一次Status
     checkStatus()
     
-    // 如果任务还在进行中，定期检查状态
+    // 如果任务还在Processing，定期检查Status
     const interval = setInterval(checkStatus, 2000)
     
     return () => clearInterval(interval)
@@ -96,7 +96,7 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
         // 完全重试
         await projectApi.retryProcessing(projectId)
       }
-      // 重新开始状态检查
+      // 重新开始Status检查
       setStatus(null)
     } catch (error) {
       console.error('Retry error:', error)
@@ -153,7 +153,7 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
       onCancel={onClose}
       footer={[
         <Button key="close" onClick={onClose}>
-          关闭
+          Close
         </Button>,
         ...(status?.status === 'error' ? [
           <Button 
@@ -177,7 +177,7 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
           <div style={{ textAlign: 'center', padding: '40px 0' }}>
             <Spin size="large" />
             <div style={{ marginTop: '16px', color: '#666' }}>
-              正在获取任务状态...
+              正在获取任务Status...
             </div>
           </div>
         ) : (
@@ -226,14 +226,14 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
             {/* 错误信息 */}
             {status.status === 'error' && status.error_message && (
               <Alert
-                message="处理失败"
+                message="Processing failed"
                 description={status.error_message}
                 type="error"
                 showIcon
               />
             )}
 
-            {/* 步骤列表 */}
+            {/* 步骤List */}
             <div>
               <Text strong style={{ marginBottom: '16px', display: 'block' }}>处理步骤</Text>
               <Steps
@@ -254,11 +254,11 @@ const TaskProgressModal: React.FC<TaskProgressModalProps> = ({
               </Steps>
             </div>
 
-            {/* 完成提示 */}
+            {/* Completed提示 */}
             {status.status === 'completed' && (
               <Alert
-                message="处理完成"
-                description="视频已成功处理，您可以查看生成的片段和合集。"
+                message="Processing completed"
+                description="VideoSuccess处理，您可以查看生成的Clip和Collection。"
                 type="success"
                 showIcon
               />

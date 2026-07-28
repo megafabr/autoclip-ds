@@ -476,7 +476,7 @@ const CollectionPreviewModal: React.FC<CollectionPreviewModalProps> = ({
 
                                 <div className="clip-actions">
                                   <Popconfirm
-                                    title="Confirmи¦Ѓд»Ћеђ€й›†дё­з§»й™¤иї™clipsеђ—пјџ"
+                                    title="Confirm remove this clip from collection?"
                                     onConfirm={(e) => {
                                       e?.stopPropagation()
                                       handleRemoveClip(clip.id)

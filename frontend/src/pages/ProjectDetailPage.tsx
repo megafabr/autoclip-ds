@@ -64,7 +64,7 @@ const ProjectDetailPage: React.FC = () => {
     try {
       const project = await projectApi.getProject(id)
       
-      // 如果项目已完成，加载clips和collections
+      // 如果ProjectCompleted，加载clips和collections
       if (project.status === 'completed') {
         try {
           const [clips, collections] = await Promise.all([
@@ -84,11 +84,11 @@ const ProjectDetailPage: React.FC = () => {
           console.log('🎯 Final project with data:', projectWithData)
           setCurrentProject(projectWithData)
           
-          // 同步更新项目列表，避免页面与列表状态漂移
+          // 同步更新Project list，避免页面与ListStatus漂移
           upsertProject(projectWithData)
         } catch (error) {
           console.error('Failed to load clips/collections:', error)
-          // 即使clips/collections加载失败，也设置项目基本信息
+          // 即使clips/collections加载Failed，也SettingsProject基本信息
           setCurrentProject(project)
         }
       } else {
@@ -96,7 +96,7 @@ const ProjectDetailPage: React.FC = () => {
       }
     } catch (error) {
       console.error('Failed to load project:', error)
-      message.error('加载项目失败')
+      message.error('加载ProjectFailed')
     }
   }
 
@@ -120,7 +120,7 @@ const ProjectDetailPage: React.FC = () => {
       loadProcessingStatus()
     } catch (error) {
       console.error('Failed to start processing:', error)
-      message.error('启动处理失败')
+      message.error('启动Processing failed')
     }
   }
 
@@ -136,10 +136,10 @@ const ProjectDetailPage: React.FC = () => {
         created_at: new Date().toISOString()
       })
       setShowCreateCollection(false)
-      message.success('合集创建成功')
+      message.success('Collection created successfully')
     } catch (error) {
       console.error('Failed to create collection:', error)
-      message.error('创建合集失败')
+      message.error('创建Collection failed')
     }
   }
 
@@ -152,10 +152,10 @@ const ProjectDetailPage: React.FC = () => {
     if (!id) return
     try {
       await removeClipFromCollection(id, collectionId, clipId)
-      message.success('切片已从合集中移除')
+      message.success('Clip已从Collection中移除')
     } catch (error) {
       console.error('Failed to remove clip from collection:', error)
-      message.error('移除切片失败')
+      message.error('移除ClipFailed')
     }
   }
 
@@ -165,10 +165,10 @@ const ProjectDetailPage: React.FC = () => {
       await deleteCollection(id, collectionId)
       setShowCollectionDetail(false)
       setSelectedCollection(null)
-      message.success('合集已删除')
+      message.success('CollectionDeleted')
     } catch (error) {
       console.error('Failed to delete collection:', error)
-      message.error('删除合集失败')
+      message.error('DeleteCollection failed')
     }
   }
 
@@ -176,10 +176,10 @@ const ProjectDetailPage: React.FC = () => {
     if (!id) return
     try {
       await reorderCollectionClips(id, collectionId, newClipIds)
-      message.success('合集顺序已更新')
+      message.success('Collection顺序已更新')
     } catch (error) {
       console.error('Failed to reorder collection clips:', error)
-      message.error('更新合集顺序失败')
+      message.error('更新Collection顺序Failed')
     }
   }
 
@@ -187,10 +187,10 @@ const ProjectDetailPage: React.FC = () => {
     if (!id) return
     try {
       await addClipToCollection(id, collectionId, clipIds)
-      message.success('切片已添加到合集')
+      message.success('Clip added to collection')
     } catch (error) {
       console.error('Failed to add clip to collection:', error)
-      message.error('添加切片失败')
+      message.error('AddClipFailed')
     }
   }
 
@@ -201,7 +201,7 @@ const ProjectDetailPage: React.FC = () => {
     if (sortBy === 'score') {
       return clips.sort((a, b) => b.final_score - a.final_score)
     } else {
-      // 按时间排序 - 将时间字符串转换为秒数进行比较
+      // 按Time排序 - 将Time字符串转换为秒数进行比较
       return clips.sort((a, b) => {
         const getTimeInSeconds = (timeStr: string) => {
           const parts = timeStr.split(':')
@@ -230,8 +230,8 @@ const ProjectDetailPage: React.FC = () => {
     return (
       <Content style={{ padding: '24px' }}>
         <Alert
-          message="加载失败"
-          description={error || '项目不存在'}
+          message="加载Failed"
+          description={error || 'Project不存在'}
           type="error"
           action={
             <Button size="small" onClick={() => navigate('/')}>
@@ -245,7 +245,7 @@ const ProjectDetailPage: React.FC = () => {
 
   return (
     <Content style={{ padding: '24px' }}>
-      {/* 简化的项目头部 */}
+      {/* 简化的Project头部 */}
       <div style={{ marginBottom: '24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <Button 
@@ -254,7 +254,7 @@ const ProjectDetailPage: React.FC = () => {
             onClick={() => navigate('/')}
             style={{ padding: 0, marginBottom: '8px' }}
           >
-            返回项目列表
+            返回Project list
           </Button>
           <Title level={2} style={{ margin: 0 }}>
             {currentProject.name}
@@ -274,17 +274,17 @@ const ProjectDetailPage: React.FC = () => {
         </Space>
       </div>
 
-      {/* 主要内容 */}
+      {/* 主要Content */}
       {currentProject.status === 'completed' ? (
         <div>
-          {/* AI合集横向滚动区域 */}
+          {/* AICollection横向滚动区域 */}
           {currentProject.collections && currentProject.collections.length > 0 && (
             <Card style={{ marginBottom: '24px' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
                 <div>
-                  <Title level={4} style={{ margin: 0 }}>AI推荐合集</Title>
+                  <Title level={4} style={{ margin: 0 }}>AIRecommendedCollection</Title>
                   <Text type="secondary">
-                    AI 已为您推荐了 {currentProject.collections.length} 个主题合集
+                    AI 已为您Recommended了 {currentProject.collections.length} 个主题Collection
                   </Text>
                 </div>
                 <Button 
@@ -301,7 +301,7 @@ const ProjectDetailPage: React.FC = () => {
                     fontSize: '14px'
                   }}
                 >
-                  创建合集
+                  创建Collection
                 </Button>
               </div>
               
@@ -316,7 +316,7 @@ const ProjectDetailPage: React.FC = () => {
               >
                 {currentProject.collections
                   .sort((a, b) => {
-                    // 按创建时间倒序排列，最新的在前面
+                    // 按Created time倒序排列，最新的在前面
                     const timeA = a.created_at ? new Date(a.created_at).getTime() : 0
                     const timeB = b.created_at ? new Date(b.created_at).getTime() : 0
                     return timeB - timeA
@@ -347,7 +347,7 @@ const ProjectDetailPage: React.FC = () => {
             </Card>
           )}
           
-          {/* 视频片段区域 */}
+          {/* VideoClip区域 */}
           <Card 
             style={{
               borderRadius: '16px',
@@ -357,9 +357,9 @@ const ProjectDetailPage: React.FC = () => {
           >
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '24px' }}>
               <div>
-                <Title level={4} style={{ margin: 0, color: '#ffffff', fontWeight: 600 }}>视频片段</Title>
+                <Title level={4} style={{ margin: 0, color: '#ffffff', fontWeight: 600 }}>VideoClip</Title>
                 <Text type="secondary" style={{ color: 'var(--ac-sub)', fontSize: '14px' }}>
-                  AI 已为您生成了 {currentProject.clips?.length || 0} 个精彩片段
+                  AI 已为您生成了 {currentProject.clips?.length || 0} 个精彩Clip
                 </Text>
               </div>
               
@@ -395,7 +395,7 @@ const ProjectDetailPage: React.FC = () => {
                          transition: 'all 0.2s ease'
                        }}
                      >
-                       时间
+                       Time
                      </Radio.Button>
                      <Radio.Button 
                        value="score" 
@@ -414,7 +414,7 @@ const ProjectDetailPage: React.FC = () => {
                          transition: 'all 0.2s ease'
                        }}
                      >
-                       评分
+                       Score
                      </Radio.Button>
                   </Radio.Group>
                 </div>
@@ -435,7 +435,7 @@ const ProjectDetailPage: React.FC = () => {
                         fontSize: '14px'
                       }}
                     >
-                      创建合集
+                      创建Collection
                     </Button>
                   )}
                 </Space>
@@ -459,7 +459,7 @@ const ProjectDetailPage: React.FC = () => {
                     videoUrl={projectApi.getClipVideoUrl(currentProject.id, clip.id, clip.title || clip.generated_title)}
                     onDownload={(clipId) => projectApi.downloadVideo(currentProject.id, clipId)}
                     onClipUpdate={(clipId: string, updates: Partial<Clip>) => {
-                      // 更新本地状态
+                      // 更新本地Status
                       if (currentProject) {
                         const updatedProject = {
                           ...currentProject,
@@ -483,7 +483,7 @@ const ProjectDetailPage: React.FC = () => {
               }}>
                 <Empty 
                   description={
-                    <Text style={{ color: '#888', fontSize: '14px' }}>暂无视频片段</Text>
+                    <Text style={{ color: '#888', fontSize: '14px' }}>NoneVideoClip</Text>
                   }
                   image={<PlayCircleOutlined style={{ fontSize: '48px', color: '#555' }} />}
                 />
@@ -499,15 +499,15 @@ const ProjectDetailPage: React.FC = () => {
             projectName={currentProject.name}
           />
           
-          {/* 项目状态提示 */}
+          {/* ProjectStatus提示 */}
           <Card style={{ marginTop: '16px' }}>
             <Empty 
               image={<PlayCircleOutlined style={{ fontSize: '64px', color: '#d9d9d9' }} />}
               description={
                 <div>
-                  <Text>项目还未完成处理</Text>
+                  <Text>Project还未Completed处理</Text>
                   <br />
-                  <Text type="secondary">处理完成后可查看视频片段和AI合集</Text>
+                  <Text type="secondary">Processing completed后可查看VideoClip和AICollection</Text>
                 </div>
               }
             />
@@ -515,7 +515,7 @@ const ProjectDetailPage: React.FC = () => {
         </div>
       )}
 
-      {/* 创建合集模态框 */}
+      {/* 创建Collection模态框 */}
       <CreateCollectionModal
         visible={showCreateCollection}
         clips={currentProject.clips || []}
@@ -523,7 +523,7 @@ const ProjectDetailPage: React.FC = () => {
         onCreate={handleCreateCollection}
       />
       
-      {/* 合集预览模态框 */}
+      {/* Collection预览模态框 */}
       <CollectionPreviewModal
         visible={showCollectionDetail}
         collection={selectedCollection}

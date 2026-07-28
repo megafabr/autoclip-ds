@@ -315,7 +315,7 @@ const FirstRunWizard: React.FC<FirstRunWizardProps> = ({ onComplete }) => {
         throw new Error('Ошибка загрузки модели')
       }
     } catch (error) {
-      console.error('WhisperОшибка загрузки модели:', error)
+      console.error('Ошибка загрузки модели Whisper:', error)
       // Не блокировать завершение мастера
     }
   }

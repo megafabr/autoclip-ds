@@ -1,6 +1,6 @@
 /**
- * 统一状态栏组件 - 替换旧的复杂进度系统
- * 支持下载中、处理中、完成等状态的统一显示
+ * 统一Status栏组件 - 替换旧的复杂进度系统
+ * 支持Downloading、Processing、Completed等Status的统一显示
  */
 
 import React, { useEffect, useState } from 'react'
@@ -30,7 +30,7 @@ export const UnifiedStatusBar: React.FC<UnifiedStatusBarProps> = ({
   
   const progress = getProgress(projectId)
 
-  // 根据状态决定是否轮询
+  // 根据Status决定是否轮询
   useEffect(() => {
     // 如果已有进度且已到达终态，则不启动轮询
     if (progress && (isCompleted(progress.stage) || isFailed(progress.message))) {
@@ -61,33 +61,33 @@ export const UnifiedStatusBar: React.FC<UnifiedStatusBarProps> = ({
     }
   }, [status, projectId, isPolling, startPolling, stopPolling, progress])
 
-  // 下载进度轮询
+  // Download进度轮询
   useEffect(() => {
     if (status === 'downloading') {
       const pollDownloadProgress = async () => {
         try {
-          console.log(`轮询下载进度: ${projectId}`)
+          console.log(`轮询Download进度: ${projectId}`)
           const response = await fetch(`/api/v1/projects/${projectId}`)
           if (response.ok) {
             const projectData = await response.json()
-            console.log('项目数据:', projectData)
+            console.log('Project数据:', projectData)
             const newProgress = projectData.processing_config?.download_progress || 0
-            console.log(`下载进度更新: ${newProgress}%`)
+            console.log(`Download进度更新: ${newProgress}%`)
             setCurrentDownloadProgress(newProgress)
             onDownloadProgressUpdate?.(newProgress)
             
-            // 如果下载完成，检查是否需要切换到处理状态
+            // 如果DownloadCompleted，检查是否需要切换到处理Status
             if (newProgress >= 100) {
-              console.log('下载完成，切换到处理状态')
+              console.log('DownloadCompleted，切换到处理Status')
               setTimeout(() => {
                 onStatusChange?.('processing')
               }, 1000)
             }
           } else {
-            console.error('获取项目数据失败:', response.status, response.statusText)
+            console.error('获取Project数据Failed:', response.status, response.statusText)
           }
         } catch (error) {
-          console.error('获取下载进度失败:', error)
+          console.error('获取Download进度Failed:', error)
         }
       }
 
@@ -101,10 +101,10 @@ export const UnifiedStatusBar: React.FC<UnifiedStatusBarProps> = ({
     }
   }, [status, projectId, onDownloadProgressUpdate, onStatusChange])
 
-  // 处理状态变化
+  // 处理Status变化
   useEffect(() => {
     if (progress) {
-      // 进度到达终态时，立刻停止轮询并同步状态
+      // 进度到达终态时，立刻停止轮询并同步Status
       if (isCompleted(progress.stage) || isFailed(progress.message)) {
         if (isPolling) {
           console.log(`进度达到终态，停止轮询: ${projectId}`)
@@ -118,8 +118,8 @@ export const UnifiedStatusBar: React.FC<UnifiedStatusBarProps> = ({
     }
   }, [progress, onStatusChange])
 
-  // ===== Calm Premium 状态展示（见 DESIGN.md）=====
-  // 进行中：细进度线 + 标签 + 右侧 mono 百分比
+  // ===== Calm Premium Status展示（见 DESIGN.md）=====
+  // Processing：细进度线 + 标签 + 右侧 mono 百分比
   const ProgressRow = ({ label, percent }: { label: string; percent: number }) => (
     <div style={{ width: '100%' }}>
       <div style={{ height: 4, background: 'var(--ac-line)', borderRadius: 999, overflow: 'hidden' }}>
@@ -140,20 +140,20 @@ export const UnifiedStatusBar: React.FC<UnifiedStatusBarProps> = ({
   )
 
   if (status === 'importing') return <ProgressRow label="导入中" percent={downloadProgress} />
-  if (status === 'downloading') return <ProgressRow label="下载中" percent={currentDownloadProgress} />
+  if (status === 'downloading') return <ProgressRow label="Downloading" percent={currentDownloadProgress} />
 
   if (status === 'processing') {
     if (!progress) return <ProgressRow label="初始化中" percent={0} />
     const { stage, percent, message } = progress
-    if (isFailed(message)) return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+    if (isFailed(message)) return <StatusRow label="Processing failed" dot="var(--ac-error)" color="var(--ac-error)" />
     return <ProgressRow label={getStageDisplayName(stage)} percent={percent} />
   }
 
-  if (status === 'completed') return <StatusRow label="已完成" dot="var(--ac-ok)" color="var(--ac-sub)" />
-  if (status === 'failed') return <StatusRow label="处理失败" dot="var(--ac-error)" color="var(--ac-error)" />
+  if (status === 'completed') return <StatusRow label="Completed" dot="var(--ac-ok)" color="var(--ac-sub)" />
+  if (status === 'failed') return <StatusRow label="Processing failed" dot="var(--ac-error)" color="var(--ac-error)" />
 
-  // 等待
-  return <StatusRow label="等待中" dot="var(--ac-muted)" color="var(--ac-muted)" />
+  // Waiting
+  return <StatusRow label="Waiting" dot="var(--ac-muted)" color="var(--ac-muted)" />
 }
 
 // 简化的进度条组件 - 用于详细进度显示

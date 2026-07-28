@@ -75,10 +75,10 @@ const SettingsPage: React.FC = () => {
           settingsApi.getCurrentProvider()
         ])
         
-        // 检查是否有失败的请求
+        // 检查是否有Failed的请求
         const failedRequests = [settings, models, provider].filter(result => result.status === 'rejected')
         if (failedRequests.length > 0) {
-          console.warn('部分API请求失败:', failedRequests.map(r => (r as PromiseRejectedResult).reason))
+          console.warn('部分API请求Failed:', failedRequests.map(r => (r as PromiseRejectedResult).reason))
         }
         
         // Обработка данных настроек
@@ -159,7 +159,7 @@ const SettingsPage: React.FC = () => {
       const isDesktop = await isDesktopMode()
       
       if (!isDesktop) {
-        // Web-режим：только показывает подсказку, без сохранения
+        // Web-режим: только показывает подсказку, без сохранения
         message.info('В Web-режиме настройки нельзя сохранить. Используйте настольное приложение.')
         setLoading(false)
         return
@@ -170,7 +170,7 @@ const SettingsPage: React.FC = () => {
       try {
         existingSettings = await settingsApi.getSettings()
       } catch (error) {
-        console.warn('获取现有配置失败，将使用默认配置:', error)
+        console.warn('获取现有配置Failed，将使用默认配置:', error)
       }
       
       // 获取现有的API keys，只更新有值的字段
@@ -301,7 +301,7 @@ const SettingsPage: React.FC = () => {
                   max_clips_per_collection: 5
                 }}
               >
-                {/* 当前提供商状态 */}
+                {/* 当前提供商Status */}
                 {currentProvider.available && (
                   <Alert
                     message={`Используется сейчас: ${currentProvider.display_name} - ${currentProvider.model}`}
@@ -505,10 +505,10 @@ const SettingsPage: React.FC = () => {
                   </Title>
                   <Paragraph className="instruction-text">
                     Система поддерживает несколько AI-провайдеров:
-                    <br />• <Text strong>Alibaba Tongyi Qianwen</Text>：открыть консоль Alibaba Cloudполучить API ключ
-                    <br />• <Text strong>OpenAI</Text>：Откройте platform.openai.com получить API ключ
-                    <br />• <Text strong>Google Gemini</Text>：Откройте ai.google.dev получить API ключ
-                    <br />• <Text strong>SiliconFlow</Text>：Откройте docs.siliconflow.cn получить API ключ
+                    <br />• <Text strong>Alibaba Tongyi Qianwen</Text>:открыть консоль Alibaba Cloudполучить API ключ
+                    <br />• <Text strong>OpenAI</Text>:Откройте platform.openai.com получить API ключ
+                    <br />• <Text strong>Google Gemini</Text>:Откройте ai.google.dev получить API ключ
+                    <br />• <Text strong>SiliconFlow</Text>:Откройте docs.siliconflow.cn получить API ключ
                   </Paragraph>
                 </div>
                 
@@ -517,9 +517,9 @@ const SettingsPage: React.FC = () => {
                     <InfoCircleOutlined /> 2. Описание параметров настройки
                   </Title>
                   <Paragraph className="instruction-text">
-                    • <Text strong>Размер текстового блока</Text>：Влияет на скорость и точность обработки, рекомендуется 5000 символов<br />
-                    • <Text strong>Порог оценки</Text>：Сохраняются только фрагменты выше этого порога<br />
-                    • <Text strong>Количество фрагментов в коллекции</Text>：Определяет количество фрагментов в каждой коллекции
+                    • <Text strong>Размер текстового блока</Text>:Влияет на скорость и точность обработки, рекомендуется 5000 символов<br />
+                    • <Text strong>Порог оценки</Text>:Сохраняются только фрагменты выше этого порога<br />
+                    • <Text strong>Количество фрагментов в коллекции</Text>:Определяет количество фрагментов в каждой коллекции
                   </Paragraph>
                 </div>
                 

@@ -26,7 +26,7 @@ dayjs.extend(relativeTime)
 dayjs.extend(timezone)
 dayjs.extend(utc)
 
-// 设置dayjs中文和时区
+// Settingsdayjs中文和时区
 dayjs.locale('zh-cn')
 dayjs.tz.setDefault('Asia/Shanghai')
 

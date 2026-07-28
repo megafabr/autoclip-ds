@@ -84,7 +84,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
     keyword: ''
   })
 
-  // 获取投稿任务列表
+  // 获取Upload taskList
   const fetchTasks = async () => {
     try {
       setLoading(true)
@@ -93,7 +93,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
       setTasks(safeRecords)
       setFilteredTasks(safeRecords)
     } catch (error: any) {
-      message.error('获取投稿任务失败: ' + (error.message || '未知错误'))
+      message.error('获取Upload taskFailed: ' + (error.message || '未知错误'))
       setTasks([])
       setFilteredTasks([])
     } finally {
@@ -101,37 +101,37 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
     }
   }
 
-  // 重试失败的任务
+  // 重试Failed的任务
   const retryTask = async (_taskId: string) => {
-    message.info('B站上传功能正在开发中，敬请期待！', 3);
+    message.info('Bilibili upload feature is under development，敬请期待！', 3);
     return;
     
     // 原有代码已禁用
     try {
       // 这里需要调用重试API
       message.success('任务重试已启动')
-      fetchTasks() // 刷新列表
+      fetchTasks() // RefreshList
     } catch (error: any) {
-      message.error('重试任务失败: ' + (error.message || '未知错误'))
+      message.error('Retry task failed: ' + (error.message || '未知错误'))
     }
   }
 
-  // 取消进行中的任务
+  // CancelProcessing的任务
   const cancelTask = async (_taskId: string) => {
-    message.info('B站上传功能正在开发中，敬请期待！', 3);
+    message.info('Bilibili upload feature is under development，敬请期待！', 3);
     return;
     
     // 原有代码已禁用
     try {
-      // 这里需要调用取消API
-      message.success('任务已取消')
-      fetchTasks() // 刷新列表
+      // 这里需要调用CancelAPI
+      message.success('任务Cancelled')
+      fetchTasks() // RefreshList
     } catch (error: any) {
-      message.error('取消任务失败: ' + (error.message || '未知错误'))
+      message.error('Cancel task failed: ' + (error.message || '未知错误'))
     }
   }
 
-  // 查看任务详情
+  // 查看Task details
   const showTaskDetail = (task: UploadTask) => {
     setSelectedTask(task)
     setDetailModalVisible(true)
@@ -180,7 +180,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
     setFilteredTasks(Array.isArray(tasks) ? tasks : [])
   }
 
-  // 获取状态标签颜色
+  // 获取Status标签颜色
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'pending':
@@ -196,7 +196,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
     }
   }
 
-  // 获取状态图标
+  // 获取Status图标
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'pending':
@@ -212,17 +212,17 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
     }
   }
 
-  // 获取状态文本
+  // 获取Status文本
   const getStatusText = (status: string) => {
     switch (status) {
       case 'pending':
         return '待处理'
       case 'processing':
-        return '处理中'
+        return 'Processing'
       case 'success':
-        return '成功'
+        return 'Success'
       case 'failed':
-        return '失败'
+        return 'Failed'
       default:
         return status
     }
@@ -256,17 +256,17 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
         <div>
           <div style={{ fontWeight: 'bold' }}>{record.title}</div>
           <div style={{ fontSize: '12px', color: '#666' }}>
-            项目ID: {record.project_id.slice(0, 8)}...
+            ProjectID: {record.project_id.slice(0, 8)}...
           </div>
         </div>
       )
     },
     {
-      title: '切片数量',
+      title: 'Clip数量',
       key: 'clip_count',
       render: (record: UploadTask) => {
         const clipCount = record.clip_id.split(',').filter(id => id.trim()).length
-        return <Tag>{clipCount} 个切片</Tag>
+        return <Tag>{clipCount} 个Clip</Tag>
       }
     },
     {
@@ -278,7 +278,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
       }
     },
     {
-      title: '状态',
+      title: 'Status',
       key: 'status',
       render: (record: UploadTask) => (
         <Tag color={getStatusColor(record.status)} icon={getStatusIcon(record.status)}>
@@ -301,7 +301,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
       }
     },
     {
-      title: '创建时间',
+      title: 'Created time',
       key: 'created_at',
       render: (record: UploadTask) => dayjs(record.created_at).format('YYYY-MM-DD HH:mm')
     },
@@ -316,7 +316,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
             icon={<EyeOutlined />}
             onClick={() => showTaskDetail(record)}
           >
-            详情
+            Details
           </Button>
           
           {record.status === 'failed' && (
@@ -332,10 +332,10 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
           
           {record.status === 'processing' && (
             <Popconfirm
-              title="确定要取消这个任务吗？"
+              title="Confirm cancel这个任务吗？"
               onConfirm={() => cancelTask(record.id)}
-              okText="确定"
-              cancelText="取消"
+              okText="Confirm"
+              cancelText="Cancel"
             >
               <Button
                 type="link"
@@ -343,7 +343,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
                 danger
                 icon={<StopOutlined />}
               >
-                取消
+                Cancel
               </Button>
             </Popconfirm>
           )}
@@ -370,23 +370,23 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
         </Col>
         <Col span={4}>
           <Card>
-            <Statistic title="处理中" value={stats.processing} valueStyle={{ color: '#1890ff' }} />
+            <Statistic title="Processing" value={stats.processing} valueStyle={{ color: '#1890ff' }} />
           </Card>
         </Col>
         <Col span={4}>
           <Card>
-            <Statistic title="成功" value={stats.success} valueStyle={{ color: '#52c41a' }} />
+            <Statistic title="Success" value={stats.success} valueStyle={{ color: '#52c41a' }} />
           </Card>
         </Col>
         <Col span={4}>
           <Card>
-            <Statistic title="失败" value={stats.failed} valueStyle={{ color: '#ff4d4f' }} />
+            <Statistic title="Failed" value={stats.failed} valueStyle={{ color: '#ff4d4f' }} />
           </Card>
         </Col>
         <Col span={4}>
           <Card>
             <Statistic 
-              title="成功率" 
+              title="Success率" 
               value={stats.total > 0 ? Math.round((stats.success / stats.total) * 100) : 0}
               suffix="%" 
               valueStyle={{ color: '#52c41a' }}
@@ -399,22 +399,22 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
       <Card style={{ marginBottom: '16px' }}>
         <Row gutter={16} align="middle">
           <Col span={6}>
-            <Form.Item label="状态" style={{ marginBottom: 0 }}>
+            <Form.Item label="Status" style={{ marginBottom: 0 }}>
               <Select
-                placeholder="选择状态"
+                placeholder="选择Status"
                 value={filters.status}
                 onChange={(value) => setFilters({ ...filters, status: value })}
                 allowClear
               >
                 <Option value="pending">待处理</Option>
-                <Option value="processing">处理中</Option>
-                <Option value="success">成功</Option>
-                <Option value="failed">失败</Option>
+                <Option value="processing">Processing</Option>
+                <Option value="success">Success</Option>
+                <Option value="failed">Failed</Option>
               </Select>
             </Form.Item>
           </Col>
           <Col span={6}>
-            <Form.Item label="时间范围" style={{ marginBottom: 0 }}>
+            <Form.Item label="Time范围" style={{ marginBottom: 0 }}>
               <RangePicker
                 value={filters.dateRange}
                 onChange={(dates) => setFilters({ ...filters, dateRange: dates })}
@@ -425,7 +425,7 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
           <Col span={6}>
             <Form.Item label="关键词" style={{ marginBottom: 0 }}>
               <Input
-                placeholder="搜索标题或描述"
+                placeholder="SearchTitle或Description"
                 value={filters.keyword}
                 onChange={(e) => setFilters({ ...filters, keyword: e.target.value })}
               />
@@ -440,15 +440,15 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
                 重置
               </Button>
               <Button icon={<ReloadOutlined />} onClick={fetchTasks}>
-                刷新
+                Refresh
               </Button>
             </Space>
           </Col>
         </Row>
       </Card>
 
-      {/* 任务列表 */}
-      <Card title={`投稿任务列表 (${filteredTasks.length})`}>
+      {/* Task list */}
+      <Card title={`Upload taskList (${filteredTasks.length})`}>
         <Table
           columns={columns}
           dataSource={filteredTasks}
@@ -463,14 +463,14 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
         />
       </Card>
 
-      {/* 任务详情弹窗 */}
+      {/* Task details弹窗 */}
       <Modal
-        title="任务详情"
+        title="Task details"
         open={detailModalVisible}
         onCancel={() => setDetailModalVisible(false)}
         footer={[
           <Button key="close" onClick={() => setDetailModalVisible(false)}>
-            关闭
+            Close
           </Button>
         ]}
         width={800}
@@ -479,13 +479,13 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
           <div>
             <Row gutter={16}>
               <Col span={12}>
-                <div><strong>任务ID:</strong> {selectedTask.id}</div>
-                <div><strong>项目ID:</strong> {selectedTask.project_id}</div>
-                <div><strong>标题:</strong> {selectedTask.title}</div>
-                <div><strong>描述:</strong> {selectedTask.description}</div>
+                <div><strong>Task ID:</strong> {selectedTask.id}</div>
+                <div><strong>ProjectID:</strong> {selectedTask.project_id}</div>
+                <div><strong>Title:</strong> {selectedTask.title}</div>
+                <div><strong>Description:</strong> {selectedTask.description}</div>
               </Col>
               <Col span={12}>
-                <div><strong>状态:</strong> 
+                <div><strong>Status:</strong> 
                   <Tag color={getStatusColor(selectedTask.status)} style={{ marginLeft: 8 }}>
                     {getStatusText(selectedTask.status)}
                   </Tag>
@@ -496,15 +496,15 @@ const UploadTaskManager: React.FC<UploadTaskManagerProps> = ({ projectId }) => {
                     return partition ? partition.name : `分区${selectedTask.partition_id}`
                   })()}
                 </div>
-                <div><strong>创建时间:</strong> {dayjs(selectedTask.created_at).format('YYYY-MM-DD HH:mm:ss')}</div>
-                <div><strong>更新时间:</strong> {dayjs(selectedTask.updated_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+                <div><strong>Created time:</strong> {dayjs(selectedTask.created_at).format('YYYY-MM-DD HH:mm:ss')}</div>
+                <div><strong>更新Time:</strong> {dayjs(selectedTask.updated_at).format('YYYY-MM-DD HH:mm:ss')}</div>
               </Col>
             </Row>
             
             <Divider />
             
             <div>
-              <strong>切片信息:</strong>
+              <strong>Clip信息:</strong>
               <div style={{ marginTop: 8 }}>
                 {selectedTask.clip_id.split(',').filter(id => id.trim()).map((clipId, index) => (
                   <Tag key={index} style={{ marginBottom: 4 }}>{clipId.trim()}</Tag>
